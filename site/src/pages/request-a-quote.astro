@@ -102,10 +102,20 @@ const schema = graph([
               <a href={BRAND.phoneHref}>{BRAND.phoneDisplay}</a>
             </li>
             <li>
+              <span>Second line</span>
+              <a href={BRAND.phoneAltHref}>{BRAND.phoneAltDisplay}</a>
+            </li>
+            <li>
               <span>WhatsApp</span>
               <a href={`https://wa.me/${BRAND.whatsappNumber}`}>{BRAND.whatsappDisplay}</a>
             </li>
           </ul>
+          <p class="aside-note">
+            Both numbers reach the same team, and neither is a local office, so
+            call whichever costs you less. A phone call is the faster route when
+            you are still deciding what to order; anything settled that way is
+            written back to you before it goes near production.
+          </p>
         </section>
 
         <section class="aside-block aside-quiet">
@@ -248,6 +258,13 @@ const schema = graph([
   }
 
   .contact-list a { font-size: 0.92rem; font-weight: 550; color: var(--accent); }
+
+  .aside-note {
+    margin: var(--sp-s) 0 0;
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: var(--fg-muted);
+  }
 
   .aside-quiet p { font-size: 0.88rem; color: var(--fg-muted); margin: 0; }
   .aside-quiet a { color: var(--accent); }

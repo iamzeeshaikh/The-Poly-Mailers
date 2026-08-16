@@ -63,6 +63,13 @@ const schema = graph([
             <span class="badge">Suited to working something out</span>
           </div>
           <a class="channel-value" href={BRAND.phoneHref}>{BRAND.phoneDisplay}</a>
+          <a class="channel-value channel-value-alt" href={BRAND.phoneAltHref}>
+            {BRAND.phoneAltDisplay}
+          </a>
+          <p>
+            Either line reaches the same team. Neither is a local office, so use
+            whichever is cheaper to call from where you are.
+          </p>
           <p>
             Useful when you are not sure what you need and a conversation will
             get there faster than an exchange of emails. Anything agreed by
@@ -177,6 +184,16 @@ const schema = graph([
   }
 
   .channel-value:hover { text-decoration: underline; }
+
+  /* The second line sits under the first rather than beside it, and a step
+     quieter so the primary number still reads as the primary. */
+  .channel-value-alt {
+    display: block;
+    margin-block-start: 0.3rem;
+    font-size: 0.96rem;
+    font-weight: 600;
+    color: var(--fg-muted);
+  }
 
   .channel-grid p { color: var(--fg-muted); font-size: 0.9rem; line-height: 1.55; margin: 0; }
 

@@ -24,7 +24,7 @@ export function organization(): Json {
     name: BRAND.name,
     url: `${SITE_URL}/`,
     email: BRAND.email,
-    telephone: BRAND.phoneDisplay,
+    telephone: [BRAND.phoneDisplay, BRAND.phoneAltDisplay],
     description:
       'Custom poly mailer manufacturing and supply for businesses in the United States, United Kingdom, Canada and Australia. Printed, stock, coloured, padded and size-specific mailers, quoted to order.',
     areaServed: [
@@ -38,7 +38,7 @@ export function organization(): Json {
         '@type': 'ContactPoint',
         contactType: 'sales',
         email: BRAND.email,
-        telephone: BRAND.phoneDisplay,
+        telephone: [BRAND.phoneDisplay, BRAND.phoneAltDisplay],
         availableLanguage: ['English'],
         areaServed: ['US', 'GB', 'CA', 'AU'],
       },

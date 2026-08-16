@@ -14,9 +14,19 @@ export const BRAND = {
   legalName: 'The Poly Mailers',
   domain: 'thepolymailers.com',
   email: 'info@thepolymailers.com',
-  /** Displayed everywhere as the primary contact number. Never labelled by country. */
-  phoneDisplay: '+44 7458 651107',
-  phoneHref: 'tel:+447458651107',
+  /**
+   * Primary contact number, shown wherever a single number is shown. It is the
+   * same line as WhatsApp, which is why one value drives both.
+   */
+  phoneDisplay: '+1 503-358-0443',
+  phoneHref: 'tel:+15033580443',
+  /**
+   * Second published line. Listed alongside the primary number, never instead
+   * of it, and never labelled as local to any market — no premises, branch or
+   * local presence is implied anywhere on the site.
+   */
+  phoneAltDisplay: '+44 7458 651107',
+  phoneAltHref: 'tel:+447458651107',
   whatsappDisplay: '+1 503-358-0443',
   whatsappNumber: '15033580443',
   tagline: 'Custom poly mailers made to order for growing brands',
