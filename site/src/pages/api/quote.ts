@@ -127,6 +127,8 @@ function safeAttachmentName(original: string): string {
 
 /* ------------------------------------------------------------------ */
 
+const THANK_YOU = '/thank-you/';
+
 function json(body: unknown, status = 200): Response {
   return new Response(JSON.stringify(body), {
     status,
@@ -138,15 +140,80 @@ function json(body: unknown, status = 200): Response {
   });
 }
 
+/**
+ * The form is submitted two ways and the response has to suit both.
+ *
+ * With JavaScript, the enhanced handler sends `Accept: application/json` and
+ * navigates on the payload. Without it, the browser performs a plain form POST
+ * and renders whatever comes back — so returning JSON there would leave the
+ * person staring at `{"ok":true}` instead of the thank-you page.
+ */
+function wantsJson(request: Request): boolean {
+  return (request.headers.get('accept') ?? '').includes('application/json');
+}
+
+/** Success. JSON callers navigate themselves; browsers are redirected. */
+function succeeded(request: Request): Response {
+  if (wantsJson(request)) return json({ ok: true, redirect: THANK_YOU });
+  return new Response(null, {
+    // 303 so the browser follows with GET. A 302 would leave some clients
+    // re-POSTing the form on refresh.
+    status: 303,
+    headers: { location: THANK_YOU, 'cache-control': 'no-store' },
+  });
+}
+
+/**
+ * Failure. Without JavaScript there is no client-side validation either, so a
+ * plain browser can genuinely arrive here — and it needs readable HTML rather
+ * than an error object. Every value is escaped; nothing is reflected raw.
+ */
+function failed(request: Request, errors: Errors, status: number): Response {
+  if (wantsJson(request)) return json({ ok: false, errors }, status);
+
+  const items = Object.values(errors)
+    .filter(Boolean)
+    .map((message) => `<li>${escapeHtml(String(message))}</li>`)
+    .join('');
+
+  const page = `<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Your request needs a correction</title>
+<style>
+  body{margin:0;padding:2.5rem 1.25rem;background:#f7f6f3;color:#171a20;
+       font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+  main{max-width:34rem;margin:0 auto}
+  h1{font-size:1.6rem;line-height:1.2;margin:0 0 .75rem}
+  ul{padding-left:1.15rem}
+  a{color:#2340ad}
+</style></head>
+<body><main>
+<h1>Your request needs a correction</h1>
+<p>Nothing was sent. Please go back and fix the following, then submit again.</p>
+<ul>${items}</ul>
+<p><a href="javascript:history.back()">Go back to the form</a>, or email
+<a href="mailto:info@thepolymailers.com">info@thepolymailers.com</a> instead.</p>
+</main></body></html>`;
+
+  return new Response(page, {
+    status,
+    headers: {
+      'content-type': 'text/html; charset=utf-8',
+      'cache-control': 'no-store',
+      'x-content-type-options': 'nosniff',
+    },
+  });
+}
+
 export const POST: APIRoute = async ({ request }) => {
   if (rateLimited(clientKey(request))) {
-    return json(
+    return failed(
+      request,
       {
-        ok: false,
-        errors: {
-          form: 'Too many requests from this connection. Wait a few minutes, or email info@thepolymailers.com.',
-        } satisfies Errors,
-      },
+        form: 'Too many requests from this connection. Wait a few minutes, or email info@thepolymailers.com.',
+      } satisfies Errors,
       429,
     );
   }
@@ -155,19 +222,19 @@ export const POST: APIRoute = async ({ request }) => {
   try {
     form = await request.formData();
   } catch {
-    return json({ ok: false, errors: { form: 'That request could not be read.' } }, 400);
+    return failed(request, { form: 'That request could not be read.' }, 400);
   }
 
   // Honeypot: a real person never sees this field.
   if (String(form.get('company_url') ?? '').trim() !== '') {
     // Answer as though it succeeded so a bot learns nothing from the response.
-    return json({ ok: true, redirect: '/thank-you/' });
+    return succeeded(request);
   }
 
   // Timing trap: a human cannot complete this form in under three seconds.
   const startedAt = Number(form.get('started_at') ?? 0);
   if (Number.isFinite(startedAt) && startedAt > 0 && Date.now() - startedAt < 3000) {
-    return json({ ok: true, redirect: '/thank-you/' });
+    return succeeded(request);
   }
 
   const fields: Partial<QuoteFields> = {
@@ -210,7 +277,7 @@ export const POST: APIRoute = async ({ request }) => {
   }
 
   if (Object.keys(errors).length) {
-    return json({ ok: false, errors }, 422);
+    return failed(request, errors, 422);
   }
 
   const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, SMTP_TO, SMTP_FROM_NAME, SMTP_FROM_EMAIL } =
@@ -220,13 +287,11 @@ export const POST: APIRoute = async ({ request }) => {
     // Fail loudly in the server log, politely to the visitor. Never leak which
     // variable is missing to the browser.
     console.error('[quote] SMTP is not configured — set the variables in .env.example.');
-    return json(
+    return failed(
+      request,
       {
-        ok: false,
-        errors: {
-          form: `Your request could not be sent right now. Please email ${BRAND.email} and we will pick it up.`,
-        } satisfies Errors,
-      },
+        form: `Your request could not be sent right now. Please email ${BRAND.email} and we will pick it up.`,
+      } satisfies Errors,
       503,
     );
   }
@@ -328,18 +393,16 @@ export const POST: APIRoute = async ({ request }) => {
     });
   } catch (error) {
     console.error('[quote] send failed:', error);
-    return json(
+    return failed(
+      request,
       {
-        ok: false,
-        errors: {
-          form: `Your request could not be sent. Please try again, or email ${BRAND.email}.`,
-        } satisfies Errors,
-      },
+        form: `Your request could not be sent. Please try again, or email ${BRAND.email}.`,
+      } satisfies Errors,
       502,
     );
   }
 
-  return json({ ok: true, redirect: '/thank-you/' });
+  return succeeded(request);
 };
 
 /** Anything other than POST is not a valid way to reach this endpoint. */

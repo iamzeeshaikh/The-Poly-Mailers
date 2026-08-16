@@ -2,7 +2,8 @@
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import QuoteForm from '~/components/QuoteForm.astro';
 import ProductCard from '~/components/ProductCard.astro';
-import MailerFigure from '~/components/MailerFigure.astro';
+import { Picture } from 'astro:assets';
+import heroBanner from '~/assets/hero/colored-poly-mailers-fan-cutout.png';
 import FaqList from '~/components/FaqList.astro';
 import CtaBand from '~/components/CtaBand.astro';
 import { featuredProducts } from '~/data/products';
@@ -151,8 +152,27 @@ const resources = [
         </ul>
       </div>
 
-      <div class="hero-figure">
-        <MailerFigure />
+      {/*
+        The banner is the LCP element, so it is a real <img> rather than a CSS
+        background: only an <img> carries srcset, and only a markup request is
+        found by the preload scanner before the stylesheet resolves.
+
+        PNG rather than JPEG because the subject is knocked out of its white
+        background and needs the alpha channel — see
+        scripts/make-hero-cutout.mjs.
+      */}
+      <div class="hero-art">
+        <Picture
+          src={heroBanner}
+          widths={[480, 760, 1067]}
+          sizes="(min-width: 58rem) 52vw, 92vw"
+          formats={['avif', 'webp']}
+          fallbackFormat="png"
+          alt="Blue, yellow, red and black poly mailers fanned out, each showing its grey self-adhesive closure strip"
+          loading="eager"
+          fetchpriority="high"
+          decoding="sync"
+        />
       </div>
     </div>
   </section>
@@ -476,11 +496,33 @@ const resources = [
   /* ------------------------------- hero ------------------------------- */
   .hero {
     position: relative;
-    padding-block: clamp(2.5rem, 1rem + 6vw, 5.5rem) clamp(2rem, 1rem + 4vw, 4rem);
-    background:
-      radial-gradient(90% 120% at 78% 0%, rgba(45, 85, 240, 0.09), transparent 62%),
-      linear-gradient(180deg, var(--paper-sunk), var(--paper) 68%);
+    isolation: isolate;
+    display: grid;
+    align-items: center;
+    /* A stated minimum height means the banner cannot resize the section as it
+       decodes, so the hero contributes nothing to CLS. */
+    min-block-size: clamp(26rem, 20rem + 18vw, 38rem);
+    padding-block: clamp(2.75rem, 1.5rem + 5vw, 5rem);
+    /* The colour is set separately from the gradient rather than in the
+       shorthand. A gradient is a background-image, so the shorthand resets
+       background-color to transparent — which leaves light text computing its
+       contrast against whatever is behind the section. */
+    background-color: #090c12;
+    background-image: linear-gradient(165deg, #10151f 0%, #090c12 58%, #0c1119 100%);
     border-block-end: 1px solid var(--line);
+    overflow: clip;
+  }
+
+  /* A brand-coloured wash behind the fan, so the banner has depth rather than
+     being a product sitting on a flat black rectangle. */
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(58% 78% at 78% 52%, rgba(52, 96, 245, 0.32), transparent 68%),
+      radial-gradient(46% 60% at 12% 8%, rgba(120, 90, 240, 0.16), transparent 70%);
   }
 
   .hero-inner {
@@ -490,16 +532,67 @@ const resources = [
   }
 
   @media (min-width: 58rem) {
-    .hero-inner { grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: var(--sp-2xl); }
+    .hero-inner {
+      grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+      gap: var(--sp-2xl);
+    }
   }
 
+  .hero-copy { max-width: 37rem; }
+
+  .hero-art {
+    /* min-width on a grid item defaults to auto, which lets a wide image push
+       the track past its share and overflow the page. */
+    min-width: 0;
+    justify-self: center;
+  }
+
+  /* Sized by height rather than width. The fan is the tallest thing in the
+     hero, so capping its height is what actually controls how tall the banner
+     becomes; letting the width lead made the section over 1,000px deep. */
+  .hero-art :global(img) {
+    display: block;
+    inline-size: auto;
+    block-size: auto;
+    max-inline-size: 100%;
+    max-block-size: clamp(15rem, 10rem + 24vw, 30rem);
+    margin-inline: auto;
+    filter: drop-shadow(0 26px 42px rgba(0, 0, 0, 0.55));
+  }
+
+  @media (min-width: 58rem) {
+    .hero-art { justify-self: end; }
+    .hero-art :global(img) { margin-inline-end: 0; }
+  }
+
+  /* --step-6 renders at 90px here, which wraps this headline onto five lines in
+     a half-width column and pushes the section past 1,100px deep. One step
+     down fits it in three and leaves the banner room to read as a banner. */
   .hero h1 {
     margin-block: 0.7rem 1rem;
-    max-width: 15ch;
-    font-size: var(--step-6);
+    max-width: 17ch;
+    font-size: var(--step-5);
+    color: #fff;
   }
 
-  .hero .lede { max-width: 50ch; }
+  .hero .eyebrow { color: rgba(255, 255, 255, 0.78); }
+
+  .hero .lede {
+    max-width: 50ch;
+    color: rgba(255, 255, 255, 0.86);
+  }
+
+  /* The ghost button borrows --fg, which is dark. Over the scrim it needs the
+     light equivalents or it disappears. */
+  .hero .btn-ghost {
+    --btn-fg: #fff;
+    border-color: rgba(255, 255, 255, 0.45);
+  }
+
+  .hero .btn-ghost:hover {
+    --btn-bg: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.72);
+  }
 
   .hero-actions {
     display: flex;
@@ -516,7 +609,7 @@ const resources = [
     padding: 0;
     list-style: none;
     font-size: 0.87rem;
-    color: var(--fg-muted);
+    color: rgba(255, 255, 255, 0.82);
   }
 
   .hero-points li { display: flex; align-items: center; gap: 0.42rem; }
@@ -526,7 +619,7 @@ const resources = [
     inline-size: 6px;
     block-size: 6px;
     border-radius: 50%;
-    background: var(--accent);
+    background: #fff;
     flex: none;
   }
 

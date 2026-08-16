@@ -5,7 +5,7 @@ Generated from the built output at `dist/client`, not from the source data.
 **148 indexable pages**, plus `/thank-you/` and `/404` which are
 noindex and excluded from the XML sitemap.
 
-Total body copy across indexable pages: **161,471 words**
+Total body copy across indexable pages: **161,459 words**
 (median 1028 words per page, shortest 450,
 longest 2303).
 
@@ -28,7 +28,7 @@ longest 2303).
 
 | URL | Words | Schema types |
 | --- | ---: | --- |
-| `/` | 1730 | FAQPage, Organization, WebPage, WebSite |
+| `/` | 1718 | FAQPage, Organization, WebPage, WebSite |
 | `/10x13-poly-mailers/` | 1453 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
 | `/12x15-poly-mailers/` | 1245 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
 | `/14-5x19-poly-mailers/` | 1237 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |

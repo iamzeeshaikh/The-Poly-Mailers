@@ -489,7 +489,15 @@ const maxMb = Math.round(MAX_UPLOAD_BYTES / (1024 * 1024));
       if (status) status.textContent = 'Sending your request.';
 
       try {
-        const response = await fetch(form.action, { method: 'POST', body: data });
+        // The Accept header is what tells the endpoint this is the enhanced
+        // path. Without it the server answers a browser form POST instead and
+        // replies with a 303 to the thank-you page, which fetch would follow
+        // silently and leave the person on the form.
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { Accept: 'application/json' },
+        });
         const payload = (await response.json().catch(() => ({}))) as {
           ok?: boolean;
           errors?: Errors;

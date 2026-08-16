@@ -158,14 +158,33 @@ const form = (overrides = {}, files = []) => {
  * A real browser sends one; this test has to supply it explicitly.
  */
 let client = 0;
+/**
+ * The enhanced (JavaScript) path. `Accept: application/json` is what tells the
+ * endpoint to answer with a payload rather than redirecting a browser, so it
+ * belongs in the request the same way the real form sends it.
+ */
 const post = (fd, ip) =>
   fetch(`${base}/api/quote/`, {
     method: 'POST',
     body: fd,
     headers: {
       origin: base,
+      accept: 'application/json',
       // A distinct address per case, so the suite does not trip its own
       // rate limiter. One case below deliberately reuses a single address.
+      'x-forwarded-for': ip ?? `203.0.113.${++client}`,
+    },
+  });
+
+/** A plain browser form POST — no JavaScript, so no Accept negotiation. */
+const postAsBrowser = (fd, ip) =>
+  fetch(`${base}/api/quote/`, {
+    method: 'POST',
+    body: fd,
+    redirect: 'manual',
+    headers: {
+      origin: base,
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
       'x-forwarded-for': ip ?? `203.0.113.${++client}`,
     },
   });
@@ -376,6 +395,41 @@ const post = (fd, ip) =>
   }
   if (limited) pass('rate limiting', 'repeated submissions from one connection are throttled with 429');
   else fail('rate limiting', 'no 429 after 12 rapid submissions');
+}
+
+/* Without JavaScript the browser posts the form itself and renders whatever
+   comes back, so a success has to be a redirect to the thank-you page rather
+   than a JSON payload nobody can read. */
+{
+  const before = received.length;
+  const res = await postAsBrowser(form());
+  const location = res.headers.get('location');
+  if (res.status === 303 && location === '/thank-you/' && received.length === before + 1) {
+    pass('no-js success', 'plain form POST answered with 303 to /thank-you/, and the mail was sent');
+  } else {
+    fail('no-js success', `status ${res.status}, location ${location}, ${received.length - before} sent`);
+  }
+}
+
+/* And a failure has to be readable HTML, not an error object. There is no
+   client-side validation on this path either, so a browser genuinely lands
+   here. */
+{
+  const before = received.length;
+  const res = await postAsBrowser(form({ email: 'not-an-email', consent: null }));
+  const body = await res.text();
+  const type = res.headers.get('content-type') ?? '';
+  if (
+    res.status === 422 &&
+    type.includes('text/html') &&
+    /Check the email address/.test(body) &&
+    /noindex/.test(body) &&
+    received.length === before
+  ) {
+    pass('no-js validation', 'plain form POST answered with a readable noindex HTML page; nothing sent');
+  } else {
+    fail('no-js validation', `status ${res.status}, type ${type}, ${body.slice(0, 160)}`);
+  }
 }
 
 /* ------------------------------------------------------------------ */

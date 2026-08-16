@@ -28,9 +28,10 @@ and referenced by every page that uses it, with its own alt text per page.
 | Format | Files | Total size |
 | --- | ---: | ---: |
 | JPEG | 471 | 13.54 MB |
-| AVIF | 410 | 9.19 MB |
-| WEBP | 409 | 7.07 MB |
-| **Total** | **1290** | **29.81 MB** |
+| AVIF | 413 | 9.24 MB |
+| WEBP | 412 | 7.17 MB |
+| PNG | 3 | 0.90 MB |
+| **Total** | **1299** | **30.85 MB** |
 
 Source photography totals 32.41 MB across
 78 references. Every rendition is generated at build
