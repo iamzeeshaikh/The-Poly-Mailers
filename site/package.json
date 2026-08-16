@@ -11,7 +11,8 @@
     "reports": "node scripts/generate-reports.mjs && node scripts/generate-link-report.mjs && node scripts/generate-inventories.mjs",
     "qa": "node scripts/qa-browser.mjs",
     "test:quote": "node scripts/test-quote-endpoint.mjs",
-    "verify": "npm run build && npm run check && npm run audit && npm run reports"
+    "verify": "npm run build && npm run check && npm run audit && npm run reports",
+    "test:smtp": "node scripts/test-smtp-live.mjs"
   },
   "author": "",
   "license": "ISC",
