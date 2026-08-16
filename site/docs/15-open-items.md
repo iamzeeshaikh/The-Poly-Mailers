@@ -9,7 +9,13 @@ from going live; all of it affects what the site is allowed to say.
 The brief instructed that certifications, material percentages, recycled
 content, compostability standards, biodegradation timelines, exact gauges, MOQs,
 delivery times, production times, prices, carrier compatibility, laboratory
-results and reviews must not be invented. None was supplied, so none appears.
+results and reviews must not be invented.
+
+Of those, exactly one has since been supplied: a unit price of $0.30, given by
+the client on 2026-08-16 with an instruction to publish merchant schema. It is
+therefore a stated figure rather than an invented one, and it appears on the
+page as well as in the markup. Everything else on this list was never supplied
+and does not appear.
 
 This is enforced structurally rather than editorially. The `SpecRow` type in
 `src/lib/claims.ts` has no field for a value — only a list of selectable options
@@ -25,7 +31,7 @@ typed into the content model.
 | Certification marks | None displayed | The certificate itself, plus permission to display the mark |
 | Minimum order quantity | "Quoted against what you need" | The real threshold per specification, if one exists |
 | Lead and production times | "Confirmed in writing per order" | Typical ranges by specification and quantity |
-| Prices | No price appears anywhere | A rate card, or confirmation that quoting stays bespoke |
+| Prices | $0.30 per unit, published as an indicative starting figure on every product page and in the Offer | A rate card, or confirmation that a single indicative figure is what you want carried across all 29 products |
 | Carrier compatibility | No approval or compatibility claimed | Written confirmation from the carrier, if any exists |
 | Customer reviews | None on the site or in the markup | A verified review programme |
 
@@ -137,9 +143,28 @@ markets, not localised versions of one page. Declaring them as alternates would
 misrepresent the relationship, and the brief explicitly warned against adding
 hreflang merely because country hubs exist.
 
-**No `MerchantReturnPolicy` or `OfferShippingDetails` schema.** Both are
-properties of an `Offer`, and there is no offer without a price. The equivalent
-information is published as readable content instead.
+**Merchant listings are live, on a client instruction that overrode the original
+brief.** The brief said not to invent prices; the client subsequently supplied
+$0.30 per unit and asked for merchant schema. So every product now carries a
+single flat `Offer` at that figure, with `MerchantReturnPolicy` and
+`OfferShippingDetails`, plus a feed at `/google-merchant-feed.xml`.
+
+Three things were held back, because they would fail rather than help:
+
+* **No `AggregateOffer` price range.** A range implies a ceiling that has not
+  been published, and a price that does not match the page is the usual reason
+  an item is disapproved.
+* **`MerchantReturnNotPermitted`, not a return window.** `/custom-order-policy/`
+  states that a printed run made to your artwork cannot be restocked, resold or
+  returned. A finite window would read better in a listing and would contradict
+  the page it links to.
+* **No `deliveryTime` and no `gtin`.** No lead times were ever supplied and a
+  made-to-order item has no barcode. Inventing either in JSON is the same
+  fabrication the site declines to make in prose, and Google checks markup
+  against the page.
+
+The visible price and the `Offer` price are generated from one constant, and the
+content audit fails the build if they ever disagree.
 
 **Location pages stop at 55.** The brief's list is covered in full. No further
 pages were generated, because a page with nothing specific to say about a place

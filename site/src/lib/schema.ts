@@ -4,15 +4,27 @@
  * Rules encoded here rather than left to authors:
  *  - Organization and WebSite are emitted once, on the homepage only, and
  *    referenced by @id everywhere else. No duplicate entities.
- *  - Product never carries a price, availability, SKU, MPN, GTIN, brand
- *    identifier, rating or review, because none of those exist for a
- *    custom-quote manufacturer and none was supplied.
+ *  - Product carries the published unit price as a single flat Offer, never an
+ *    AggregateOffer range. The same figure is rendered on the page, because
+ *    marked-up content that is not visible is a structured-data violation.
+ *  - Product still carries no rating and no review. There is no review
+ *    programme, and fabricated ratings are the fastest way to lose a merchant
+ *    listing.
  *  - FAQPage is only ever built from the same array that renders the visible
  *    FAQ block, so schema and page content cannot drift apart.
  *  - No LocalBusiness anywhere: there is no supplied address.
  */
 
-import { BRAND, ORG_ID, SITE_URL, WEBSITE_ID, abs, SOCIAL_PROFILES } from './site';
+import {
+  BRAND,
+  BUILD_DATE,
+  ORG_ID,
+  PRICING,
+  SITE_URL,
+  WEBSITE_ID,
+  abs,
+  SOCIAL_PROFILES,
+} from './site';
 import type { Faq } from '~/data/types';
 
 export type Json = Record<string, unknown>;
@@ -121,20 +133,98 @@ export function imageObject(opts: {
 }
 
 /**
- * Product schema for a made-to-order item.
- *
- * There is no `offers`, no `sku`, no `gtin`, no `mpn`, no `aggregateRating` and
- * no `review`. Every one of those would be fabricated. `brand` is the supplying
- * organization, which is true, rather than an invented manufacturer identifier.
+ * The markets an offer is valid in. Every one of these is a market the site
+ * states it supplies, so the list is not aspirational.
  */
+const OFFER_REGIONS = ['US', 'GB', 'CA', 'AU'] as const;
+
+/**
+ * Return policy attached to every offer.
+ *
+ * `MerchantReturnNotPermitted`, because /custom-order-policy/ states plainly
+ * that a printed run produced to your artwork cannot be restocked, resold or
+ * returned. A finite return window would read better in a listing and would
+ * contradict the page it links to, which is the kind of mismatch that loses a
+ * merchant listing rather than wins one.
+ *
+ * This is separate from us being wrong. Where an order does not match the
+ * approved proof or the written specification we put it right, and the policy
+ * page says so — that is a remedy, not a return.
+ */
+function returnPolicy(): Json {
+  return {
+    '@type': 'MerchantReturnPolicy',
+    '@id': `${SITE_URL}/#returnpolicy`,
+    applicableCountry: [...OFFER_REGIONS],
+    returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+    merchantReturnLink: abs('/custom-order-policy/'),
+  };
+}
+
+/**
+ * Delivery terms attached to every offer.
+ *
+ * Destinations only. A `deliveryTime` would need handling and transit figures,
+ * and the site publishes no lead times anywhere because none was supplied —
+ * putting them in the markup would be inventing in JSON what we decline to
+ * invent in prose, and Google checks markup against the page.
+ */
+function shippingDetails(): Json {
+  return {
+    '@type': 'OfferShippingDetails',
+    '@id': `${SITE_URL}/#shipping`,
+    shippingDestination: OFFER_REGIONS.map((code) => ({
+      '@type': 'DefinedRegion',
+      addressCountry: code,
+    })),
+  };
+}
+
+/**
+ * The offer carried by every product.
+ *
+ * A single flat `Offer` at the published unit price rather than an
+ * `AggregateOffer` price range: a range implies a top price we have not
+ * published, and ranges are the usual cause of merchant listings being rejected
+ * for a price that does not match the page.
+ *
+ * `priceValidUntil` is required by Google for a merchant listing. It is derived
+ * from the build date so it never goes stale silently.
+ */
+function offer(url: string): Json {
+  const validUntil = new Date(BUILD_DATE);
+  validUntil.setUTCFullYear(validUntil.getUTCFullYear() + 1);
+
+  return {
+    '@type': 'Offer',
+    '@id': `${url}#offer`,
+    url,
+    price: PRICING.unit.toFixed(2),
+    priceCurrency: PRICING.currency,
+    priceValidUntil: validUntil.toISOString().slice(0, 10),
+    availability: 'https://schema.org/InStock',
+    itemCondition: 'https://schema.org/NewCondition',
+    seller: { '@id': ORG_ID },
+    eligibleRegion: OFFER_REGIONS.map((code) => ({
+      '@type': 'Country',
+      name: code,
+    })),
+    hasMerchantReturnPolicy: returnPolicy(),
+    shippingDetails: shippingDetails(),
+  };
+}
+
 export function product(opts: {
   path: string;
   name: string;
   description: string;
   image: string;
   category: string;
+  /** Stable identifier for merchant feeds. Derived from the slug, not invented. */
+  sku?: string;
 }): Json {
   const url = abs(opts.path);
+  const sku = opts.sku ?? (opts.path.replace(/\//g, '') || 'poly-mailer');
   return {
     '@type': 'Product',
     '@id': `${url}#product`,
@@ -142,15 +232,22 @@ export function product(opts: {
     description: opts.description,
     image: opts.image.startsWith('http') ? opts.image : abs(opts.image),
     category: opts.category,
+    sku,
+    mpn: sku,
     brand: { '@type': 'Brand', name: BRAND.name },
     manufacturer: { '@id': ORG_ID },
     url,
-    isVariantOf: undefined,
+    offers: offer(url),
     additionalProperty: [
       {
         '@type': 'PropertyValue',
         name: 'Supply model',
         value: 'Made to order against a written quotation',
+      },
+      {
+        '@type': 'PropertyValue',
+        name: 'Pricing basis',
+        value: `${PRICING.display} ${PRICING.qualifierShort}`,
       },
     ],
   };

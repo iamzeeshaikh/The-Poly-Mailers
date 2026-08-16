@@ -9,6 +9,13 @@
 
 export const SITE_URL = 'https://thepolymailers.com';
 
+/**
+ * Stamped once at build time. `priceValidUntil` in Product schema is derived
+ * from it, so the offer expiry moves forward with each deploy rather than
+ * going stale on a date somebody typed in a year ago.
+ */
+export const BUILD_DATE = new Date().toISOString().slice(0, 10);
+
 export const BRAND = {
   name: 'The Poly Mailers',
   legalName: 'The Poly Mailers',
@@ -30,6 +37,30 @@ export const BRAND = {
   whatsappDisplay: '+1 503-358-0443',
   whatsappNumber: '15033580443',
   tagline: 'Custom poly mailers made to order for growing brands',
+} as const;
+
+/**
+ * Published unit price.
+ *
+ * Supplied by the client and therefore a stated fact rather than an invented
+ * one. It is the indicative starting price per mailer, and it is published in
+ * two places that must agree: the visible price on the page, and the `Offer` in
+ * Product schema.
+ *
+ * They have to agree because Google treats marked-up content that is not
+ * visible on the page as a structured-data violation, and a merchant listing is
+ * exactly the kind of markup that gets checked. Anything that renders a price
+ * or emits one into schema reads it from here, so the two cannot drift.
+ */
+export const PRICING = {
+  unit: 0.3,
+  currency: 'USD',
+  /** Rendered form. Kept beside the number so they cannot disagree. */
+  display: '$0.30',
+  /** Always shown with the price. The figure is a starting point, not a quote. */
+  qualifier: 'per unit, indicative — your quotation is priced against your own specification',
+  /** Short form, for places where the long qualifier will not fit. */
+  qualifierShort: 'per unit, indicative',
 } as const;
 
 /**

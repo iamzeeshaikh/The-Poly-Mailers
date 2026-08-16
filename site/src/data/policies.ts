@@ -185,9 +185,9 @@ export const policyPages: readonly ContentPage[] = [
               'Everything on this site describes what we can supply and how choices are made. The specification for your order is the one written on your quotation, and it takes precedence over any page here.',
           },
           {
-            term: 'No prices are published',
+            term: 'Prices shown are indicative',
             detail:
-              'Because every order is made to a specification, this website carries no price list, and nothing on it is an offer to sell at a particular price.',
+              'The unit price published on product pages is an indicative starting figure. It is not an offer to sell at that price, and it is not a quotation. Because every order is made to a specification, the price that applies to you is the one written on your quotation, which supersedes any figure on this site.',
           },
           {
             term: 'Images are illustrative',

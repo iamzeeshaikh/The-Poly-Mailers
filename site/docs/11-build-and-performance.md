@@ -5,14 +5,14 @@
 | | |
 | --- | ---: |
 | HTML pages | 150 |
-| Total HTML | 10438 KB |
-| Average page HTML | 69.6 KB |
-| Largest page HTML | 115.0 KB |
+| Total HTML | 10488 KB |
+| Average page HTML | 69.9 KB |
+| Largest page HTML | 115.1 KB |
 | JavaScript bundles | 3 |
 | Total JavaScript | 15.0 KB uncompressed |
 | CSS files | 4 |
-| Total CSS | 45.3 KB uncompressed |
-| Image renditions | 1299 |
+| Total CSS | 45.8 KB uncompressed |
+| Image renditions | 1325 |
 | Fonts | 2 files, 115 KB total |
 
 ## JavaScript actually shipped

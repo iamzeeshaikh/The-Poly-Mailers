@@ -51,10 +51,17 @@ const BANNED_CLAIMS = [
   { re: /\b(ships?|delivered|dispatch(ed)?|turnaround|lead time)\s+in\s+\d+\s*(–|-|to)?\s*\d*\s*(working\s+|business\s+)?(day|week)/i, why: 'states a delivery or production time' },
   { re: /\b(usps|ups|fedex|dhl|royal mail|canada post|australia post)[- ]approved\b/i, why: 'claims carrier approval' },
   { re: /\bapproved\s+(by|for)\s+(usps|ups|fedex|dhl)\b/i, why: 'claims carrier approval' },
-  { re: /(^|[^\w])\$\s?\d/, why: 'states a price' },
+  // The published unit price is a supplied fact and appears deliberately, on
+  // the page and in the Offer. Any OTHER price is still an invention, so the
+  // pattern excludes exactly the one figure that is allowed rather than
+  // dropping the check.
+  { re: /(^|[^\w])\$\s?(?!0\.30\b)\d/, why: 'states a price other than the published unit price' },
   { re: /\b\d+(\.\d+)?\s*(out of 5|\/5)\b/i, why: 'states a rating' },
   { re: /\b\d+\s+(reviews|ratings)\b/i, why: 'references a review count' },
 ];
+
+/** Build date, for checking that an offer has not silently expired. */
+const TODAY = new Date().toISOString().slice(0, 10);
 
 /** Pages that are allowed to be noindex and absent from the sitemap. */
 const NON_INDEXABLE = new Set(['/thank-you/', '/404/']);
@@ -564,9 +571,50 @@ for (const p of pages) {
       }
 
       if (node['@type'] === 'Product') {
-        for (const forbidden of ['offers', 'sku', 'gtin', 'gtin13', 'mpn', 'aggregateRating', 'review']) {
+        // gtin and rating stay forbidden. There is no barcode for a
+        // made-to-order item and no review programme, and inventing either is
+        // the fastest route to a disapproved merchant listing.
+        for (const forbidden of ['gtin', 'gtin12', 'gtin13', 'gtin14', 'aggregateRating', 'review']) {
           if (node[forbidden]) {
             add('error', 'schema', p.url, `Product carries "${forbidden}", which cannot be substantiated.`);
+          }
+        }
+
+        // A merchant listing needs all of these. Missing one does not fail
+        // loudly in Google — the item is quietly ineligible — so it is checked
+        // here instead.
+        for (const required of ['sku', 'brand', 'image', 'offers']) {
+          if (!node[required]) {
+            add('error', 'schema', p.url, `Product is missing "${required}", so it cannot form a merchant listing.`);
+          }
+        }
+
+        const offer = node.offers;
+        if (offer) {
+          if (Array.isArray(offer)) {
+            add('error', 'schema', p.url, 'Product carries multiple offers; one flat Offer is the agreed shape.');
+          } else if (offer['@type'] === 'AggregateOffer') {
+            add('error', 'schema', p.url, 'Product carries an AggregateOffer range rather than a single price.');
+          } else {
+            for (const required of ['price', 'priceCurrency', 'availability', 'priceValidUntil']) {
+              if (!offer[required]) {
+                add('error', 'schema', p.url, `Offer is missing "${required}".`);
+              }
+            }
+            // The offer price must be the figure a reader can see. Marked-up
+            // content that is not visible on the page is a structured-data
+            // violation, and this is the check that catches the two drifting.
+            if (offer.price && !p.text.includes(`$${offer.price}`)) {
+              add(
+                'error',
+                'schema',
+                p.url,
+                `Offer price ${offer.price} does not appear in the visible text of the page.`,
+              );
+            }
+            if (offer.priceValidUntil && offer.priceValidUntil < TODAY) {
+              add('error', 'schema', p.url, `Offer priceValidUntil ${offer.priceValidUntil} is in the past.`);
+            }
           }
         }
       }
