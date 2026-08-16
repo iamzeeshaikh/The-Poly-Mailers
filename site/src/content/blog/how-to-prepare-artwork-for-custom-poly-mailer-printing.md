@@ -46,7 +46,7 @@ Getting the order right removes almost every reason for a second proof round, an
 
 ## Four decisions that come before design
 
-Each of these constrains the artwork. Making them afterwards means redrawing rather than adjusting.
+Each of these constrains the artwork. Making them afterwards means redrawing rather than adjusting, so settle them alongside the rest of the [decisions that belong before a quotation](/resources/custom-mailer-ordering-checklist/).
 
 **Size, settled on a physical sample.** Artwork is laid out for a specific panel. If the size changes, the layout changes, and a design approved for a 10x13 does not simply scale onto a 12x15 — the proportions of the printable area are different once the flap and welds are accounted for.
 
@@ -58,7 +58,7 @@ Each of these constrains the artwork. Making them afterwards means redrawing rat
 
 ## Designing for a bag rather than a page
 
-By the time anyone sees your artwork, the mailer has been packed, folded at the flap, sealed, labelled, stacked and carried. Designs that ignore that arrive looking wrong even when they printed perfectly.
+By the time anyone sees your artwork, the mailer has been packed, folded at the flap, sealed, labelled, stacked and carried. Designs that ignore that arrive looking wrong even when they printed perfectly. [Placing a mark on a mailer outline](/design-your-poly-mailer/) is a quick way to see where the folds fall before drawing anything.
 
 Four rules cover most of it.
 
@@ -69,7 +69,7 @@ Four rules cover most of it.
 
 ## Building the file
 
-With the constraints settled, the file itself is straightforward. Six things to get right while designing rather than fix afterwards.
+With the constraints settled, the file itself is straightforward. Six things to get right while designing rather than fix afterwards — the [printing and artwork reference](/resources/printing-and-artwork-guide/) has the same list as a table to work against.
 
 1. **Work at final size.** Design at the dimensions the bag will actually be, so type sizes and line weights are judged at real scale rather than scaled up at the end.
 2. **Mark the dead zones on your template.** Draw the flap area and the weld margins and keep anything important out of both. Doing this visually beats remembering it.
@@ -98,7 +98,7 @@ Then check placement against a packed bag rather than a flat one. Ask where the 
 
 Ask for as many rounds as you need. A proof round costs a fraction of a reprint, and a supplier discouraging additional rounds is optimising their own process rather than your outcome.
 
-What a proof will not reliably tell you is colour. A screen is backlit, film is not, and a colour that looks correct on a calibrated monitor can arrive materially different. Where a colour matters commercially — a brand colour customers recognise — ask for a physical check rather than approving digitally.
+What a proof will not reliably tell you is colour. A screen is backlit, film is not, and a colour that looks correct on a calibrated monitor can arrive materially different. Where a colour matters commercially — a brand colour customers recognise — [ask for a physical check](/samples/) rather than approving digitally.
 
 ## Rights, which are easy to forget
 
@@ -106,7 +106,7 @@ Before sending artwork, confirm you actually hold the commercial reproduction ri
 
 Stock illustration bought on a personal licence, an image found online, and a design a freelancer was paid to produce are three different legal positions, and only one of them is safe to print at volume. Fonts carry licences too, and some restrict use in a logo or in packaging specifically.
 
-This is not a hypothetical concern. Packaging is highly visible, produced in quantity, and easy to trace back — it is a poor place to find out about a licensing problem.
+This is not a hypothetical concern. Packaging is highly visible, produced in quantity, and easy to trace back — it is a poor place to find out about a licensing problem. What you confirm when you send us a file is set out in the [custom order policy](/custom-order-policy/).
 
 ## A short pre-flight list
 

@@ -53,7 +53,7 @@ Three reasons, and none of them is dishonesty.
 
 **What thickness does not capture.** How the film was produced, what it is blended from, and how the seals were formed all affect whether a bag survives a drop. Two films of identical stated thickness can behave noticeably differently in use.
 
-None of that makes the figure useless. It makes it insufficient on its own, which is why the questions below are worth more than the number.
+None of that makes the figure useless. It makes it insufficient on its own, which is why the questions below are worth more than the number. What we will and will not state about a film is set out on the [materials page](/materials/).
 
 ## Better questions than "how thick is it"
 
@@ -65,9 +65,11 @@ Five questions that reveal a genuine difference between two suppliers.
 - **Was it measured on film or on the finished bag?** Ask both suppliers the same question and you will often find you were never comparing like with like.
 - **What happens if this film becomes unavailable?** A supplier who has an answer has thought about consistency. One who has not will substitute quietly.
 
+Our answers to all four sit on the [material reference](/resources/poly-mailer-material-guide/), including where the honest answer is that a figure is not published.
+
 ## What actually determines whether a mailer survives
 
-Film weight matters for exactly one failure mode: puncture and tear from concentrated force. That is a real failure and a common one, and it is worth specifying against.
+Film weight matters for exactly one failure mode: puncture and tear from concentrated force. That is a real failure and a common one, and it is worth specifying against. The other three, and which format answers each, are laid out in the [comparison of protective formats](/resources/protective-mailer-comparison/).
 
 It is not the only one, and for most operations it is not the largest.
 
@@ -91,7 +93,7 @@ You do not need laboratory equipment to compare two candidate specifications. Yo
 4. **Test the seal deliberately.** Peel, fold, press the full length, then pull the flap firmly. A partial bond is obvious immediately, and it tells you as much about the adhesive as about the film.
 5. **Wet the outside and leave it twenty minutes.** Water on the panel and pooled around the closure. Check whether anything reached the contents, which tells you where your actual moisture risk is.
 
-Do all five on both films and the answer is usually unambiguous. It is also considerably more informative than any published specification, because it is your contents, your fold and your failure modes.
+Do all five on both films and the answer is usually unambiguous. It is also considerably more informative than any published specification, because it is your contents, your fold and your failure modes. [Ask for both specifications as samples](/samples/) rather than ordering a run of either.
 
 ## When a heavier film is genuinely the answer
 
@@ -99,7 +101,7 @@ There are categories where the standard weight is not adequate and the upgrade i
 
 Anything boxed, because a carton corner concentrates the whole force of a drop onto one point. Anything with hardware — buckles, studs, rivets, zips — which behaves like a corner from the inside. Anything heavy for its size, such as leather goods or dense components. And large formats generally, because the contents that need a big bag are heavier and a large bag flexes more.
 
-There are also categories where it is money wasted. Soft goods with no hard edges put almost no stress on film, and a folded garment is its own cushioning. Buying a heavy specification for apparel is buying protection against a failure that does not occur.
+There are also categories where it is money wasted. Soft goods with no hard edges put almost no stress on film, and a folded garment is its own cushioning. Buying a heavy specification for [apparel shipping bags](/apparel-shipping-bags/) is buying protection against a failure that does not occur.
 
 ## The arithmetic for a lighter specification
 
@@ -117,4 +119,4 @@ Where the failure rate does not move, the saving is genuinely free and worth tak
 
 Rather than asking for a thickness, ask for a specification that names four things: the film weight in whatever unit the supplier uses, whether that figure is a target or a minimum, what it was measured on, and what contents it is recommended for.
 
-A quotation stating all four is comparable with another quotation stating all four. A quotation stating a number alone is not comparable with anything, and neither is a decision made from it.
+A quotation stating all four is comparable with another quotation stating all four. A quotation stating a number alone is not comparable with anything, and neither is a decision made from it. The [ordering checklist](/resources/custom-mailer-ordering-checklist/) is written to be used against any supplier's quotation, including one that is not ours.

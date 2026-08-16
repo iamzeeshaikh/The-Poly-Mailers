@@ -60,7 +60,7 @@ There are three feedstocks, and a supplier saying "recycled" means one of them:
 
 A claim that names the feedstock and the proportion, and can be traced to a document, means something. A claim that says only "recycled" means almost nothing, and the difference between the first two is where most of the meaning sits.
 
-This is the easiest of the three to substantiate, because the evidence exists at the point of manufacture and does not depend on anything a customer does afterwards.
+This is the easiest of the three to substantiate, because the evidence exists at the point of manufacture and does not depend on anything a customer does afterwards. What we confirm per order is set out on the [recycled mailer page](/recycled-poly-mailers/).
 
 ## Compostable is about a specific process
 
@@ -70,7 +70,7 @@ That process has to exist and your customer has to be able to reach it. This is 
 
 There is a second distinction inside the term. Industrial composting happens at a facility built to hold those conditions; home composting happens in a domestic heap at much lower temperatures. A material can be assessed for one and not the other, and they are not interchangeable. A supplier who says "compostable" without saying which has not answered the question.
 
-Before choosing this route, the questions are: what can my customers actually access, what will I tell them to do with it, and what documentation exists for the specific material.
+Before choosing this route, the questions are: what can my customers actually access, what will I tell them to do with it, and what documentation exists for the specific material. The [compostable mailer page](/compostable-poly-mailers/) states which of those we can answer and which we cannot.
 
 ## Biodegradable is the least defined
 
@@ -83,7 +83,7 @@ A defensible degradation claim answers four questions:
 3. **Over what period?** A timeframe, tied to the conditions named above. A timeframe without conditions is meaningless.
 4. **Assessed by whom, against what method?** A supplier saying so is not an assessment.
 
-If a supplier cannot answer all four for the specific film they are selling you, the claim is not one you should print. This is also why unqualified degradation language is among the most frequently challenged statements in packaging across the markets we serve.
+If a supplier cannot answer all four for the specific film they are selling you, the claim is not one you should print — which is why the [biodegradable mailer page](/biodegradable-poly-mailers/) makes no timescale claim at all. This is also why unqualified degradation language is among the most frequently challenged statements in packaging across the markets we serve.
 
 ## Comparing them on what matters
 
@@ -96,7 +96,7 @@ Set side by side, the three separate cleanly on four questions.
 | Evidence required | Feedstock type and proportion | Assessment against a defined process | Conditions, completeness, timeframe, method |
 | Difficulty of substantiating | Straightforward | Possible, but the route must exist too | Hard without full qualification |
 
-The pattern is consistent. The route that is easiest to evidence is also the one that does not depend on anything outside your control, and the route with the strongest story is the one most likely to deliver nothing if the infrastructure is absent.
+The pattern is consistent. The route that is easiest to evidence is also the one that does not depend on anything outside your control, and the route with the strongest story is the one most likely to deliver nothing if the infrastructure is absent. The [terminology used across all three](/resources/sustainable-mailer-terminology-guide/) is defined term by term.
 
 ## Why we publish no numbers
 
@@ -104,7 +104,7 @@ There is no recycled percentage, certification mark or decomposition timescale a
 
 Content varies by film, by production batch and by market. A single figure published here would be a figure we could not honour for every order, in a category where regulators in every market we serve treat unsupported environmental claims seriously.
 
-What we do instead is go to the supplier of the specific film for your order, ask what is documented, and show you the answer before you commit — including when the answer is that nothing is. That is a less appealing page than one covered in green symbols, and it is the only version that leaves you able to defend what you print.
+What we do instead is go to the supplier of the specific film for your order, ask what is documented, and show you the answer before you commit — including when the answer is that nothing is. That reasoning is set out in full on the [sustainability page](/sustainability/). It is a less appealing page than one covered in green symbols, and it is the only version that leaves you able to defend what you print.
 
 ## Recyclability is a fourth question
 
@@ -114,7 +114,7 @@ Recyclability is about whether your customer can get the material collected and 
 
 So a mailer can have high recycled content and still be difficult for a household to recycle. Both statements can be true at once, and printing one while implying the other is where a lot of packaging copy goes wrong.
 
-If recyclability is what your customers actually care about, the honest thing to print is where the film can be taken. An accurate instruction gets followed; a general symbol implying a collection that does not exist locally causes more harm than saying nothing.
+If recyclability is what your customers actually care about, the honest thing to print is where the film can be taken. An accurate instruction gets followed; a general symbol implying a collection that does not exist locally causes more harm than saying nothing. Which route suits a given range is set out across the [sustainable mailer options](/sustainable-poly-mailers/).
 
 ## The claim you can always make
 

@@ -8,9 +8,9 @@ page is genuinely connected.
 
 | | |
 | --- | ---: |
-| Contextual internal links | 1466 |
-| Average inbound per page | 9.1 |
-| Average outbound per page | 9.0 |
+| Contextual internal links | 1525 |
+| Average inbound per page | 9.3 |
+| Average outbound per page | 9.2 |
 | **Orphan pages** | **0** |
 | Pages with a single inbound link | 0 |
 | Broken internal links | 0 |
@@ -44,14 +44,14 @@ The ten pages with the fewest contextual inbound links. None is at zero.
 | --- | ---: |
 | `/request-a-quote/` | 132 |
 | `/privacy-policy/` | 117 |
-| `/blank-poly-mailers/` | 45 |
+| `/blank-poly-mailers/` | 46 |
 | `/10x13-poly-mailers/` | 45 |
 | `/usa/` | 31 |
 | `/self-seal-poly-mailers/` | 30 |
 | `/padded-poly-mailers/` | 30 |
 | `/custom-poly-mailers/` | 27 |
 | `/economy-poly-mailers/` | 24 |
-| `/poly-bubble-mailers/` | 20 |
+| `/poly-bubble-mailers/` | 21 |
 
 ## Pages linking out least
 

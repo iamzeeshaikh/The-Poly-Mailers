@@ -5,7 +5,7 @@ Generated from the built output at `dist/client`, not from the source data.
 **148 indexable pages**, plus `/thank-you/` and `/404` which are
 noindex and excluded from the XML sitemap.
 
-Total body copy across indexable pages: **161,405 words**
+Total body copy across indexable pages: **162,328 words**
 (median 1027 words per page, shortest 455,
 longest 2303).
 
@@ -46,16 +46,16 @@ longest 2303).
 | `/black-poly-mailers/` | 1305 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
 | `/blank-poly-mailers/` | 1306 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
 | `/blog/` | 455 | BreadcrumbList, CollectionPage, ItemList |
-| `/blog/choosing-colors-for-branded-shipping-mailers/` | 1547 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
-| `/blog/how-custom-printed-poly-mailers-support-brand-recognition/` | 1560 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
-| `/blog/how-to-choose-the-right-poly-mailer-size/` | 1813 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
-| `/blog/how-to-prepare-artwork-for-custom-poly-mailer-printing/` | 1593 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
-| `/blog/packaging-ideas-for-small-ecommerce-businesses/` | 1379 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
-| `/blog/poly-mailer-thickness-and-durability-explained/` | 1545 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
-| `/blog/poly-mailers-for-clothing-and-apparel-shipping/` | 1578 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
-| `/blog/poly-mailers-vs-padded-mailers/` | 1550 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
-| `/blog/recycled-vs-compostable-vs-biodegradable-mailers/` | 1588 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
-| `/blog/when-to-use-bubble-lined-poly-mailers/` | 1377 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
+| `/blog/choosing-colors-for-branded-shipping-mailers/` | 1679 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
+| `/blog/how-custom-printed-poly-mailers-support-brand-recognition/` | 1630 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
+| `/blog/how-to-choose-the-right-poly-mailer-size/` | 1932 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
+| `/blog/how-to-prepare-artwork-for-custom-poly-mailer-printing/` | 1662 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
+| `/blog/packaging-ideas-for-small-ecommerce-businesses/` | 1462 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
+| `/blog/poly-mailer-thickness-and-durability-explained/` | 1637 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
+| `/blog/poly-mailers-for-clothing-and-apparel-shipping/` | 1651 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
+| `/blog/poly-mailers-vs-padded-mailers/` | 1645 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
+| `/blog/recycled-vs-compostable-vs-biodegradable-mailers/` | 1669 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
+| `/blog/when-to-use-bubble-lined-poly-mailers/` | 1486 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
 | `/canada/` | 897 | BreadcrumbList, CollectionPage, FAQPage, ItemList |
 | `/christmas-poly-mailers/` | 1461 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
 | `/colored-poly-mailers/` | 1353 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |

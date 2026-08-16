@@ -53,7 +53,7 @@ Colour, cleanliness and care. That is most of it.
 
 A coloured bag sealed neatly with a straight label reads better than an elaborate printed one sealed carelessly with a label applied at an angle. A parcel that has obviously been packed by someone paying attention communicates something no design does.
 
-That is good news at small scale, because two of those three things are free and the third is cheap.
+That is good news at small scale, because two of those three things are free and the third is cheap — a [coloured bag from stock](/colored-poly-mailers/) needs no artwork and no print run.
 
 ## Where to put a small budget
 
@@ -65,7 +65,7 @@ Ranked by presentation gained per pound or dollar spent, at genuinely low volume
 - **A matte finish rather than gloss.** A small premium, and it both photographs better and hides handling marks.
 - **A full printed run.** High per unit at small quantities, and the last thing to buy rather than the first.
 
-The first three together cost a fraction of the last one and account for most of what a customer registers.
+The first three together cost a fraction of the last one and account for most of what a customer registers. If you want to see a mark on a bag before spending anything, [place one on a mailer outline](/design-your-poly-mailer/) first.
 
 ## The sequence for a first order
 
@@ -78,6 +78,8 @@ Six steps, arranged so nothing early commits you to anything later.
 5. **Ship a hundred parcels, then look at what happened.** Which size ran out, what arrived damaged, what customers mentioned. That is real data, and it beats any prediction.
 6. **Print when three things are true at once.** Volume has stopped swinging, artwork has stopped changing, and customers are photographing the parcel. Not before.
 
+Steps one and two are what [unprinted stock](/blank-poly-mailers/) is for, and nothing about it has to be decided in advance.
+
 ## Decisions worth deferring
 
 Four commitments that are cheap to postpone and expensive to reverse.
@@ -88,7 +90,7 @@ Four commitments that are cheap to postpone and expensive to reverse.
 
 **A fourth size.** Most ranges that think they need four need three plus a plain oversized bag for genuine outliers.
 
-**A custom colour match.** A stock colour close to your brand looks identical to a customer who has never seen your swatch, at a fraction of the cost and with no proof round.
+**A custom colour match.** A stock colour close to your brand looks identical to a customer who has never seen your swatch, at a fraction of the cost and with no proof round — pick the nearest from the [stock tones we hold](/poly-mailer-colors/) instead.
 
 ## Small things that punch above their cost
 
@@ -100,7 +102,7 @@ A consistently placed label. Same position, straight, every time. It costs nothi
 
 Tissue in a colour that matches the bag. A few cents, and it turns opening the parcel into a second moment rather than one.
 
-A returns strip, if you sell anything sized. It saves the customer finding their own packaging and saves you a support conversation, and it costs pennies per unit.
+A returns strip, if you sell anything sized. It saves the customer finding their own packaging and saves you a support conversation, and it costs pennies per unit — the [closure options](/resources/closure-and-self-seal-guide/) cover how the second strip works.
 
 A short hand-written line on small orders. Not scalable, and while you are small it is the most memorable thing in the parcel.
 
@@ -110,7 +112,7 @@ Most businesses at this scale store packaging somewhere that was never designed 
 
 Two things matter. Keep cartons flat and sealed so the adhesive stays clean. And keep them away from heat and direct light, because those age the closure long before they affect the film.
 
-A spare room is fine. A garage through a hot summer, a car boot, or a shelf in front of a sunny window are all poor, and they are exactly where packaging tends to end up. It is another argument for ordering a season at a time rather than a year.
+A spare room is fine. A garage through a hot summer, a car boot, or a shelf in front of a sunny window are all poor, and they are exactly where packaging tends to end up. It is another argument for ordering a season at a time rather than a year, which is how most [small business orders](/industries/small-businesses/) are quoted.
 
 ## Knowing when you have outgrown this
 

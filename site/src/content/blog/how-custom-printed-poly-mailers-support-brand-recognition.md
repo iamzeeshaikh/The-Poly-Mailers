@@ -54,7 +54,7 @@ Three things, and only one of them is obvious.
 
 **It signals care before the product is seen.** Whatever is inside, a considered parcel says the business thought about the whole transaction. That is a claim about competence, made without words, at the moment a customer is most attentive.
 
-None of those is unique to printing. A strong colour achieves the first, and something considered inside the bag achieves the third. Printing does all three at once and does the second most reliably.
+None of those is unique to printing. A strong colour achieves the first, and something considered inside the bag achieves the third. Printing does all three at once and does the second most reliably, which is the case the [printed mailer page](/custom-printed-poly-mailers/) is built around.
 
 ## When it is too early
 
@@ -68,7 +68,7 @@ The three conditions that mean it is no longer too early tend to arrive together
 - **Artwork has stopped changing.** The mark has been stable for a year and nobody is arguing about it.
 - **Customers are photographing the parcel.** Which means the outside of the bag has already become part of the product, and you are simply catching up.
 
-Until all three hold, coloured stock with a printed seal sticker delivers most of the recognition benefit for a fraction of the commitment, and the sticker can change whenever you do.
+Until all three hold, [coloured stock](/colored-poly-mailers/) with a printed seal sticker delivers most of the recognition benefit for a fraction of the commitment, and the sticker can change whenever you do.
 
 ## What actually makes printed packaging work
 
@@ -80,7 +80,7 @@ What survives is fewer elements, larger. One idea, sized generously, with space 
 
 What does not survive is fine line work, small type, tonal gradients and anything positioned where the flap folds over or the shipping label lands.
 
-That last point is the one most often missed. A four-by-six label covers a substantial share of a mid-size mailer's front panel, and it goes wherever the packer finds space unless you make the right place obvious. Either design a deliberate clear zone for it, or put the artwork on the reverse and keep the front plain.
+That last point is the one most often missed. A four-by-six label covers a substantial share of a mid-size mailer's front panel, and it goes wherever the packer finds space unless you make the right place obvious. Either design a deliberate clear zone for it, or put the artwork on the reverse and keep the front plain — the [artwork guidelines](/artwork-guidelines/) give the measurements to work to.
 
 ## Getting more from a smaller print budget
 
@@ -92,7 +92,7 @@ Printing is not one decision, and the choices within it move the price by very d
 4. **Keep to one or two ink colours with real contrast.** Two strong colours outperform a subtle multi-colour palette on this substrate, and each additional colour is a setup.
 5. **Order to a run you will actually use.** The per-unit price falls with volume, and packaging that outlives its artwork is not a saving at any price.
 
-Following those five, a first printed run costs a fraction of what brands often assume, and the visible result is frequently better than the elaborate version.
+Following those five, a first printed run costs a fraction of what brands often assume, and the visible result is frequently better than the elaborate version. What each of the five does to a price is covered on the [printing options page](/printing-options/).
 
 ## The layer most brands underinvest in
 
@@ -100,7 +100,7 @@ The outside of the parcel gets the parcel to the door. The inside is what a cust
 
 A printed card, tissue in a matched tone, a seal sticker that has to be broken, a hand-written line on a small order — all of them cost a fraction of a printed run, all of them reorder in small quantities, and all of them can change seasonally without touching your packaging supply.
 
-For a business that is not yet ready to print the bag, that layer delivers most of what printing would. For a business that has printed the bag, it is what makes the parcel feel finished rather than merely branded.
+For a business that is not yet ready to print the bag, that layer delivers most of what printing would — the [ideas that work at low volume](/blog/packaging-ideas-for-small-ecommerce-businesses/) go through it in detail. For a business that has printed the bag, it is what makes the parcel feel finished rather than merely branded.
 
 ## What we will not claim
 
@@ -108,7 +108,7 @@ You will find figures elsewhere about how much branded packaging increases repea
 
 What can be said without a study is this. Recognisable packaging is recognised. Photographed packaging reaches people who did not buy anything. A parcel that looks considered says something about the business that sent it. Whether those effects justify the cost in your specific case depends on your margin, your repeat rate and how much of your growth comes through customers showing other people what they bought.
 
-That is a judgement rather than a calculation, and it is yours to make.
+That is a judgement rather than a calculation, and it is yours to make. If you want it costed rather than argued, [tell us what you ship and we will price it](/request-a-quote/).
 
 ## Where to start
 

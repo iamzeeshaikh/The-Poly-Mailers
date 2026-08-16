@@ -53,7 +53,7 @@ That gap is where sizing goes wrong. A garment folded carefully into a 10x13 fit
 
 Two things follow. Test with your own packers, at working pace, on a normal day. And write the fold down — a consistent fold across a team makes parcel size predictable, which makes shipping cost predictable and makes packed parcels stack instead of sprawl.
 
-It is one of the cheapest process improvements available in a fulfilment operation, and almost nobody does it.
+It is one of the cheapest process improvements available in a fulfilment operation, and almost nobody does it. The [method for sizing against a packed order](/size-guide/) is written to be run this way, with your own packers rather than at a desk.
 
 ## Sizing across a range that varies
 
@@ -68,13 +68,13 @@ Garment bulk varies more within a single range than most buyers expect. These ar
 
 Most apparel operations settle on two or three of these rather than one. The exception is a range with genuinely uniform bulk, where standardising is worth the small waste on the lightest orders.
 
-The size to make sure you have is the largest one. It handles a small share of orders and it is the one that generates damage claims when it is missing, because the alternative is forcing a coat into a bag built for a tee.
+The size to make sure you have is the largest one. It handles a small share of orders and it is the one that generates damage claims when it is missing, because the alternative is forcing a coat into a bag built for a tee — which is what the [larger formats](/large-poly-mailers/) exist for.
 
 ## Opacity is a specification, not an assumption
 
 A dark garment inside a pale mailer will read as a grey shadow through the front panel unless the film is specified to prevent it. Customers notice, and what they notice is that the packaging looks cheap.
 
-This is entirely a specification question. Higher-opacity film and heavier film weights both address it, and either can be quoted against your actual range. Alternatively a darker base colour removes the question completely, which is one reason so many apparel brands run black.
+This is entirely a specification question. Higher-opacity film and heavier film weights both address it, and either can be quoted against your actual range, as the [materials page](/materials/) explains. Alternatively a darker base colour removes the question completely, which is one reason so many apparel brands run black.
 
 Deciding this before ordering costs nothing. Discovering it after a run has arrived costs a run.
 
@@ -84,7 +84,7 @@ Every packaging decision in apparel should be tested twice: once on the way out 
 
 A single-strip mailer works perfectly outbound and forces the customer to find their own packaging for a return. What comes back arrives in cereal boxes, in bags that split, and in parcels with three labels on them — which is a processing cost, a damage risk and a customer experience problem all at once.
 
-A second adhesive strip changes that. The customer opens along a tear line, repacks the item, peels the second strip and seals it. The parcel arrives in packaging you chose, at a size you expected, and there is nothing for you to include in the outbound order to make it possible.
+A second adhesive strip changes that. The customer opens along a tear line, repacks the item, peels the second strip and seals it. The parcel arrives in packaging you chose, at a size you expected, and there is nothing for you to include in the outbound order to make it possible. How the closures differ is set out in the [guide to self-seal and returns strips](/resources/closure-and-self-seal-guide/).
 
 The arithmetic is straightforward. Multiply the extra cost per mailer by your total outbound volume, and compare it against your return rate multiplied by the cost of supplying a separate returns bag plus the support contacts you field about how to send something back. For most fashion brands the second number is larger, and often by a lot.
 
@@ -108,6 +108,8 @@ If you are starting from nothing, this sequence gets you to a working setup with
 4. **Decide the returns route before ordering.** Double strip, separate returns bag, or customer-supplied. Each has a different cost, and the choice belongs here rather than later.
 5. **Settle sizes before artwork.** Artwork is laid out for a specific panel, so a size change after approval means redrawing rather than adjusting.
 6. **Order the sizes together.** Where the film and specification match, setup is shared, and the batches will match each other.
+
+The wider picture for a garment operation, including wholesale alongside direct, is on the [clothing and apparel page](/industries/clothing-and-apparel/).
 
 ## The parcel is part of the product now
 

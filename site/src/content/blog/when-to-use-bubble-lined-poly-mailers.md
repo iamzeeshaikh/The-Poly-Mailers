@@ -51,7 +51,7 @@ Two consequences follow from that mechanism, and both are more important than th
 
 The first is that protection only exists where the lining sits between the contents and the outside. A small item in a large cushioned mailer has protection on its faces and empty space beside it. It slides, it accelerates, and when it reaches the end of the bag the lining at that point has to absorb a much larger impact than it was designed for.
 
-The second is that bubble size is a trade rather than an upgrade. Larger bubbles absorb bigger single impacts and add bulk to the packed parcel. Smaller bubbles spread smaller forces more evenly and keep the parcel thinner. Neither is universally better.
+The second is that bubble size is a trade rather than an upgrade. Larger bubbles absorb bigger single impacts and add bulk to the packed parcel. Smaller bubbles spread smaller forces more evenly and keep the parcel thinner. Neither is universally better, and the [lined formats we run](/poly-bubble-mailers/) are quoted against what you ship rather than by grade.
 
 ## The cases where it genuinely pays
 
@@ -63,6 +63,8 @@ Cushioning earns its cost in a recognisable set of situations.
 - **Contents where a failure is expensive.** Where a damaged order costs a replacement, a second shipment, a support conversation and a proportion of that customer's future spend, the arithmetic turns favourable quickly.
 - **Parcels that will be handled repeatedly.** Consolidation, transfer and long multi-leg routes each add impact opportunities that a single-leg local delivery does not have.
 
+Boxed cosmetics and small electronics account for most of these in practice, which the [beauty and cosmetics page](/industries/beauty-and-cosmetics/) goes through.
+
 ## The cases where it will not help
 
 Three failures look like they need cushioning and do not.
@@ -73,7 +75,7 @@ Three failures look like they need cushioning and do not.
 
 **Movement.** Inconsistent damage with contents rattling means the bag is too big. A smaller plain mailer will outperform a larger cushioned one here, and cost less.
 
-The diagnostic is straightforward: look at how the failed items broke rather than at the packaging, and match the fix to the fracture.
+The diagnostic is straightforward: look at how the failed items broke rather than at the packaging, and match the fix to the fracture. The [protective formats compared against each failure mode](/resources/protective-mailer-comparison/) set out which answers what.
 
 ## Working out whether it is worth it
 
@@ -85,13 +87,15 @@ Rather than upgrading everything, work out where the damage actually is.
 4. **Work out what one failure costs you end to end.** Then divide by the per-parcel cost of upgrading, including any change in shipping cost from the larger outer dimensions.
 5. **Protect the cluster, not the flow.** A business upgrading every parcel because one line breaks is paying for protection on tens of thousands of shipments that never needed it.
 
+Splitting a range across a plain and a [padded specification](/padded-poly-mailers/) is quoted the same way as a single one.
+
 ## What changes when you switch
 
 Moving to a cushioned format has second-order effects worth planning for.
 
 The outer dimensions grow for the same interior space, because the lining takes room. A parcel that fitted a pricing band may not any more, so weigh and measure a packed sample rather than assuming.
 
-Storage volume increases, because cushioned mailers do not pack flat.
+Storage volume increases, because cushioned mailers do not pack flat, and the outer size that fits your packed order may not be the one you order in plain film.
 
 Weight increases slightly — trivial on one parcel, real across a high monthly volume under weight-based pricing.
 
@@ -105,7 +109,7 @@ A poly outer resists rain and splashing, weighs less, and stretches before it te
 
 A paper outer feels more traditional and takes fine print more crisply, which suits books and print. It also absorbs water, and paper contents inside a wet paper bag is the worst combination available.
 
-For most categories the film outer wins on the measure that matters. For a bookseller who knows their parcels stay dry, the paper one has a genuine argument.
+For most categories the film outer wins on the measure that matters. For a bookseller who knows their parcels stay dry, the paper one has a genuine argument, and the [packaging picture for books and stationery](/industries/books-and-stationery/) goes into why.
 
 ## The most effective change is usually free
 
@@ -113,4 +117,4 @@ Before spending anything on cushioning, size the mailer properly.
 
 A close fit stops contents moving, which eliminates the single most common cause of damage in small-parcel shipping. It costs nothing, it reduces both packaging and shipping cost, and it works on every failure mode except crushing.
 
-Businesses that get fit right first often find their damage rate falls far enough that cushioning is no longer needed at all — and those that still need it get much more from it, because the lining is doing the job it was designed for rather than compensating for a bag that was too big.
+Businesses that get fit right first often find their damage rate falls far enough that cushioning is no longer needed at all — and those that still need it get much more from it, because the lining is doing the job it was designed for rather than compensating for a bag that was too big. Start with the [method for sizing against a packed order](/size-guide/).

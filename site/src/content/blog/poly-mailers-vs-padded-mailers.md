@@ -54,7 +54,7 @@ Packages fail in distinguishable ways, and the way something broke tells you wha
 - **Crushing.** Deformed, flattened or collapsed contents. Padding does nothing here. A flexible bag has no structure, so a load applied on top of it passes straight through whatever is inside.
 - **Movement.** Inconsistent damage, contents rattling, wear concentrated at one end. This is a fit problem. A smaller bag fixes it; a thicker lining does not.
 
-Two of those four respond to padding. Buying a cushioned mailer for the other two is a common and expensive mistake, and it is why some businesses upgrade their packaging twice without the damage rate improving.
+Two of those four respond to padding. Buying a cushioned mailer for the other two is a common and expensive mistake, and it is why some businesses upgrade their packaging twice without the damage rate improving. The [protective mailer formats compared side by side](/resources/protective-mailer-comparison/) map each format to the failure it answers.
 
 ## What plain film actually does
 
@@ -68,7 +68,7 @@ And it is light and thin, which matters on every parcel you send under weight or
 
 What it does not do is absorb impact. Contents in a plain mailer experience whatever the parcel experiences, minus a little from the film itself.
 
-For soft goods that is entirely sufficient. A folded garment is its own cushioning; a knitted item is better at absorbing impact than most linings are. Buying padding for a t-shirt is buying protection against a failure that cannot happen.
+For soft goods that is entirely sufficient. A folded garment is its own cushioning; a knitted item is better at absorbing impact than most linings are. Buying padding for a t-shirt is buying protection against a failure that cannot happen — which is why [plain mailers for clothing](/apparel-shipping-bags/) remain the sensible default for a garment range.
 
 ## When cushioning earns its cost
 
@@ -80,7 +80,7 @@ Genuinely fragile items, boxed first. A cushioned mailer protects a boxed cerami
 
 Items with hard corners in a mixed parcel, where a corner would otherwise press against film with the whole weight of the parcel behind it.
 
-And anything where the failure is expensive relative to the packaging. If a damaged order costs you a replacement, a second shipment, a support conversation and a proportion of that customer's future orders, the arithmetic for cushioning gets favourable very quickly.
+And anything where the failure is expensive relative to the packaging. If a damaged order costs you a replacement, a second shipment, a support conversation and a proportion of that customer's future orders, the arithmetic for cushioning gets favourable very quickly. Where it does, the [bubble-lined formats we run](/poly-bubble-mailers/) are the starting point.
 
 ## Running the numbers
 
@@ -92,7 +92,7 @@ The comparison is not between two unit prices. It is between the cost of upgradi
 4. **Compare it against your actual failure rate.** Not your impression of it — pull the returns and damage data.
 5. **Check whether damage is concentrated.** If failures cluster in one product line, protect that line rather than the whole flow. This is usually where the answer is.
 
-That last step is the one that saves the most money. A business upgrading every parcel because one product breaks is paying for protection on tens of thousands of shipments that never needed it.
+That last step is the one that saves the most money. A business upgrading every parcel because one product breaks is paying for protection on tens of thousands of shipments that never needed it. Splitting the range across two specifications is quoted the same way as one, as the [checklist for ordering to a specification](/resources/custom-mailer-ordering-checklist/) sets out.
 
 ## The honest limits of a flexible bag
 
@@ -102,7 +102,7 @@ A mailer has no structure. If your damage reports describe crushed cartons and d
 
 Similarly, an item with a protruding part that cannot be tucked — a handle, a spout, a rigid corner — will work against film whatever is between it and the outside.
 
-Fit is the other limit. Cushioning only protects where it sits between the contents and the outside. A small item in a large cushioned mailer has protection on its faces and open space beside it, and it will reach the end of that space at speed. Sizing correctly does more for arrival condition than moving up a bubble grade, and it costs less.
+Fit is the other limit. Cushioning only protects where it sits between the contents and the outside. A small item in a large cushioned mailer has protection on its faces and open space beside it, and it will reach the end of that space at speed. Sizing correctly does more for arrival condition than moving up a bubble grade, and it costs less — the [method for sizing against a packed order](/size-guide/) is worth running first.
 
 ## What changes when you switch
 
@@ -122,4 +122,4 @@ If you have damage data, start there and match the failure mode to the fix. If y
 
 Order a modest quantity of the cushioned specification alongside your current one, use it for the products you suspect are the problem, and track the two separately. A month of real shipments through your real network produces a better answer than any specification comparison.
 
-And if the answer turns out to be that your parcels are arriving fine, that is a result too. Plain film covers more categories than the packaging industry generally admits, and paying for protection you do not need is as much a specification error as not paying for protection you do.
+And if the answer turns out to be that your parcels are arriving fine, that is a result too. Plain film covers more categories than the packaging industry generally admits, and paying for protection you do not need is as much a specification error as not paying for protection you do. If you want both specifications costed side by side, [tell us what you ship](/request-a-quote/).

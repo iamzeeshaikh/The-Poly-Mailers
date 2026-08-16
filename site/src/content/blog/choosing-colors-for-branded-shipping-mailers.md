@@ -41,7 +41,7 @@ references: []
 
 Packaging colour gets chosen from a swatch, in good light, on a desk. It then spends its working life in a warehouse, a van and a doorway, and a colour that looked considered on the desk can look grubby after a week in a sorting network.
 
-Choosing well means thinking about the second environment rather than the first, and about four properties that are invisible in a swatch.
+Choosing well means thinking about the second environment rather than the first, and about four properties that are invisible in a swatch. The [full range of stock tones](/poly-mailer-colors/) is the starting point once those four are settled.
 
 ## The four properties that decide it
 
@@ -53,6 +53,8 @@ Choosing well means thinking about the second environment rather than the first,
 
 **Photographic behaviour.** Gloss produces hotspots that need lighting to control. Matte reads evenly under almost any light. Pale tones pick up the colour of whatever surface they are photographed on, which is why the same blush mailer looks peach on wood and mauve on grey.
 
+All four are settled at quotation rather than left to the film that happens to be running, and the [printing options](/printing-options/) that depend on them are settled at the same time.
+
 ## What each family does in practice
 
 - **White and bone.** The widest print latitude available and the lowest film cost. Shows every mark, and blows out under bright light in photographs. The right base for multi-colour or photographic artwork; a poor one for a parcel that will be handled a lot before it arrives.
@@ -62,9 +64,11 @@ Choosing well means thinking about the second environment rather than the first,
 - **Blush and pastels.** The softest and most considered read, and the most demanding technically. Dark inks only, show-through is a real risk, and marks show more than on any base except white.
 - **Deep jewel tones.** Read as premium, hide marks well, and take white and pale metallics. Frequently the most useful compromise between a black that feels severe and a bright that feels promotional.
 
+The family that suits most brands first is the plain one — [black mailers](/black-poly-mailers/) hide handling marks better than anything else on this list.
+
 ## Deciding in the right order
 
-Colour decisions go wrong when they are made before the questions that constrain them.
+Colour decisions go wrong when they are made before the questions that constrain them. Opacity and finish are film properties rather than colour ones, and the [differences between film weights](/materials/) explain what each will support.
 
 1. **Decide whether colour or print carries the identity.** If the colour is doing the work, choose for recognition and you may not need printing at all. If print is doing it, choose for contrast against your ink instead.
 2. **Check your primary ink against candidate bases.** A brand built on a black wordmark cannot use a black base. Finding that out now costs nothing; finding it out at proof stage costs a week.
@@ -77,7 +81,7 @@ Colour decisions go wrong when they are made before the questions that constrain
 
 Colour drifts slightly between production batches, and it shows more on saturated tones than on pale ones. This is normal in film manufacture rather than a defect, but it becomes a problem in one specific situation: when a reorder has to sit on the same shelf as existing stock.
 
-If that applies, say so at quotation stage and supply a sample from the run you are matching. It can then be checked against your reference before production rather than discovered on delivery.
+If that applies, say so at quotation stage and supply a sample from the run you are matching, or [request a sample of the tone](/samples/) before the first order. It can then be checked against your reference before production rather than discovered on delivery.
 
 If it does not apply — if you use stock down before reordering — the drift is invisible and not worth paying attention to.
 
@@ -91,7 +95,7 @@ Coding order types by mailer colour reduces picking errors at a busy bench witho
 
 The same applies to product lines in a mixed operation, to markets in a multi-country one, and to wholesale against direct. Colour is the cheapest visual signal available in a warehouse, and unlike a printed instruction it works at a distance and in peripheral vision.
 
-That argues for choosing colours that are genuinely distinguishable from each other rather than tonally close, if you are running more than one.
+That argues for choosing colours that are genuinely distinguishable from each other rather than tonally close, if you are running more than one. The [guide to selecting a base colour](/resources/color-selection-guide/) sets the tones out by how far apart they read on a bench.
 
 ## How many colours to run
 
@@ -113,4 +117,4 @@ A saturated colour with no printing at all, for a business that wants doorstep r
 
 Or white, for anyone whose artwork is photographic or multi-colour and who therefore has no real alternative.
 
-The one to think hardest about is blush and pastel. It photographs beautifully, it reads exactly right for several categories, and it demands more of the specification than any other choice — opacity, ink contrast and finish all have to be settled deliberately rather than accepted as defaults.
+The one to think hardest about is blush and pastel — the [pale pink stock](/light-pink-poly-mailers/) is the usual starting point. It photographs beautifully, it reads exactly right for several categories, and it demands more of the specification than any other choice — opacity, ink contrast and finish all have to be settled deliberately rather than accepted as defaults.

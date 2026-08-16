@@ -56,7 +56,7 @@ A folded t-shirt is not what you ship. What you ship is a folded t-shirt, a than
 
 So the first step is to build a real order. Not a representative one, not a typical one — a complete one, including everything that goes in the parcel on a normal day. If your inserts vary by order type, build the heaviest version.
 
-Do this for your five most-shipped products rather than your whole catalogue. Five will usually account for the large majority of your volume, and they will cluster into two or three sizes without you having to force them.
+Do this for your five most-shipped products rather than your whole catalogue. Five will usually account for the large majority of your volume, and they will cluster into two or three sizes without you having to force them — usually into two or three of the [sizes we run as standard](/poly-mailer-sizes/).
 
 ## The three measurements that matter
 
@@ -68,7 +68,7 @@ Once you have a packed bundle, take three measurements. Two of them are obvious 
 
 Depth is the one people skip, and it is the one that decides both whether the bag closes properly and which shipping band the parcel lands in. A parcel that is small in footprint and thick in section frequently costs more to send than a wider, flatter one containing exactly the same things.
 
-The measurement that is almost useless on its own is the flat dimension of the product. A garment laid out on a table tells you nothing about what it becomes when folded, and a lofty item tells you less again.
+The measurement that is almost useless on its own is the flat dimension of the product. A garment laid out on a table tells you nothing about what it becomes when folded, and a lofty item tells you less again. Where to hold the tape for each of the three is set out in the [guide to measuring a packed parcel](/resources/mailer-measurement-guide/).
 
 ## Test before you commit
 
@@ -80,6 +80,8 @@ Ten minutes with a physical sample settles what an afternoon of spreadsheet work
 4. **Weigh and measure the packed parcels.** Check them against the pricing bands you actually buy on, because a size change can move a parcel across a threshold in either direction.
 5. **Choose the smaller size that passes.** If both work, the smaller one is cheaper per unit and travels better.
 
+If you have nothing to test with, [request samples in two candidate sizes](/samples/) and pack them yourself before committing to a run.
+
 That last point is worth dwelling on, because it runs against instinct.
 
 ## Why sizing up is not safer
@@ -90,7 +92,7 @@ A mailer with contents that fill it is held rigid by those contents. The same co
 
 An oversized mailer also costs more per unit, occupies more space in a shipping vehicle, and on any dimensional pricing arrangement is billed for volume it is not using.
 
-The exception is loft. A genuinely lofty product — a knitted jumper, an insulated jacket, a cushion — is trying to expand rather than settle, and forcing it into a bag that only just contains it puts the closure under continuous tension. The right answer there is usually a gusset rather than a bigger flat bag, because a gusset gives the loft somewhere to go without adding slack.
+The exception is loft. A genuinely lofty product — a knitted jumper, an insulated jacket, a cushion — is trying to expand rather than settle, and forcing it into a bag that only just contains it puts the closure under continuous tension. The right answer there is usually a gusset rather than a bigger flat bag, because a gusset gives the loft somewhere to go without adding slack. Where loft is the whole problem, start from the [larger formats built for bulky goods](/large-poly-mailers/) rather than sizing up a flat bag.
 
 ## What a size decision does to shipping cost
 
@@ -112,6 +114,8 @@ It stops being worth it when a meaningful proportion of your orders sit badly in
 
 The way to know is your own order data. Pull a month of shipments, group them by packed size, and look at the distribution before deciding. An impression of what you ship is wrong more often than it is right.
 
+Standardising also makes [unprinted stock in a single size](/blank-poly-mailers/) a reasonable first order, because there is no artwork to redo when the size changes.
+
 ## The mistakes that cost the most
 
 Four errors account for most of the sizing decisions that get reversed within a year.
@@ -121,7 +125,7 @@ Four errors account for most of the sizing decisions that get reversed within a 
 - **Buying one size larger for safety.** Higher unit cost, less stable parcels, more damage rather than less.
 - **Standardising on one size across a genuinely varied range.** Waste on the light orders, failures on the heavy ones, and a damage rate concentrated in your most valuable shipments.
 
-All four are avoided by the same thing: packing a real order into a physical sample before committing to a run.
+All four are avoided by the same thing: packing a real order into a physical sample before committing to a run. The [decisions worth settling before you ask for a price](/resources/custom-mailer-ordering-checklist/) cover the rest of them.
 
 ## What to do next
 
