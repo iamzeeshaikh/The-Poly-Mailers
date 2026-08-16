@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+._*
+
+# node
+node_modules/
+
+# secrets — never commit
+.env
+.env.*
+!.env.example

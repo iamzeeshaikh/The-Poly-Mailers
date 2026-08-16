@@ -1,0 +1,519 @@
+{
+  "mapping": [
+    {
+      "source": "10x13-poly-mailers/10x13-poly-mailers-01.jpg",
+      "published": "white-poly-mailer-pair-angled-teal-backdrop.jpg",
+      "note": "",
+      "bytes": 32074
+    },
+    {
+      "source": "10x13-poly-mailers/10x13-poly-mailers-02.jpg",
+      "published": "white-poly-mailer-front-and-back-lime-backdrop.jpg",
+      "note": "",
+      "bytes": 41906
+    },
+    {
+      "source": "10x13-poly-mailers/10x13-poly-mailers-03.jpg",
+      "published": "white-poly-mailer-open-peel-strip-blue-backdrop.jpg",
+      "note": "",
+      "bytes": 30722
+    },
+    {
+      "source": "12x15-poly-mailers/12x15-poly-mailers-01.jpg",
+      "published": "white-poly-mailers-fanned-dark-seal-strip.jpg",
+      "note": "",
+      "bytes": 43801
+    },
+    {
+      "source": "12x15-poly-mailers/12x15-poly-mailers-02.png",
+      "published": "white-poly-mailer-filled-and-flat-pair.png",
+      "note": "",
+      "bytes": 273516
+    },
+    {
+      "source": "12x15-poly-mailers/12x15-poly-mailers-03.png",
+      "published": "silver-grey-poly-mailers-stacked-open-flap.png",
+      "note": "",
+      "bytes": 420373
+    },
+    {
+      "source": "14-5x19-poly-mailers/14-5x19-poly-mailers-01.png",
+      "published": "white-poly-mailer-holding-folded-jacket.png",
+      "note": "",
+      "bytes": 268427
+    },
+    {
+      "source": "14-5x19-poly-mailers/14-5x19-poly-mailers-03.jpg",
+      "published": "white-poly-mailers-fanned-dark-seal-strip.jpg",
+      "note": "Byte-identical to an asset already published; stored once and referenced by every page that uses it, each with its own alt text.",
+      "bytes": 43801
+    },
+    {
+      "source": "19x24-poly-mailers/19x24-poly-mailers-01.png",
+      "published": "white-poly-mailers-with-19-by-24-inch-callouts.png",
+      "note": "",
+      "bytes": 300775
+    },
+    {
+      "source": "19x24-poly-mailers/19x24-poly-mailers-02.png",
+      "published": "white-poly-mailer-holding-folded-jacket.png",
+      "note": "Byte-identical to an asset already published; stored once and referenced by every page that uses it, each with its own alt text.",
+      "bytes": 268427
+    },
+    {
+      "source": "24x24-poly-mailers/24x24-poly-mailers-01.png",
+      "published": "white-poly-mailer-holding-folded-jacket.png",
+      "note": "Byte-identical to an asset already published; stored once and referenced by every page that uses it, each with its own alt text.",
+      "bytes": 268427
+    },
+    {
+      "source": "24x24-poly-mailers/24x24-poly-mailers-03.png",
+      "published": "silver-grey-poly-mailers-stacked-open-flap.png",
+      "note": "Byte-identical to an asset already published; stored once and referenced by every page that uses it, each with its own alt text.",
+      "bytes": 420373
+    },
+    {
+      "source": "6x9-poly-mailers/6x9-poly-mailers-01.jpg",
+      "published": "pink-poly-mailers-rolled-stack-red-backdrop.jpg",
+      "note": "",
+      "bytes": 32658
+    },
+    {
+      "source": "6x9-poly-mailers/6x9-poly-mailers-02.jpg",
+      "published": "light-pink-poly-mailers-fanned-silver-seal.jpg",
+      "note": "",
+      "bytes": 32226
+    },
+    {
+      "source": "6x9-poly-mailers/6x9-poly-mailers-03.jpg",
+      "published": "deep-pink-poly-mailers-stacked-with-insert-card.jpg",
+      "note": "",
+      "bytes": 71205
+    },
+    {
+      "source": "9x12-poly-mailers/9x12-poly-mailers-01.png",
+      "published": "green-poly-mailer-single-angled-grey-backdrop.png",
+      "note": "",
+      "bytes": 705053
+    },
+    {
+      "source": "9x12-poly-mailers/9x12-poly-mailers-02.png",
+      "published": "pink-floral-poly-mailers-fanned-with-book.png",
+      "note": "",
+      "bytes": 1307733
+    },
+    {
+      "source": "9x12-poly-mailers/9x12-poly-mailers-03.png",
+      "published": "black-poly-mailers-printed-with-customer-logo.png",
+      "note": "",
+      "bytes": 449625
+    },
+    {
+      "source": "apparel-shipping-bags/apparel-shipping-bags-01.png",
+      "published": "lilac-apparel-mailer-held-open-by-hands.png",
+      "note": "",
+      "bytes": 919582
+    },
+    {
+      "source": "apparel-shipping-bags/apparel-shipping-bags-02.png",
+      "published": "colored-apparel-mailers-fanned-with-polo-shirt.png",
+      "note": "",
+      "bytes": 622084
+    },
+    {
+      "source": "apparel-shipping-bags/apparel-shipping-bags-03.png",
+      "published": "white-apparel-mailer-with-placeholder-logo-artwork.png",
+      "note": "",
+      "bytes": 395839
+    },
+    {
+      "source": "bee-poly-mailers/bee-poly-mailers-01.png",
+      "published": "sage-green-mailer-printed-bee-and-daisy-pattern.png",
+      "note": "",
+      "bytes": 720466
+    },
+    {
+      "source": "bee-poly-mailers/bee-poly-mailers-02.png",
+      "published": "white-mailer-printed-honey-and-bee-pattern.png",
+      "note": "",
+      "bytes": 938876
+    },
+    {
+      "source": "bee-poly-mailers/bee-poly-mailers-03.png",
+      "published": "sunflower-and-bee-printed-mailers-fanned.png",
+      "note": "",
+      "bytes": 930554
+    },
+    {
+      "source": "biodegradable-poly-mailers/biodegradable-poly-mailers-01.png",
+      "published": "green-mailer-printed-with-eco-message-artwork.png",
+      "note": "",
+      "bytes": 696805
+    },
+    {
+      "source": "biodegradable-poly-mailers/biodegradable-poly-mailers-03.jpg",
+      "published": "grey-mailer-printed-with-recycled-content-artwork.jpg",
+      "note": "",
+      "bytes": 34840
+    },
+    {
+      "source": "black-poly-mailers/black-poly-mailers-01.png",
+      "published": "matte-black-poly-mailers-front-and-back.png",
+      "note": "",
+      "bytes": 301402
+    },
+    {
+      "source": "black-poly-mailers/black-poly-mailers-02.png",
+      "published": "black-poly-mailers-pair-on-split-grey-backdrop.png",
+      "note": "",
+      "bytes": 343186
+    },
+    {
+      "source": "black-poly-mailers/black-poly-mailers-03.png",
+      "published": "black-poly-mailers-printed-logo-flat-lay.png",
+      "note": "",
+      "bytes": 1408738
+    },
+    {
+      "source": "blank-poly-mailers/blank-poly-mailers-01.png",
+      "published": "unprinted-white-poly-mailers-fanned-stack.png",
+      "note": "",
+      "bytes": 576655
+    },
+    {
+      "source": "blank-poly-mailers/blank-poly-mailers-02.png",
+      "published": "white-poly-mailer-filled-and-flat-pair.png",
+      "note": "Byte-identical to an asset already published; stored once and referenced by every page that uses it, each with its own alt text.",
+      "bytes": 273516
+    },
+    {
+      "source": "blank-poly-mailers/blank-poly-mailers-03.png",
+      "published": "unprinted-white-poly-mailers-rolled-bundle.png",
+      "note": "",
+      "bytes": 394655
+    },
+    {
+      "source": "christmas-poly-mailers/christmas-poly-mailers-01.png",
+      "published": "pink-christmas-mailer-printed-gingerbread-pattern.png",
+      "note": "",
+      "bytes": 951501
+    },
+    {
+      "source": "christmas-poly-mailers/christmas-poly-mailers-02.png",
+      "published": "white-christmas-mailers-printed-winter-botanical-pattern.png",
+      "note": "",
+      "bytes": 1590815
+    },
+    {
+      "source": "christmas-poly-mailers/christmas-poly-mailers-03.png",
+      "published": "red-christmas-mailer-printed-snowflake-pattern.png",
+      "note": "",
+      "bytes": 1050462
+    },
+    {
+      "source": "colored-poly-mailers/colored-poly-mailers-01.png",
+      "published": "colored-poly-mailers-blue-yellow-red-black-fan.png",
+      "note": "",
+      "bytes": 443077
+    },
+    {
+      "source": "colored-poly-mailers/colored-poly-mailers-02.png",
+      "published": "blue-poly-mailers-pair-angled.png",
+      "note": "",
+      "bytes": 567257
+    },
+    {
+      "source": "colored-poly-mailers/colored-poly-mailers-03.png",
+      "published": "violet-poly-mailer-filled-angled.png",
+      "note": "",
+      "bytes": 392944
+    },
+    {
+      "source": "compostable-poly-mailers/compostable-poly-mailers-01.png",
+      "published": "green-mailer-printed-with-eco-message-artwork.png",
+      "note": "Byte-identical to an asset already published; stored once and referenced by every page that uses it, each with its own alt text.",
+      "bytes": 696805
+    },
+    {
+      "source": "compostable-poly-mailers/compostable-poly-mailers-03.jpg",
+      "published": "white-mailer-holding-folded-tie-dye-garment.jpg",
+      "note": "",
+      "bytes": 47615
+    },
+    {
+      "source": "custom-frosted-poly-bags/custom-frosted-poly-bags-01.png",
+      "published": "frosted-zip-poly-bags-pair-with-care-symbols.png",
+      "note": "",
+      "bytes": 701025
+    },
+    {
+      "source": "custom-frosted-poly-bags/custom-frosted-poly-bags-02.png",
+      "published": "frosted-zip-poly-bag-holding-folded-garment.png",
+      "note": "",
+      "bytes": 482583
+    },
+    {
+      "source": "custom-frosted-poly-bags/custom-frosted-poly-bags-03.png",
+      "published": "frosted-zip-poly-bags-holding-knitwear.png",
+      "note": "",
+      "bytes": 562275
+    },
+    {
+      "source": "custom-poly-mailers/custom-poly-mailers-01.jpg",
+      "published": "black-poly-mailer-printed-with-message-copy.jpg",
+      "note": "",
+      "bytes": 67334
+    },
+    {
+      "source": "custom-poly-mailers/custom-poly-mailers-02.jpg",
+      "published": "orange-poly-mailer-printed-edge-pattern.jpg",
+      "note": "",
+      "bytes": 73851
+    },
+    {
+      "source": "custom-poly-mailers/custom-poly-mailers-03.jpg",
+      "published": "black-poly-mailer-printed-inside-and-out-with-garment.jpg",
+      "note": "",
+      "bytes": 84328
+    },
+    {
+      "source": "economy-poly-mailers/economy-poly-mailers-01.jpg",
+      "published": "plain-white-poly-mailer-standing-filled.jpg",
+      "note": "",
+      "bytes": 20236
+    },
+    {
+      "source": "economy-poly-mailers/economy-poly-mailers-02.jpg",
+      "published": "white-poly-mailer-with-green-flap-detail.jpg",
+      "note": "",
+      "bytes": 50937
+    },
+    {
+      "source": "economy-poly-mailers/economy-poly-mailers-03.jpg",
+      "published": "white-poly-mailers-stacked-with-rolled-film.jpg",
+      "note": "",
+      "bytes": 57239
+    },
+    {
+      "source": "halloween-poly-mailers/halloween-poly-mailers-01.png",
+      "published": "purple-halloween-mailer-printed-haunted-house-scene.png",
+      "note": "",
+      "bytes": 1507072
+    },
+    {
+      "source": "halloween-poly-mailers/halloween-poly-mailers-02.png",
+      "published": "blush-halloween-mailer-printed-pumpkin-and-bat-pattern.png",
+      "note": "",
+      "bytes": 1150744
+    },
+    {
+      "source": "halloween-poly-mailers/halloween-poly-mailers-03.png",
+      "published": "violet-halloween-mailer-printed-jack-o-lantern-pattern.png",
+      "note": "",
+      "bytes": 1379107
+    },
+    {
+      "source": "large-poly-mailers/large-poly-mailers-01.png",
+      "published": "white-poly-mailer-holding-folded-jacket.png",
+      "note": "Byte-identical to an asset already published; stored once and referenced by every page that uses it, each with its own alt text.",
+      "bytes": 268427
+    },
+    {
+      "source": "large-poly-mailers/large-poly-mailers-02.png",
+      "published": "white-poly-mailers-with-19-by-24-inch-callouts.png",
+      "note": "Byte-identical to an asset already published; stored once and referenced by every page that uses it, each with its own alt text.",
+      "bytes": 300775
+    },
+    {
+      "source": "light-pink-poly-mailers/light-pink-poly-mailers-01.jpg",
+      "published": "light-pink-poly-mailers-fanned-silver-seal.jpg",
+      "note": "Byte-identical to an asset already published; stored once and referenced by every page that uses it, each with its own alt text.",
+      "bytes": 32226
+    },
+    {
+      "source": "light-pink-poly-mailers/light-pink-poly-mailers-02.jpg",
+      "published": "pink-poly-mailers-rolled-stack-red-backdrop.jpg",
+      "note": "Byte-identical to an asset already published; stored once and referenced by every page that uses it, each with its own alt text.",
+      "bytes": 32658
+    },
+    {
+      "source": "light-pink-poly-mailers/light-pink-poly-mailers-03.jpg",
+      "published": "blush-pink-bubble-lined-mailers-stacked.jpg",
+      "note": "",
+      "bytes": 59911
+    },
+    {
+      "source": "padded-poly-mailers/padded-poly-mailers-01.jpg",
+      "published": "teal-bubble-lined-mailers-stacked-with-peel-strip.jpg",
+      "note": "",
+      "bytes": 178709
+    },
+    {
+      "source": "padded-poly-mailers/padded-poly-mailers-03.jpg",
+      "published": "kraft-faced-bubble-lined-mailer-open-corner.jpg",
+      "note": "",
+      "bytes": 45215
+    },
+    {
+      "source": "personalized-bubble-mailers/personalized-bubble-mailers-01.png",
+      "published": "teal-bubble-mailer-printed-thank-you-artwork.png",
+      "note": "",
+      "bytes": 855241
+    },
+    {
+      "source": "personalized-bubble-mailers/personalized-bubble-mailers-02.png",
+      "published": "cream-bubble-mailer-printed-line-illustration.png",
+      "note": "",
+      "bytes": 755347
+    },
+    {
+      "source": "personalized-bubble-mailers/personalized-bubble-mailers-03.png",
+      "published": "two-printed-bubble-mailers-with-address-labels.png",
+      "note": "",
+      "bytes": 1637248
+    },
+    {
+      "source": "pink-poly-mailers/pink-poly-mailers-01.jpg",
+      "published": "deep-pink-poly-mailers-stacked-with-insert-card.jpg",
+      "note": "Byte-identical to an asset already published; stored once and referenced by every page that uses it, each with its own alt text.",
+      "bytes": 71205
+    },
+    {
+      "source": "pink-poly-mailers/pink-poly-mailers-02.jpg",
+      "published": "pink-poly-mailers-rolled-stack-red-backdrop.jpg",
+      "note": "Byte-identical to an asset already published; stored once and referenced by every page that uses it, each with its own alt text.",
+      "bytes": 32658
+    },
+    {
+      "source": "poly-bubble-mailers/poly-bubble-mailers-01.png",
+      "published": "black-bubble-lined-poly-mailers-printed-logo.png",
+      "note": "",
+      "bytes": 971239
+    },
+    {
+      "source": "poly-bubble-mailers/poly-bubble-mailers-02.png",
+      "published": "teal-bubble-mailer-printed-thank-you-artwork.png",
+      "note": "Byte-identical to an asset already published; stored once and referenced by every page that uses it, each with its own alt text.",
+      "bytes": 855241
+    },
+    {
+      "source": "poly-bubble-mailers/poly-bubble-mailers-03.png",
+      "published": "colored-printed-bubble-lined-mailers-arranged-fan.png",
+      "note": "",
+      "bytes": 1535883
+    },
+    {
+      "source": "recycled-poly-mailers/recycled-poly-mailers-01.jpg",
+      "published": "grey-mailer-printed-with-recycled-content-artwork.jpg",
+      "note": "Byte-identical to an asset already published; stored once and referenced by every page that uses it, each with its own alt text.",
+      "bytes": 34840
+    },
+    {
+      "source": "recycled-poly-mailers/recycled-poly-mailers-02.jpg",
+      "published": "white-mailer-holding-folded-tie-dye-garment.jpg",
+      "note": "Byte-identical to an asset already published; stored once and referenced by every page that uses it, each with its own alt text.",
+      "bytes": 47615
+    },
+    {
+      "source": "recycled-poly-mailers/recycled-poly-mailers-03.jpg",
+      "published": "white-mailer-printed-with-recycled-materials-artwork.jpg",
+      "note": "",
+      "bytes": 21840
+    },
+    {
+      "source": "self-seal-poly-mailers/self-seal-poly-mailers-02.jpg",
+      "published": "white-self-seal-mailer-holding-folded-jeans.jpg",
+      "note": "",
+      "bytes": 226133
+    },
+    {
+      "source": "self-seal-poly-mailers/self-seal-poly-mailers-03.jpg",
+      "published": "white-self-seal-mailers-with-tear-strip-detail.jpg",
+      "note": "",
+      "bytes": 134288
+    },
+    {
+      "source": "small-poly-mailers/small-poly-mailers-01.jpg",
+      "published": "purple-poly-mailers-rolled-stack.jpg",
+      "note": "",
+      "bytes": 32913
+    },
+    {
+      "source": "small-poly-mailers/small-poly-mailers-02.jpg",
+      "published": "pink-poly-mailers-rolled-stack-red-backdrop.jpg",
+      "note": "Byte-identical to an asset already published; stored once and referenced by every page that uses it, each with its own alt text.",
+      "bytes": 32658
+    },
+    {
+      "source": "small-poly-mailers/small-poly-mailers-03.jpg",
+      "published": "light-pink-poly-mailers-fanned-silver-seal.jpg",
+      "note": "Byte-identical to an asset already published; stored once and referenced by every page that uses it, each with its own alt text.",
+      "bytes": 32226
+    },
+    {
+      "source": "white-poly-mailers/white-poly-mailers-01.png",
+      "published": "white-poly-mailer-filled-and-flat-pair.png",
+      "note": "Byte-identical to an asset already published; stored once and referenced by every page that uses it, each with its own alt text.",
+      "bytes": 273516
+    },
+    {
+      "source": "white-poly-mailers/white-poly-mailers-02.jpg",
+      "published": "white-poly-mailers-fanned-dark-seal-strip.jpg",
+      "note": "Byte-identical to an asset already published; stored once and referenced by every page that uses it, each with its own alt text.",
+      "bytes": 43801
+    },
+    {
+      "source": "white-poly-mailers/white-poly-mailers-03.jpg",
+      "published": "white-mailer-printed-with-recycled-materials-artwork.jpg",
+      "note": "Byte-identical to an asset already published; stored once and referenced by every page that uses it, each with its own alt text.",
+      "bytes": 21840
+    }
+  ],
+  "skipped": [
+    {
+      "folder": "14-5x19-poly-mailers",
+      "file": "14-5x19-poly-mailers-02.png",
+      "reason": "Watermarked third-party stock mockup (pixpine.com) containing Lorem Ipsum body copy and a fabricated name and address block."
+    },
+    {
+      "folder": "19x24-poly-mailers",
+      "file": "19x24-poly-mailers-03.png",
+      "reason": "Watermarked third-party stock mockup (pixpine.com) containing Lorem Ipsum body copy and a fabricated name and address block."
+    },
+    {
+      "folder": "24x24-poly-mailers",
+      "file": "24x24-poly-mailers-02.png",
+      "reason": "Watermarked third-party stock mockup (pixpine.com) containing Lorem Ipsum body copy and a fabricated name and address block."
+    },
+    {
+      "folder": "biodegradable-poly-mailers",
+      "file": "biodegradable-poly-mailers-02.png",
+      "reason": "Byte-identical to compostable-poly-mailers-02.png; excluded for the same certification-mark reason."
+    },
+    {
+      "folder": "compostable-poly-mailers",
+      "file": "compostable-poly-mailers-02.png",
+      "reason": "Shows TUV certification marks, a 4-6 month decomposition claim and a stated PLA/PBAT/corn-starch composition. No supporting documentation was supplied."
+    },
+    {
+      "folder": "large-poly-mailers",
+      "file": "large-poly-mailers-03.png",
+      "reason": "Watermarked third-party stock mockup (pixpine.com) containing Lorem Ipsum body copy and a fabricated name and address block."
+    },
+    {
+      "folder": "padded-poly-mailers",
+      "file": "padded-poly-mailers-02.jpg",
+      "reason": "Carries a marketplace watermark (HUALIWEN) and a 20 PCS retail badge."
+    },
+    {
+      "folder": "pink-poly-mailers",
+      "file": "pink-poly-mailers-03.png",
+      "reason": "Mailers are printed with a competing packaging company brand mark."
+    },
+    {
+      "folder": "self-seal-poly-mailers",
+      "file": "self-seal-poly-mailers-01.jpg",
+      "reason": "Kraft paper padded mailers — wrong material for a poly self-seal product page."
+    }
+  ]
+}

@@ -1,0 +1,371 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection, render } from 'astro:content';
+import { Picture, getImage } from 'astro:assets';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import FaqList from '~/components/FaqList.astro';
+import RelatedLinks from '~/components/RelatedLinks.astro';
+import CtaBand from '~/components/CtaBand.astro';
+import { blogPosting, breadcrumbs, faqPage, graph, webPage, type Crumb } from '~/lib/schema';
+
+export const getStaticPaths = (async () => {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { post: post.id }, props: { post } }));
+}) satisfies GetStaticPaths;
+
+const { post } = Astro.props;
+const { Content, headings, remarkPluginFrontmatter } = await render(post);
+
+const path = `/blog/${post.id}/`;
+const data = post.data;
+
+const social = await getImage({
+  src: data.heroImage,
+  width: 1200,
+  height: 1200,
+  format: 'jpeg',
+  quality: 78,
+});
+
+const preload = await getImage({
+  src: data.heroImage,
+  widths: [520, 760, 1040],
+  sizes: '(min-width: 62rem) 44rem, 94vw',
+  format: 'avif',
+  quality: 72,
+});
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: '/' },
+  { name: 'Articles', href: '/blog/' },
+  { name: data.title, href: path },
+];
+
+const iso = (d: Date) => d.toISOString().slice(0, 10);
+const human = (d: Date) =>
+  d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+
+const schema = graph([
+  webPage({
+    path,
+    name: data.title,
+    description: data.description,
+    primaryImage: social.src,
+    hasBreadcrumb: true,
+  }),
+  breadcrumbs(crumbs),
+  blogPosting({
+    path,
+    headline: data.title,
+    description: data.description,
+    image: social.src,
+    published: iso(data.published),
+    modified: iso(data.updated),
+    author: data.author,
+    reviewedBy: data.reviewer,
+    wordCount: remarkPluginFrontmatter?.wordCount as number | undefined,
+  }),
+  data.faqs.length ? faqPage(path, data.faqs) : null,
+]);
+
+/** Only h2s go in the contents list; h3s are detail within a section. */
+const toc = headings.filter((h) => h.depth === 2);
+---
+
+<BaseLayout
+  title={`${data.title} | The Poly Mailers`}
+  description={data.description}
+  path={path}
+  ogImage={social.src}
+  ogImageAlt={data.heroAlt}
+  schema={schema}
+  crumbs={crumbs}
+  preloadImage={{
+    href: preload.src,
+    imagesrcset: preload.srcSet.attribute,
+    imagesizes: preload.attributes.sizes,
+  }}
+>
+  <article class="post">
+    <header class="wrap-narrow post-head">
+      <p class="eyebrow">Article</p>
+      <h1>{data.title}</h1>
+      <p class="post-standfirst">{data.description}</p>
+      <dl class="post-meta">
+        <div>
+          <dt>Written by</dt>
+          <dd>{data.author}</dd>
+        </div>
+        {
+          data.reviewer && (
+            <div>
+              <dt>Reviewed by</dt>
+              <dd>{data.reviewer}</dd>
+            </div>
+          )
+        }
+        <div>
+          <dt>Published</dt>
+          <dd><time datetime={iso(data.published)}>{human(data.published)}</time></dd>
+        </div>
+        <div>
+          <dt>Last reviewed</dt>
+          <dd><time datetime={iso(data.reviewed)}>{human(data.reviewed)}</time></dd>
+        </div>
+      </dl>
+    </header>
+
+    <figure class="wrap post-hero">
+      <Picture
+        src={data.heroImage}
+        alt={data.heroAlt}
+        widths={[520, 760, 1040]}
+        sizes="(min-width: 62rem) 44rem, 94vw"
+        formats={['avif', 'webp']}
+        fallbackFormat="jpeg"
+        quality={72}
+        loading="eager"
+        fetchpriority="high"
+        decoding="sync"
+      />
+      {data.heroCaption && <figcaption>{data.heroCaption}</figcaption>}
+    </figure>
+
+    <div class="wrap post-body">
+      {
+        toc.length > 2 && (
+          <nav class="post-toc" aria-labelledby="toc-heading">
+            <h2 id="toc-heading">On this page</h2>
+            <ol>
+              {toc.map((h) => (
+                <li>
+                  <a href={`#${h.slug}`}>{h.text}</a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        )
+      }
+
+      <div class="prose post-prose">
+        <Content />
+      </div>
+    </div>
+
+    {
+      data.references.length > 0 && (
+        <section class="wrap-narrow post-refs">
+          <h2>Notes on sources</h2>
+          <dl>
+            {data.references.map((ref) => (
+              <>
+                <dt>{ref.label}</dt>
+                <dd>{ref.note}</dd>
+              </>
+            ))}
+          </dl>
+        </section>
+      )
+    }
+
+    {
+      data.faqs.length > 0 && (
+        <div class="wrap-narrow section-tight">
+          <FaqList faqs={data.faqs} heading="Questions this raises" id={`faq-${post.id}`} />
+        </div>
+      )
+    }
+
+    {
+      data.related.length > 0 && (
+        <div class="wrap section-tight">
+          <RelatedLinks links={data.related} heading="Read next" />
+        </div>
+      )
+    }
+
+    <div class="wrap section-tight">
+      <CtaBand
+        heading={data.cta.heading}
+        body={data.cta.body}
+        buttonLabel={data.cta.label}
+        whatsappMessage={data.cta.whatsapp}
+      />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .post-head { padding-block: var(--sp-xl) var(--sp-m); }
+
+  .post-head h1 {
+    margin-block: 0.6rem 0.9rem;
+    font-size: var(--step-4);
+    max-width: 20ch;
+  }
+
+  .post-standfirst {
+    font-size: var(--step-1);
+    line-height: 1.5;
+    color: var(--fg-muted);
+    max-width: 56ch;
+  }
+
+  .post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem 1.75rem;
+    margin-block-start: var(--sp-m);
+    padding-block-start: var(--sp-s);
+    border-block-start: 1px solid var(--line);
+  }
+
+  .post-meta dt {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--fg-subtle);
+    margin-block-end: 0.15rem;
+  }
+
+  .post-meta dd { margin: 0; font-size: 0.88rem; font-weight: 550; }
+
+  .post-hero {
+    margin: 0 auto;
+    max-width: 44rem;
+    min-width: 0;
+  }
+
+  .post-hero :global(img) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--r-l);
+    border: 1px solid var(--line);
+  }
+
+  .post-hero figcaption {
+    margin-block-start: 0.6rem;
+    font-size: 0.8rem;
+    color: var(--fg-subtle);
+    text-align: center;
+  }
+
+  .post-body {
+    display: grid;
+    gap: var(--sp-l);
+    padding-block-start: var(--sp-xl);
+  }
+
+  @media (min-width: 68rem) {
+    .post-body {
+      grid-template-columns: 15rem minmax(0, 44rem);
+      gap: var(--sp-2xl);
+      justify-content: center;
+      align-items: start;
+    }
+
+    .post-toc { position: sticky; top: calc(var(--header-h) + 1.5rem); }
+  }
+
+  .post-toc h2 {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--fg-subtle);
+    margin-block-end: 0.7rem;
+  }
+
+  .post-toc ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.42rem;
+    counter-reset: toc;
+  }
+
+  .post-toc li { counter-increment: toc; }
+
+  .post-toc a {
+    display: flex;
+    gap: 0.6rem;
+    font-size: 0.87rem;
+    color: var(--fg-muted);
+    text-decoration: none;
+    line-height: 1.4;
+  }
+
+  .post-toc a::before {
+    content: counter(toc, decimal-leading-zero);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent);
+    flex: none;
+    padding-block-start: 0.1rem;
+  }
+
+  .post-toc a:hover { color: var(--accent-hover); }
+
+  .post-prose { max-width: 44rem; }
+
+  .post-prose :global(h2) {
+    font-size: var(--step-2);
+    margin-block-start: 2.2em;
+    scroll-margin-top: calc(var(--header-h) + 1.5rem);
+  }
+
+  .post-prose :global(h3) { font-size: var(--step-1); }
+
+  .post-prose :global(table) {
+    display: block;
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: var(--r-m);
+    font-size: var(--step--1);
+    background: var(--bg-raised);
+  }
+
+  .post-prose :global(th),
+  .post-prose :global(td) {
+    padding: 0.7rem 0.95rem;
+    text-align: start;
+    vertical-align: top;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .post-prose :global(thead th) {
+    background: var(--bg-sunk);
+    font-weight: 650;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+    white-space: nowrap;
+  }
+
+  .post-prose :global(strong) { font-weight: 650; }
+
+  .post-refs {
+    margin-block-start: var(--sp-2xl);
+    padding: 1.4rem 1.6rem;
+    background: var(--bg-sunk);
+    border: 1px solid var(--line);
+    border-radius: var(--r-m);
+  }
+
+  .post-refs h2 {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-block-end: 0.8rem;
+  }
+
+  .post-refs dt { font-weight: 650; font-size: 0.88rem; margin-block-start: 0.7rem; }
+  .post-refs dt:first-of-type { margin-block-start: 0; }
+  .post-refs dd { margin: 0.2rem 0 0; font-size: 0.87rem; color: var(--fg-muted); }
+</style>

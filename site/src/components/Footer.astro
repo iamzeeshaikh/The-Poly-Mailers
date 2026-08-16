@@ -1,0 +1,298 @@
+---
+import { BRAND, MARKETS } from '~/lib/site';
+
+const year = 2026;
+
+const columns = [
+  {
+    title: 'Popular sizes',
+    links: [
+      { href: '/10x13-poly-mailers/', label: '10x13 poly mailers' },
+      { href: '/9x12-poly-mailers/', label: '9x12 poly mailers' },
+      { href: '/6x9-poly-mailers/', label: '6x9 poly mailers' },
+      { href: '/12x15-poly-mailers/', label: '12x15 poly mailers' },
+      { href: '/14-5x19-poly-mailers/', label: '14.5x19 poly mailers' },
+      { href: '/19x24-poly-mailers/', label: '19x24 poly mailers' },
+      { href: '/24x24-poly-mailers/', label: '24x24 poly mailers' },
+      { href: '/poly-mailer-sizes/', label: 'Every size compared' },
+    ],
+  },
+  {
+    title: 'Colours & print',
+    links: [
+      { href: '/custom-poly-mailers/', label: 'Custom printed mailers' },
+      { href: '/pink-poly-mailers/', label: 'Pink poly mailers' },
+      { href: '/light-pink-poly-mailers/', label: 'Light pink poly mailers' },
+      { href: '/black-poly-mailers/', label: 'Black poly mailers' },
+      { href: '/white-poly-mailers/', label: 'White poly mailers' },
+      { href: '/colored-poly-mailers/', label: 'Colored poly mailers' },
+      { href: '/blank-poly-mailers/', label: 'Blank poly mailers' },
+      { href: '/custom-frosted-poly-bags/', label: 'Frosted poly bags' },
+    ],
+  },
+  {
+    title: 'Protective & specialist',
+    links: [
+      { href: '/poly-bubble-mailers/', label: 'Poly bubble mailers' },
+      { href: '/padded-poly-mailers/', label: 'Padded poly mailers' },
+      { href: '/personalized-bubble-mailers/', label: 'Personalized bubble mailers' },
+      { href: '/self-seal-poly-mailers/', label: 'Self-seal poly mailers' },
+      { href: '/apparel-shipping-bags/', label: 'Apparel shipping bags' },
+      { href: '/economy-poly-mailers/', label: 'Economy poly mailers' },
+      { href: '/large-poly-mailers/', label: 'Large poly mailers' },
+      { href: '/small-poly-mailers/', label: 'Small poly mailers' },
+    ],
+  },
+  {
+    title: 'Sustainable & seasonal',
+    links: [
+      { href: '/sustainable-poly-mailers/', label: 'Sustainable range' },
+      { href: '/recycled-poly-mailers/', label: 'Recycled poly mailers' },
+      { href: '/compostable-poly-mailers/', label: 'Compostable poly mailers' },
+      { href: '/biodegradable-poly-mailers/', label: 'Biodegradable poly mailers' },
+      { href: '/seasonal-poly-mailers/', label: 'Seasonal mailers' },
+      { href: '/christmas-poly-mailers/', label: 'Christmas poly mailers' },
+      { href: '/halloween-poly-mailers/', label: 'Halloween poly mailers' },
+      { href: '/bee-poly-mailers/', label: 'Bee poly mailers' },
+    ],
+  },
+  {
+    title: 'Company',
+    links: [
+      { href: '/about/', label: 'About us' },
+      { href: '/how-it-works/', label: 'How it works' },
+      { href: '/design-your-poly-mailer/', label: 'Design your mailer' },
+      { href: '/samples/', label: 'Samples' },
+      { href: '/industries/', label: 'Industries' },
+      { href: '/resources/', label: 'Resources' },
+      { href: '/blog/', label: 'Articles' },
+      { href: '/faq/', label: 'Questions' },
+    ],
+  },
+];
+---
+
+<footer class="site-footer on-ink">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+          <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
+            <rect x="2.5" y="6.5" width="27" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="2.2"></rect>
+            <path d="M2.5 11.5h27" stroke="currentColor" stroke-width="2.2"></path>
+            <path d="M11 18.5h10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path>
+          </svg>
+          <span>The Poly Mailers</span>
+        </a>
+        <p class="footer-blurb">
+          Custom poly mailers made to order — printed, coloured, padded and
+          size-specific — quoted against a written specification rather than a
+          fixed price list.
+        </p>
+        <ul role="list" class="footer-contact">
+          <li>
+            <span class="footer-label">Email</span>
+            <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>
+          </li>
+          <li>
+            <span class="footer-label">Phone</span>
+            <a href={BRAND.phoneHref}>{BRAND.phoneDisplay}</a>
+          </li>
+          <li>
+            <span class="footer-label">WhatsApp</span>
+            <a href={`https://wa.me/${BRAND.whatsappNumber}`}>{BRAND.whatsappDisplay}</a>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        {
+          columns.map((col) => (
+            <div class="footer-col">
+              <h2 class="footer-col-title">{col.title}</h2>
+              <ul role="list">
+                {col.links.map((l) => (
+                  <li>
+                    <a href={l.href}>{l.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </nav>
+    </div>
+
+    <div class="footer-markets">
+      <h2 class="footer-col-title">Where we ship</h2>
+      <ul role="list">
+        {
+          MARKETS.map((m) => (
+            <li>
+              <a href={`/${m.slug}/`}>{m.serviceStatement}</a>
+            </li>
+          ))
+        }
+        <li><a href="/locations/">All locations we serve</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-legal">
+        © {year} {BRAND.name}. Specifications, materials and pricing are confirmed
+        in writing on each quotation.
+      </p>
+      <ul role="list" class="footer-policies">
+        <li><a href="/privacy-policy/">Privacy policy</a></li>
+        <li><a href="/terms-and-conditions/">Terms and conditions</a></li>
+        <li><a href="/shipping-and-delivery/">Shipping and delivery</a></li>
+        <li><a href="/custom-order-policy/">Custom order policy</a></li>
+        <li><a href="/accessibility-statement/">Accessibility</a></li>
+        <li><a href="/sitemap/">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    padding-block: var(--sp-2xl) var(--sp-l);
+    margin-block-start: var(--sp-3xl);
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--sp-xl);
+  }
+
+  @media (min-width: 62rem) {
+    .footer-top { grid-template-columns: 19rem minmax(0, 1fr); gap: var(--sp-2xl); }
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: inherit;
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.022em;
+  }
+
+  .footer-blurb {
+    margin-block-start: var(--sp-s);
+    color: var(--fg-muted);
+    font-size: 0.93rem;
+    max-width: 34ch;
+  }
+
+  .footer-contact {
+    margin-block-start: var(--sp-m);
+    display: grid;
+    gap: 0.7rem;
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-label {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--fg-subtle);
+    margin-block-end: 0.15rem;
+  }
+
+  .footer-contact a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 550;
+  }
+
+  .footer-contact a:hover { text-decoration: underline; }
+
+  .footer-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 11.5rem), 1fr));
+    gap: var(--sp-l) var(--sp-m);
+  }
+
+  .footer-col-title {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--fg-subtle);
+    margin-block-end: 0.85rem;
+  }
+
+  .footer-nav ul,
+  .footer-markets ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.42rem;
+  }
+
+  .footer-nav a,
+  .footer-markets a {
+    color: var(--ink-200);
+    text-decoration: none;
+    font-size: 0.885rem;
+  }
+
+  .footer-nav a:hover,
+  .footer-markets a:hover { color: #fff; text-decoration: underline; }
+
+  .footer-markets {
+    margin-block-start: var(--sp-xl);
+    padding-block-start: var(--sp-l);
+    border-block-start: 1px solid var(--line);
+  }
+
+  .footer-markets ul {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    gap: 0.5rem var(--sp-m);
+  }
+
+  .footer-bottom {
+    margin-block-start: var(--sp-l);
+    padding-block-start: var(--sp-m);
+    border-block-start: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-s) var(--sp-m);
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-legal {
+    color: var(--fg-subtle);
+    font-size: 0.82rem;
+    max-width: 60ch;
+    margin: 0;
+  }
+
+  .footer-policies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-policies a {
+    color: var(--ink-300);
+    font-size: 0.82rem;
+    text-decoration: none;
+  }
+
+  .footer-policies a:hover { color: #fff; text-decoration: underline; }
+</style>

@@ -1,0 +1,202 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import ProductCard from '~/components/ProductCard.astro';
+import QuoteForm from '~/components/QuoteForm.astro';
+import CtaBand from '~/components/CtaBand.astro';
+import { products, productsInGroup } from '~/data/products';
+import { collections } from '~/data/collections';
+import { breadcrumbs, graph, itemList, webPage, type Crumb } from '~/lib/schema';
+
+const path = '/poly-mailers/';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: '/' },
+  { name: 'Poly mailers', href: path },
+];
+
+const groups = [
+  {
+    key: 'size' as const,
+    title: 'By size',
+    blurb:
+      'Nine formats, from a single small item up to a square footprint for cushions and quilts. If you have not settled on a dimension, the two decision pages at the end of this group are the place to start.',
+  },
+  {
+    key: 'color' as const,
+    title: 'By colour and print status',
+    blurb:
+      'Colour is the cheapest branding available and it is also a technical decision — the base determines which inks will read and how much shows through the film.',
+  },
+  {
+    key: 'protective' as const,
+    title: 'Protection and closure',
+    blurb:
+      'Cushioned constructions and closure options. Worth reading in the order of the failure you are seeing rather than the product you had in mind.',
+  },
+  {
+    key: 'print' as const,
+    title: 'Print and specification',
+    blurb:
+      'Custom printed runs, cost-led specifications, and the zip-closure garment bag that is genuinely a different product from a mailer.',
+  },
+  {
+    key: 'sustainable' as const,
+    title: 'Sustainable materials',
+    blurb:
+      'Three routes that answer three different questions. No percentages, certifications or breakdown timescales are published anywhere, because none was supplied with evidence.',
+  },
+  {
+    key: 'specialty' as const,
+    title: 'Specialist and seasonal',
+    blurb:
+      'Garment-specific formats and printed patterns, including the seasonal designs where quantity risk matters more than anything about the bag.',
+  },
+];
+
+const schema = graph([
+  webPage({
+    path,
+    name: 'All poly mailers',
+    description:
+      'Every poly mailer we supply, grouped by the decision behind it — size, colour, protection, print, sustainability and specialist formats.',
+    type: 'CollectionPage',
+    hasBreadcrumb: true,
+  }),
+  breadcrumbs(crumbs),
+  itemList({
+    path,
+    name: 'Poly mailer range',
+    items: products.map((p) => ({ href: `/${p.slug}/`, label: p.name })),
+  }),
+]);
+---
+
+<BaseLayout
+  title="All Poly Mailers | Sizes, Colours & Printed Formats"
+  description="Every poly mailer we supply — 29 products grouped by size, colour, protection, print and sustainability, each with the decision behind it explained."
+  path={path}
+  schema={schema}
+  crumbs={crumbs}
+>
+  <article>
+    <header class="wrap page-head">
+      <p class="eyebrow">Full range</p>
+      <h1>All poly mailers</h1>
+      <p class="lede">
+        Twenty-nine products, grouped by the decision behind them rather than
+        alphabetically. Each page answers one question and says plainly where
+        the answer is something else.
+      </p>
+      <p class="head-p">
+        If you already know what you need, the groups below will get you there.
+        If you do not, the <a href="/poly-mailer-sizes/">size comparison</a> is
+        where most people should start.
+      </p>
+    </header>
+
+    <div class="wrap section-tight">
+      <QuoteForm
+        source={path}
+        compact
+        id="quote-range"
+        heading="Or describe what you ship"
+        intro="A recommendation costs nothing and is faster than working through twenty-nine pages."
+      />
+    </div>
+
+    <section class="wrap section-tight">
+      <h2 class="coll-h">Start from a decision</h2>
+      <ul role="list" class="coll-row">
+        {
+          collections.map((c) => (
+            <li>
+              <a href={`/${c.slug}/`}>
+                <span class="coll-title">{c.h1}</span>
+                <span class="coll-note">{c.summary}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    {
+      groups.map((group) => {
+        const items = productsInGroup(group.key);
+        return (
+          <section class="wrap section-tight">
+            <div class="group-head">
+              <h2>{group.title}</h2>
+              <p>{group.blurb}</p>
+            </div>
+            <div class="prod-grid">
+              {items.map((product, i) => (
+                <ProductCard product={product} index={i} />
+              ))}
+            </div>
+          </section>
+        );
+      })
+    }
+
+    <div class="wrap section-tight">
+      <CtaBand
+        heading="Twenty-nine products is a lot to read"
+        body="Tell us what you ship and what is going wrong with your current packaging. We will point you at the right two pages and quote them."
+        buttonLabel="Get a recommendation"
+        whatsappMessage="Hi, I am not sure which poly mailer I need. Could you point me in the right direction?"
+      />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-head { padding-block: var(--sp-xl) var(--sp-s); max-width: 62rem; }
+  .page-head h1 { margin-block: 0.6rem 1rem; }
+  .page-head .lede { font-size: var(--step-1); }
+  .head-p { margin-block-start: 0.9rem; color: var(--fg-muted); max-width: 60ch; }
+  .head-p a { color: var(--accent); }
+
+  .coll-h { font-size: var(--step-2); margin-block-end: var(--sp-m); }
+
+  .coll-row {
+    display: grid;
+    gap: var(--sp-s);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .coll-row > li { min-width: 0; }
+
+  .coll-row a {
+    display: grid;
+    gap: 0.25rem;
+    height: 100%;
+    padding: 1.05rem 1.15rem;
+    background: var(--bg-sunk);
+    border: 1px solid var(--line);
+    border-radius: var(--r-m);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease);
+  }
+
+  .coll-row a:hover { border-color: var(--accent); background: var(--bg-raised); }
+
+  .coll-title { font-weight: 650; font-size: 0.98rem; }
+  .coll-note { color: var(--fg-muted); font-size: 0.85rem; line-height: 1.45; }
+
+  .group-head { margin-block-end: var(--sp-m); max-width: 58ch; }
+  .group-head h2 { font-size: var(--step-3); margin-block-end: 0.4rem; }
+  .group-head p { color: var(--fg-muted); }
+
+  .prod-grid {
+    display: grid;
+    gap: var(--sp-s);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  }
+
+  .prod-grid > :global(*) { min-width: 0; }
+</style>

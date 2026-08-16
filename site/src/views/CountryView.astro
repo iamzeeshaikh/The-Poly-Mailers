@@ -1,0 +1,230 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Blocks from '~/components/Blocks.astro';
+import QuoteForm from '~/components/QuoteForm.astro';
+import FaqList from '~/components/FaqList.astro';
+import RelatedLinks from '~/components/RelatedLinks.astro';
+import CtaBand from '~/components/CtaBand.astro';
+import { locationsInMarket } from '~/data/locations';
+import { breadcrumbs, faqPage, graph, itemList, webPage, type Crumb } from '~/lib/schema';
+
+/**
+ * Country hubs sit at the root — /usa/, /uk/, /canada/, /australia/ — because
+ * they are market pages rather than a subsection of anything.
+ *
+ * No hreflang is emitted anywhere on this site. These four are different pages
+ * about different markets, not localised equivalents of a single page, and
+ * declaring them as alternates would be a misrepresentation.
+ */
+import type { CountryHub } from '~/data/locations';
+
+interface Props {
+  country: CountryHub;
+}
+
+const { country } = Astro.props;
+const path = `/${country.slug}/`;
+
+const places = locationsInMarket(country.slug);
+const states = places.filter((p) => p.kind === 'state');
+const cities = places.filter((p) => p.kind === 'city');
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: '/' },
+  { name: 'Locations', href: '/locations/' },
+  { name: country.name, href: path },
+];
+
+const schema = graph([
+  webPage({
+    path,
+    name: country.h1,
+    description: country.description,
+    type: 'CollectionPage',
+    hasBreadcrumb: true,
+  }),
+  breadcrumbs(crumbs),
+  itemList({
+    path,
+    name: `Locations in ${country.name}`,
+    items: places.map((p) => ({ href: `/locations/${p.slug}/`, label: p.name })),
+  }),
+  faqPage(path, country.faqs),
+]);
+
+const groupByRegion = (list: readonly (typeof places)[number][]) => {
+  const map = new Map<string, typeof places[number][]>();
+  for (const place of list) {
+    const existing = map.get(place.region) ?? [];
+    existing.push(place);
+    map.set(place.region, existing);
+  }
+  return [...map.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+};
+---
+
+<BaseLayout
+  title={country.title}
+  description={country.description}
+  path={path}
+  schema={schema}
+  crumbs={crumbs}
+>
+  <article>
+    <header class="wrap page-head">
+      <p class="eyebrow">Market</p>
+      <h1>{country.h1}</h1>
+      {country.intro.map((p, i) => <p class={i === 0 ? 'lede' : 'head-p'}>{p}</p>)}
+    </header>
+
+    <div class="wrap section-tight">
+      <QuoteForm
+        source={path}
+        compact
+        id={`quote-${country.slug}`}
+        heading={`Quote an order for ${country.name}`}
+        intro="Tell us what you ship and where it goes. Currency, documentation and schedule are all confirmed in writing."
+      />
+    </div>
+
+    <div class="wrap section-tight">
+      <Blocks blocks={country.blocks} />
+    </div>
+
+    {
+      places.length > 0 && (
+        <section class="wrap section-tight">
+          <h2 class="sec-h">Where we write about {country.name}</h2>
+          <p class="sec-intro">
+            Each of these covers a different commercial situation rather than the
+            same page with a different place name on it.
+          </p>
+
+          {states.length > 0 && (
+            <div class="place-group">
+              <h3>States</h3>
+              {groupByRegion(states).map(([region, list]) => (
+                <div class="region">
+                  <p class="region-name">{region}</p>
+                  <ul role="list" class="place-list">
+                    {list.map((place) => (
+                      <li>
+                        <a href={`/locations/${place.slug}/`}>
+                          <span class="place-name">{place.name}</span>
+                          <span class="place-note">{place.summary}</span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {cities.length > 0 && (
+            <div class="place-group">
+              <h3>Cities</h3>
+              {groupByRegion(cities).map(([region, list]) => (
+                <div class="region">
+                  <p class="region-name">{region}</p>
+                  <ul role="list" class="place-list">
+                    {list.map((place) => (
+                      <li>
+                        <a href={`/locations/${place.slug}/`}>
+                          <span class="place-name">{place.name}</span>
+                          <span class="place-note">{place.summary}</span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
+        </section>
+      )
+    }
+
+    <div class="wrap section-tight">
+      <FaqList
+        faqs={country.faqs}
+        heading={`Questions about supplying ${country.name}`}
+        id={`faq-${country.slug}`}
+      />
+    </div>
+
+    <div class="wrap section-tight">
+      <RelatedLinks links={country.related} heading="Related pages" />
+    </div>
+
+    <div class="wrap section-tight">
+      <CtaBand
+        heading={country.cta.heading}
+        body={country.cta.body}
+        buttonLabel={country.cta.buttonLabel}
+        whatsappMessage={country.whatsapp}
+      />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-head { padding-block: var(--sp-xl) var(--sp-s); max-width: 62rem; }
+  .page-head h1 { margin-block: 0.6rem 1rem; max-width: 18ch; }
+  .page-head .lede { font-size: var(--step-1); }
+  .head-p { margin-block-start: 0.9rem; color: var(--fg-muted); max-width: 60ch; }
+
+  .sec-h { font-size: var(--step-3); margin-block-end: 0.4rem; }
+  .sec-intro { color: var(--fg-muted); max-width: 54ch; margin-block-end: var(--sp-l); }
+
+  .place-group + .place-group { margin-block-start: var(--sp-xl); }
+
+  .place-group > h3 {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--fg-subtle);
+    margin-block-end: var(--sp-s);
+  }
+
+  .region + .region { margin-block-start: var(--sp-m); }
+
+  .region-name {
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    font-weight: 500;
+    letter-spacing: -0.014em;
+    margin-block-end: 0.5rem;
+  }
+
+  .place-list {
+    display: grid;
+    gap: 0.4rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .place-list > li { min-width: 0; }
+
+  .place-list a {
+    display: grid;
+    gap: 0.15rem;
+    height: 100%;
+    padding: 0.85rem 1rem;
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--r-s);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color var(--dur-fast) var(--ease);
+  }
+
+  .place-list a:hover { border-color: var(--accent); }
+
+  .place-name { font-weight: 650; font-size: 0.95rem; }
+  .place-note { color: var(--fg-muted); font-size: 0.83rem; line-height: 1.45; }
+</style>

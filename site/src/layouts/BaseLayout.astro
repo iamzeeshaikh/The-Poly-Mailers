@@ -1,0 +1,139 @@
+---
+import '~/styles/global.css';
+import Header from '~/components/Header.astro';
+import Footer from '~/components/Footer.astro';
+import WhatsAppButton from '~/components/WhatsAppButton.astro';
+import Breadcrumbs from '~/components/Breadcrumbs.astro';
+import { abs, BRAND } from '~/lib/site';
+import type { Crumb } from '~/lib/schema';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Site-root path with a trailing slash, e.g. "/10x13-poly-mailers/" */
+  path: string;
+  /** Absolute or site-root URL of the social preview image. */
+  ogImage?: string;
+  ogImageAlt?: string;
+  noindex?: boolean;
+  /** Serialized JSON-LD graph. */
+  schema?: string;
+  crumbs?: readonly Crumb[];
+  /** Absolute URL of the LCP image, preloaded when supplied. */
+  preloadImage?: { href: string; imagesrcset?: string; imagesizes?: string };
+  bodyClass?: string;
+}
+
+const {
+  title,
+  description,
+  path,
+  ogImage,
+  ogImageAlt,
+  noindex = false,
+  schema,
+  crumbs,
+  preloadImage,
+  bodyClass = '',
+} = Astro.props;
+
+const canonical = abs(path);
+const socialImage = ogImage ? (ogImage.startsWith('http') ? ogImage : abs(ogImage)) : undefined;
+---
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    {!noindex && <meta name="robots" content="index, follow, max-image-preview:large" />}
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={BRAND.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="en" />
+    {socialImage && <meta property="og:image" content={socialImage} />}
+    {socialImage && ogImageAlt && <meta property="og:image:alt" content={ogImageAlt} />}
+
+    <meta name="twitter:card" content={socialImage ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {socialImage && <meta name="twitter:image" content={socialImage} />}
+
+    <meta name="theme-color" content="#0d1116" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <link
+      rel="preload"
+      href="/fonts/inter-latin-var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/fraunces-latin-var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    {
+      preloadImage && (
+        <link
+          rel="preload"
+          as="image"
+          href={preloadImage.href}
+          imagesrcset={preloadImage.imagesrcset}
+          imagesizes={preloadImage.imagesizes}
+          fetchpriority="high"
+        />
+      )
+    }
+
+    <script is:inline>
+      document.documentElement.classList.remove('no-js');
+    </script>
+
+    {schema && <script type="application/ld+json" set:html={schema} />}
+  </head>
+  <body class={bodyClass}>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <Header />
+    {crumbs && crumbs.length > 1 && <Breadcrumbs crumbs={crumbs} />}
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <Footer />
+    <WhatsAppButton />
+
+    <script>
+      // Scroll reveal. One observer, no layout reads, unhooks as it goes.
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const targets = document.querySelectorAll<HTMLElement>('[data-reveal]');
+
+      if (reduce.matches || !('IntersectionObserver' in window)) {
+        targets.forEach((el) => el.classList.add('is-revealed'));
+      } else {
+        const io = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (!entry.isIntersecting) continue;
+              entry.target.classList.add('is-revealed');
+              io.unobserve(entry.target);
+            }
+          },
+          { rootMargin: '0px 0px -8% 0px', threshold: 0.05 },
+        );
+        targets.forEach((el) => io.observe(el));
+      }
+    </script>
+  </body>
+</html>

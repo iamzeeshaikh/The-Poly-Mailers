@@ -1,0 +1,134 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Blocks from '~/components/Blocks.astro';
+import QuoteForm from '~/components/QuoteForm.astro';
+import FaqList from '~/components/FaqList.astro';
+import RelatedLinks from '~/components/RelatedLinks.astro';
+import ProductCard from '~/components/ProductCard.astro';
+import CtaBand from '~/components/CtaBand.astro';
+import { productBySlug } from '~/data/products';
+import { breadcrumbs, faqPage, graph, itemList, webPage, type Crumb } from '~/lib/schema';
+
+import type { Collection } from '~/data/collections';
+
+interface Props {
+  collection: Collection;
+}
+
+const { collection } = Astro.props;
+const path = `/${collection.slug}/`;
+
+const items = collection.productSlugs
+  .map((slug) => productBySlug.get(slug))
+  .filter((p): p is NonNullable<typeof p> => Boolean(p));
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: '/' },
+  { name: 'Poly mailers', href: '/poly-mailers/' },
+  { name: collection.name, href: path },
+];
+
+const schema = graph([
+  webPage({
+    path,
+    name: collection.h1,
+    description: collection.description,
+    type: 'CollectionPage',
+    hasBreadcrumb: true,
+  }),
+  breadcrumbs(crumbs),
+  itemList({
+    path,
+    name: collection.h1,
+    items: items.map((p) => ({ href: `/${p.slug}/`, label: p.name })),
+  }),
+  faqPage(path, collection.faqs),
+]);
+---
+
+<BaseLayout
+  title={collection.title}
+  description={collection.description}
+  path={path}
+  schema={schema}
+  crumbs={crumbs}
+>
+  <article>
+    <header class="wrap coll-head">
+      <p class="eyebrow">{collection.eyebrow}</p>
+      <h1>{collection.h1}</h1>
+      {collection.intro.map((p, i) => <p class={i === 0 ? 'lede' : 'coll-p'}>{p}</p>)}
+    </header>
+
+    <div class="wrap section-tight">
+      <QuoteForm
+        source={path}
+        compact
+        id={`quote-${collection.slug}`}
+        heading="Not sure which of these to order?"
+        intro="Describe what you ship and we will point you at the right one, then quote it. A recommendation costs nothing."
+      />
+    </div>
+
+    <section class="wrap section-tight">
+      <h2 class="picks-heading">Which one fits</h2>
+      <div class="picks-grid">
+        {
+          items.map((product, i) => (
+            <ProductCard product={product} note={collection.picks[product.slug]} index={i} />
+          ))
+        }
+      </div>
+    </section>
+
+    <div class="wrap section-tight">
+      <Blocks blocks={collection.blocks} />
+    </div>
+
+    <div class="wrap section-tight">
+      <FaqList
+        faqs={collection.faqs}
+        heading={`Questions about ${collection.h1.toLowerCase()}`}
+        id={`faq-${collection.slug}`}
+      />
+    </div>
+
+    <div class="wrap section-tight">
+      <RelatedLinks
+        links={collection.related}
+        heading="Related reading"
+        intro="Each of these takes the decision further in a different direction."
+      />
+    </div>
+
+    <div class="wrap section-tight">
+      <CtaBand
+        heading={collection.cta.heading}
+        body={collection.cta.body}
+        buttonLabel={collection.cta.buttonLabel}
+        whatsappMessage={collection.whatsapp}
+      />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .coll-head {
+    padding-block: var(--sp-xl) var(--sp-s);
+    max-width: 62rem;
+  }
+
+  .coll-head h1 { margin-block: 0.6rem 1rem; max-width: 17ch; }
+  .coll-head .lede { font-size: var(--step-1); }
+  .coll-p { margin-block-start: 0.9rem; color: var(--fg-muted); max-width: 60ch; }
+
+  .picks-heading { font-size: var(--step-3); margin-block-end: var(--sp-m); }
+
+  .picks-grid {
+    display: grid;
+    gap: var(--sp-s);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  }
+
+  .picks-grid > :global(*) { min-width: 0; }
+</style>

@@ -1,0 +1,150 @@
+---
+/**
+ * Every root-level page that shares a rendering template.
+ *
+ * Product, collection, capability, country-hub and policy URLs all sit at the
+ * site root by design, so one dynamic segment resolves all of them. Routing
+ * them through a single file means there can never be two competing `/[param]/`
+ * patterns, and the duplicate check below turns a URL collision into a build
+ * failure rather than a silently overwritten page.
+ *
+ * Pages with a bespoke layout — the quote page, contact, the design tool, the
+ * blog index, the HTML sitemap — have their own files. Astro resolves a static
+ * route ahead of this one, so they win automatically.
+ */
+import type { GetStaticPaths } from 'astro';
+import ProductView from '~/views/ProductView.astro';
+import CollectionView from '~/views/CollectionView.astro';
+import CountryView from '~/views/CountryView.astro';
+import ContentView from '~/views/ContentView.astro';
+import { products } from '~/data/products';
+import { collections } from '~/data/collections';
+import { capabilityPages } from '~/data/capabilities';
+import { policyPages } from '~/data/policies';
+import { countryHubs } from '~/data/locations';
+import type { Crumb } from '~/lib/schema';
+import type { ContentPage } from '~/data/types';
+
+export const getStaticPaths = (() => {
+  const entries = [
+    ...products.map((product) => ({
+      params: { slug: product.slug },
+      props: {
+        kind: 'product' as const,
+        product,
+        collection: undefined,
+        country: undefined,
+        page: undefined,
+      },
+    })),
+    ...collections.map((collection) => ({
+      params: { slug: collection.slug },
+      props: {
+        kind: 'collection' as const,
+        product: undefined,
+        collection,
+        country: undefined,
+        page: undefined,
+      },
+    })),
+    ...countryHubs.map((country) => ({
+      params: { slug: country.slug },
+      props: {
+        kind: 'country' as const,
+        product: undefined,
+        collection: undefined,
+        country,
+        page: undefined,
+      },
+    })),
+    ...capabilityPages.map((page) => ({
+      params: { slug: page.slug },
+      props: {
+        kind: 'capability' as const,
+        product: undefined,
+        collection: undefined,
+        country: undefined,
+        page,
+      },
+    })),
+    ...policyPages.map((page) => ({
+      params: { slug: page.slug },
+      props: {
+        kind: 'policy' as const,
+        product: undefined,
+        collection: undefined,
+        country: undefined,
+        page,
+      },
+    })),
+  ];
+
+  const seen = new Set<string>();
+  for (const entry of entries) {
+    if (seen.has(entry.params.slug)) {
+      throw new Error(
+        `Duplicate root URL "/${entry.params.slug}/". One canonical URL per page — see docs/01-audit-and-architecture.md section 3.`,
+      );
+    }
+    seen.add(entry.params.slug);
+  }
+
+  return entries;
+}) satisfies GetStaticPaths;
+
+const { kind, product, collection, country, page } = Astro.props;
+
+const contentPage = page as ContentPage | undefined;
+const path = contentPage ? `/${contentPage.slug}/` : '';
+
+const capabilityCrumbs: Crumb[] = contentPage
+  ? [
+      { name: 'Home', href: '/' },
+      { name: 'Capabilities', href: '/how-it-works/' },
+      { name: contentPage.h1, href: path },
+    ]
+  : [];
+
+const policyCrumbs: Crumb[] = contentPage
+  ? [
+      { name: 'Home', href: '/' },
+      { name: contentPage.h1, href: path },
+    ]
+  : [];
+
+const capabilityEyebrows: Record<string, string> = {
+  materials: 'Specification',
+  'printing-options': 'Specification',
+  'artwork-guidelines': 'Specification',
+  'size-guide': 'Specification',
+  sustainability: 'Our position',
+};
+---
+
+{kind === 'product' && product && <ProductView product={product} />}
+
+{kind === 'collection' && collection && <CollectionView collection={collection} />}
+
+{kind === 'country' && country && <CountryView country={country} />}
+
+{
+  kind === 'capability' && contentPage && (
+    <ContentView
+      page={contentPage}
+      path={path}
+      crumbs={capabilityCrumbs}
+      eyebrow={capabilityEyebrows[contentPage.slug]}
+      quoteForm={{
+        heading: 'Turn this into a specification',
+        intro:
+          'Tell us what you ship and we will apply everything on this page to your order, in writing.',
+      }}
+    />
+  )
+}
+
+{
+  kind === 'policy' && contentPage && (
+    <ContentView page={contentPage} path={path} crumbs={policyCrumbs} eyebrow="Policy" />
+  )
+}

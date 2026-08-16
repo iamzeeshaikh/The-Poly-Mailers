@@ -1,0 +1,23 @@
+---
+import type { GetStaticPaths } from 'astro';
+import ContentView from '~/views/ContentView.astro';
+import { resources } from '~/data/resources';
+import type { Crumb } from '~/lib/schema';
+
+export const getStaticPaths = (() =>
+  resources.map((resource) => ({
+    params: { resource: resource.slug },
+    props: { resource },
+  }))) satisfies GetStaticPaths;
+
+const { resource } = Astro.props;
+const path = `/resources/${resource.slug}/`;
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: '/' },
+  { name: 'Resources', href: '/resources/' },
+  { name: resource.h1, href: path },
+];
+---
+
+<ContentView page={resource} path={path} crumbs={crumbs} eyebrow="Reference guide" />

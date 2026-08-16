@@ -1,0 +1,248 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import CtaBand from '~/components/CtaBand.astro';
+import { resources } from '~/data/resources';
+import { breadcrumbs, graph, itemList, webPage, type Crumb } from '~/lib/schema';
+
+const path = '/resources/';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: '/' },
+  { name: 'Resources', href: path },
+];
+
+/** Grouped by the job each guide does, not alphabetically. */
+const groups = [
+  {
+    title: 'Selecting',
+    blurb: 'Working out what to order when you have not decided yet.',
+    slugs: ['poly-mailer-size-guide', 'color-selection-guide', 'poly-mailer-material-guide'],
+  },
+  {
+    title: 'Comparing',
+    blurb: 'Putting two options — or two suppliers — side by side.',
+    slugs: ['protective-mailer-comparison', 'sustainable-mailer-terminology-guide', 'closure-and-self-seal-guide'],
+  },
+  {
+    title: 'Preparing',
+    blurb: 'Getting your side of the work right before anyone quotes.',
+    slugs: ['printing-and-artwork-guide', 'custom-mailer-ordering-checklist'],
+  },
+  {
+    title: 'Measuring and ordering',
+    blurb: 'The practical steps immediately before an order.',
+    slugs: ['mailer-measurement-guide', 'international-ordering-guide'],
+  },
+];
+
+const bySlug = new Map(resources.map((r) => [r.slug, r]));
+
+const schema = graph([
+  webPage({
+    path,
+    name: 'Poly mailer reference guides',
+    description:
+      'Reference guides for selecting, comparing, preparing and measuring packaging — written to be usable against any supplier, not only ours.',
+    type: 'CollectionPage',
+    hasBreadcrumb: true,
+  }),
+  breadcrumbs(crumbs),
+  itemList({
+    path,
+    name: 'Reference guides',
+    items: resources.map((r) => ({ href: `/resources/${r.slug}/`, label: r.h1 })),
+  }),
+]);
+---
+
+<BaseLayout
+  title="Poly Mailer Reference Guides | Sizing, Print, Materials"
+  description="Ten reference guides for choosing, comparing and specifying poly mailers — size charts, material comparison, artwork preparation and ordering checklists."
+  path={path}
+  schema={schema}
+  crumbs={crumbs}
+>
+  <article>
+    <header class="wrap page-head">
+      <p class="eyebrow">Reference</p>
+      <h1>Reference guides</h1>
+      <p class="lede">
+        Ten guides for working out what to order. They are written to be used
+        against any supplier rather than only against us, which is why several
+        of them tell you what to ask a competitor.
+      </p>
+      <p class="head-p">
+        These are reference material — tables and checklists you come back to.
+        The articles are the other thing: arguments you read once.
+      </p>
+    </header>
+
+    <div class="wrap section-tight res-groups">
+      {
+        groups.map((group) => (
+          <section class="res-group">
+            <div class="res-group-head">
+              <h2>{group.title}</h2>
+              <p>{group.blurb}</p>
+            </div>
+            <ul role="list" class="res-list">
+              {group.slugs.map((slug) => {
+                const resource = bySlug.get(slug);
+                return resource ? (
+                  <li>
+                    <a href={`/resources/${resource.slug}/`}>
+                      <span class="res-title">{resource.h1}</span>
+                      <span class="res-summary">{resource.summary}</span>
+                    </a>
+                  </li>
+                ) : null;
+              })}
+            </ul>
+          </section>
+        ))
+      }
+    </div>
+
+    <section class="wrap section-tight">
+      <div class="why-grid">
+        <div class="why-copy">
+          <h2>Written to be used against any quotation</h2>
+          <p>
+            Several of these guides tell you what to ask a supplier, and they do
+            not exclude us from that. The material guide sets out how to compare
+            two film specifications when the published numbers are not
+            comparable. The terminology guide gives you five questions to put to
+            anyone making an environmental claim. The ordering checklist is a
+            brief you can send to three suppliers so the quotations come back
+            comparable.
+          </p>
+          <p>
+            That is deliberate. A buyer who can interrogate a specification
+            makes better decisions, and a supplier who cannot answer those
+            questions has told you something useful.
+          </p>
+        </div>
+        <ul role="list" class="why-list">
+          <li>
+            <strong>Reference, not argument</strong>
+            <span>Tables and checklists you return to, rather than a piece to read once.</span>
+          </li>
+          <li>
+            <strong>No figures we cannot stand behind</strong>
+            <span>No gauge numbers, no recycled percentages, no delivery times.</span>
+          </li>
+          <li>
+            <strong>Supplier-neutral where it matters</strong>
+            <span>The comparison guides work whether or not you buy from us.</span>
+          </li>
+          <li>
+            <strong>Boundaries stated</strong>
+            <span>Each guide says what it does not cover and which page does.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="wrap section-tight">
+      <CtaBand
+        heading="Or skip the reading"
+        body="Describe what you ship and we will do the working out for you — a size recommendation, a specification and a price, in writing."
+        buttonLabel="Get a recommendation"
+        whatsappMessage="Hi, I would rather describe what I ship than work it out myself. Can you advise?"
+      />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-head { padding-block: var(--sp-xl) var(--sp-s); max-width: 62rem; }
+  .page-head h1 { margin-block: 0.6rem 1rem; max-width: 16ch; }
+  .page-head .lede { font-size: var(--step-1); }
+  .head-p { margin-block-start: 0.9rem; color: var(--fg-muted); max-width: 60ch; }
+
+  .res-groups { display: grid; gap: var(--sp-xl); }
+
+  .res-group {
+    display: grid;
+    gap: var(--sp-m);
+  }
+
+  @media (min-width: 54rem) {
+    .res-group { grid-template-columns: 15rem minmax(0, 1fr); gap: var(--sp-xl); align-items: start; }
+  }
+
+  .res-group-head h2 {
+    font-size: var(--step-2);
+    margin-block-end: 0.35rem;
+  }
+
+  .res-group-head p { color: var(--fg-muted); font-size: 0.9rem; margin: 0; }
+
+  .res-list {
+    display: grid;
+    gap: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-block-start: 1px solid var(--line);
+  }
+
+  .res-list a {
+    display: grid;
+    gap: 0.2rem;
+    padding: 1rem 0;
+    border-block-end: 1px solid var(--line);
+    text-decoration: none;
+    color: inherit;
+    transition: padding-inline-start var(--dur) var(--ease-out);
+  }
+
+  .res-list a:hover { padding-inline-start: 0.65rem; }
+
+  .res-title {
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    font-weight: 500;
+    letter-spacing: -0.014em;
+  }
+
+  .res-list a:hover .res-title { color: var(--accent-hover); }
+
+  .res-summary { color: var(--fg-muted); font-size: 0.9rem; }
+
+  .why-grid {
+    display: grid;
+    gap: var(--sp-m);
+  }
+
+  @media (min-width: 56rem) {
+    .why-grid {
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: var(--sp-xl);
+      align-items: start;
+    }
+  }
+
+  .why-copy h2 { font-size: var(--step-2); margin-block-end: 0.6rem; max-width: 22ch; }
+  .why-copy p { color: var(--fg-muted); max-width: 52ch; }
+  .why-copy p + p { margin-block-start: 0.8rem; }
+
+  .why-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0;
+  }
+
+  .why-list li {
+    display: grid;
+    gap: 0.1rem;
+    padding-block: 0.85rem;
+    border-block-end: 1px solid var(--line);
+  }
+
+  .why-list li:last-child { border-block-end: 0; }
+  .why-list strong { font-size: 0.98rem; font-weight: 650; }
+  .why-list span { color: var(--fg-muted); font-size: 0.9rem; }
+</style>

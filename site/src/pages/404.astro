@@ -1,0 +1,138 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { BRAND } from '~/lib/site';
+
+/**
+ * The static build emits this as 404.html and Vercel serves it with a genuine
+ * 404 status, so it is a real not-found response rather than a soft 404.
+ * It is excluded from the XML sitemap and carries a noindex directive.
+ */
+const routes = [
+  {
+    href: '/poly-mailers/',
+    label: 'All poly mailers',
+    note: 'Every product, grouped by the decision behind it.',
+  },
+  {
+    href: '/poly-mailer-sizes/',
+    label: 'Sizes compared',
+    note: 'If you arrived looking for a specific dimension.',
+  },
+  {
+    href: '/poly-mailer-colors/',
+    label: 'Colours compared',
+    note: 'If you were looking for a particular colour.',
+  },
+  {
+    href: '/request-a-quote/',
+    label: 'Request a quotation',
+    note: 'Describe what you need and skip the browsing.',
+  },
+  {
+    href: '/sitemap/',
+    label: 'Full sitemap',
+    note: 'Every page on the site, in one list.',
+  },
+];
+---
+
+<BaseLayout
+  title="Page Not Found | The Poly Mailers"
+  description="That page does not exist. Here are the routes most people are looking for."
+  path="/404/"
+  noindex
+>
+  <article class="wrap nf">
+    <div class="nf-inner">
+      <p class="nf-code" aria-hidden="true">404</p>
+      <h1>That page does not exist</h1>
+      <p class="lede">
+        Either the address is wrong or the page has moved. Nothing has been
+        deleted quietly — if a URL used to work and now does not, tell us and we
+        will fix it.
+      </p>
+
+      <nav class="nf-routes" aria-label="Common destinations">
+        <h2>Where most people are heading</h2>
+        <ul role="list">
+          {
+            routes.map((route) => (
+              <li>
+                <a href={route.href}>
+                  <span class="nf-label">{route.label}</span>
+                  <span class="nf-note">{route.note}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+
+      <p class="nf-contact">
+        Or email <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a> and describe
+        what you were looking for.
+      </p>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .nf { padding-block: var(--sp-2xl) var(--sp-3xl); }
+  .nf-inner { max-width: 44rem; }
+
+  .nf-code {
+    font-family: var(--font-mono);
+    font-size: var(--step-2);
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    margin-block-end: 0.5rem;
+  }
+
+  .nf h1 { margin-block-end: 0.9rem; max-width: 16ch; }
+  .nf .lede { font-size: var(--step-1); max-width: 52ch; }
+
+  .nf-routes { margin-block-start: var(--sp-xl); }
+
+  .nf-routes h2 {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--fg-subtle);
+    margin-block-end: var(--sp-s);
+  }
+
+  .nf-routes ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.4rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  }
+
+  .nf-routes li { min-width: 0; }
+
+  .nf-routes a {
+    display: grid;
+    gap: 0.15rem;
+    height: 100%;
+    padding: 0.9rem 1.05rem;
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--r-m);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color var(--dur-fast) var(--ease);
+  }
+
+  .nf-routes a:hover { border-color: var(--accent); }
+
+  .nf-label { font-weight: 650; font-size: 0.96rem; }
+  .nf-note { color: var(--fg-muted); font-size: 0.85rem; }
+
+  .nf-contact { margin-block-start: var(--sp-l); color: var(--fg-muted); }
+  .nf-contact a { color: var(--accent); }
+</style>

@@ -1,0 +1,129 @@
+---
+import { Picture } from 'astro:assets';
+import type { ProductPage } from '~/data/types';
+
+interface Props {
+  product: ProductPage;
+  /** Overrides the summary line — used where a page needs its own framing. */
+  note?: string;
+  index?: number;
+}
+
+const { product, note, index = 0 } = Astro.props;
+
+const modules = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/products/*.{png,jpg,jpeg}',
+  { eager: true },
+);
+
+const ref = product.images[0]!;
+const src = modules[`/src/assets/products/${ref.file}`]!.default;
+---
+
+<article class="pcard" data-reveal style={`--reveal-delay:${Math.min(index, 5) * 50}ms`}>
+  <a class="pcard-link" href={`/${product.slug}/`}>
+    <div class="pcard-media">
+      <Picture
+        src={src}
+        alt={ref.alt}
+        widths={[240, 360, 520]}
+        sizes="(min-width: 68rem) 22vw, (min-width: 45rem) 30vw, 46vw"
+        formats={['avif', 'webp']}
+        fallbackFormat="jpeg"
+        quality={68}
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+    <div class="pcard-body">
+      <h3>{product.name}</h3>
+      <p>{note ?? product.summary}</p>
+      <span class="pcard-go">
+        Read the detail
+        <svg width="14" height="10" viewBox="0 0 16 12" aria-hidden="true">
+          <path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </span>
+    </div>
+  </a>
+</article>
+
+<style>
+  .pcard {
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--r-m);
+    overflow: clip;
+    transition: border-color var(--dur-fast) var(--ease), transform var(--dur) var(--ease-out),
+      box-shadow var(--dur) var(--ease-out);
+  }
+
+  .pcard:hover {
+    border-color: var(--ink-200);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-m);
+  }
+
+  .pcard-link {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100%;
+    min-width: 0;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .pcard-media {
+    inline-size: 100%;
+    aspect-ratio: 4 / 3;
+    background: var(--bg-sunk);
+    overflow: clip;
+  }
+
+  .pcard-media :global(img) {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    transition: transform var(--dur-slow) var(--ease-out);
+  }
+
+  .pcard:hover .pcard-media :global(img) { transform: scale(1.035); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pcard:hover .pcard-media :global(img) { transform: none; }
+  }
+
+  .pcard-body {
+    padding: 1rem 1.1rem 1.15rem;
+    display: grid;
+    align-content: start;
+    gap: 0.35rem;
+  }
+
+  .pcard-body h3 {
+    font-size: 1.05rem;
+    font-family: var(--font-body);
+    font-weight: 650;
+    letter-spacing: -0.012em;
+  }
+
+  .pcard-body p {
+    color: var(--fg-muted);
+    font-size: 0.885rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .pcard-go {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-block-start: 0.35rem;
+    font-size: 0.83rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .pcard-go svg { transition: transform var(--dur) var(--ease-out); }
+  .pcard:hover .pcard-go svg { transform: translateX(3px); }
+</style>

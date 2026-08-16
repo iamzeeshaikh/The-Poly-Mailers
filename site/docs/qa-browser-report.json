@@ -1,0 +1,90 @@
+{
+  "base": "http://localhost:4599",
+  "results": [
+    {
+      "ok": true,
+      "name": "mobile overflow",
+      "detail": "no horizontal scrolling or clipped content across 18 pages at 320, 375, 414, 768, 1024 and 1440px"
+    },
+    {
+      "ok": true,
+      "name": "screenshots",
+      "detail": "captured 18 pages at mobile and desktop"
+    },
+    {
+      "ok": true,
+      "name": "skip link",
+      "detail": "first tab stop is the skip link"
+    },
+    {
+      "ok": true,
+      "name": "gallery keyboard",
+      "detail": "thumbnail activation switches the stage image"
+    },
+    {
+      "ok": true,
+      "name": "faq semantics",
+      "detail": "FAQs use native details/summary"
+    },
+    {
+      "ok": true,
+      "name": "form validation",
+      "detail": "7 inline errors, 7 fields marked invalid, no navigation"
+    },
+    {
+      "ok": true,
+      "name": "form recovery",
+      "detail": "values preserved, email error shown, focus moved to the offending field"
+    },
+    {
+      "ok": true,
+      "name": "honeypot",
+      "detail": "present, aria-hidden, clipped and removed from tab order"
+    },
+    {
+      "ok": true,
+      "name": "upload validation",
+      "detail": "disallowed extension rejected before submission"
+    },
+    {
+      "ok": true,
+      "name": "design tool sizing",
+      "detail": "bag width 276.92307692307696 → 240 on size change"
+    },
+    {
+      "ok": true,
+      "name": "design tool colour",
+      "detail": "swatch updates the preview, its own state and the summary"
+    },
+    {
+      "ok": true,
+      "name": "design tool handoff",
+      "detail": "configuration is written into the quote form and carries the preview caveat"
+    },
+    {
+      "ok": true,
+      "name": "design tool persistence",
+      "detail": "configuration survived a reload"
+    },
+    {
+      "ok": true,
+      "name": "design tool keyboard",
+      "detail": "arrow keys move between colour swatches"
+    },
+    {
+      "ok": true,
+      "name": "reduced motion",
+      "detail": "all revealed content is visible with motion reduced"
+    },
+    {
+      "ok": true,
+      "name": "no-js fallback",
+      "detail": "1297 words and 6 images render without JavaScript"
+    },
+    {
+      "ok": true,
+      "name": "contrast",
+      "detail": "199 text elements meet WCAG AA against their background"
+    }
+  ]
+}

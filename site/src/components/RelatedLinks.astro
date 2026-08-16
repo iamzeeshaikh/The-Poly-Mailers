@@ -1,0 +1,98 @@
+---
+import type { RelatedLink } from '~/data/types';
+
+interface Props {
+  links: readonly RelatedLink[];
+  heading: string;
+  intro?: string;
+}
+
+const { links, heading, intro } = Astro.props;
+---
+
+<section class="related" aria-labelledby="related-heading">
+  <h2 id="related-heading">{heading}</h2>
+  {intro && <p class="related-intro">{intro}</p>}
+  <ul role="list" class="related-grid">
+    {
+      links.map((link, i) => (
+        <li data-reveal style={`--reveal-delay:${i * 55}ms`}>
+          <a href={link.href} class="related-card">
+            <span class="related-label">{link.label}</span>
+            <span class="related-reason">{link.reason}</span>
+            <svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true" class="related-arrow">
+              <path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<style>
+  .related h2 { font-size: var(--step-3); margin-block-end: 0.4rem; }
+
+  .related-intro {
+    color: var(--fg-muted);
+    max-width: 54ch;
+    margin-block-end: var(--sp-m);
+  }
+
+  .related-grid {
+    display: grid;
+    gap: var(--sp-s);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    list-style: none;
+    margin: var(--sp-s) 0 0;
+    padding: 0;
+  }
+
+  .related-grid > li { min-width: 0; }
+
+  .related-card {
+    display: grid;
+    gap: 0.35rem;
+    height: 100%;
+    padding: 1.15rem 1.25rem;
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--r-m);
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    transition: border-color var(--dur-fast) var(--ease), transform var(--dur) var(--ease-out),
+      box-shadow var(--dur) var(--ease-out);
+  }
+
+  .related-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-m);
+  }
+
+  .related-label {
+    font-weight: 650;
+    font-size: 1rem;
+    letter-spacing: -0.008em;
+    padding-inline-end: 1.6rem;
+  }
+
+  .related-reason {
+    color: var(--fg-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .related-arrow {
+    position: absolute;
+    top: 1.35rem;
+    inset-inline-end: 1.2rem;
+    color: var(--accent);
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease-out);
+  }
+
+  .related-card:hover .related-arrow { opacity: 1; transform: none; }
+</style>

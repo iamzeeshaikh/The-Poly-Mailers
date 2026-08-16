@@ -1,0 +1,228 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import QuoteForm from '~/components/QuoteForm.astro';
+import { BRAND, MARKETS, whatsappLink } from '~/lib/site';
+import { breadcrumbs, graph, webPage, type Crumb } from '~/lib/schema';
+
+const path = '/contact/';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: '/' },
+  { name: 'Contact', href: path },
+];
+
+const schema = graph([
+  webPage({
+    path,
+    name: 'Contact The Poly Mailers',
+    description:
+      'Email, phone and WhatsApp for The Poly Mailers, with a note on which route suits which kind of enquiry.',
+    type: 'ContactPage',
+    hasBreadcrumb: true,
+  }),
+  breadcrumbs(crumbs),
+]);
+---
+
+<BaseLayout
+  title="Contact The Poly Mailers | Email, Phone & WhatsApp"
+  description="Reach The Poly Mailers by email, phone or WhatsApp. Which route suits which enquiry, and what to include so the first reply is a useful one."
+  path={path}
+  schema={schema}
+  crumbs={crumbs}
+>
+  <article>
+    <header class="wrap page-head">
+      <p class="eyebrow">Contact</p>
+      <h1>Contact us</h1>
+      <p class="lede">
+        Three ways to reach a person. Which one to use depends on what you are
+        asking, and the difference is worth two minutes of reading.
+      </p>
+    </header>
+
+    <section class="wrap section-tight">
+      <ul role="list" class="channel-grid">
+        <li>
+          <div class="channel-head">
+            <h2>Email</h2>
+            <span class="badge">Suited to quotations</span>
+          </div>
+          <a class="channel-value" href={`mailto:${BRAND.email}`}>{BRAND.email}</a>
+          <p>
+            The right route for anything with detail attached — specifications,
+            artwork, order profiles, documentation requests. It leaves a written
+            record on both sides, which matters when a specification is being
+            agreed.
+          </p>
+        </li>
+
+        <li>
+          <div class="channel-head">
+            <h2>Phone</h2>
+            <span class="badge">Suited to working something out</span>
+          </div>
+          <a class="channel-value" href={BRAND.phoneHref}>{BRAND.phoneDisplay}</a>
+          <p>
+            Useful when you are not sure what you need and a conversation will
+            get there faster than an exchange of emails. Anything agreed by
+            phone is confirmed back to you in writing afterwards.
+          </p>
+        </li>
+
+        <li>
+          <div class="channel-head">
+            <h2>WhatsApp</h2>
+            <span class="badge">Suited to a quick question</span>
+          </div>
+          <a
+            class="channel-value"
+            href={whatsappLink('Hi, I have a question about poly mailers.')}
+            target="_blank"
+            rel="noopener">{BRAND.whatsappDisplay}</a
+          >
+          <p>
+            Good for a short question, a photograph of what you currently use,
+            or a picture of something that has arrived damaged. Faster than
+            email for anything visual.
+          </p>
+        </li>
+      </ul>
+
+      <div class="channel-note panel">
+        <h2>About these numbers</h2>
+        <p>
+          The phone number above is our single contact line for every market we
+          serve. It is not presented as a local number for the United States,
+          Canada or Australia, because it is not one, and a supplier displaying
+          a local-looking number it does not answer locally is telling you
+          something about the rest of its claims.
+        </p>
+        <p>
+          We hold no branch, depot or collection point in any market. Orders are
+          produced to your specification and shipped to the address you give us.
+        </p>
+      </div>
+    </section>
+
+    <section class="wrap section-tight">
+      <div class="markets">
+        <h2>Where we supply</h2>
+        <ul role="list">
+          {
+            MARKETS.map((m) => (
+              <li>
+                <a href={`/${m.slug}/`}>
+                  <span class="market-name">{m.name}</span>
+                  <span class="market-note">{m.serviceStatement}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    <div class="wrap section-tight">
+      <QuoteForm
+        source={path}
+        id="quote-contact"
+        heading="Or send it in writing"
+        intro="If your enquiry has detail attached, this is the fastest route to a useful answer. Attach artwork if you have it."
+      />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-head { padding-block: var(--sp-xl) var(--sp-s); max-width: 62rem; }
+  .page-head h1 { margin-block: 0.6rem 1rem; }
+  .page-head .lede { font-size: var(--step-1); }
+
+  .channel-grid {
+    display: grid;
+    gap: var(--sp-s);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .channel-grid > li {
+    min-width: 0;
+    padding: 1.4rem 1.5rem;
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--r-m);
+    display: grid;
+    align-content: start;
+    gap: 0.5rem;
+  }
+
+  .channel-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .channel-head h2 { font-size: var(--step-1); }
+
+  .channel-value {
+    font-size: 1.02rem;
+    font-weight: 650;
+    color: var(--accent);
+    text-decoration: none;
+    word-break: break-word;
+  }
+
+  .channel-value:hover { text-decoration: underline; }
+
+  .channel-grid p { color: var(--fg-muted); font-size: 0.9rem; line-height: 1.55; margin: 0; }
+
+  .channel-note {
+    margin-block-start: var(--sp-m);
+    max-width: 52rem;
+  }
+
+  .channel-note h2 { font-size: var(--step-1); margin-block-end: 0.5rem; }
+  .channel-note p { color: var(--fg-muted); font-size: 0.92rem; }
+  .channel-note p + p { margin-block-start: 0.7rem; }
+
+  .markets h2 { font-size: var(--step-2); margin-block-end: var(--sp-m); }
+
+  .markets ul {
+    display: grid;
+    gap: var(--sp-s);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .markets li { min-width: 0; }
+
+  .markets a {
+    display: grid;
+    gap: 0.2rem;
+    height: 100%;
+    padding: 1rem 1.15rem;
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--r-m);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color var(--dur-fast) var(--ease);
+  }
+
+  .markets a:hover { border-color: var(--accent); }
+
+  .market-name {
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    font-weight: 500;
+    letter-spacing: -0.014em;
+  }
+
+  .market-note { color: var(--fg-muted); font-size: 0.83rem; }
+</style>

@@ -1,0 +1,204 @@
+---
+import { getImage } from 'astro:assets';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Blocks from '~/components/Blocks.astro';
+import ProductGallery from '~/components/ProductGallery.astro';
+import QuoteForm from '~/components/QuoteForm.astro';
+import FaqList from '~/components/FaqList.astro';
+import RelatedLinks from '~/components/RelatedLinks.astro';
+import CtaBand from '~/components/CtaBand.astro';
+import { collections } from '~/data/collections';
+import {
+  breadcrumbs,
+  faqPage,
+  graph,
+  imageObject,
+  product as productSchema,
+  webPage,
+  type Crumb,
+} from '~/lib/schema';
+
+import type { ProductPage } from '~/data/types';
+
+interface Props {
+  product: ProductPage;
+}
+
+const { product } = Astro.props;
+const path = `/${product.slug}/`;
+
+const modules = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/products/*.{png,jpg,jpeg}',
+  { eager: true },
+);
+
+const heroRef = product.images[0]!;
+const heroSource = modules[`/src/assets/products/${heroRef.file}`]!.default;
+
+// Social preview and the schema ImageObject both point at one built rendition,
+// so the URL in the markup is a file that actually exists in the output.
+const social = await getImage({
+  src: heroSource,
+  width: 1200,
+  height: 1200,
+  format: 'jpeg',
+  quality: 78,
+});
+
+// The same widths the gallery emits, so the preload matches the chosen candidate.
+const preload = await getImage({
+  src: heroSource,
+  widths: [440, 640, 880, 1080],
+  sizes: '(min-width: 64rem) 46vw, (min-width: 40rem) 60vw, 92vw',
+  format: 'avif',
+  quality: 72,
+});
+
+const collection = collections.find((c) => product.collections.includes(c.slug));
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: '/' },
+  { name: 'Poly mailers', href: '/poly-mailers/' },
+  ...(collection ? [{ name: collection.name, href: `/${collection.slug}/` }] : []),
+  { name: product.name, href: path },
+];
+
+const schema = graph([
+  webPage({
+    path,
+    name: product.h1,
+    description: product.description,
+    primaryImage: social.src,
+    hasBreadcrumb: true,
+  }),
+  breadcrumbs(crumbs),
+  productSchema({
+    path,
+    name: product.name,
+    description: product.summary,
+    image: social.src,
+    category: 'Poly mailers',
+  }),
+  imageObject({
+    path,
+    url: social.src,
+    width: 1200,
+    height: 1200,
+    caption: heroRef.alt,
+  }),
+  faqPage(path, product.faqs),
+]);
+---
+
+<BaseLayout
+  title={product.title}
+  description={product.description}
+  path={path}
+  ogImage={social.src}
+  ogImageAlt={heroRef.alt}
+  schema={schema}
+  crumbs={crumbs}
+  preloadImage={{
+    href: preload.src,
+    imagesrcset: preload.srcSet.attribute,
+    imagesizes: preload.attributes.sizes,
+  }}
+>
+  <article>
+    <div class="wrap product-top">
+      <div class="product-intro">
+        <p class="eyebrow">{collection?.eyebrow ?? 'Poly mailers'}</p>
+        <h1>{product.h1}</h1>
+        {product.intro.map((p, i) => <p class={i === 0 ? 'lede' : 'intro-p'}>{p}</p>)}
+        <p class="whats-next">
+          <a class="link-arrow" href={`#quote-${product.slug}`}>
+            Request a quotation for {product.name.toLowerCase()}
+          </a>
+        </p>
+      </div>
+
+      <div class="product-media">
+        <ProductGallery images={product.images} productName={product.name} />
+      </div>
+    </div>
+
+    <div class="wrap section-tight">
+      <QuoteForm
+        preset={product.quotePreset}
+        source={path}
+        compact
+        id={`quote-${product.slug}`}
+        heading={`Price ${product.name.toLowerCase()}`}
+        intro="A short brief is enough to start. We come back with a written specification and a price."
+      />
+    </div>
+
+    <div class="wrap section-tight">
+      <Blocks blocks={product.blocks} />
+    </div>
+
+    <div class="wrap section-tight">
+      <FaqList
+        faqs={product.faqs}
+        heading={`Questions about ${product.name.toLowerCase()}`}
+        id={`faq-${product.slug}`}
+      />
+    </div>
+
+    <div class="wrap section-tight">
+      <RelatedLinks
+        links={product.related}
+        heading="Where to go next"
+        intro="Each of these answers a different question from the one this page answers."
+      />
+    </div>
+
+    <div class="wrap section-tight">
+      <CtaBand
+        heading={product.cta.heading}
+        body={product.cta.body}
+        buttonLabel={product.cta.buttonLabel}
+        whatsappMessage={product.whatsapp}
+      />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .product-top {
+    display: grid;
+    gap: var(--sp-l);
+    padding-block: var(--sp-xl) var(--sp-s);
+    align-items: start;
+  }
+
+  @media (min-width: 60rem) {
+    .product-top {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+      gap: var(--sp-2xl);
+      padding-block: var(--sp-2xl) var(--sp-m);
+    }
+  }
+
+  .product-intro h1 {
+    margin-block: 0.55rem 0.9rem;
+    max-width: 15ch;
+  }
+
+  .product-intro .lede {
+    font-size: var(--step-1);
+    color: var(--fg-muted);
+  }
+
+  .intro-p {
+    margin-block-start: 0.9rem;
+    color: var(--fg-muted);
+    max-width: 58ch;
+  }
+
+  .whats-next { margin-block-start: var(--sp-m); }
+
+  @media (min-width: 60rem) {
+    .product-media { position: sticky; top: calc(var(--header-h) + 1.5rem); }
+  }
+</style>

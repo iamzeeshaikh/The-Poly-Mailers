@@ -1,0 +1,251 @@
+---
+import { getCollection } from 'astro:content';
+import { Picture } from 'astro:assets';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import CtaBand from '~/components/CtaBand.astro';
+import { breadcrumbs, graph, itemList, webPage, type Crumb } from '~/lib/schema';
+
+const path = '/blog/';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.published.valueOf() - a.data.published.valueOf(),
+);
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: '/' },
+  { name: 'Articles', href: path },
+];
+
+const schema = graph([
+  webPage({
+    path,
+    name: 'Articles',
+    description:
+      'Articles on choosing, specifying and printing poly mailers — written as arguments rather than as reference tables.',
+    type: 'CollectionPage',
+    hasBreadcrumb: true,
+  }),
+  breadcrumbs(crumbs),
+  itemList({
+    path,
+    name: 'Articles',
+    items: posts.map((p) => ({ href: `/blog/${p.id}/`, label: p.data.title })),
+  }),
+]);
+
+const human = (d: Date) =>
+  d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+
+const [lead, ...rest] = posts;
+---
+
+<BaseLayout
+  title="Articles on Poly Mailers | Sizing, Print & Materials"
+  description="Articles on choosing, specifying and printing poly mailers — sizing, cushioning, colour, artwork and sustainability, written for people making the decision."
+  path={path}
+  schema={schema}
+  crumbs={crumbs}
+>
+  <article>
+    <header class="wrap page-head">
+      <p class="eyebrow">Articles</p>
+      <h1>Articles</h1>
+      <p class="lede">
+        Arguments rather than reference tables. Each of these takes one decision
+        and works it through — which size, whether to cushion, when printing is
+        worth it, and what the sustainability terms actually commit you to.
+      </p>
+      <p class="head-p">
+        If you want a lookup table instead, the <a href="/resources/">reference
+        guides</a> are the other half of this.
+      </p>
+    </header>
+
+    {
+      lead && (
+        <section class="wrap section-tight">
+          <a class="lead-card" href={`/blog/${lead.id}/`}>
+            <div class="lead-media">
+              <Picture
+                src={lead.data.heroImage}
+                alt={lead.data.heroAlt}
+                widths={[420, 640, 860]}
+                sizes="(min-width: 58rem) 40vw, 92vw"
+                formats={['avif', 'webp']}
+                fallbackFormat="jpeg"
+                quality={70}
+                loading="eager"
+                fetchpriority="high"
+              />
+            </div>
+            <div class="lead-copy">
+              <span class="badge">Latest</span>
+              <h2>{lead.data.title}</h2>
+              <p>{lead.data.description}</p>
+              <span class="lead-meta">
+                <time datetime={lead.data.published.toISOString().slice(0, 10)}>
+                  {human(lead.data.published)}
+                </time>
+                <span aria-hidden="true">·</span>
+                <span>{lead.data.author}</span>
+              </span>
+            </div>
+          </a>
+        </section>
+      )
+    }
+
+    <section class="wrap section-tight">
+      <ul role="list" class="post-grid">
+        {
+          rest.map((post, i) => (
+            <li data-reveal style={`--reveal-delay:${Math.min(i, 5) * 45}ms`}>
+              <a href={`/blog/${post.id}/`}>
+                <div class="card-media">
+                  <Picture
+                    src={post.data.heroImage}
+                    alt={post.data.heroAlt}
+                    widths={[260, 400, 560]}
+                    sizes="(min-width: 68rem) 24vw, (min-width: 45rem) 33vw, 92vw"
+                    formats={['avif', 'webp']}
+                    fallbackFormat="jpeg"
+                    quality={68}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="card-copy">
+                  <h2>{post.data.title}</h2>
+                  <p>{post.data.description}</p>
+                  <time datetime={post.data.published.toISOString().slice(0, 10)}>
+                    {human(post.data.published)}
+                  </time>
+                </div>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <div class="wrap section-tight">
+      <CtaBand
+        heading="Skip to the answer"
+        body="Describe what you ship and we will recommend a specification and quote it, rather than leaving you to work it out from articles."
+        buttonLabel="Request a recommendation"
+        whatsappMessage="Hi, I would rather get a recommendation than work it out myself. Can you help?"
+      />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-head { padding-block: var(--sp-xl) var(--sp-s); max-width: 62rem; }
+  .page-head h1 { margin-block: 0.6rem 1rem; }
+  .page-head .lede { font-size: var(--step-1); }
+  .head-p { margin-block-start: 0.9rem; color: var(--fg-muted); max-width: 60ch; }
+  .head-p a { color: var(--accent); }
+
+  .lead-card {
+    display: grid;
+    gap: 0;
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--r-l);
+    overflow: clip;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color var(--dur-fast) var(--ease), box-shadow var(--dur) var(--ease-out);
+  }
+
+  .lead-card:hover { border-color: var(--accent); box-shadow: var(--shadow-m); }
+
+  @media (min-width: 58rem) {
+    .lead-card { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr); align-items: stretch; }
+  }
+
+  .lead-media { background: var(--bg-sunk); min-width: 0; overflow: clip; }
+
+  .lead-media :global(img) {
+    inline-size: 100%;
+    block-size: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .lead-copy {
+    padding: clamp(1.25rem, 0.9rem + 1.6vw, 2.25rem);
+    display: grid;
+    align-content: center;
+    gap: 0.6rem;
+    justify-items: start;
+  }
+
+  .lead-copy h2 { font-size: var(--step-3); max-width: 20ch; }
+  .lead-copy p { color: var(--fg-muted); max-width: 50ch; margin: 0; }
+
+  .lead-meta {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.83rem;
+    color: var(--fg-subtle);
+  }
+
+  .post-grid {
+    display: grid;
+    gap: var(--sp-m);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .post-grid > li { min-width: 0; }
+
+  .post-grid a {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100%;
+    min-width: 0;
+    text-decoration: none;
+    color: inherit;
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--r-m);
+    overflow: clip;
+    transition: border-color var(--dur-fast) var(--ease), transform var(--dur) var(--ease-out);
+  }
+
+  .post-grid a:hover { border-color: var(--accent); transform: translateY(-3px); }
+
+  .card-media {
+    background: var(--bg-sunk);
+    min-width: 0;
+    inline-size: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: clip;
+  }
+
+  .card-media :global(img) {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  .card-copy {
+    padding: 1.05rem 1.2rem 1.25rem;
+    display: grid;
+    align-content: start;
+    gap: 0.4rem;
+  }
+
+  .card-copy h2 {
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    font-weight: 500;
+    letter-spacing: -0.014em;
+  }
+
+  .card-copy p { color: var(--fg-muted); font-size: 0.88rem; line-height: 1.5; margin: 0; }
+  .card-copy time { font-size: 0.79rem; color: var(--fg-subtle); }
+</style>

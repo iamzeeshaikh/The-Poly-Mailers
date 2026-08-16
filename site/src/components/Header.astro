@@ -1,0 +1,553 @@
+---
+import { BRAND } from '~/lib/site';
+
+const current = Astro.url.pathname;
+
+const nav = [
+  {
+    label: 'Products',
+    href: '/poly-mailers/',
+    columns: [
+      {
+        title: 'By size',
+        links: [
+          { href: '/poly-mailer-sizes/', label: 'All sizes' },
+          { href: '/6x9-poly-mailers/', label: '6x9' },
+          { href: '/9x12-poly-mailers/', label: '9x12' },
+          { href: '/10x13-poly-mailers/', label: '10x13' },
+          { href: '/12x15-poly-mailers/', label: '12x15' },
+          { href: '/14-5x19-poly-mailers/', label: '14.5x19' },
+          { href: '/19x24-poly-mailers/', label: '19x24' },
+          { href: '/24x24-poly-mailers/', label: '24x24' },
+          { href: '/large-poly-mailers/', label: 'Large' },
+          { href: '/small-poly-mailers/', label: 'Small' },
+        ],
+      },
+      {
+        title: 'By colour',
+        links: [
+          { href: '/poly-mailer-colors/', label: 'All colours' },
+          { href: '/pink-poly-mailers/', label: 'Pink' },
+          { href: '/light-pink-poly-mailers/', label: 'Light pink' },
+          { href: '/black-poly-mailers/', label: 'Black' },
+          { href: '/white-poly-mailers/', label: 'White' },
+          { href: '/colored-poly-mailers/', label: 'Mixed colours' },
+          { href: '/blank-poly-mailers/', label: 'Blank stock' },
+        ],
+      },
+      {
+        title: 'Printed & protective',
+        links: [
+          { href: '/custom-poly-mailers/', label: 'Custom printed' },
+          { href: '/custom-printed-poly-mailers/', label: 'Printed range' },
+          { href: '/poly-bubble-mailers/', label: 'Poly bubble' },
+          { href: '/padded-poly-mailers/', label: 'Padded' },
+          { href: '/personalized-bubble-mailers/', label: 'Printed bubble' },
+          { href: '/self-seal-poly-mailers/', label: 'Self-seal' },
+          { href: '/custom-frosted-poly-bags/', label: 'Frosted zip bags' },
+        ],
+      },
+      {
+        title: 'Specialist',
+        links: [
+          { href: '/apparel-shipping-bags/', label: 'Apparel bags' },
+          { href: '/economy-poly-mailers/', label: 'Economy' },
+          { href: '/sustainable-poly-mailers/', label: 'Sustainable range' },
+          { href: '/recycled-poly-mailers/', label: 'Recycled' },
+          { href: '/compostable-poly-mailers/', label: 'Compostable' },
+          { href: '/biodegradable-poly-mailers/', label: 'Biodegradable' },
+          { href: '/seasonal-poly-mailers/', label: 'Seasonal & patterned' },
+        ],
+      },
+    ],
+  },
+  {
+    label: 'Capabilities',
+    href: '/how-it-works/',
+    columns: [
+      {
+        title: 'Ordering',
+        links: [
+          { href: '/how-it-works/', label: 'How ordering works' },
+          { href: '/design-your-poly-mailer/', label: 'Design your mailer' },
+          { href: '/samples/', label: 'Samples' },
+          { href: '/request-a-quote/', label: 'Request a quote' },
+        ],
+      },
+      {
+        title: 'Specification',
+        links: [
+          { href: '/materials/', label: 'Materials' },
+          { href: '/printing-options/', label: 'Printing options' },
+          { href: '/artwork-guidelines/', label: 'Artwork guidelines' },
+          { href: '/size-guide/', label: 'Size guide' },
+          { href: '/sustainability/', label: 'Sustainability' },
+        ],
+      },
+      {
+        title: 'Sectors',
+        links: [
+          { href: '/industries/', label: 'All industries' },
+          { href: '/industries/clothing-and-apparel/', label: 'Clothing & apparel' },
+          { href: '/industries/ecommerce/', label: 'Ecommerce' },
+          { href: '/industries/beauty-and-cosmetics/', label: 'Beauty & cosmetics' },
+          { href: '/industries/subscription-businesses/', label: 'Subscription boxes' },
+        ],
+      },
+    ],
+  },
+  {
+    label: 'Learn',
+    href: '/resources/',
+    columns: [
+      {
+        title: 'Guides',
+        links: [
+          { href: '/resources/', label: 'All resources' },
+          { href: '/resources/poly-mailer-size-guide/', label: 'Size reference' },
+          { href: '/resources/poly-mailer-material-guide/', label: 'Material guide' },
+          { href: '/resources/printing-and-artwork-guide/', label: 'Printing & artwork' },
+          { href: '/resources/sustainable-mailer-terminology-guide/', label: 'Sustainability terms' },
+        ],
+      },
+      {
+        title: 'Articles',
+        links: [
+          { href: '/blog/', label: 'All articles' },
+          { href: '/blog/how-to-choose-the-right-poly-mailer-size/', label: 'Choosing a size' },
+          { href: '/blog/poly-mailers-vs-padded-mailers/', label: 'Plain against padded' },
+          { href: '/blog/poly-mailer-thickness-and-durability-explained/', label: 'Film weight explained' },
+        ],
+      },
+      {
+        title: 'Where we ship',
+        links: [
+          { href: '/locations/', label: 'All locations' },
+          { href: '/usa/', label: 'United States' },
+          { href: '/uk/', label: 'United Kingdom' },
+          { href: '/canada/', label: 'Canada' },
+          { href: '/australia/', label: 'Australia' },
+        ],
+      },
+    ],
+  },
+  { label: 'About', href: '/about/' },
+  { label: 'Contact', href: '/contact/' },
+];
+
+const isActive = (href: string) =>
+  href === '/' ? current === '/' : current.startsWith(href.replace(/\/$/, ''));
+---
+
+<header class="site-header" data-header>
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label={`${BRAND.name} home`}>
+      <svg class="brand-mark" width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="2.5" y="6.5" width="27" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="2.2"></rect>
+        <path d="M2.5 11.5h27" stroke="currentColor" stroke-width="2.2"></path>
+        <path d="M11 18.5h10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path>
+      </svg>
+      <span class="brand-name">The Poly Mailers</span>
+    </a>
+
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="primary-nav"
+      data-nav-toggle
+    >
+      <span class="nav-toggle-bars" aria-hidden="true"><span></span></span>
+      <span class="nav-toggle-label">Menu</span>
+    </button>
+
+    <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+      <ul role="list" class="nav-list">
+        {
+          nav.map((item) => (
+            <li class={item.columns ? 'has-panel' : ''}>
+              {item.columns ? (
+                <>
+                  <button
+                    type="button"
+                    class="nav-link nav-trigger"
+                    aria-expanded="false"
+                    data-panel-trigger
+                    aria-current={isActive(item.href) ? 'true' : undefined}
+                  >
+                    {item.label}
+                    <svg width="11" height="7" viewBox="0 0 11 7" aria-hidden="true" class="chev">
+                      <path d="M1 1l4.5 4.5L10 1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                    </svg>
+                  </button>
+                  <div class="nav-panel" data-panel hidden>
+                    <div class="wrap nav-panel-inner">
+                      {item.columns.map((col) => (
+                        <div class="nav-col">
+                          <p class="nav-col-title">{col.title}</p>
+                          <ul role="list">
+                            {col.links.map((l) => (
+                              <li>
+                                <a href={l.href} aria-current={current === l.href ? 'page' : undefined}>
+                                  {l.label}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <a
+                  class="nav-link"
+                  href={item.href}
+                  aria-current={current === item.href ? 'page' : undefined}
+                >
+                  {item.label}
+                </a>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+
+      <div class="nav-actions">
+        <a class="nav-phone" href={BRAND.phoneHref}>
+          <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true">
+            <path
+              d="M3 2h3l1.2 3-1.6 1.2a9 9 0 0 0 4.2 4.2L11 8.8l3 1.2v3a1 1 0 0 1-1.1 1A12 12 0 0 1 2 3.1 1 1 0 0 1 3 2Z"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linejoin="round"></path>
+          </svg>
+          <span>{BRAND.phoneDisplay}</span>
+        </a>
+        <a class="btn btn-sm" href="/request-a-quote/">Request a quote</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: color-mix(in srgb, var(--paper) 86%, transparent);
+    backdrop-filter: saturate(160%) blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-m);
+    min-height: var(--header-h);
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    text-decoration: none;
+    color: var(--ink-900);
+    flex: none;
+    margin-inline-end: auto;
+  }
+
+  .brand-mark { color: var(--cobalt-600); flex: none; }
+
+  .brand-name {
+    font-family: var(--font-display);
+    font-size: 1.08rem;
+    font-weight: 600;
+    letter-spacing: -0.022em;
+    white-space: nowrap;
+  }
+
+  .nav-toggle {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 0.8rem;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--r-s);
+    font-size: 0.9rem;
+    font-weight: 600;
+    flex: none;
+    min-height: 44px;
+  }
+
+  .nav-toggle-bars {
+    position: relative;
+    inline-size: 17px;
+    block-size: 12px;
+    flex: none;
+  }
+
+  .nav-toggle-bars span,
+  .nav-toggle-bars::before,
+  .nav-toggle-bars::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    inline-size: 100%;
+    block-size: 2px;
+    background: currentColor;
+    border-radius: 2px;
+    transition: transform var(--dur) var(--ease), opacity var(--dur) var(--ease);
+  }
+
+  .nav-toggle-bars::before { top: 0; }
+  .nav-toggle-bars span { top: 5px; }
+  .nav-toggle-bars::after { bottom: 0; }
+
+  [aria-expanded='true'] .nav-toggle-bars::before { transform: translateY(5px) rotate(45deg); }
+  [aria-expanded='true'] .nav-toggle-bars span { opacity: 0; }
+  [aria-expanded='true'] .nav-toggle-bars::after { transform: translateY(-5px) rotate(-45deg); }
+
+  .primary-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-m);
+  }
+
+  .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.32rem;
+    padding: 0.55rem 0.7rem;
+    border-radius: var(--r-s);
+    font-size: 0.945rem;
+    font-weight: 550;
+    color: var(--ink-700);
+    text-decoration: none;
+    white-space: nowrap;
+    min-height: 40px;
+  }
+
+  .nav-link:hover { background: var(--paper-sunk); color: var(--ink-900); }
+  .nav-link[aria-current] { color: var(--cobalt-700); }
+
+  .chev { transition: transform var(--dur-fast) var(--ease); opacity: 0.6; }
+  [aria-expanded='true'] > .chev { transform: rotate(180deg); }
+
+  .nav-panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: var(--paper-raised);
+    border-bottom: 1px solid var(--line);
+    box-shadow: var(--shadow-m);
+    padding-block: var(--sp-l);
+  }
+
+  .nav-panel-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+    gap: var(--sp-l);
+  }
+
+  .nav-col > ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.1rem; }
+
+  .nav-col-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--fg-subtle);
+    margin-block-end: 0.6rem;
+  }
+
+  .nav-col a {
+    display: block;
+    padding: 0.4rem 0.5rem;
+    margin-inline-start: -0.5rem;
+    border-radius: var(--r-xs);
+    font-size: 0.93rem;
+    color: var(--ink-700);
+    text-decoration: none;
+  }
+
+  .nav-col a:hover { background: var(--paper-sunk); color: var(--cobalt-700); }
+  .nav-col a[aria-current='page'] { color: var(--cobalt-700); font-weight: 600; }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: none;
+  }
+
+  .nav-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.88rem;
+    font-weight: 550;
+    color: var(--ink-600);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .nav-phone:hover { color: var(--cobalt-700); }
+
+  @media (max-width: 68.75rem) {
+    .nav-phone span { display: none; }
+    .nav-link { padding-inline: 0.5rem; font-size: 0.9rem; }
+  }
+
+  @media (max-width: 60rem) {
+    .nav-toggle { display: inline-flex; }
+
+    .primary-nav {
+      /*
+        The header carries a backdrop-filter, which makes it a containing block
+        for fixed-position descendants. `inset: … 0 0 0` therefore resolved
+        against the header box rather than the viewport and clipped the panel to
+        the height of the header. An explicit block-size is independent of which
+        containing block applies, so the panel fills the screen either way.
+      */
+      position: fixed;
+      inset-block-start: var(--header-h);
+      inset-inline: 0;
+      block-size: calc(100svh - var(--header-h));
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      background: var(--paper);
+      padding: var(--sp-s) 0 var(--sp-2xl);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      transform: translateX(100%);
+      visibility: hidden;
+      pointer-events: none;
+      transition: transform var(--dur) var(--ease), visibility var(--dur);
+    }
+
+    .primary-nav.is-open {
+      transform: none;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .nav-list { flex-direction: column; align-items: stretch; gap: 0; }
+
+    .nav-list > li { border-bottom: 1px solid var(--line); }
+
+    .nav-link,
+    .nav-trigger {
+      width: 100%;
+      justify-content: space-between;
+      padding: 0.95rem 1.25rem;
+      border-radius: 0;
+      font-size: 1.02rem;
+      min-height: 52px;
+    }
+
+    .nav-panel {
+      position: static;
+      box-shadow: none;
+      border: 0;
+      background: var(--paper-sunk);
+      padding-block: var(--sp-s);
+    }
+
+    .nav-panel-inner { grid-template-columns: 1fr; gap: var(--sp-m); }
+
+    .nav-actions {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.6rem;
+      padding: var(--sp-m) 1.25rem 0;
+    }
+
+    .nav-phone { justify-content: center; padding: 0.6rem; }
+    .nav-phone span { display: inline; }
+    .nav-actions .btn { width: 100%; }
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('[data-nav-toggle]');
+  const nav = document.getElementById('primary-nav');
+  const triggers = Array.from(
+    document.querySelectorAll<HTMLButtonElement>('[data-panel-trigger]'),
+  );
+
+  const isDesktop = () => window.matchMedia('(min-width: 60.0625rem)').matches;
+
+  function closeAllPanels(except?: HTMLElement) {
+    for (const t of triggers) {
+      const panel = t.nextElementSibling as HTMLElement | null;
+      if (!panel || panel === except) continue;
+      t.setAttribute('aria-expanded', 'false');
+      panel.hidden = true;
+    }
+  }
+
+  toggle?.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    nav?.classList.toggle('is-open', !open);
+    document.body.style.overflow = !open && !isDesktop() ? 'hidden' : '';
+    if (open) closeAllPanels();
+  });
+
+  for (const trigger of triggers) {
+    const panel = trigger.nextElementSibling as HTMLElement | null;
+    if (!panel) continue;
+
+    trigger.addEventListener('click', () => {
+      const open = trigger.getAttribute('aria-expanded') === 'true';
+      closeAllPanels(panel);
+      trigger.setAttribute('aria-expanded', String(!open));
+      panel.hidden = open;
+    });
+  }
+
+  // Desktop: close on outside click and on Escape. Focus returns to the trigger.
+  document.addEventListener('click', (event) => {
+    if (!isDesktop()) return;
+    const target = event.target as Node;
+    const inside = triggers.some(
+      (t) => t.contains(target) || t.nextElementSibling?.contains(target),
+    );
+    if (!inside) closeAllPanels();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return;
+    const openTrigger = triggers.find((t) => t.getAttribute('aria-expanded') === 'true');
+    if (openTrigger) {
+      closeAllPanels();
+      openTrigger.focus();
+      return;
+    }
+    if (nav?.classList.contains('is-open')) {
+      toggle?.click();
+      toggle?.focus();
+    }
+  });
+
+  // Reset state when crossing the breakpoint so nothing is left hidden off-screen.
+  window.matchMedia('(min-width: 60.0625rem)').addEventListener('change', () => {
+    nav?.classList.remove('is-open');
+    toggle?.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    closeAllPanels();
+  });
+</script>

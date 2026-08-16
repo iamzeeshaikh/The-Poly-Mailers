@@ -1,0 +1,239 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import CtaBand from '~/components/CtaBand.astro';
+import { industries } from '~/data/industries';
+import { breadcrumbs, graph, itemList, webPage, type Crumb } from '~/lib/schema';
+
+const path = '/industries/';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: '/' },
+  { name: 'Industries', href: path },
+];
+
+const schema = graph([
+  webPage({
+    path,
+    name: 'Industries we supply',
+    description:
+      'Poly mailer packaging written around the operational problem each sector actually has, from apparel returns to static-sensitive electronics.',
+    type: 'CollectionPage',
+    hasBreadcrumb: true,
+  }),
+  breadcrumbs(crumbs),
+  itemList({
+    path,
+    name: 'Industries',
+    items: industries.map((i) => ({ href: `/industries/${i.slug}/`, label: i.name })),
+  }),
+]);
+---
+
+<BaseLayout
+  title="Industries We Supply | Sector Packaging Guidance"
+  description="Poly mailer guidance by sector — apparel, ecommerce, beauty, books, subscription, accessories, gifting and electronics, each written around its own problem."
+  path={path}
+  schema={schema}
+  crumbs={crumbs}
+>
+  <article>
+    <header class="wrap page-head">
+      <p class="eyebrow">Sectors</p>
+      <h1>Industries we supply</h1>
+      <p class="lede">
+        Ten sectors, ten different problems. An apparel operation is solving for
+        returns; a beauty brand is solving for a printed carton arriving
+        unmarked; an electronics seller is solving for hard corners and static.
+      </p>
+      <p class="head-p">
+        These pages are written around those problems rather than around the
+        products, because a list of bags is not much help when the real question
+        is how your category ships.
+      </p>
+    </header>
+
+    <section class="wrap section-tight">
+      <ul role="list" class="ind-grid">
+        {
+          industries.map((industry, i) => (
+            <li data-reveal style={`--reveal-delay:${Math.min(i, 6) * 45}ms`}>
+              <a href={`/industries/${industry.slug}/`}>
+                <h2>{industry.name}</h2>
+                <p>{industry.summary}</p>
+                <span class="ind-go">
+                  Read the guidance
+                  <svg width="14" height="10" viewBox="0 0 16 12" aria-hidden="true">
+                    <path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="wrap section-tight">
+      <div class="why-grid">
+        <div class="why-copy">
+          <h2>Why these are written by sector rather than by product</h2>
+          <p>
+            A list of bags is not much help when the real question is how your
+            category ships. An apparel operation is solving for returns; a
+            beauty brand is solving for a printed carton arriving unmarked; an
+            electronics seller is solving for hard corners and static handling.
+            Those are different problems that happen to be answered with the
+            same raw material.
+          </p>
+          <p>
+            So each page starts from the problem, names the sectors that
+            genuinely have it, and recommends five products with the reason each
+            one belongs there. The recommendations differ between pages even
+            where the products overlap, because the reason for choosing them
+            differs.
+          </p>
+        </div>
+        <ul role="list" class="why-list">
+          <li>
+            <strong>Written from the failure, not the catalogue</strong>
+            <span>Each page opens with what actually goes wrong in that category.</span>
+          </li>
+          <li>
+            <strong>Five recommendations, each with a reason</strong>
+            <span>Not a full range dump. Five products and why they fit this sector.</span>
+          </li>
+          <li>
+            <strong>Sector-specific questions answered</strong>
+            <span>The FAQs on each page are the ones buyers in that category actually ask.</span>
+          </li>
+          <li>
+            <strong>No sector we cannot serve honestly</strong>
+            <span>Categories that mostly ship in cartons do not get a page arguing otherwise.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="wrap section-tight">
+      <div class="panel note-panel">
+        <h2>Not listed here?</h2>
+        <p>
+          These are the sectors where poly mailers are genuinely the right
+          packaging and where we have enough to say to justify a page. We have
+          not written pages for categories that mostly ship in cartons, because
+          a page recommending a flexible bag for rigid goods would be a page
+          arguing against itself.
+        </p>
+        <p>
+          If your category is not here and you think a mailer suits it, describe
+          what you ship and we will tell you honestly whether it does.
+        </p>
+        <a class="link-arrow" href="/contact/">Describe what you ship</a>
+      </div>
+    </section>
+
+    <div class="wrap section-tight">
+      <CtaBand
+        heading="Packaging specified for how you actually ship"
+        body="Send us your order profile and the failures you are seeing. We will recommend a specification and explain the reasoning before quoting it."
+        buttonLabel="Request a specification"
+        whatsappMessage="Hi, I would like packaging advice for my sector."
+      />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-head { padding-block: var(--sp-xl) var(--sp-s); max-width: 62rem; }
+  .page-head h1 { margin-block: 0.6rem 1rem; max-width: 16ch; }
+  .page-head .lede { font-size: var(--step-1); }
+  .head-p { margin-block-start: 0.9rem; color: var(--fg-muted); max-width: 60ch; }
+
+  .ind-grid {
+    display: grid;
+    gap: var(--sp-s);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ind-grid > li { min-width: 0; }
+
+  .ind-grid a {
+    display: grid;
+    gap: 0.35rem;
+    align-content: start;
+    height: 100%;
+    padding: 1.35rem 1.4rem 1.5rem;
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--r-m);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color var(--dur-fast) var(--ease), transform var(--dur) var(--ease-out);
+  }
+
+  .ind-grid a:hover { border-color: var(--accent); transform: translateY(-3px); }
+
+  .ind-grid h2 {
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+  }
+
+  .ind-grid p { color: var(--fg-muted); font-size: 0.89rem; line-height: 1.5; margin: 0; }
+
+  .ind-go {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-block-start: 0.3rem;
+    font-size: 0.83rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .why-grid {
+    display: grid;
+    gap: var(--sp-m);
+  }
+
+  @media (min-width: 56rem) {
+    .why-grid {
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: var(--sp-xl);
+      align-items: start;
+    }
+  }
+
+  .why-copy h2 { font-size: var(--step-2); margin-block-end: 0.6rem; max-width: 22ch; }
+  .why-copy p { color: var(--fg-muted); max-width: 52ch; }
+  .why-copy p + p { margin-block-start: 0.8rem; }
+
+  .why-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0;
+  }
+
+  .why-list li {
+    display: grid;
+    gap: 0.1rem;
+    padding-block: 0.85rem;
+    border-block-end: 1px solid var(--line);
+  }
+
+  .why-list li:last-child { border-block-end: 0; }
+  .why-list strong { font-size: 0.98rem; font-weight: 650; }
+  .why-list span { color: var(--fg-muted); font-size: 0.9rem; }
+
+  .note-panel { max-width: 46rem; }
+  .note-panel h2 { font-size: var(--step-2); margin-block-end: 0.6rem; }
+  .note-panel p { color: var(--fg-muted); }
+  .note-panel p + p { margin-block-start: 0.8rem; }
+  .note-panel .link-arrow { margin-block-start: var(--sp-s); }
+</style>

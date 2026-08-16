@@ -1,0 +1,305 @@
+---
+import type { Block } from '~/data/types';
+import { SPEC_NOTE } from '~/lib/claims';
+
+interface Props {
+  blocks: readonly Block[];
+  /** Heading level for block headings. Product pages use h2. */
+  level?: 2 | 3;
+}
+
+const { blocks, level = 2 } = Astro.props;
+const H = `h${level}` as 'h2' | 'h3';
+const Sub = `h${level + 1}` as 'h3' | 'h4';
+
+const slug = (text: string) =>
+  text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+---
+
+<div class="blocks">
+  {
+    blocks.map((block, index) => (
+      <section class={`block block-${block.kind}`} id={slug(block.heading)} data-reveal style={`--reveal-delay:${Math.min(index, 3) * 60}ms`}>
+        {block.kind === 'prose' && (
+          <>
+            <H>{block.heading}</H>
+            {block.standfirst && <p class="standfirst">{block.standfirst}</p>}
+            <div class="prose">
+              {block.paragraphs.map((p) => (
+                <p>{p}</p>
+              ))}
+            </div>
+          </>
+        )}
+
+        {block.kind === 'linked-prose' && (
+          <>
+            <H>{block.heading}</H>
+            <div class="prose">
+              <p>
+                {block.before}
+                <a href={block.link.href}>{block.link.anchor}</a>
+                {block.after}
+              </p>
+              {block.extra?.map((p) => <p>{p}</p>)}
+            </div>
+          </>
+        )}
+
+        {block.kind === 'bullets' && (
+          <>
+            <H>{block.heading}</H>
+            {block.intro && <p class="standfirst">{block.intro}</p>}
+            <ul role="list" class="term-list">
+              {block.items.map((item) => (
+                <li>
+                  <Sub class="term">{item.term}</Sub>
+                  <p>{item.detail}</p>
+                </li>
+              ))}
+            </ul>
+            {block.outro && <p class="block-outro">{block.outro}</p>}
+          </>
+        )}
+
+        {block.kind === 'steps' && (
+          <>
+            <H>{block.heading}</H>
+            {block.intro && <p class="standfirst">{block.intro}</p>}
+            <ol class="step-list">
+              {block.steps.map((step) => (
+                <li>
+                  <Sub class="term">{step.title}</Sub>
+                  <p>{step.detail}</p>
+                </li>
+              ))}
+            </ol>
+          </>
+        )}
+
+        {block.kind === 'specs' && (
+          <>
+            <H>{block.heading}</H>
+            {block.intro && <p class="standfirst">{block.intro}</p>}
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Option</th>
+                    <th scope="col">Choices</th>
+                    <th scope="col">What changes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {block.rows.map((row) => (
+                    <tr>
+                      <th scope="row">{row.label}</th>
+                      <td>
+                        <ul role="list" class="choice-list">
+                          {row.options.map((opt) => (
+                            <li>{opt}</li>
+                          ))}
+                        </ul>
+                      </td>
+                      <td>{row.note}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p class="spec-note">{SPEC_NOTE}</p>
+          </>
+        )}
+
+        {block.kind === 'compare' && (
+          <>
+            <H>{block.heading}</H>
+            {block.intro && <p class="standfirst">{block.intro}</p>}
+            <div class="table-scroll">
+              <table>
+                <caption>{block.caption}</caption>
+                <thead>
+                  <tr>
+                    {block.columns.map((col) => (
+                      <th scope="col">{col || <span class="visually-hidden">Row label</span>}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {block.rows.map((row) => (
+                    <tr>
+                      {row.map((cell, i) =>
+                        i === 0 ? <th scope="row">{cell}</th> : <td>{cell}</td>,
+                      )}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            {block.outro && <p class="block-outro">{block.outro}</p>}
+          </>
+        )}
+
+        {block.kind === 'callout' && (
+          <aside class={`callout ${block.tone === 'caution' ? 'callout-caution' : ''}`}>
+            <Sub>{block.heading}</Sub>
+            <p>{block.body}</p>
+          </aside>
+        )}
+      </section>
+    ))
+  }
+</div>
+
+<style>
+  .blocks {
+    display: grid;
+    gap: var(--sp-xl);
+  }
+
+  /* Grid items are min-width: auto by default, so a table with a min-width
+     inside .table-scroll would stretch the section instead of scrolling
+     within its own wrapper. */
+  .block { min-width: 0; }
+
+  .block > :global(h2),
+  .block > :global(h3) {
+    margin-block-end: 0.55rem;
+    max-width: 24ch;
+  }
+
+  .block > :global(h2) { font-size: var(--step-3); }
+
+  .standfirst {
+    color: var(--fg-muted);
+    font-size: var(--step-1);
+    line-height: 1.45;
+    max-width: 56ch;
+    margin-block-end: var(--sp-s);
+  }
+
+  .block-outro {
+    margin-block-start: var(--sp-s);
+    color: var(--fg-muted);
+    max-width: var(--measure);
+  }
+
+  .term-list,
+  .step-list {
+    display: grid;
+    gap: var(--sp-s);
+    margin: var(--sp-s) 0 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: step;
+  }
+
+  @media (min-width: 48rem) {
+    .term-list { grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); }
+    .term-list > li { min-width: 0; }
+  }
+
+  .term-list > li {
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--r-m);
+    padding: 1.05rem 1.2rem;
+  }
+
+  .step-list > li {
+    counter-increment: step;
+    position: relative;
+    padding-inline-start: 3.1rem;
+    padding-block: 0.15rem 0.9rem;
+    border-block-end: 1px solid var(--line);
+  }
+
+  .step-list > li:last-child { border-block-end: 0; padding-block-end: 0; }
+
+  .step-list > li::before {
+    content: counter(step);
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0.05rem;
+    inline-size: 2.1rem;
+    block-size: 2.1rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--accent-hover);
+    font-size: 0.86rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .term,
+  .step-list :global(.term) {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 650;
+    letter-spacing: -0.005em;
+    margin-block-end: 0.28rem;
+    line-height: 1.35;
+  }
+
+  .term-list p,
+  .step-list p {
+    color: var(--fg-muted);
+    font-size: 0.945rem;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .choice-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  .choice-list li {
+    background: var(--bg-sunk);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.18rem 0.55rem;
+    font-size: 0.79rem;
+    white-space: nowrap;
+  }
+
+  .spec-note {
+    margin-block-start: 0.85rem;
+    font-size: 0.85rem;
+    color: var(--fg-subtle);
+    max-width: 72ch;
+  }
+
+  .callout {
+    border-inline-start: 3px solid var(--accent);
+    background: var(--accent-soft);
+    border-radius: 0 var(--r-m) var(--r-m) 0;
+    padding: 1.1rem 1.3rem;
+  }
+
+  .callout-caution {
+    border-inline-start-color: var(--amber-500);
+    background: var(--amber-100);
+  }
+
+  .callout :global(h3),
+  .callout :global(h4) {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 650;
+    margin-block-end: 0.3rem;
+  }
+
+  .callout p { margin: 0; font-size: 0.94rem; color: var(--fg-muted); }
+
+  .prose { max-width: var(--measure); }
+</style>

@@ -1,0 +1,128 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Blocks from '~/components/Blocks.astro';
+import QuoteForm from '~/components/QuoteForm.astro';
+import FaqList from '~/components/FaqList.astro';
+import RelatedLinks from '~/components/RelatedLinks.astro';
+import ProductCard from '~/components/ProductCard.astro';
+import CtaBand from '~/components/CtaBand.astro';
+import { industries } from '~/data/industries';
+import { productBySlug } from '~/data/products';
+import { breadcrumbs, faqPage, graph, itemList, webPage, type Crumb } from '~/lib/schema';
+
+export const getStaticPaths = (() =>
+  industries.map((industry) => ({
+    params: { industry: industry.slug },
+    props: { industry },
+  }))) satisfies GetStaticPaths;
+
+const { industry } = Astro.props;
+const path = `/industries/${industry.slug}/`;
+
+const picks = industry.recommended
+  .map((r) => ({ product: productBySlug.get(r.slug), why: r.why }))
+  .filter((p): p is { product: NonNullable<typeof p.product>; why: string } => Boolean(p.product));
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: '/' },
+  { name: 'Industries', href: '/industries/' },
+  { name: industry.name, href: path },
+];
+
+const schema = graph([
+  webPage({
+    path,
+    name: industry.h1,
+    description: industry.description,
+    hasBreadcrumb: true,
+  }),
+  breadcrumbs(crumbs),
+  itemList({
+    path,
+    name: `Recommended for ${industry.name.toLowerCase()}`,
+    items: picks.map((p) => ({ href: `/${p.product.slug}/`, label: p.product.name })),
+  }),
+  faqPage(path, industry.faqs),
+]);
+---
+
+<BaseLayout
+  title={industry.title}
+  description={industry.description}
+  path={path}
+  schema={schema}
+  crumbs={crumbs}
+>
+  <article>
+    <header class="wrap page-head">
+      <p class="eyebrow">Sector</p>
+      <h1>{industry.h1}</h1>
+      {industry.intro.map((p, i) => <p class={i === 0 ? 'lede' : 'head-p'}>{p}</p>)}
+    </header>
+
+    <div class="wrap section-tight">
+      <QuoteForm
+        source={path}
+        compact
+        id={`quote-${industry.slug}`}
+        heading={`Quote packaging for ${industry.name.toLowerCase()}`}
+        intro="Tell us what you ship and how much of it. A recommendation and a written price come back together."
+      />
+    </div>
+
+    <section class="wrap section-tight">
+      <h2 class="picks-heading">What we would put in front of you</h2>
+      <p class="picks-intro">
+        Five products, each with the reason it belongs in this sector rather than
+        a general description.
+      </p>
+      <div class="picks-grid">
+        {picks.map((p, i) => <ProductCard product={p.product} note={p.why} index={i} />)}
+      </div>
+    </section>
+
+    <div class="wrap section-tight">
+      <Blocks blocks={industry.blocks} />
+    </div>
+
+    <div class="wrap section-tight">
+      <FaqList
+        faqs={industry.faqs}
+        heading={`Questions from ${industry.name.toLowerCase()} buyers`}
+        id={`faq-${industry.slug}`}
+      />
+    </div>
+
+    <div class="wrap section-tight">
+      <RelatedLinks links={industry.related} heading="Related pages" />
+    </div>
+
+    <div class="wrap section-tight">
+      <CtaBand
+        heading={industry.cta.heading}
+        body={industry.cta.body}
+        buttonLabel={industry.cta.buttonLabel}
+        whatsappMessage={industry.whatsapp}
+      />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-head { padding-block: var(--sp-xl) var(--sp-s); max-width: 62rem; }
+  .page-head h1 { margin-block: 0.6rem 1rem; max-width: 18ch; }
+  .page-head .lede { font-size: var(--step-1); }
+  .head-p { margin-block-start: 0.9rem; color: var(--fg-muted); max-width: 60ch; }
+
+  .picks-heading { font-size: var(--step-3); margin-block-end: 0.4rem; }
+  .picks-intro { color: var(--fg-muted); max-width: 52ch; margin-block-end: var(--sp-m); }
+
+  .picks-grid {
+    display: grid;
+    gap: var(--sp-s);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  }
+
+  .picks-grid > :global(*) { min-width: 0; }
+</style>

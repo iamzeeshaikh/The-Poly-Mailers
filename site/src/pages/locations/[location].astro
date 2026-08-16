@@ -1,0 +1,195 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Blocks from '~/components/Blocks.astro';
+import QuoteForm from '~/components/QuoteForm.astro';
+import FaqList from '~/components/FaqList.astro';
+import RelatedLinks from '~/components/RelatedLinks.astro';
+import ProductCard from '~/components/ProductCard.astro';
+import CtaBand from '~/components/CtaBand.astro';
+import { locations } from '~/data/locations';
+import { productBySlug } from '~/data/products';
+import { MARKET_BY_SLUG } from '~/lib/site';
+import { breadcrumbs, faqPage, graph, itemList, webPage, type Crumb } from '~/lib/schema';
+
+export const getStaticPaths = (() =>
+  locations.map((location) => ({
+    params: { location: location.slug },
+    props: { location },
+  }))) satisfies GetStaticPaths;
+
+const { location } = Astro.props;
+const path = `/locations/${location.slug}/`;
+const market = MARKET_BY_SLUG[location.market];
+
+/**
+ * Recommended items may point at a product or at a capability page. Anything
+ * that is not a product slug is rendered as a plain contextual link rather than
+ * as a card, so a page never silently drops a recommendation.
+ */
+const picks = location.recommended
+  .map((r) => ({ product: productBySlug.get(r.slug), slug: r.slug, why: r.why }))
+  .filter((p) => p.product);
+
+const nonProductPicks = location.recommended.filter((r) => !productBySlug.has(r.slug));
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: '/' },
+  { name: 'Locations', href: '/locations/' },
+  { name: market.name, href: `/${market.slug}/` },
+  { name: location.name, href: path },
+];
+
+const schema = graph([
+  webPage({ path, name: location.h1, description: location.description, hasBreadcrumb: true }),
+  breadcrumbs(crumbs),
+  itemList({
+    path,
+    name: `Recommended for ${location.name}`,
+    items: picks.map((p) => ({ href: `/${p.product!.slug}/`, label: p.product!.name })),
+  }),
+  faqPage(path, location.faqs),
+]);
+---
+
+<BaseLayout
+  title={location.title}
+  description={location.description}
+  path={path}
+  schema={schema}
+  crumbs={crumbs}
+>
+  <article>
+    <header class="wrap page-head">
+      <p class="eyebrow">{market.serviceStatement}</p>
+      <h1>{location.h1}</h1>
+      {location.intro.map((p, i) => <p class={i === 0 ? 'lede' : 'head-p'}>{p}</p>)}
+    </header>
+
+    <div class="wrap section-tight">
+      <QuoteForm
+        source={path}
+        compact
+        id={`quote-${location.slug}`}
+        heading={`Quote an order for ${location.name}`}
+        intro="Tell us what you ship and where it goes. We confirm the specification, the schedule and the price in writing."
+      />
+    </div>
+
+    <section class="wrap section-tight">
+      <h2 class="sec-h">Who buys mailers here</h2>
+      <p class="sec-intro">
+        Sectors where poly mailers are genuinely the right packaging, with the
+        reason each one appears rather than a generic list.
+      </p>
+      <ul role="list" class="sector-list">
+        {
+          location.sectors.map((sector) => (
+            <li>
+              <h3>{sector.name}</h3>
+              <p>{sector.note}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="wrap section-tight">
+      <h2 class="sec-h">What we would suggest</h2>
+      <div class="picks-grid">
+        {picks.map((p, i) => <ProductCard product={p.product!} note={p.why} index={i} />)}
+      </div>
+      {
+        nonProductPicks.length > 0 && (
+          <ul role="list" class="extra-picks">
+            {nonProductPicks.map((p) => (
+              <li>
+                <a href={`/${p.slug}/`}>{p.why}</a>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </section>
+
+    <div class="wrap section-tight">
+      <Blocks blocks={location.blocks} />
+    </div>
+
+    <div class="wrap section-tight">
+      <FaqList
+        faqs={location.faqs}
+        heading={`Questions from ${location.name} buyers`}
+        id={`faq-${location.slug}`}
+      />
+    </div>
+
+    <div class="wrap section-tight">
+      <RelatedLinks links={location.related} heading="Related pages" />
+    </div>
+
+    <div class="wrap section-tight">
+      <CtaBand
+        heading={location.cta.heading}
+        body={location.cta.body}
+        buttonLabel={location.cta.buttonLabel}
+        whatsappMessage={location.whatsapp}
+      />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-head { padding-block: var(--sp-xl) var(--sp-s); max-width: 62rem; }
+  .page-head h1 { margin-block: 0.6rem 1rem; max-width: 18ch; }
+  .page-head .lede { font-size: var(--step-1); }
+  .head-p { margin-block-start: 0.9rem; color: var(--fg-muted); max-width: 60ch; }
+
+  .sec-h { font-size: var(--step-3); margin-block-end: 0.4rem; }
+  .sec-intro { color: var(--fg-muted); max-width: 54ch; margin-block-end: var(--sp-m); }
+
+  .sector-list {
+    display: grid;
+    gap: var(--sp-s);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sector-list > li {
+    min-width: 0;
+    padding: 1.1rem 1.2rem;
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--r-m);
+  }
+
+  .sector-list h3 {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 650;
+    margin-block-end: 0.25rem;
+  }
+
+  .sector-list p { color: var(--fg-muted); font-size: 0.9rem; line-height: 1.5; margin: 0; }
+
+  .picks-grid {
+    display: grid;
+    gap: var(--sp-s);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+    margin-block-start: var(--sp-m);
+  }
+
+  .picks-grid > :global(*) { min-width: 0; }
+
+  .extra-picks {
+    list-style: none;
+    margin: var(--sp-s) 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.4rem;
+  }
+
+  .extra-picks a { color: var(--accent); font-size: 0.92rem; }
+</style>

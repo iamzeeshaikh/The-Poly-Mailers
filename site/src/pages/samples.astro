@@ -1,0 +1,178 @@
+---
+import ContentView from '~/views/ContentView.astro';
+import type { Crumb } from '~/lib/schema';
+import type { ContentPage } from '~/data/types';
+
+const path = '/samples/';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: '/' },
+  { name: 'Samples', href: path },
+];
+
+const page: ContentPage = {
+  slug: 'samples',
+  name: 'samples',
+  h1: 'Poly Mailer Samples',
+  title: 'Poly Mailer Samples | Test Before You Order',
+  description:
+    'How to use samples properly — which sizes to request, the five tests worth running, and what a sample can and cannot tell you before a run.',
+  summary: 'How to use samples so they actually settle the question.',
+  intro: [
+    'A sample is not a courtesy. It is the cheapest risk reduction available in packaging, and used properly it settles in ten minutes a question that otherwise gets decided by guesswork and revisited after a full run has arrived.',
+    'Used badly — one bag, glanced at, put in a drawer — it tells you almost nothing. This page is about the difference.',
+  ],
+  plan: {
+    intent: 'Get packaging samples and know what to do with them.',
+    audience: 'Buyers about to place a first order or change a specification.',
+    problem: 'Samples get requested and then not tested in any useful way.',
+    angle: 'A testing protocol rather than a request form — what to do once they arrive.',
+    primaryKeyword: 'poly mailer samples',
+    supportingKeywords: ['free poly mailer samples', 'packaging samples', 'test mailer sizes'],
+    nearestPage: '/size-guide/',
+    boundary:
+      'The size guide is the full decision framework. This page is specifically about sampling as a step within it.',
+  },
+  blocks: [
+    {
+      kind: 'bullets',
+      heading: 'What to ask for',
+      intro:
+        'A sample request is more useful when it is specific. Four things to include.',
+      items: [
+        {
+          term: 'Two candidate sizes, not one',
+          detail:
+            'The comparison is what produces the answer. A single sample tells you whether that size works; two tell you which is right.',
+        },
+        {
+          term: 'The film weight you are considering',
+          detail:
+            'And the one above it, if the decision is finely balanced. Weight differences are obvious in the hand and invisible on a specification sheet.',
+        },
+        {
+          term: 'The closure you would specify',
+          detail:
+            'Particularly if you are weighing a returns strip, because the only way to judge it is to use it.',
+        },
+        {
+          term: 'A description of what goes inside',
+          detail:
+            'So the samples sent are relevant to your contents rather than a general assortment.',
+        },
+      ],
+      outro:
+        'Sample requests are handled as part of the quotation conversation rather than as a separate process, so the same enquiry covers both.',
+    },
+    {
+      kind: 'steps',
+      heading: 'The five tests worth running',
+      intro:
+        'Do all five, with your real contents, on the same day. It takes ten minutes and it is more informative than any specification comparison.',
+      steps: [
+        {
+          title: 'Pack a complete order into each',
+          detail:
+            'Product, card, tissue, returns slip — everything that goes in on a normal day. And have the people who actually pack do the folding, at working pace.',
+        },
+        {
+          title: 'Seal it and check the strip',
+          detail:
+            'The adhesive must meet clean film along its whole length. If contents reach the strip anywhere, the size is too tight and that section will not hold.',
+        },
+        {
+          title: 'Drop each parcel once from bench height',
+          detail:
+            'Flat onto a hard floor, then again on a corner. The corner drop is where concentrated force shows up.',
+        },
+        {
+          title: 'Press a hard edge against the film from inside',
+          detail:
+            'A box corner or a buckle, with steady pressure. This is the most diagnostic test for the difference between two film weights.',
+        },
+        {
+          title: 'Weigh and measure the packed parcels',
+          detail:
+            'Against the shipping bands you actually buy on. This is where a size decision quietly saves or costs real money.',
+        },
+      ],
+    },
+    {
+      kind: 'prose',
+      heading: 'What a sample cannot tell you',
+      standfirst: 'Three things, and it is worth knowing which they are.',
+      paragraphs: [
+        'It cannot show you production colour reliably. A sample from stock is not a proof of your specification, and colour on film varies with finish, base and batch. Where a colour matters commercially, ask for a proof of your artwork on your chosen film rather than judging from a sample bag.',
+        'It cannot tell you how a full run will behave in aggregate. A single bag is one data point; a run has variation within it, which is what production checks exist to control.',
+        'And it cannot tell you what your customers will think. That takes shipping a hundred parcels and paying attention to what comes back — which is a good argument for a modest first order rather than a large one.',
+      ],
+    },
+    {
+      kind: 'linked-prose',
+      heading: 'Testing a printed design',
+      before:
+        'A plain sample settles size, film weight and closure. It does not settle artwork, because the only reliable way to see how a design behaves on a specific film and finish is a proof of that design on that material. That matters most on cushioned and translucent surfaces, where the texture changes what survives. What to expect from a proof, and what it will not show you, is set out on the ',
+      link: { href: '/printing-options/', anchor: 'printing options page' },
+      after: '.',
+    },
+    {
+      kind: 'callout',
+      heading: 'A note on free samples',
+      body: 'Sample requests are handled case by case as part of a quotation conversation, and we are honest about why: samples cost something to produce and ship, and a supplier promising unlimited free samples to anyone is recovering that cost elsewhere. Tell us what you are trying to decide and we will work out what is useful to send.',
+    },
+  ],
+  faqs: [
+    {
+      q: 'How many samples should I request?',
+      a: 'Two candidate sizes is the useful minimum, because the comparison is what produces an answer. Add a second film weight if that decision is finely balanced, and a closure variant if you are weighing a returns strip.',
+    },
+    {
+      q: 'Can I get samples of a printed design?',
+      a: 'A printed sample of your own artwork is a proof rather than a sample, and it is produced as part of an order rather than in advance of one. Plain samples settle size, weight and closure; a proof settles artwork.',
+    },
+    {
+      q: 'What should I do with samples when they arrive?',
+      a: 'Pack a complete real order into each, seal it properly, drop it once flat and once on a corner, press a hard edge against the film from inside, and weigh the packed parcel against your shipping bands. Ten minutes, and it settles the question.',
+    },
+    {
+      q: 'Are samples free?',
+      a: 'Requests are handled case by case as part of a quotation conversation. Tell us what you are trying to decide and we will work out what is useful to send rather than applying a blanket policy in either direction.',
+    },
+  ],
+  related: [
+    {
+      href: '/size-guide/',
+      label: 'Choosing a size',
+      reason: 'The full framework that sampling sits inside.',
+    },
+    {
+      href: '/poly-mailer-sizes/',
+      label: 'Every size compared',
+      reason: 'Narrow the shortlist before requesting anything.',
+    },
+    {
+      href: '/request-a-quote/',
+      label: 'Request a quotation',
+      reason: 'Samples and pricing are handled in the same conversation.',
+    },
+  ],
+  cta: {
+    heading: 'Ask for samples',
+    body: 'Tell us what you ship and which sizes you are weighing up. We will work out what is useful to send and quote alongside it.',
+    buttonLabel: 'Request samples',
+  },
+  whatsapp: 'Hi, I would like samples of a couple of poly mailer sizes to test.',
+};
+---
+
+<ContentView
+  page={page}
+  path={path}
+  crumbs={crumbs}
+  eyebrow="Before you order"
+  quoteForm={{
+    heading: 'Request samples and a quotation together',
+    intro:
+      'Mention the sizes you want to test in the message field. Samples and pricing are handled in the same conversation.',
+  }}
+/>

@@ -1,0 +1,192 @@
+---
+import { Picture } from 'astro:assets';
+import type { ImageRef } from '~/data/types';
+
+interface Props {
+  images: readonly ImageRef[];
+  /** Name used only for the aria-label of the thumbnail control group. */
+  productName: string;
+}
+
+const { images, productName } = Astro.props;
+
+// Eagerly resolve the imported assets so widths and heights are known at build
+// time. Nothing here reaches for the network or defers a dimension.
+const modules = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/products/*.{png,jpg,jpeg}',
+  { eager: true },
+);
+
+const resolved = images.map((ref) => {
+  const mod = modules[`/src/assets/products/${ref.file}`];
+  if (!mod) {
+    throw new Error(
+      `Missing product image "${ref.file}". Run "npm run images" and check src/data/image-manifest.json.`,
+    );
+  }
+  return { ...ref, src: mod.default };
+});
+
+const [hero, ...rest] = resolved;
+---
+
+<div class="gallery" data-gallery>
+  <figure class="gallery-stage">
+    {
+      resolved.map((img, i) => (
+        <div class="stage-slide" data-slide={i} hidden={i !== 0}>
+          <Picture
+            src={img.src}
+            alt={img.alt}
+            widths={[440, 640, 880, 1080]}
+            sizes="(min-width: 64rem) 46vw, (min-width: 40rem) 60vw, 92vw"
+            formats={['avif', 'webp']}
+            fallbackFormat="jpeg"
+            quality={72}
+            loading={i === 0 ? 'eager' : 'lazy'}
+            fetchpriority={i === 0 ? 'high' : 'auto'}
+            decoding={i === 0 ? 'sync' : 'async'}
+          />
+        </div>
+      ))
+    }
+    {
+      resolved.some((r) => r.caption) && (
+        <figcaption class="stage-caption">
+          {resolved.map((img, i) => (
+            <span data-caption={i} hidden={i !== 0}>
+              {img.caption ?? ''}
+            </span>
+          ))}
+        </figcaption>
+      )
+    }
+  </figure>
+
+  {
+    rest.length > 0 && (
+      <div class="thumbs" role="group" aria-label={`${productName} images`}>
+        {resolved.map((img, i) => (
+          <button
+            type="button"
+            class="thumb"
+            data-thumb={i}
+            aria-pressed={i === 0 ? 'true' : 'false'}
+          >
+            <Picture
+              src={img.src}
+              alt=""
+              width={96}
+              height={96}
+              formats={['avif', 'webp']}
+              fallbackFormat="jpeg"
+              quality={60}
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="visually-hidden">Show image {i + 1}</span>
+          </button>
+        ))}
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .gallery {
+    display: grid;
+    gap: 0.65rem;
+  }
+
+  .gallery-stage {
+    margin: 0;
+    position: relative;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--r-l);
+    overflow: clip;
+  }
+
+  /* Reserved 1:1 box: every supplied photograph is square, so the aspect ratio
+     is fixed and no slide swap can shift the page. */
+  .stage-slide {
+    inline-size: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .stage-slide[hidden] { display: none; }
+
+  .stage-slide :global(img) {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  .stage-caption {
+    padding: 0.7rem 0.95rem;
+    border-block-start: 1px solid var(--line);
+    background: var(--bg-sunk);
+    font-size: 0.8rem;
+    line-height: 1.45;
+    color: var(--fg-muted);
+    /* Reserve two lines so switching between captioned and uncaptioned
+       images cannot move anything below. */
+    min-block-size: 3.1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .stage-caption span[hidden] { display: none; }
+
+  .thumbs {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .thumb {
+    inline-size: 68px;
+    block-size: 68px;
+    flex: none;
+    padding: 0;
+    border: 1px solid var(--line);
+    border-radius: var(--r-s);
+    overflow: clip;
+    background: var(--paper-raised);
+    transition: border-color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+  }
+
+  .thumb :global(img) {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  .thumb:hover { transform: translateY(-2px); }
+  .thumb[aria-pressed='true'] { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+</style>
+
+<script>
+  for (const gallery of document.querySelectorAll<HTMLElement>('[data-gallery]')) {
+    const thumbs = gallery.querySelectorAll<HTMLButtonElement>('[data-thumb]');
+    const slides = gallery.querySelectorAll<HTMLElement>('[data-slide]');
+    const captions = gallery.querySelectorAll<HTMLElement>('[data-caption]');
+
+    const show = (index: number) => {
+      slides.forEach((s, i) => (s.hidden = i !== index));
+      captions.forEach((c, i) => (c.hidden = i !== index));
+      thumbs.forEach((t, i) => t.setAttribute('aria-pressed', String(i === index)));
+    };
+
+    thumbs.forEach((thumb, i) => {
+      thumb.addEventListener('click', () => show(i));
+      thumb.addEventListener('keydown', (event) => {
+        if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
+        event.preventDefault();
+        const next = (i + (event.key === 'ArrowRight' ? 1 : -1) + thumbs.length) % thumbs.length;
+        thumbs[next]?.focus();
+        show(next);
+      });
+    });
+  }
+</script>

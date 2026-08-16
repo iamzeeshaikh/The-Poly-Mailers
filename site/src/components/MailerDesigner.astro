@@ -1,0 +1,1033 @@
+---
+import { PREVIEW_NOTE } from '~/lib/claims';
+
+/**
+ * "Design Your Poly Mailer" configurator.
+ *
+ * Implementation notes:
+ *  - The preview is SVG rather than canvas, so it scales without pixelation,
+ *    prints, and can carry a real <title> for assistive technology.
+ *  - Every control is a native form element. Nothing here needs a pointer:
+ *    artwork position and scale are range inputs, so keyboard users get the
+ *    same control as mouse users rather than a degraded alternative.
+ *  - The editor script is loaded only when this component is on the page and
+ *    is deferred by default (Astro module scripts), so it never blocks paint.
+ *  - Uploaded artwork is read with FileReader into a data URL and never leaves
+ *    the browser until the quote form is submitted.
+ *  - Configuration is persisted to sessionStorage so a reload does not lose
+ *    work, and cleared when the tab closes.
+ */
+
+const SIZES = [
+  { id: '6x9', label: '6 x 9', ratio: 6 / 9 },
+  { id: '9x12', label: '9 x 12', ratio: 9 / 12 },
+  { id: '10x13', label: '10 x 13', ratio: 10 / 13 },
+  { id: '12x15', label: '12 x 15', ratio: 12 / 15 },
+  { id: '14.5x19', label: '14.5 x 19', ratio: 14.5 / 19 },
+  { id: '19x24', label: '19 x 24', ratio: 19 / 24 },
+  { id: '24x24', label: '24 x 24', ratio: 1 },
+  { id: 'custom', label: 'Custom size', ratio: 0.78 },
+];
+
+const COLOURS = [
+  { id: 'white', label: 'White', hex: '#f4f4f2', ink: '#1b1f26' },
+  { id: 'bone', label: 'Bone', hex: '#e8e2d6', ink: '#2b3038' },
+  { id: 'black', label: 'Black', hex: '#1b1f26', ink: '#f5f6f8' },
+  { id: 'grey', label: 'Grey', hex: '#8a9099', ink: '#12161b' },
+  { id: 'blush', label: 'Blush pink', hex: '#f3c9d2', ink: '#4a2732' },
+  { id: 'pink', label: 'Bright pink', hex: '#e0559a', ink: '#ffffff' },
+  { id: 'cobalt', label: 'Cobalt blue', hex: '#2f52d8', ink: '#ffffff' },
+  { id: 'forest', label: 'Forest green', hex: '#245c40', ink: '#f2f7f4' },
+  { id: 'clay', label: 'Terracotta', hex: '#c1613c', ink: '#fff6f1' },
+  { id: 'violet', label: 'Violet', hex: '#7a4fd6', ink: '#ffffff' },
+];
+
+const TYPES = [
+  { id: 'plain', label: 'Plain film mailer' },
+  { id: 'bubble', label: 'Bubble-lined mailer' },
+  { id: 'frosted', label: 'Frosted zip bag' },
+];
+
+const FINISHES = [
+  { id: 'matte', label: 'Matte' },
+  { id: 'gloss', label: 'Gloss' },
+];
+
+const CLOSURES = [
+  { id: 'single', label: 'Single adhesive strip' },
+  { id: 'double', label: 'Double strip for returns' },
+  { id: 'tab', label: 'Peel strip with tear tab' },
+];
+
+const MATERIALS = [
+  { id: 'standard', label: 'Standard film' },
+  { id: 'heavier', label: 'Heavier duty film' },
+  { id: 'recycled', label: 'Recycled content, where available' },
+];
+
+const COVERAGE = [
+  { id: 'logo', label: 'Logo only' },
+  { id: 'partial', label: 'Partial coverage' },
+  { id: 'full', label: 'Full coverage' },
+];
+---
+
+<section class="designer" data-designer aria-label="Mailer configuration tool">
+  <div class="designer-grid">
+    <!-- ============================ PREVIEW =========================== -->
+    <div class="preview-col">
+      <div class="preview-frame">
+        <svg
+          class="preview"
+          viewBox="0 0 400 480"
+          role="img"
+          aria-labelledby="preview-title preview-desc"
+          data-preview
+        >
+          <title id="preview-title">Approximate preview of your mailer</title>
+          <desc id="preview-desc" data-preview-desc>
+            A plain white mailer with no artwork placed.
+          </desc>
+
+          <defs>
+            <linearGradient id="dz-sheen" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"></stop>
+              <stop offset="45%" stop-color="#ffffff" stop-opacity="0.04"></stop>
+              <stop offset="100%" stop-color="#000000" stop-opacity="0.12"></stop>
+            </linearGradient>
+            <pattern id="dz-bubble" width="16" height="16" patternUnits="userSpaceOnUse">
+              <circle cx="8" cy="8" r="5.4" fill="#ffffff" fill-opacity="0.16"></circle>
+              <circle cx="8" cy="8" r="5.4" fill="none" stroke="#000000" stroke-opacity="0.07"></circle>
+            </pattern>
+            <clipPath id="dz-clip">
+              <rect data-bag-clip x="60" y="60" width="280" height="360" rx="6"></rect>
+            </clipPath>
+          </defs>
+
+          <!-- bag body -->
+          <rect data-bag x="60" y="60" width="280" height="360" rx="6" fill="#f4f4f2"></rect>
+
+          <!-- artwork, clipped to the bag -->
+          <g clip-path="url(#dz-clip)">
+            <image
+              data-artwork
+              href=""
+              x="0"
+              y="0"
+              width="0"
+              height="0"
+              preserveAspectRatio="xMidYMid meet"
+              opacity="0"></image>
+            <text
+              data-front-text
+              x="200"
+              y="250"
+              text-anchor="middle"
+              font-family="Inter, sans-serif"
+              font-size="26"
+              font-weight="700"
+              fill="#1b1f26"></text>
+            <text
+              data-back-text
+              x="200"
+              y="290"
+              text-anchor="middle"
+              font-family="Inter, sans-serif"
+              font-size="16"
+              font-weight="500"
+              fill="#1b1f26"
+              opacity="0.75"></text>
+          </g>
+
+          <!-- texture overlay for bubble construction -->
+          <rect
+            data-texture
+            x="60"
+            y="60"
+            width="280"
+            height="360"
+            rx="6"
+            fill="url(#dz-bubble)"
+            opacity="0"></rect>
+
+          <!-- finish sheen -->
+          <rect
+            data-sheen
+            x="60"
+            y="60"
+            width="280"
+            height="360"
+            rx="6"
+            fill="url(#dz-sheen)"
+            opacity="0.35"></rect>
+
+          <!-- closure flap -->
+          <g data-closure>
+            <rect data-flap x="60" y="60" width="280" height="30" fill="#000000" fill-opacity="0.16"></rect>
+            <line
+              data-strip
+              x1="72"
+              y1="78"
+              x2="328"
+              y2="78"
+              stroke="#ffffff"
+              stroke-opacity="0.7"
+              stroke-width="3"
+              stroke-dasharray="10 7"
+              stroke-linecap="round"></line>
+            <line
+              data-strip-2
+              x1="72"
+              y1="88"
+              x2="328"
+              y2="88"
+              stroke="#ffffff"
+              stroke-opacity="0.45"
+              stroke-width="2"
+              stroke-dasharray="6 6"
+              stroke-linecap="round"
+              opacity="0"></line>
+            <path
+              data-tab
+              d="M186 90 h28 l-6 12 h-16 Z"
+              fill="#ffffff"
+              fill-opacity="0.55"
+              opacity="0"></path>
+          </g>
+
+          <!-- outline -->
+          <rect
+            data-outline
+            x="60"
+            y="60"
+            width="280"
+            height="360"
+            rx="6"
+            fill="none"
+            stroke="#0d1116"
+            stroke-opacity="0.16"></rect>
+        </svg>
+
+        <div class="face-switch" role="group" aria-label="Preview face">
+          <button type="button" data-face="front" aria-pressed="true">Front</button>
+          <button type="button" data-face="back" aria-pressed="false">Back</button>
+        </div>
+      </div>
+
+      <p class="preview-note">{PREVIEW_NOTE}</p>
+
+      <div class="summary" data-summary-wrap>
+        <h2>Your configuration</h2>
+        <dl data-summary></dl>
+      </div>
+    </div>
+
+    <!-- ============================ CONTROLS ========================== -->
+    <div class="controls-col">
+      <form class="controls" data-controls>
+        <fieldset>
+          <legend>Format</legend>
+
+          <p class="field">
+            <label for="dz-type">Mailer type</label>
+            <select id="dz-type" name="type">
+              {TYPES.map((t) => <option value={t.id}>{t.label}</option>)}
+            </select>
+          </p>
+
+          <p class="field">
+            <label for="dz-size">Size</label>
+            <select id="dz-size" name="size">
+              {SIZES.map((s) => <option value={s.id} selected={s.id === '10x13'}>{s.label}</option>)}
+            </select>
+          </p>
+
+          <p class="field" data-custom-size hidden>
+            <label for="dz-custom">Custom dimensions</label>
+            <input
+              type="text"
+              id="dz-custom"
+              name="customSize"
+              placeholder="e.g. 260mm x 330mm"
+              maxlength="60"
+            />
+            <span class="hint">Give the packed size of your product if you know it.</span>
+          </p>
+
+          <p class="field">
+            <label for="dz-material">Material</label>
+            <select id="dz-material" name="material">
+              {MATERIALS.map((m) => <option value={m.id}>{m.label}</option>)}
+            </select>
+          </p>
+
+          <p class="field">
+            <label for="dz-closure">Closure</label>
+            <select id="dz-closure" name="closure">
+              {CLOSURES.map((c) => <option value={c.id}>{c.label}</option>)}
+            </select>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Appearance</legend>
+
+          <div class="field">
+            <span class="field-label" id="dz-colour-label">Film colour</span>
+            <div class="swatches" role="radiogroup" aria-labelledby="dz-colour-label">
+              {
+                COLOURS.map((c, i) => (
+                  <button
+                    type="button"
+                    class="swatch"
+                    role="radio"
+                    aria-checked={i === 0 ? 'true' : 'false'}
+                    data-colour={c.id}
+                    data-hex={c.hex}
+                    data-ink={c.ink}
+                    style={`--sw:${c.hex}`}
+                    tabindex={i === 0 ? 0 : -1}
+                  >
+                    <span class="visually-hidden">{c.label}</span>
+                  </button>
+                ))
+              }
+            </div>
+            <span class="hint" data-colour-name>White</span>
+          </div>
+
+          <p class="field">
+            <label for="dz-finish">Finish</label>
+            <select id="dz-finish" name="finish">
+              {FINISHES.map((f) => <option value={f.id}>{f.label}</option>)}
+            </select>
+          </p>
+
+          <p class="field">
+            <label for="dz-coverage">Print coverage</label>
+            <select id="dz-coverage" name="coverage">
+              {COVERAGE.map((c) => <option value={c.id}>{c.label}</option>)}
+            </select>
+          </p>
+
+          <fieldset class="inline-fieldset">
+            <legend>Print sides</legend>
+            <label class="radio">
+              <input type="radio" name="sides" value="one" checked />
+              <span>One side</span>
+            </label>
+            <label class="radio">
+              <input type="radio" name="sides" value="two" />
+              <span>Both sides</span>
+            </label>
+          </fieldset>
+        </fieldset>
+
+        <fieldset>
+          <legend>Artwork</legend>
+
+          <p class="field">
+            <label for="dz-logo">Logo or artwork</label>
+            <input type="file" id="dz-logo" accept="image/png,image/jpeg,image/svg+xml" />
+            <span class="hint">
+              PNG, JPG or SVG, for preview only. The file stays in your browser
+              and is not uploaded until you send the quote request.
+            </span>
+            <span class="err" data-artwork-error role="alert"></span>
+          </p>
+
+          <p class="field">
+            <label for="dz-scale">Artwork size</label>
+            <input type="range" id="dz-scale" min="10" max="100" value="45" step="1" />
+            <span class="hint" data-scale-value>45% of the panel width</span>
+          </p>
+
+          <p class="field">
+            <label for="dz-x">Horizontal position</label>
+            <input type="range" id="dz-x" min="0" max="100" value="50" step="1" />
+          </p>
+
+          <p class="field">
+            <label for="dz-y">Vertical position</label>
+            <input type="range" id="dz-y" min="0" max="100" value="40" step="1" />
+          </p>
+
+          <p class="field">
+            <label for="dz-front-text">Front text</label>
+            <input type="text" id="dz-front-text" name="frontText" maxlength="28" />
+            <span class="hint">Keep it short. Long lines close up on film.</span>
+          </p>
+
+          <p class="field">
+            <label for="dz-back-text">Back text</label>
+            <input type="text" id="dz-back-text" name="backText" maxlength="40" />
+          </p>
+        </fieldset>
+
+        <div class="controls-actions">
+          <button type="button" class="btn btn-ghost btn-sm" data-reset>Start again</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Hidden field the quote form reads, populated on every change. -->
+  <input type="hidden" data-design-output value="" />
+</section>
+
+<style>
+  .designer {
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--r-l);
+    overflow: clip;
+  }
+
+  .designer-grid {
+    display: grid;
+    gap: 0;
+  }
+
+  @media (min-width: 60rem) {
+    .designer-grid { grid-template-columns: minmax(0, 1fr) 22rem; }
+  }
+
+  .preview-col {
+    padding: clamp(1.1rem, 0.8rem + 1.4vw, 1.9rem);
+    min-width: 0;
+    background:
+      radial-gradient(80% 80% at 50% 25%, rgba(45, 85, 240, 0.06), transparent 70%),
+      var(--bg-sunk);
+    display: grid;
+    align-content: start;
+    gap: var(--sp-s);
+  }
+
+  .preview-frame { position: relative; max-inline-size: 26rem; margin-inline: auto; }
+
+  .preview {
+    inline-size: 100%;
+    /* Capped so the figure stays a considered object rather than filling a
+       wide column, and centred within whatever space is available. */
+    max-inline-size: 26rem;
+    margin-inline: auto;
+    block-size: auto;
+    /* Fixed ratio: changing size never resizes the container. */
+    aspect-ratio: 400 / 480;
+    filter: drop-shadow(0 14px 26px rgba(13, 17, 22, 0.16));
+  }
+
+  .preview rect,
+  .preview line,
+  .preview path,
+  .preview text {
+    transition:
+      fill 320ms var(--ease),
+      opacity 320ms var(--ease),
+      x 320ms var(--ease),
+      y 320ms var(--ease),
+      width 320ms var(--ease),
+      height 320ms var(--ease);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .preview rect,
+    .preview line,
+    .preview path,
+    .preview text { transition: none; }
+  }
+
+  .face-switch {
+    display: flex;
+    gap: 0.3rem;
+    justify-content: center;
+    margin-block-start: 0.4rem;
+  }
+
+  .face-switch button {
+    padding: 0.42rem 0.95rem;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    background: var(--bg-raised);
+    font-size: 0.85rem;
+    font-weight: 600;
+    min-height: 38px;
+  }
+
+  .face-switch button[aria-pressed='true'] {
+    background: var(--ink-900);
+    color: #fff;
+    border-color: var(--ink-900);
+  }
+
+  .preview-note {
+    font-size: 0.8rem;
+    color: var(--fg-subtle);
+    line-height: 1.5;
+    max-width: 46ch;
+    margin-inline: auto;
+  }
+
+  .summary {
+    max-inline-size: 30rem;
+    margin-inline: auto;
+    inline-size: 100%;
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--r-m);
+    padding: 1rem 1.15rem;
+  }
+
+  .summary h2 {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--fg-subtle);
+    margin-block-end: 0.6rem;
+  }
+
+  .summary dl {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.32rem 0.85rem;
+    font-size: 0.85rem;
+  }
+
+  .summary dt { color: var(--fg-subtle); }
+  .summary dd { margin: 0; font-weight: 550; text-align: end; }
+
+  .controls-col {
+    border-block-start: 1px solid var(--line);
+    max-block-size: none;
+  }
+
+  @media (min-width: 60rem) {
+    .controls-col {
+      border-block-start: 0;
+      border-inline-start: 1px solid var(--line);
+    }
+  }
+
+  .controls {
+    padding: clamp(1.1rem, 0.8rem + 1.2vw, 1.5rem);
+    display: grid;
+    gap: var(--sp-m);
+  }
+
+  fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  legend {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--fg-subtle);
+    padding: 0;
+    margin-block-end: 0.2rem;
+  }
+
+  .field { display: grid; gap: 0.3rem; margin: 0; }
+
+  label,
+  .field-label {
+    font-size: 0.83rem;
+    font-weight: 600;
+    color: var(--ink-700);
+  }
+
+  select,
+  input[type='text'] {
+    inline-size: 100%;
+    font-size: 16px;
+    padding: 0.6rem 0.7rem;
+    min-height: 46px;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--r-s);
+    background: var(--paper);
+    color: var(--fg);
+  }
+
+  input[type='file'] {
+    inline-size: 100%;
+    font-size: 0.85rem;
+    padding: 0.45rem;
+    border: 1px dashed var(--line-strong);
+    border-radius: var(--r-s);
+    background: var(--paper);
+  }
+
+  input[type='range'] {
+    inline-size: 100%;
+    accent-color: var(--cobalt-600);
+    min-height: 34px;
+  }
+
+  .hint { font-size: 0.76rem; color: var(--fg-subtle); line-height: 1.45; }
+
+  .err { font-size: 0.79rem; color: var(--danger-600); font-weight: 550; }
+  .err:empty { display: none; }
+
+  .swatches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .swatch {
+    inline-size: 32px;
+    block-size: 32px;
+    border-radius: 50%;
+    background: var(--sw);
+    border: 2px solid var(--paper);
+    box-shadow: 0 0 0 1px var(--line-strong);
+    transition: transform var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease);
+  }
+
+  .swatch:hover { transform: scale(1.09); }
+  .swatch[aria-checked='true'] { box-shadow: 0 0 0 2px var(--accent); }
+
+  .inline-fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.1rem;
+    align-items: center;
+  }
+
+  .inline-fieldset legend { margin-block-end: 0.4rem; }
+
+  .radio {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 450;
+    font-size: 0.88rem;
+  }
+
+  .radio input { inline-size: 18px; block-size: 18px; accent-color: var(--cobalt-600); }
+
+  .controls-actions { display: flex; gap: 0.5rem; }
+</style>
+
+<script>
+  import { PREVIEW_NOTE } from '~/lib/claims';
+
+  const STORAGE_KEY = 'tpm-designer-v1';
+  const MAX_PREVIEW_BYTES = 4 * 1024 * 1024;
+  const ALLOWED_PREVIEW = ['image/png', 'image/jpeg', 'image/svg+xml'];
+
+  interface Config {
+    type: string;
+    size: string;
+    customSize: string;
+    material: string;
+    closure: string;
+    colour: string;
+    colourLabel: string;
+    finish: string;
+    coverage: string;
+    sides: string;
+    frontText: string;
+    backText: string;
+    scale: number;
+    x: number;
+    y: number;
+    face: 'front' | 'back';
+    artworkName: string;
+  }
+
+  const SIZE_RATIOS: Record<string, number> = {
+    '6x9': 6 / 9,
+    '9x12': 9 / 12,
+    '10x13': 10 / 13,
+    '12x15': 12 / 15,
+    '14.5x19': 14.5 / 19,
+    '19x24': 19 / 24,
+    '24x24': 1,
+    custom: 0.78,
+  };
+
+  const LABELS: Record<string, Record<string, string>> = {
+    type: {
+      plain: 'Plain film mailer',
+      bubble: 'Bubble-lined mailer',
+      frosted: 'Frosted zip bag',
+    },
+    material: {
+      standard: 'Standard film',
+      heavier: 'Heavier duty film',
+      recycled: 'Recycled content, where available',
+    },
+    closure: {
+      single: 'Single adhesive strip',
+      double: 'Double strip for returns',
+      tab: 'Peel strip with tear tab',
+    },
+    finish: { matte: 'Matte', gloss: 'Gloss' },
+    coverage: { logo: 'Logo only', partial: 'Partial coverage', full: 'Full coverage' },
+    sides: { one: 'One side', two: 'Both sides' },
+  };
+
+  for (const root of document.querySelectorAll<HTMLElement>('[data-designer]')) {
+    const form = root.querySelector<HTMLFormElement>('[data-controls]')!;
+    const svg = root.querySelector<SVGSVGElement>('[data-preview]')!;
+    const output = root.querySelector<HTMLInputElement>('[data-design-output]')!;
+
+    const el = <T extends Element>(sel: string) => root.querySelector<T>(sel)!;
+
+    const bag = el<SVGRectElement>('[data-bag]');
+    const bagClip = el<SVGRectElement>('[data-bag-clip]');
+    const texture = el<SVGRectElement>('[data-texture]');
+    const sheen = el<SVGRectElement>('[data-sheen]');
+    const outline = el<SVGRectElement>('[data-outline]');
+    const flap = el<SVGRectElement>('[data-flap]');
+    const strip = el<SVGLineElement>('[data-strip]');
+    const strip2 = el<SVGLineElement>('[data-strip-2]');
+    const tab = el<SVGPathElement>('[data-tab]');
+    const artwork = el<SVGImageElement>('[data-artwork]');
+    const frontText = el<SVGTextElement>('[data-front-text]');
+    const backText = el<SVGTextElement>('[data-back-text]');
+    const desc = el<SVGDescElement>('[data-preview-desc]');
+    const summary = el<HTMLElement>('[data-summary]');
+    const colourName = el<HTMLElement>('[data-colour-name]');
+    const scaleValue = el<HTMLElement>('[data-scale-value]');
+    const artworkError = el<HTMLElement>('[data-artwork-error]');
+    const customSizeField = el<HTMLElement>('[data-custom-size]');
+
+    const swatches = Array.from(root.querySelectorAll<HTMLButtonElement>('[data-colour]'));
+    const faceButtons = Array.from(root.querySelectorAll<HTMLButtonElement>('[data-face]'));
+
+    let artworkData = '';
+
+    const config: Config = {
+      type: 'plain',
+      size: '10x13',
+      customSize: '',
+      material: 'standard',
+      closure: 'single',
+      colour: 'white',
+      colourLabel: 'White',
+      finish: 'matte',
+      coverage: 'logo',
+      sides: 'one',
+      frontText: '',
+      backText: '',
+      scale: 45,
+      x: 50,
+      y: 40,
+      face: 'front',
+      artworkName: '',
+    };
+
+    let hex = '#f4f4f2';
+    let ink = '#1b1f26';
+
+    /* ---------------------------------------------------------------- */
+
+    function bagGeometry() {
+      const ratio = SIZE_RATIOS[config.size] ?? 0.78;
+      const maxH = 360;
+      const maxW = 280;
+      let h = maxH;
+      let w = h * ratio;
+      if (w > maxW) {
+        w = maxW;
+        h = w / ratio;
+      }
+      return { x: 200 - w / 2, y: 240 - h / 2, w, h };
+    }
+
+    function applyGeometry() {
+      const { x, y, w, h } = bagGeometry();
+      for (const node of [bag, bagClip, texture, sheen, outline]) {
+        node.setAttribute('x', String(x));
+        node.setAttribute('y', String(y));
+        node.setAttribute('width', String(w));
+        node.setAttribute('height', String(h));
+      }
+
+      const flapH = Math.max(22, h * 0.085);
+      flap.setAttribute('x', String(x));
+      flap.setAttribute('y', String(y));
+      flap.setAttribute('width', String(w));
+      flap.setAttribute('height', String(flapH));
+
+      strip.setAttribute('x1', String(x + 12));
+      strip.setAttribute('x2', String(x + w - 12));
+      strip.setAttribute('y1', String(y + flapH * 0.55));
+      strip.setAttribute('y2', String(y + flapH * 0.55));
+
+      strip2.setAttribute('x1', String(x + 12));
+      strip2.setAttribute('x2', String(x + w - 12));
+      strip2.setAttribute('y1', String(y + flapH * 0.95));
+      strip2.setAttribute('y2', String(y + flapH * 0.95));
+
+      tab.setAttribute(
+        'd',
+        `M${200 - 14} ${y + flapH} h28 l-6 12 h-16 Z`,
+      );
+    }
+
+    function applyArtwork() {
+      const { x, y, w, h } = bagGeometry();
+      const aw = (w * config.scale) / 100;
+      const ah = aw;
+      const ax = x + ((w - aw) * config.x) / 100;
+      const ay = y + ((h - ah) * config.y) / 100;
+
+      artwork.setAttribute('x', String(ax));
+      artwork.setAttribute('y', String(ay));
+      artwork.setAttribute('width', String(aw));
+      artwork.setAttribute('height', String(ah));
+      artwork.setAttribute('opacity', artworkData ? '1' : '0');
+
+      const showFront = config.face === 'front';
+      frontText.textContent = showFront ? config.frontText : '';
+      backText.textContent =
+        !showFront || config.sides === 'two' ? (showFront ? '' : config.backText) : '';
+
+      frontText.setAttribute('x', '200');
+      frontText.setAttribute('y', String(y + h * 0.72));
+      frontText.setAttribute('fill', ink);
+
+      backText.setAttribute('x', '200');
+      backText.setAttribute('y', String(y + h * 0.5));
+      backText.setAttribute('fill', ink);
+
+      // Artwork appears on the front face only; the back carries text.
+      artwork.setAttribute('opacity', artworkData && showFront ? '1' : '0');
+    }
+
+    function applyAppearance() {
+      bag.setAttribute('fill', config.type === 'frosted' ? '#e9edf0' : hex);
+      outline.setAttribute('stroke-opacity', config.type === 'frosted' ? '0.3' : '0.16');
+      texture.setAttribute('opacity', config.type === 'bubble' ? '1' : '0');
+      sheen.setAttribute('opacity', config.finish === 'gloss' ? '0.55' : '0.18');
+      strip2.setAttribute('opacity', config.closure === 'double' ? '1' : '0');
+      tab.setAttribute('opacity', config.closure === 'tab' ? '1' : '0');
+    }
+
+    function describe() {
+      const parts = [
+        LABELS.type[config.type],
+        `in ${config.colourLabel.toLowerCase()}`,
+        `with a ${LABELS.finish[config.finish].toLowerCase()} finish`,
+        `and a ${LABELS.closure[config.closure].toLowerCase()}`,
+      ];
+      if (artworkData) parts.push('with uploaded artwork placed on the front');
+      if (config.frontText) parts.push(`printed with the words ${config.frontText}`);
+      desc.textContent = `${parts.join(', ')}. Showing the ${config.face} face.`;
+    }
+
+    function renderSummary() {
+      const rows: [string, string][] = [
+        ['Type', LABELS.type[config.type]!],
+        ['Size', config.size === 'custom' ? config.customSize || 'Custom (to confirm)' : config.size],
+        ['Material', LABELS.material[config.material]!],
+        ['Colour', config.colourLabel],
+        ['Finish', LABELS.finish[config.finish]!],
+        ['Closure', LABELS.closure[config.closure]!],
+        ['Coverage', LABELS.coverage[config.coverage]!],
+        ['Sides', LABELS.sides[config.sides]!],
+        ['Artwork', config.artworkName || 'None uploaded'],
+      ];
+      summary.innerHTML = rows
+        .map(
+          ([k, v]) =>
+            `<dt>${k}</dt><dd>${v.replace(/[<>&]/g, (c) => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;' })[c]!)}</dd>`,
+        )
+        .join('');
+    }
+
+    function serialise() {
+      const lines = [
+        `Type: ${LABELS.type[config.type]}`,
+        `Size: ${config.size === 'custom' ? config.customSize || 'custom, to confirm' : config.size}`,
+        `Material: ${LABELS.material[config.material]}`,
+        `Colour: ${config.colourLabel}`,
+        `Finish: ${LABELS.finish[config.finish]}`,
+        `Closure: ${LABELS.closure[config.closure]}`,
+        `Print coverage: ${LABELS.coverage[config.coverage]}`,
+        `Sides printed: ${LABELS.sides[config.sides]}`,
+        `Front text: ${config.frontText || '(none)'}`,
+        `Back text: ${config.backText || '(none)'}`,
+        `Artwork file: ${config.artworkName || '(none uploaded in the tool)'}`,
+        `Artwork placement: ${config.scale}% width, ${config.x}% across, ${config.y}% down`,
+        '',
+        PREVIEW_NOTE,
+      ];
+      return lines.join('\n');
+    }
+
+    function sync() {
+      applyGeometry();
+      applyAppearance();
+      applyArtwork();
+      describe();
+      renderSummary();
+
+      const payload = serialise();
+      output.value = payload;
+
+      // Push into any quote form on the page.
+      document
+        .querySelectorAll<HTMLInputElement>('[data-design-field]')
+        .forEach((field) => (field.value = payload));
+
+      try {
+        sessionStorage.setItem(STORAGE_KEY, JSON.stringify(config));
+      } catch {
+        /* storage unavailable — the tool still works, it just will not persist */
+      }
+    }
+
+    /* ------------------------------ events --------------------------- */
+
+    form.addEventListener('change', (event) => {
+      const target = event.target as HTMLInputElement | HTMLSelectElement;
+      if (!target.name) return;
+      (config as unknown as Record<string, string>)[target.name] = target.value;
+      customSizeField.hidden = config.size !== 'custom';
+      sync();
+    });
+
+    form.addEventListener('input', (event) => {
+      const target = event.target as HTMLInputElement;
+      if (target.type === 'text') {
+        (config as unknown as Record<string, string>)[target.name] = target.value;
+        sync();
+      }
+    });
+
+    el<HTMLInputElement>('#dz-scale').addEventListener('input', (event) => {
+      config.scale = Number((event.target as HTMLInputElement).value);
+      scaleValue.textContent = `${config.scale}% of the panel width`;
+      sync();
+    });
+
+    el<HTMLInputElement>('#dz-x').addEventListener('input', (event) => {
+      config.x = Number((event.target as HTMLInputElement).value);
+      sync();
+    });
+
+    el<HTMLInputElement>('#dz-y').addEventListener('input', (event) => {
+      config.y = Number((event.target as HTMLInputElement).value);
+      sync();
+    });
+
+    // Colour swatches behave as a radio group, arrow keys included.
+    swatches.forEach((swatch, index) => {
+      swatch.addEventListener('click', () => selectColour(index));
+      swatch.addEventListener('keydown', (event) => {
+        const key = (event as KeyboardEvent).key;
+        if (key !== 'ArrowRight' && key !== 'ArrowLeft') return;
+        event.preventDefault();
+        const next = (index + (key === 'ArrowRight' ? 1 : -1) + swatches.length) % swatches.length;
+        swatches[next]!.focus();
+        selectColour(next);
+      });
+    });
+
+    function selectColour(index: number) {
+      const swatch = swatches[index]!;
+      swatches.forEach((s, i) => {
+        s.setAttribute('aria-checked', String(i === index));
+        s.tabIndex = i === index ? 0 : -1;
+      });
+      config.colour = swatch.dataset.colour ?? 'white';
+      config.colourLabel = swatch.querySelector('span')?.textContent ?? 'White';
+      hex = swatch.dataset.hex ?? '#f4f4f2';
+      ink = swatch.dataset.ink ?? '#1b1f26';
+      colourName.textContent = config.colourLabel;
+      sync();
+    }
+
+    faceButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        config.face = (button.dataset.face as 'front' | 'back') ?? 'front';
+        faceButtons.forEach((b) =>
+          b.setAttribute('aria-pressed', String(b === button)),
+        );
+        sync();
+      });
+    });
+
+    el<HTMLInputElement>('#dz-logo').addEventListener('change', (event) => {
+      const input = event.target as HTMLInputElement;
+      const file = input.files?.[0];
+      artworkError.textContent = '';
+
+      if (!file) {
+        artworkData = '';
+        config.artworkName = '';
+        artwork.removeAttribute('href');
+        sync();
+        return;
+      }
+
+      if (!ALLOWED_PREVIEW.includes(file.type)) {
+        artworkError.textContent = 'Use a PNG, JPG or SVG for the preview.';
+        input.value = '';
+        return;
+      }
+
+      if (file.size > MAX_PREVIEW_BYTES) {
+        artworkError.textContent = 'That file is too large to preview. Try one under 4 MB.';
+        input.value = '';
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.addEventListener('load', () => {
+        artworkData = String(reader.result ?? '');
+        config.artworkName = file.name;
+        artwork.setAttribute('href', artworkData);
+        sync();
+      });
+      reader.addEventListener('error', () => {
+        artworkError.textContent = 'That file could not be read. Try another one.';
+      });
+      reader.readAsDataURL(file);
+    });
+
+    root.querySelector<HTMLButtonElement>('[data-reset]')?.addEventListener('click', () => {
+      try {
+        sessionStorage.removeItem(STORAGE_KEY);
+      } catch {
+        /* ignore */
+      }
+      window.location.reload();
+    });
+
+    /* --------------------------- restore state ----------------------- */
+
+    try {
+      const saved = sessionStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        Object.assign(config, JSON.parse(saved) as Config);
+        for (const [key, value] of Object.entries(config)) {
+          const field = form.querySelector<HTMLInputElement>(`[name="${key}"]`);
+          if (field && typeof value === 'string') field.value = value;
+        }
+        const swatchIndex = swatches.findIndex((s) => s.dataset.colour === config.colour);
+        if (swatchIndex >= 0) selectColour(swatchIndex);
+        el<HTMLInputElement>('#dz-scale').value = String(config.scale);
+        el<HTMLInputElement>('#dz-x').value = String(config.x);
+        el<HTMLInputElement>('#dz-y').value = String(config.y);
+        customSizeField.hidden = config.size !== 'custom';
+      }
+    } catch {
+      /* corrupt state — start fresh rather than failing */
+    }
+
+    sync();
+  }
+</script>

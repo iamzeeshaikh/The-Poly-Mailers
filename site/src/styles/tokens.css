@@ -1,0 +1,137 @@
+/* =========================================================================
+   The Poly Mailers — design tokens
+   Identity: "sealed ink". Graphite substrate, warm paper ground, one cobalt
+   signal colour and a low-chroma amber used only for small emphases.
+   Nothing here is borrowed from a stock packaging palette: the greys are cool,
+   the paper is warm, and the accent sits at a higher chroma than the UI blues
+   normally used on manufacturing sites.
+   ========================================================================= */
+
+:root {
+  /* --- Substrate ------------------------------------------------------- */
+  --ink-900: #0d1116;
+  --ink-800: #151a21;
+  --ink-700: #1e242d;
+  --ink-600: #2b3340;
+  --ink-500: #414c5c;
+  --ink-400: #5d6a7c;
+  --ink-300: #8996a6;
+  --ink-200: #b6c0cb;
+  --ink-100: #dbe1e8;
+
+  /* --- Paper ground ---------------------------------------------------- */
+  --paper: #f7f5f1;
+  --paper-raised: #ffffff;
+  --paper-sunk: #efece5;
+  --paper-line: #e2ddd3;
+
+  /* --- Signal ---------------------------------------------------------- */
+  --cobalt-700: #1b34a8;
+  --cobalt-600: #2242cf;
+  --cobalt-500: #2d55f0;
+  --cobalt-300: #8ba3fb;
+  --cobalt-100: #e4eaff;
+
+  /* --- Emphasis (small areas only) ------------------------------------- */
+  --amber-600: #a76a10;
+  --amber-500: #d18b1f;
+  --amber-100: #fbf0dc;
+
+  /* --- Semantic -------------------------------------------------------- */
+  --danger-600: #a4262c;
+  --danger-100: #fbe9ea;
+  --success-600: #14663f;
+  --success-100: #e3f4eb;
+
+  /* --- Roles ----------------------------------------------------------- */
+  --bg: var(--paper);
+  --bg-raised: var(--paper-raised);
+  --bg-sunk: var(--paper-sunk);
+  --fg: var(--ink-900);
+  --fg-muted: var(--ink-500);
+  --fg-subtle: var(--ink-400);
+  --line: var(--paper-line);
+  --line-strong: var(--ink-200);
+  --accent: var(--cobalt-600);
+  --accent-hover: var(--cobalt-700);
+  --accent-soft: var(--cobalt-100);
+  --on-accent: #ffffff;
+  --focus: var(--cobalt-500);
+
+  /* --- Type ------------------------------------------------------------ */
+  --font-display: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', Palatino,
+    'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
+
+  /* Fluid scale, 320px → 1440px. Ratios kept tight at the small end so the
+     editorial headings stay readable rather than shrinking to a whisper. */
+  --step--1: clamp(0.82rem, 0.79rem + 0.13vw, 0.89rem);
+  --step-0: clamp(1rem, 0.96rem + 0.18vw, 1.09rem);
+  --step-1: clamp(1.18rem, 1.1rem + 0.38vw, 1.4rem);
+  --step-2: clamp(1.4rem, 1.24rem + 0.75vw, 1.85rem);
+  --step-3: clamp(1.66rem, 1.38rem + 1.36vw, 2.45rem);
+  --step-4: clamp(1.97rem, 1.5rem + 2.31vw, 3.25rem);
+  --step-5: clamp(2.34rem, 1.58rem + 3.75vw, 4.3rem);
+  --step-6: clamp(2.7rem, 1.5rem + 5.9vw, 5.6rem);
+
+  --lh-tight: 1.06;
+  --lh-snug: 1.22;
+  --lh-body: 1.62;
+
+  /* --- Space ----------------------------------------------------------- */
+  --sp-3xs: 0.25rem;
+  --sp-2xs: 0.5rem;
+  --sp-xs: 0.75rem;
+  --sp-s: 1rem;
+  --sp-m: 1.5rem;
+  --sp-l: 2.25rem;
+  --sp-xl: 3.5rem;
+  --sp-2xl: 5rem;
+  --sp-3xl: clamp(4rem, 2rem + 8vw, 8rem);
+
+  /* --- Shape ----------------------------------------------------------- */
+  --r-xs: 3px;
+  --r-s: 6px;
+  --r-m: 10px;
+  --r-l: 16px;
+  --r-xl: 26px;
+
+  /* Shadows are cool-tinted so they sit on the warm paper without muddying. */
+  --shadow-s: 0 1px 2px rgba(13, 17, 22, 0.06), 0 2px 6px rgba(13, 17, 22, 0.04);
+  --shadow-m: 0 2px 4px rgba(13, 17, 22, 0.05), 0 10px 26px rgba(13, 17, 22, 0.07);
+  --shadow-l: 0 4px 8px rgba(13, 17, 22, 0.06), 0 26px 60px rgba(13, 17, 22, 0.1);
+
+  --measure: 68ch;
+  --wrap: 1240px;
+  --wrap-wide: 1440px;
+  --wrap-narrow: 760px;
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 140ms;
+  --dur: 260ms;
+  --dur-slow: 620ms;
+
+  --header-h: 68px;
+}
+
+/* Dark sections invert the roles rather than redefining components. */
+.on-ink {
+  --bg: var(--ink-900);
+  --bg-raised: var(--ink-800);
+  --bg-sunk: #080b0e;
+  --fg: #f2f4f7;
+  --fg-muted: var(--ink-200);
+  --fg-subtle: var(--ink-300);
+  --line: var(--ink-700);
+  --line-strong: var(--ink-600);
+  --accent: var(--cobalt-300);
+  --accent-hover: #adbdfc;
+  --accent-soft: rgba(45, 85, 240, 0.18);
+  --on-accent: var(--ink-900);
+  --focus: var(--cobalt-300);
+  background: var(--bg);
+  color: var(--fg);
+}

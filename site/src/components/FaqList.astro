@@ -1,0 +1,108 @@
+---
+import type { Faq } from '~/data/types';
+
+interface Props {
+  faqs: readonly Faq[];
+  heading: string;
+  intro?: string;
+  id?: string;
+}
+
+const { faqs, heading, intro, id = 'faqs' } = Astro.props;
+---
+
+<section class="faqs" id={id} aria-labelledby={`${id}-heading`}>
+  <h2 id={`${id}-heading`}>{heading}</h2>
+  {intro && <p class="faqs-intro">{intro}</p>}
+  <div class="faq-list">
+    {
+      faqs.map((faq, i) => (
+        <details class="faq" open={i === 0}>
+          <summary>
+            <span class="faq-q">{faq.q}</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="13" height="13" viewBox="0 0 14 14">
+                <path d="M7 1v12M1 7h12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+            </span>
+          </summary>
+          <div class="faq-a">
+            <p>{faq.a}</p>
+          </div>
+        </details>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .faqs h2 { font-size: var(--step-3); margin-block-end: 0.4rem; }
+
+  .faqs-intro {
+    color: var(--fg-muted);
+    max-width: 56ch;
+    margin-block-end: var(--sp-m);
+  }
+
+  .faq-list {
+    margin-block-start: var(--sp-s);
+    border-block-start: 1px solid var(--line);
+  }
+
+  .faq { border-block-end: 1px solid var(--line); }
+
+  summary {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--sp-s);
+    padding-block: 1.05rem;
+    cursor: pointer;
+    list-style: none;
+    min-height: 48px;
+  }
+
+  summary::-webkit-details-marker { display: none; }
+
+  summary:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+    border-radius: var(--r-xs);
+  }
+
+  .faq-q {
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    font-weight: 500;
+    line-height: 1.35;
+    letter-spacing: -0.012em;
+    max-width: 52ch;
+  }
+
+  summary:hover .faq-q { color: var(--accent-hover); }
+
+  .faq-icon {
+    flex: none;
+    inline-size: 30px;
+    block-size: 30px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--line-strong);
+    border-radius: 50%;
+    color: var(--accent);
+    margin-block-start: 0.15rem;
+    transition: transform var(--dur) var(--ease), background var(--dur-fast) var(--ease);
+  }
+
+  [open] .faq-icon {
+    transform: rotate(45deg);
+    background: var(--accent-soft);
+  }
+
+  .faq-a {
+    padding-block-end: 1.15rem;
+    max-width: var(--measure);
+  }
+
+  .faq-a p { margin: 0; color: var(--fg-muted); }
+</style>

@@ -1,0 +1,530 @@
+---
+import {
+  ACCEPT_ATTRIBUTE,
+  COUNTRIES,
+  MAX_FILES,
+  MAX_UPLOAD_BYTES,
+  PRODUCT_OPTIONS,
+  QUANTITY_BANDS,
+} from '~/lib/quote';
+
+interface Props {
+  /** Pre-selects the product dropdown. */
+  preset?: string;
+  /** Which page the enquiry came from. Sent as a hidden field. */
+  source: string;
+  /** Compact variant used near the top of product and collection pages. */
+  compact?: boolean;
+  heading?: string;
+  intro?: string;
+  /** Adds the design-configuration hidden field, populated by the design tool. */
+  withDesign?: boolean;
+  id?: string;
+}
+
+const {
+  preset = '',
+  source,
+  compact = false,
+  heading = 'Get a written quotation',
+  intro = 'Tell us what you need. We reply with a specification and a price — no fixed price list, because every order is made to order.',
+  withDesign = false,
+  id = 'quote',
+} = Astro.props;
+
+const maxMb = Math.round(MAX_UPLOAD_BYTES / (1024 * 1024));
+---
+
+<section class={`quote-form ${compact ? 'is-compact' : ''}`} id={id}>
+  <div class="qf-head">
+    <h2>{heading}</h2>
+    <p>{intro}</p>
+  </div>
+
+  <form
+    class="qf"
+    method="post"
+    action="/api/quote/"
+    enctype="multipart/form-data"
+    novalidate
+    data-quote-form
+  >
+    <input type="hidden" name="source" value={source} />
+    {withDesign && <input type="hidden" name="design" data-design-field value="" />}
+
+    <!-- Honeypot. Hidden from sight and from assistive technology; a bot that
+         fills it is rejected server-side without an error being shown. -->
+    <div class="qf-hp" aria-hidden="true">
+      <label for={`${id}-company-url`}>Company website</label>
+      <input
+        type="text"
+        id={`${id}-company-url`}
+        name="company_url"
+        tabindex="-1"
+        autocomplete="off"
+      />
+    </div>
+    <!-- Timestamp trap: submissions faster than a human can type are rejected. -->
+    <input type="hidden" name="started_at" data-started-at value="" />
+
+    <div class="qf-grid">
+      <p class="field">
+        <label for={`${id}-name`}>Name <span class="req" aria-hidden="true">*</span></label>
+        <input
+          type="text"
+          id={`${id}-name`}
+          name="name"
+          autocomplete="name"
+          required
+          aria-describedby={`${id}-name-err`}
+          maxlength="120"
+        />
+        <span class="err" id={`${id}-name-err`} data-error-for="name" role="alert"></span>
+      </p>
+
+      <p class="field">
+        <label for={`${id}-email`}>Business email <span class="req" aria-hidden="true">*</span></label>
+        <input
+          type="email"
+          id={`${id}-email`}
+          name="email"
+          autocomplete="email"
+          inputmode="email"
+          required
+          aria-describedby={`${id}-email-err`}
+          maxlength="200"
+        />
+        <span class="err" id={`${id}-email-err`} data-error-for="email" role="alert"></span>
+      </p>
+
+      <p class="field">
+        <label for={`${id}-phone`}>Phone or WhatsApp <span class="req" aria-hidden="true">*</span></label>
+        <input
+          type="tel"
+          id={`${id}-phone`}
+          name="phone"
+          autocomplete="tel"
+          inputmode="tel"
+          required
+          aria-describedby={`${id}-phone-err`}
+          maxlength="40"
+        />
+        <span class="err" id={`${id}-phone-err`} data-error-for="phone" role="alert"></span>
+      </p>
+
+      <p class="field">
+        <label for={`${id}-country`}>Country <span class="req" aria-hidden="true">*</span></label>
+        <select
+          id={`${id}-country`}
+          name="country"
+          required
+          autocomplete="country-name"
+          aria-describedby={`${id}-country-err`}
+        >
+          <option value="">Select a country</option>
+          {COUNTRIES.map((c) => <option value={c}>{c}</option>)}
+        </select>
+        <span class="err" id={`${id}-country-err`} data-error-for="country" role="alert"></span>
+      </p>
+
+      <p class="field field-wide">
+        <label for={`${id}-product`}>Product <span class="req" aria-hidden="true">*</span></label>
+        <select
+          id={`${id}-product`}
+          name="product"
+          required
+          aria-describedby={`${id}-product-err`}
+        >
+          <option value="">Select a product</option>
+          {
+            PRODUCT_OPTIONS.map((p) => (
+              <option value={p} selected={p === preset}>
+                {p}
+              </option>
+            ))
+          }
+        </select>
+        <span class="err" id={`${id}-product-err`} data-error-for="product" role="alert"></span>
+      </p>
+
+      <p class="field">
+        <label for={`${id}-size`}>Size or dimensions</label>
+        <input
+          type="text"
+          id={`${id}-size`}
+          name="size"
+          placeholder="e.g. 10x13, or 260mm x 330mm"
+          aria-describedby={`${id}-size-err`}
+          maxlength="120"
+        />
+        <span class="err" id={`${id}-size-err`} data-error-for="size" role="alert"></span>
+      </p>
+
+      <p class="field">
+        <label for={`${id}-quantity`}>Approximate quantity <span class="req" aria-hidden="true">*</span></label>
+        <select
+          id={`${id}-quantity`}
+          name="quantity"
+          required
+          aria-describedby={`${id}-quantity-err`}
+        >
+          <option value="">Select a quantity</option>
+          {QUANTITY_BANDS.map((q) => <option value={q}>{q}</option>)}
+        </select>
+        <span class="err" id={`${id}-quantity-err`} data-error-for="quantity" role="alert"></span>
+      </p>
+
+      <p class="field field-wide">
+        <label for={`${id}-message`}>Message or instructions</label>
+        <textarea
+          id={`${id}-message`}
+          name="message"
+          rows={compact ? 3 : 5}
+          maxlength="4000"
+          aria-describedby={`${id}-message-err`}
+          placeholder="What are you shipping, what film weight or closure you need, and anything else that affects the specification."
+        ></textarea>
+        <span class="err" id={`${id}-message-err`} data-error-for="message" role="alert"></span>
+      </p>
+
+      <p class="field field-wide">
+        <label for={`${id}-artwork`}>Artwork upload</label>
+        <input
+          type="file"
+          id={`${id}-artwork`}
+          name="artwork"
+          multiple
+          accept={ACCEPT_ATTRIBUTE}
+          aria-describedby={`${id}-artwork-hint ${id}-artwork-err`}
+        />
+        <span class="hint" id={`${id}-artwork-hint`}>
+          PDF, AI, EPS, PSD, SVG, PNG or JPG. Up to {MAX_FILES} files, {maxMb} MB each.
+        </span>
+        <span class="err" id={`${id}-artwork-err`} data-error-for="artwork" role="alert"></span>
+      </p>
+
+      <p class="field field-wide checkbox">
+        <input type="checkbox" id={`${id}-consent`} name="consent" value="yes" required />
+        <label for={`${id}-consent`}>
+          I am happy for The Poly Mailers to use these details to reply to my
+          enquiry, as described in the <a href="/privacy-policy/">privacy policy</a>.
+          <span class="req" aria-hidden="true">*</span>
+        </label>
+        <span class="err" data-error-for="consent" role="alert"></span>
+      </p>
+    </div>
+
+    <div class="qf-actions">
+      <button type="submit" class="btn btn-lg">
+        <span data-submit-label>Send my request</span>
+      </button>
+      <p class="qf-note">
+        We reply by email. Your details are not sold or passed on.
+      </p>
+    </div>
+
+    <p class="err form-err" data-error-for="form" role="alert"></p>
+    <div class="qf-status visually-hidden" role="status" data-form-status></div>
+  </form>
+</section>
+
+<style>
+  .quote-form {
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--r-l);
+    padding: clamp(1.25rem, 0.9rem + 1.6vw, 2rem);
+    box-shadow: var(--shadow-s);
+  }
+
+  .qf-head h2 {
+    font-size: var(--step-2);
+    margin-block-end: 0.35rem;
+  }
+
+  .qf-head p {
+    color: var(--fg-muted);
+    font-size: 0.95rem;
+    max-width: 56ch;
+    margin-block-end: var(--sp-m);
+  }
+
+  .is-compact .qf-head h2 { font-size: var(--step-1); }
+
+  .qf-grid {
+    display: grid;
+    gap: var(--sp-s);
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  @media (min-width: 34rem) {
+    .qf-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .field-wide { grid-column: 1 / -1; }
+  }
+
+  .field {
+    display: grid;
+    gap: 0.3rem;
+    margin: 0;
+    min-width: 0;
+  }
+
+  label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--ink-700);
+  }
+
+  .req { color: var(--danger-600); margin-inline-start: 0.1rem; }
+
+  input[type='text'],
+  input[type='email'],
+  input[type='tel'],
+  select,
+  textarea {
+    inline-size: 100%;
+    /* 16px minimum stops iOS Safari zooming the viewport on focus. */
+    font-size: 16px;
+    padding: 0.7rem 0.8rem;
+    min-height: 48px;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--r-s);
+    background: var(--paper);
+    color: var(--fg);
+    transition: border-color var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease);
+  }
+
+  textarea { min-height: auto; resize: vertical; line-height: 1.5; }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+    outline: none;
+  }
+
+  input[aria-invalid='true'],
+  select[aria-invalid='true'],
+  textarea[aria-invalid='true'] {
+    border-color: var(--danger-600);
+    background: var(--danger-100);
+  }
+
+  input[type='file'] {
+    inline-size: 100%;
+    font-size: 0.9rem;
+    padding: 0.55rem;
+    border: 1px dashed var(--line-strong);
+    border-radius: var(--r-s);
+    background: var(--paper);
+  }
+
+  input[type='file']::file-selector-button {
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-inline-end: 0.7rem;
+    padding: 0.45rem 0.8rem;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--r-xs);
+    background: var(--bg-sunk);
+    cursor: pointer;
+  }
+
+  .checkbox {
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    gap: 0.2rem 0.6rem;
+  }
+
+  .checkbox input {
+    inline-size: 20px;
+    block-size: 20px;
+    margin-block-start: 0.18rem;
+    accent-color: var(--cobalt-600);
+  }
+
+  .checkbox label { font-weight: 450; font-size: 0.87rem; line-height: 1.5; }
+  .checkbox a { color: var(--accent); }
+  .checkbox .err { grid-column: 1 / -1; }
+
+  .hint { font-size: 0.79rem; color: var(--fg-subtle); }
+
+  .err {
+    font-size: 0.81rem;
+    color: var(--danger-600);
+    font-weight: 550;
+  }
+
+  .err:empty { display: none; }
+
+  .form-err {
+    margin-block-start: var(--sp-s);
+    padding: 0.7rem 0.9rem;
+    background: var(--danger-100);
+    border-radius: var(--r-s);
+  }
+
+  .qf-actions {
+    margin-block-start: var(--sp-m);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--sp-s) var(--sp-m);
+  }
+
+  .qf-actions .btn { min-width: 12rem; }
+  .qf-actions .btn[aria-disabled='true'] { opacity: 0.65; pointer-events: none; }
+
+  .qf-note {
+    margin: 0;
+    font-size: 0.82rem;
+    color: var(--fg-subtle);
+    max-width: 30ch;
+  }
+
+  /* Honeypot: removed from flow and from the accessibility tree. */
+  .qf-hp {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+</style>
+
+<script>
+  import { validateQuote, extensionOf, ALLOWED_UPLOADS, MAX_FILES, MAX_UPLOAD_BYTES, MAX_TOTAL_UPLOAD_BYTES } from '~/lib/quote';
+  import type { Errors, QuoteFields } from '~/lib/quote';
+
+  const allowedExts = new Set(ALLOWED_UPLOADS.map((a) => a.ext));
+
+  for (const form of document.querySelectorAll<HTMLFormElement>('[data-quote-form]')) {
+    const startedAt = form.querySelector<HTMLInputElement>('[data-started-at]');
+    if (startedAt) startedAt.value = String(Date.now());
+
+    const status = form.querySelector<HTMLElement>('[data-form-status]');
+    const submit = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    const label = form.querySelector<HTMLElement>('[data-submit-label]');
+
+    const errorSlot = (field: string) =>
+      form.querySelector<HTMLElement>(`[data-error-for="${field}"]`);
+
+    const clearErrors = () => {
+      form.querySelectorAll<HTMLElement>('[data-error-for]').forEach((el) => (el.textContent = ''));
+      form
+        .querySelectorAll<HTMLElement>('[aria-invalid="true"]')
+        .forEach((el) => el.removeAttribute('aria-invalid'));
+    };
+
+    const showErrors = (errors: Errors) => {
+      clearErrors();
+      let first: HTMLElement | null = null;
+      for (const [field, message] of Object.entries(errors)) {
+        const slot = errorSlot(field);
+        if (slot) slot.textContent = message ?? '';
+        const input = form.querySelector<HTMLElement>(`[name="${field}"]`);
+        if (input) {
+          input.setAttribute('aria-invalid', 'true');
+          if (!first) first = input;
+        }
+      }
+      first?.focus();
+      if (status) status.textContent = `${Object.keys(errors).length} field(s) need attention.`;
+    };
+
+    const validateFiles = (): string | null => {
+      const input = form.querySelector<HTMLInputElement>('input[type="file"]');
+      const files = input?.files;
+      if (!files || files.length === 0) return null;
+      if (files.length > MAX_FILES) return `Attach no more than ${MAX_FILES} files.`;
+
+      let total = 0;
+      for (const file of Array.from(files)) {
+        const ext = extensionOf(file.name);
+        if (!allowedExts.has(ext as never)) {
+          return `"${file.name}" is not an accepted format. Use PDF, AI, EPS, PSD, SVG, PNG or JPG.`;
+        }
+        if (file.size > MAX_UPLOAD_BYTES) {
+          return `"${file.name}" is larger than ${Math.round(MAX_UPLOAD_BYTES / 1024 / 1024)} MB.`;
+        }
+        total += file.size;
+      }
+      if (total > MAX_TOTAL_UPLOAD_BYTES) {
+        return `Those files total more than ${Math.round(MAX_TOTAL_UPLOAD_BYTES / 1024 / 1024)} MB together.`;
+      }
+      return null;
+    };
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const data = new FormData(form);
+
+      const fields: Partial<QuoteFields> = {
+        name: String(data.get('name') ?? ''),
+        email: String(data.get('email') ?? ''),
+        phone: String(data.get('phone') ?? ''),
+        country: String(data.get('country') ?? ''),
+        product: String(data.get('product') ?? ''),
+        size: String(data.get('size') ?? ''),
+        quantity: String(data.get('quantity') ?? ''),
+        message: String(data.get('message') ?? ''),
+        consent: data.get('consent') === 'yes',
+      };
+
+      const errors = validateQuote(fields);
+      const fileError = validateFiles();
+      if (fileError) errors.artwork = fileError;
+
+      if (Object.keys(errors).length) {
+        showErrors(errors);
+        return;
+      }
+
+      clearErrors();
+      submit?.setAttribute('aria-disabled', 'true');
+      if (label) label.textContent = 'Sending…';
+      if (status) status.textContent = 'Sending your request.';
+
+      try {
+        const response = await fetch(form.action, { method: 'POST', body: data });
+        const payload = (await response.json().catch(() => ({}))) as {
+          ok?: boolean;
+          errors?: Errors;
+          redirect?: string;
+        };
+
+        if (response.ok && payload.ok) {
+          // Values are intentionally left in place until the redirect happens,
+          // so a slow navigation never looks like a lost form.
+          window.location.href = payload.redirect ?? '/thank-you/';
+          return;
+        }
+
+        showErrors(
+          payload.errors ?? {
+            form: 'Your request could not be sent. Please try again, or email info@thepolymailers.com.',
+          },
+        );
+      } catch {
+        showErrors({
+          form: 'We could not reach the server. Check your connection and try again, or email info@thepolymailers.com.',
+        });
+      } finally {
+        submit?.removeAttribute('aria-disabled');
+        if (label) label.textContent = 'Send my request';
+      }
+    });
+
+    // Clear a field's error as soon as the person starts fixing it.
+    form.addEventListener('input', (event) => {
+      const target = event.target as HTMLElement & { name?: string };
+      if (!target?.name) return;
+      target.removeAttribute('aria-invalid');
+      const slot = errorSlot(target.name);
+      if (slot) slot.textContent = '';
+    });
+  }
+</script>

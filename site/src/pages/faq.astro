@@ -1,0 +1,231 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import CtaBand from '~/components/CtaBand.astro';
+import FaqList from '~/components/FaqList.astro';
+import { breadcrumbs, faqPage, graph, webPage, type Crumb } from '~/lib/schema';
+import type { Faq } from '~/data/types';
+
+const path = '/faq/';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: '/' },
+  { name: 'Questions', href: path },
+];
+
+/**
+ * These are cross-cutting questions about how buying works, not product
+ * questions. Every product, collection, industry and location page carries its
+ * own FAQs, and none of them is repeated here — a question that belongs to a
+ * product belongs on that product's page, where the schema and the context
+ * match it.
+ */
+const groups: { heading: string; blurb: string; faqs: Faq[] }[] = [
+  {
+    heading: 'Before you order',
+    blurb: 'The questions that come up before anyone has chosen anything.',
+    faqs: [
+      {
+        q: 'Why is there no price list on this site?',
+        a: 'Because every order is made to a specification. Size, film weight, closure, colour, print coverage and quantity all move the price and they interact, so a figure published against a product name would be accurate for one configuration and misleading for the rest. You get a written price against your own specification instead.',
+      },
+      {
+        q: 'Do you have a minimum order quantity?',
+        a: 'We quote against what you actually need rather than against a published threshold. Smaller runs carry a higher unit price because setup spreads across fewer units, and we show you the difference so you can weigh it against the flexibility.',
+      },
+      {
+        q: 'How quickly can I get a quotation?',
+        a: 'Faster if the enquiry is specific. What you ship, roughly how many, whether it is printed and which market it goes to is enough for a real answer rather than a holding reply.',
+      },
+      {
+        q: 'Can you help if I do not know what I need?',
+        a: 'That is a normal starting point rather than a problem. Describe what you ship and what is going wrong with your current packaging, and working out the specification is part of the job.',
+      },
+      {
+        q: 'Should I get samples first?',
+        a: 'For a first order it is usually the most useful money you will spend. A size question is settled in ten minutes with two physical bags and a real packed order, and it is never settled reliably by reading a chart.',
+      },
+    ],
+  },
+  {
+    heading: 'Specification and production',
+    blurb: 'How an order is defined and what happens once it is placed.',
+    faqs: [
+      {
+        q: 'What is confirmed on a quotation?',
+        a: 'Size, film weight, closure, opacity, colour, finish, print coverage, sides printed, quantity and the applicable quantity tolerance, together with the price, the currency and the period the quotation holds for. Everything is named rather than implied.',
+      },
+      {
+        q: 'Will I receive exactly the quantity I order?',
+        a: 'Manufactured runs carry a tolerance either side of the ordered figure, because production does not stop at an exact unit. The tolerance for your order and how any variation is charged are stated on the quotation. If an exact count matters, say so at enquiry stage.',
+      },
+      {
+        q: 'How many proof rounds can I have?',
+        a: 'As many as you need. A proof round costs a fraction of a reprint, and a supplier discouraging additional rounds is optimising their own process rather than your outcome.',
+      },
+      {
+        q: 'What if the film I ordered before is no longer available?',
+        a: 'You hear about it before an order ships, with a description of what changed and what it affects. Where the change is material, a sample is made available so you can test it against your own contents first.',
+      },
+      {
+        q: 'Can I order several sizes or colours on one run?',
+        a: 'Yes, and it is usually more economical than separate orders because setup is shared where the film and artwork match. It also means the batches match each other, which matters if the colours will sit side by side.',
+      },
+    ],
+  },
+  {
+    heading: 'Delivery and markets',
+    blurb: 'Where we supply and how orders reach you.',
+    faqs: [
+      {
+        q: 'Which countries do you supply?',
+        a: 'The United States, United Kingdom, Canada and Australia. Orders are produced to order and shipped to the address you give us — we hold no local branch, depot or collection point in any of them.',
+      },
+      {
+        q: 'How long will delivery take?',
+        a: 'It depends on the specification, the quantity, whether it is printed and how quickly a proof is approved. We confirm a schedule in writing for your specific order and tell you which step is the critical path, rather than publishing a figure that would be wrong for most orders.',
+      },
+      {
+        q: 'Can you deliver somewhere with no loading dock?',
+        a: 'Yes, but tell us at quotation stage. No dock, no lift, restricted street access or stairs all change how an order should be structured, and it is far easier to plan around than to run into on the day.',
+      },
+      {
+        q: 'Who pays import duties on an international order?',
+        a: 'This is stated on your quotation rather than assumed, because it depends on the destination and the shipping arrangement agreed. Ask before ordering if it affects your budgeting.',
+      },
+    ],
+  },
+  {
+    heading: 'Claims and documentation',
+    blurb: 'What we will and will not state, and what evidence is available.',
+    faqs: [
+      {
+        q: 'Why do you not publish recycled percentages?',
+        a: 'Because recycled content varies by film, by production batch and by market, and a figure on a web page could not be honoured for every order. We confirm the feedstock type and proportion in writing on your quotation for the film actually being supplied, with the documentation behind it.',
+      },
+      {
+        q: 'Are your mailers recyclable?',
+        a: 'Flexible film is generally not accepted in household kerbside collections across the markets we serve, and is instead collected at store drop-off points where those exist. Availability varies by area, so check what applies where your customers live before printing any disposal instruction.',
+      },
+      {
+        q: 'Can you provide documentation for a tender or an audit?',
+        a: 'We provide whatever the supplier of the specific film holds, and we are explicit about what is not covered. We will not produce a document that says more than the underlying evidence supports.',
+      },
+      {
+        q: 'Are your mailers approved by any carrier?',
+        a: 'We make no carrier approval or compatibility claims. Poly mailers are widely used across every major network, and whether a specific service accepts a specific parcel is a question for that carrier.',
+      },
+      {
+        q: 'Why are there no customer reviews on this site?',
+        a: 'Because we hold no verified review programme to draw them from. Publishing testimonials we cannot substantiate — or rating markup with no visible reviews behind it — would be the same category of claim as an unsupported material percentage.',
+      },
+    ],
+  },
+];
+
+const allFaqs = groups.flatMap((g) => g.faqs);
+
+const schema = graph([
+  webPage({
+    path,
+    name: 'Questions about ordering poly mailers',
+    description:
+      'Cross-cutting questions about quotations, specification, production, delivery and the claims we do and do not make.',
+    type: 'FAQPage',
+    hasBreadcrumb: true,
+  }),
+  breadcrumbs(crumbs),
+  faqPage(path, allFaqs),
+]);
+---
+
+<BaseLayout
+  title="Questions About Ordering Poly Mailers | FAQ"
+  description="How quotations work, what is confirmed on a specification, where we supply, and which claims we will and will not make about materials and delivery."
+  path={path}
+  schema={schema}
+  crumbs={crumbs}
+>
+  <article>
+    <header class="wrap page-head">
+      <p class="eyebrow">Questions</p>
+      <h1>Questions about ordering</h1>
+      <p class="lede">
+        These are the cross-cutting questions — how buying works, what a
+        quotation covers, where we supply and what we will not claim.
+      </p>
+      <p class="head-p">
+        Product-specific questions live on each product page, where the context
+        and the answer belong together. Nothing on this page is repeated from
+        one of those. For a full list of what is on the site, the
+        <a href="/sitemap/">sitemap</a> lists every page with a line on what it
+        is for.
+      </p>
+    </header>
+
+    <div class="wrap faq-groups">
+      {
+        groups.map((group) => (
+          <section class="faq-group">
+            <div class="faq-group-head">
+              <h2>{group.heading}</h2>
+              <p>{group.blurb}</p>
+            </div>
+            <FaqList
+              faqs={group.faqs}
+              heading={group.heading}
+              id={`faq-${group.heading.toLowerCase().replace(/[^a-z]+/g, '-')}`}
+            />
+          </section>
+        ))
+      }
+    </div>
+
+    <div class="wrap section-tight">
+      <CtaBand
+        heading="Not answered here?"
+        body="Ask a person. Anything specific to your products or your market is better answered directly than by a page trying to cover every case."
+        buttonLabel="Ask a question"
+        href="/contact/"
+        whatsappMessage="Hi, I have a question about ordering poly mailers."
+      />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-head { padding-block: var(--sp-xl) var(--sp-s); max-width: 62rem; }
+  .page-head h1 { margin-block: 0.6rem 1rem; max-width: 16ch; }
+  .page-head .lede { font-size: var(--step-1); }
+  .head-p { margin-block-start: 0.9rem; color: var(--fg-muted); max-width: 60ch; }
+
+  .faq-groups {
+    display: grid;
+    gap: var(--sp-2xl);
+    padding-block-start: var(--sp-l);
+  }
+
+  .faq-group { display: grid; gap: var(--sp-m); }
+
+  @media (min-width: 58rem) {
+    .faq-group {
+      grid-template-columns: 15rem minmax(0, 1fr);
+      gap: var(--sp-xl);
+      align-items: start;
+    }
+
+    .faq-group-head { position: sticky; top: calc(var(--header-h) + 1.5rem); }
+  }
+
+  .faq-group-head h2 { font-size: var(--step-2); margin-block-end: 0.35rem; }
+  .faq-group-head p { color: var(--fg-muted); font-size: 0.9rem; margin: 0; }
+
+  /* The group heading is already shown alongside; hide the duplicate inside. */
+  .faq-group :global(.faqs > h2) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+</style>

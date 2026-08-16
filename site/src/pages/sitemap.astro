@@ -1,0 +1,151 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { siteTree, allIndexableUrls } from '~/lib/site-tree';
+import { breadcrumbs, graph, webPage, type Crumb } from '~/lib/schema';
+
+const path = '/sitemap/';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.published.valueOf() - a.data.published.valueOf(),
+);
+
+const blogEntries = posts.map((p) => ({
+  href: `/blog/${p.id}/`,
+  label: p.data.title,
+  note: p.data.intent,
+}));
+
+const sections = siteTree(blogEntries);
+const total = allIndexableUrls(blogEntries).length;
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: '/' },
+  { name: 'Sitemap', href: path },
+];
+
+const schema = graph([
+  webPage({
+    path,
+    name: 'Sitemap',
+    description: 'Every indexable page on thepolymailers.com, grouped by section.',
+    hasBreadcrumb: true,
+  }),
+  breadcrumbs(crumbs),
+]);
+---
+
+<BaseLayout
+  title="Sitemap | The Poly Mailers"
+  description="Every indexable page on thepolymailers.com, grouped by section, with a line on what each one is for."
+  path={path}
+  schema={schema}
+  crumbs={crumbs}
+>
+  <article>
+    <header class="wrap page-head">
+      <p class="eyebrow">Navigation</p>
+      <h1>Sitemap</h1>
+      <p class="lede">
+        Every indexable page, grouped by section, with a line on what each one
+        is for. {total} pages in total.
+      </p>
+      <p class="head-p">
+        The machine-readable version is at <a href="/sitemap-index.xml">/sitemap-index.xml</a>,
+        which is what search engines use.
+      </p>
+    </header>
+
+    <div class="wrap sitemap-body">
+      {
+        sections.map((section) => (
+          <section class="sm-section">
+            <div class="sm-head">
+              <h2>{section.title}</h2>
+              <p>{section.blurb}</p>
+              <span class="sm-count">{section.entries.length}</span>
+            </div>
+            <ul role="list" class="sm-list">
+              {section.entries.map((entry) => (
+                <li>
+                  <a href={entry.href}>{entry.label}</a>
+                  {entry.note && <span>{entry.note}</span>}
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))
+      }
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-head { padding-block: var(--sp-xl) var(--sp-s); max-width: 62rem; }
+  .page-head h1 { margin-block: 0.6rem 1rem; }
+  .page-head .lede { font-size: var(--step-1); }
+  .head-p { margin-block-start: 0.9rem; color: var(--fg-muted); }
+  .head-p a { color: var(--accent); }
+
+  .sitemap-body {
+    display: grid;
+    gap: var(--sp-xl);
+    padding-block: var(--sp-l) var(--sp-2xl);
+  }
+
+  .sm-section { display: grid; gap: var(--sp-m); }
+
+  @media (min-width: 58rem) {
+    .sm-section {
+      grid-template-columns: 15rem minmax(0, 1fr);
+      gap: var(--sp-xl);
+      align-items: start;
+    }
+  }
+
+  .sm-head { position: relative; }
+  .sm-head h2 { font-size: var(--step-2); margin-block-end: 0.3rem; }
+  .sm-head p { color: var(--fg-muted); font-size: 0.88rem; margin: 0; max-width: 30ch; }
+
+  .sm-count {
+    display: inline-block;
+    margin-block-start: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--fg-subtle);
+  }
+
+  .sm-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0;
+    border-block-start: 1px solid var(--line);
+  }
+
+  .sm-list li {
+    display: grid;
+    gap: 0.1rem;
+    padding-block: 0.65rem;
+    border-block-end: 1px solid var(--line);
+  }
+
+  @media (min-width: 40rem) {
+    .sm-list li {
+      grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+      gap: 0.2rem var(--sp-m);
+      align-items: baseline;
+    }
+  }
+
+  .sm-list a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 550;
+    font-size: 0.94rem;
+  }
+
+  .sm-list a:hover { text-decoration: underline; }
+  .sm-list span { color: var(--fg-muted); font-size: 0.85rem; line-height: 1.45; }
+</style>

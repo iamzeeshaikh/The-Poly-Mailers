@@ -1,0 +1,237 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import QuoteForm from '~/components/QuoteForm.astro';
+import FaqList from '~/components/FaqList.astro';
+import MailerDesigner from '~/components/MailerDesigner.astro';
+import { PREVIEW_NOTE } from '~/lib/claims';
+import { breadcrumbs, faqPage, graph, webPage, type Crumb } from '~/lib/schema';
+
+const path = '/design-your-poly-mailer/';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: '/' },
+  { name: 'Design your mailer', href: path },
+];
+
+const faqs = [
+  {
+    q: 'Is the preview an accurate representation of the finished product?',
+    a: 'It is an approximate visual guide, not a production proof. Proportions, colour and placement are indicative. The binding version is the proof produced against your artwork on your chosen film, which you approve before anything is printed.',
+  },
+  {
+    q: 'Does my artwork get uploaded when I use the tool?',
+    a: 'No. The image you add is read by your own browser to draw the preview and stays on your device. It is only sent to us if you attach it to the quote form and submit it.',
+  },
+  {
+    q: 'Will my configuration be saved if I close the tab?',
+    a: 'It is held in your browser for the current session, so a reload does not lose your work. Closing the tab clears it. If you want to keep it, submit it with a quote request.',
+  },
+  {
+    q: 'Can I use the tool with a keyboard?',
+    a: 'Yes. Every control is a native form element, including artwork scale and position, which are range inputs rather than a drag-only canvas. Colour swatches behave as a radio group with arrow-key navigation.',
+  },
+  {
+    q: 'What if I cannot see the preview?',
+    a: 'Everything the tool captures can be described in the message field of the quote form instead, and we will apply it exactly the same way. The preview is a convenience rather than a requirement.',
+  },
+];
+
+const schema = graph([
+  webPage({
+    path,
+    name: 'Design your poly mailer',
+    description:
+      'Configure a mailer — size, colour, finish, closure, material and print coverage — position your artwork, and send the configuration with a quote request.',
+    hasBreadcrumb: true,
+  }),
+  breadcrumbs(crumbs),
+  faqPage(path, faqs),
+]);
+---
+
+<BaseLayout
+  title="Design Your Poly Mailer | Configuration Tool"
+  description="Configure a mailer visually — size, colour, finish, closure, material, print coverage and artwork placement — then send the specification with a quote request."
+  path={path}
+  schema={schema}
+  crumbs={crumbs}
+>
+  <article>
+    <header class="wrap tool-head">
+      <p class="eyebrow">Design tool</p>
+      <h1>Design your poly mailer</h1>
+      <p class="lede">
+        Build the specification visually rather than describing it. Choose the
+        format, colour, finish and closure, position your artwork, and send the
+        result with a quote request so we are pricing the thing you actually
+        built.
+      </p>
+      <p class="tool-note">{PREVIEW_NOTE}</p>
+    </header>
+
+    <div class="wrap section-tight">
+      <MailerDesigner />
+    </div>
+
+    <section class="wrap section-tight">
+      <div class="how-grid">
+        <div class="how-copy">
+          <h2>How to get the most out of it</h2>
+          <p>
+            The tool is quickest when you already know the size. If you do not,
+            settle that first with a physical sample — a preview cannot tell you
+            whether your product fits.
+          </p>
+        </div>
+        <ol class="how-steps">
+          <li>
+            <strong>Pick the format before the colour</strong>
+            <span>Type and size constrain everything after them.</span>
+          </li>
+          <li>
+            <strong>Choose the base, then check your ink against it</strong>
+            <span>A dark mark will not read on a dark film, whatever the print quality.</span>
+          </li>
+          <li>
+            <strong>Add artwork at a generous size</strong>
+            <span>Marks read smaller on a packed bag than they do on a flat preview.</span>
+          </li>
+          <li>
+            <strong>Leave room for the shipping label</strong>
+            <span>Position the artwork so a label does not have to land on it.</span>
+          </li>
+          <li>
+            <strong>Send it with a quote request</strong>
+            <span>The configuration travels with the enquiry as written specification.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="wrap section-tight">
+      <div class="limits panel">
+        <h2>What the tool does not do</h2>
+        <ul role="list">
+          <li>
+            <strong>It does not produce manufacturing artwork.</strong>
+            The preview is a visual guide. Print-ready files are prepared to the
+            specification on the <a href="/artwork-guidelines/">artwork guidelines page</a>
+            and confirmed on a proof.
+          </li>
+          <li>
+            <strong>It does not show accurate colour.</strong>
+            A screen is backlit and film is not. Where a colour matters
+            commercially, ask for a physical check rather than approving from a
+            preview or a digital proof.
+          </li>
+          <li>
+            <strong>It does not calculate a price.</strong>
+            Quantity, market and specification interact, so a price comes back
+            from a person rather than from a calculator that would be wrong.
+          </li>
+          <li>
+            <strong>It does not confirm that your product fits.</strong>
+            Only a physical sample packed with a real order does that.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="wrap section-tight">
+      <FaqList faqs={faqs} heading="Questions about the design tool" id="faq-design-tool" />
+    </div>
+
+    <div class="wrap section-tight">
+      <QuoteForm
+        source={path}
+        withDesign
+        id="quote-design"
+        heading="Send your configuration"
+        intro="Your choices above are attached to this enquiry automatically. Add anything the tool could not capture in the message field."
+      />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .tool-head { padding-block: var(--sp-xl) var(--sp-s); max-width: 62rem; }
+  .tool-head h1 { margin-block: 0.6rem 1rem; max-width: 16ch; }
+  .tool-head .lede { font-size: var(--step-1); }
+
+  .tool-note {
+    margin-block-start: 0.9rem;
+    font-size: 0.85rem;
+    color: var(--fg-subtle);
+    max-width: 62ch;
+    padding-inline-start: 0.9rem;
+    border-inline-start: 3px solid var(--amber-500);
+  }
+
+  .how-grid {
+    display: grid;
+    gap: var(--sp-m);
+  }
+
+  @media (min-width: 56rem) {
+    .how-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: var(--sp-xl); align-items: start; }
+  }
+
+  .how-copy h2 { font-size: var(--step-2); margin-block-end: 0.5rem; }
+  .how-copy p { color: var(--fg-muted); max-width: 42ch; }
+
+  .how-steps {
+    counter-reset: s;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0;
+  }
+
+  .how-steps li {
+    counter-increment: s;
+    position: relative;
+    padding: 0.85rem 0 0.85rem 2.6rem;
+    border-block-end: 1px solid var(--line);
+    display: grid;
+    gap: 0.1rem;
+  }
+
+  .how-steps li:last-child { border-block-end: 0; }
+
+  .how-steps li::before {
+    content: counter(s, decimal-leading-zero);
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0.95rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .how-steps strong { font-size: 0.98rem; font-weight: 650; }
+  .how-steps span { color: var(--fg-muted); font-size: 0.9rem; }
+
+  .limits { max-width: 52rem; }
+  .limits h2 { font-size: var(--step-2); margin-block-end: var(--sp-s); }
+
+  .limits ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .limits li {
+    color: var(--fg-muted);
+    font-size: 0.93rem;
+    line-height: 1.55;
+    padding-inline-start: 1rem;
+    border-inline-start: 2px solid var(--line-strong);
+  }
+
+  .limits strong { color: var(--fg); display: block; }
+  .limits a { color: var(--accent); }
+</style>

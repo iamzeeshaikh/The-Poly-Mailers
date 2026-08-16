@@ -1,0 +1,254 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import QuoteForm from '~/components/QuoteForm.astro';
+import { BRAND } from '~/lib/site';
+import { breadcrumbs, graph, webPage, type Crumb } from '~/lib/schema';
+
+const path = '/request-a-quote/';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: '/' },
+  { name: 'Request a quote', href: path },
+];
+
+const schema = graph([
+  webPage({
+    path,
+    name: 'Request a quotation',
+    description:
+      'Send a short brief and receive a written specification and price for custom poly mailers, with no fixed price list to argue with.',
+    hasBreadcrumb: true,
+  }),
+  breadcrumbs(crumbs),
+]);
+---
+
+<BaseLayout
+  title="Request a Quote | Custom Poly Mailer Pricing"
+  description="Send a short brief and get a written specification and price for poly mailers. Attach artwork if you have it, and we will check it before quoting."
+  path={path}
+  schema={schema}
+  crumbs={crumbs}
+>
+  <article class="quote-page">
+    <div class="wrap quote-layout">
+      <div class="quote-main">
+        <header class="quote-head">
+          <p class="eyebrow">Quotation</p>
+          <h1>Request a quotation</h1>
+          <p class="lede">
+            Six fields is enough to get a real answer. If you are unsure of the
+            size or the film, say so in the message — working that out is part
+            of the job rather than something to settle first.
+          </p>
+        </header>
+
+        <QuoteForm
+          source={path}
+          id="quote-main"
+          withDesign
+          heading="Tell us what you need"
+          intro="Everything is confirmed back to you in writing before anything is scheduled."
+        />
+      </div>
+
+      <aside class="quote-aside">
+        <section class="aside-block">
+          <h2>What happens next</h2>
+          <ol class="next-steps">
+            <li>
+              <strong>We read it and come back to you</strong>
+              <span>By email, to the address you give us.</span>
+            </li>
+            <li>
+              <strong>We confirm the specification</strong>
+              <span>Size, film, closure, colour, coverage and quantity, in writing.</span>
+            </li>
+            <li>
+              <strong>You get a price and a schedule</strong>
+              <span>With a stated validity period, so you can compare it properly.</span>
+            </li>
+            <li>
+              <strong>Nothing runs until you approve it</strong>
+              <span>And for printed work, not until you approve a proof.</span>
+            </li>
+          </ol>
+        </section>
+
+        <section class="aside-block">
+          <h2>What makes an enquiry fast</h2>
+          <ul role="list" class="tips">
+            <li>What goes in the parcel, including the inserts</li>
+            <li>Roughly how many, and over what period</li>
+            <li>Whether you want it printed</li>
+            <li>Which market it ships to</li>
+            <li>A photograph of what you currently use</li>
+          </ul>
+          <p class="tip-note">
+            Not sure about any of it? Send what you have. A partial brief still
+            gets a useful reply.
+          </p>
+        </section>
+
+        <section class="aside-block">
+          <h2>Other ways to reach us</h2>
+          <ul role="list" class="contact-list">
+            <li>
+              <span>Email</span>
+              <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>
+            </li>
+            <li>
+              <span>Phone</span>
+              <a href={BRAND.phoneHref}>{BRAND.phoneDisplay}</a>
+            </li>
+            <li>
+              <span>WhatsApp</span>
+              <a href={`https://wa.me/${BRAND.whatsappNumber}`}>{BRAND.whatsappDisplay}</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="aside-block aside-quiet">
+          <h2>Working it out first</h2>
+          <p>
+            If you would rather settle the specification before asking, the
+            <a href="/resources/custom-mailer-ordering-checklist/">ordering checklist</a>
+            covers the eleven decisions that make a quotation accurate first time.
+          </p>
+        </section>
+      </aside>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .quote-layout {
+    display: grid;
+    gap: var(--sp-xl);
+    padding-block: var(--sp-xl) var(--sp-2xl);
+    align-items: start;
+  }
+
+  @media (min-width: 62rem) {
+    .quote-layout {
+      grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
+      gap: var(--sp-2xl);
+    }
+
+    .quote-aside { position: sticky; top: calc(var(--header-h) + 1.5rem); }
+  }
+
+  .quote-head { margin-block-end: var(--sp-l); }
+  .quote-head h1 { margin-block: 0.6rem 0.9rem; max-width: 14ch; }
+  .quote-head .lede { font-size: var(--step-1); }
+
+  .quote-aside { display: grid; gap: var(--sp-m); }
+
+  .aside-block {
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--r-m);
+    padding: 1.3rem 1.4rem;
+  }
+
+  .aside-quiet { background: var(--bg-sunk); }
+
+  .aside-block h2 {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--fg-subtle);
+    margin-block-end: 0.9rem;
+  }
+
+  .next-steps {
+    counter-reset: s;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .next-steps li {
+    counter-increment: s;
+    display: grid;
+    gap: 0.1rem;
+    padding-inline-start: 1.85rem;
+    position: relative;
+  }
+
+  .next-steps li::before {
+    content: counter(s);
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0.05rem;
+    inline-size: 1.35rem;
+    block-size: 1.35rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--accent-hover);
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+
+  .next-steps strong { font-size: 0.92rem; font-weight: 650; }
+  .next-steps span { font-size: 0.85rem; color: var(--fg-muted); line-height: 1.45; }
+
+  .tips {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .tips li {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.88rem;
+    color: var(--fg-muted);
+  }
+
+  .tips li::before {
+    content: '';
+    flex: none;
+    inline-size: 5px;
+    block-size: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-block-start: 0.55rem;
+  }
+
+  .tip-note {
+    margin-block-start: 0.85rem;
+    font-size: 0.83rem;
+    color: var(--fg-subtle);
+  }
+
+  .contact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  .contact-list li { display: grid; gap: 0.1rem; }
+
+  .contact-list span {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--fg-subtle);
+  }
+
+  .contact-list a { font-size: 0.92rem; font-weight: 550; color: var(--accent); }
+
+  .aside-quiet p { font-size: 0.88rem; color: var(--fg-muted); margin: 0; }
+  .aside-quiet a { color: var(--accent); }
+</style>

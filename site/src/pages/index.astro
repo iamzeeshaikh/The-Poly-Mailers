@@ -1,0 +1,923 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import QuoteForm from '~/components/QuoteForm.astro';
+import ProductCard from '~/components/ProductCard.astro';
+import MailerFigure from '~/components/MailerFigure.astro';
+import FaqList from '~/components/FaqList.astro';
+import CtaBand from '~/components/CtaBand.astro';
+import { featuredProducts } from '~/data/products';
+import { collections } from '~/data/collections';
+import { MARKETS } from '~/lib/site';
+import { faqPage, graph, organization, webPage, website } from '~/lib/schema';
+
+const path = '/';
+
+/**
+ * Homepage FAQs are written for the broad "poly mailers" query — what the
+ * product is, how buying from a made-to-order supplier differs from buying off
+ * a shelf. None of them repeats a product-page question.
+ */
+const faqs = [
+  {
+    q: 'What is a poly mailer?',
+    a: 'A lightweight polyethylene shipping bag with a self-adhesive closure. It contains and protects soft goods, resists rain and weighs a fraction of a carton, which is why most clothing and small-goods ecommerce ships in one.',
+  },
+  {
+    q: 'Why is there no price list on this site?',
+    a: 'Because every order is made to a specification. Size, film weight, closure, colour, print coverage and quantity all move the price, and a published figure would be wrong for most of the orders we quote. You get a written price against your own specification instead.',
+  },
+  {
+    q: 'Do you supply plain mailers as well as printed ones?',
+    a: 'Yes. Plain stock in a range of colours and sizes is a large part of what we supply, and it is often the right first order while artwork and volumes are still settling.',
+  },
+  {
+    q: 'Which countries do you supply?',
+    a: 'The United States, United Kingdom, Canada and Australia. Orders are produced to order and shipped to your address; we hold no local branches, and delivery arrangements are confirmed with you at the point of order.',
+  },
+  {
+    q: 'How do I know which size to order?',
+    a: 'Pack a real order — including the card, tissue and returns slip — into a sample and see which size closes without straining. If you tell us what you ship, we will recommend a size and say why before quoting it.',
+  },
+  {
+    q: 'Can I see the design before it is printed?',
+    a: 'Nothing runs until you approve a proof showing placement, scale and colour. A digital proof shows placement reliably and colour approximately, so where colour accuracy matters commercially, ask for a physical check.',
+  },
+];
+
+const schema = graph([
+  organization(),
+  website(),
+  webPage({
+    path,
+    name: 'Custom poly mailers made to order',
+    description:
+      'Custom, printed, stock, coloured, padded and size-specific poly mailers, quoted to order for businesses in the US, UK, Canada and Australia.',
+    hasBreadcrumb: false,
+  }),
+  faqPage(path, faqs),
+]);
+
+const capabilityCards = [
+  {
+    href: '/printing-options/',
+    title: 'Printing',
+    body: 'One colour to full coverage, one side or both, exterior or interior. Coverage moves cost more than colour count does.',
+  },
+  {
+    href: '/materials/',
+    title: 'Materials',
+    body: 'Film weight, opacity and finish, chosen against what you ship rather than against a general recommendation.',
+  },
+  {
+    href: '/size-guide/',
+    title: 'Sizing',
+    body: 'Standard sizes or custom dimensions, worked out from your packed product rather than from a chart.',
+  },
+  {
+    href: '/artwork-guidelines/',
+    title: 'Artwork',
+    body: 'File formats, bleed, colour mode and the checks we run before a proof goes back to you.',
+  },
+];
+
+const industries = [
+  { href: '/industries/clothing-and-apparel/', label: 'Clothing and apparel' },
+  { href: '/industries/ecommerce/', label: 'Ecommerce' },
+  { href: '/industries/beauty-and-cosmetics/', label: 'Beauty and cosmetics' },
+  { href: '/industries/fashion-boutiques/', label: 'Fashion boutiques' },
+  { href: '/industries/subscription-businesses/', label: 'Subscription businesses' },
+  { href: '/industries/books-and-stationery/', label: 'Books and stationery' },
+  { href: '/industries/accessories/', label: 'Accessories' },
+  { href: '/industries/small-businesses/', label: 'Small businesses' },
+  { href: '/industries/gift-retail/', label: 'Gift retail' },
+  { href: '/industries/electronics-accessories/', label: 'Electronics accessories' },
+];
+
+const resources = [
+  {
+    href: '/resources/poly-mailer-size-guide/',
+    title: 'Size reference',
+    body: 'Every size against the item types it handles, in one table.',
+  },
+  {
+    href: '/resources/custom-mailer-ordering-checklist/',
+    title: 'Ordering checklist',
+    body: 'The eleven decisions to settle before you ask anyone for a price.',
+  },
+  {
+    href: '/resources/sustainable-mailer-terminology-guide/',
+    title: 'Sustainability terms',
+    body: 'What recycled, compostable and biodegradable each actually commit you to.',
+  },
+  {
+    href: '/resources/international-ordering-guide/',
+    title: 'Ordering across markets',
+    body: 'What changes when an order ships to the US, UK, Canada or Australia.',
+  },
+];
+---
+
+<BaseLayout
+  title="Custom Poly Mailers | Printed, Stock & Bulk Supply"
+  description="Custom poly mailers made to order — printed, coloured, padded and size-specific. Written quotations for businesses in the US, UK, Canada and Australia."
+  path={path}
+  schema={schema}
+>
+  <!-- ============================ HERO ============================ -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Made to order · US · UK · Canada · Australia</p>
+        <h1>Poly mailers built to your specification, not to a price list</h1>
+        <p class="lede">
+          Printed, plain, coloured, cushioned and size-specific mailers,
+          manufactured against a written specification you approve before
+          anything runs. Tell us what you ship and we will tell you what to
+          order.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-lg btn-arrow" href="/request-a-quote/">
+            Request a quotation
+            <svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true">
+              <path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a class="btn btn-lg btn-ghost" href="/design-your-poly-mailer/">Design your mailer</a>
+        </div>
+        <ul role="list" class="hero-points">
+          <li>Written specification before production</li>
+          <li>Proof approval on every printed run</li>
+          <li>No claim we cannot evidence</li>
+        </ul>
+      </div>
+
+      <div class="hero-figure">
+        <MailerFigure />
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= QUOTE, NEAR TOP ======================= -->
+  <section class="wrap section-tight" id="quote">
+    <QuoteForm
+      source="/"
+      heading="Start with a short brief"
+      intro="Six fields is enough to get a real answer. If you are not sure of the size or the film, say so — working that out is part of the quotation."
+      id="quote-home"
+    />
+  </section>
+
+  <!-- ========================= CATEGORIES ========================= -->
+  <section class="wrap section">
+    <header class="sec-head">
+      <p class="eyebrow">Browse by decision</p>
+      <h2>Start from the question you are actually asking</h2>
+      <p class="sec-lede">
+        Each of these is a chooser rather than a catalogue. They compare the
+        options and hand you to the product page that fits.
+      </p>
+    </header>
+
+    <ul role="list" class="cat-grid">
+      {
+        collections.map((c, i) => (
+          <li data-reveal style={`--reveal-delay:${i * 55}ms`}>
+            <a class="cat-card" href={`/${c.slug}/`}>
+              <span class="cat-eyebrow">{c.eyebrow}</span>
+              <span class="cat-title">{c.h1}</span>
+              <span class="cat-body">{c.plan.problem}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <!-- ====================== POPULAR PRODUCTS ====================== -->
+  <section class="wrap section-tight">
+    <header class="sec-head sec-head-row">
+      <div>
+        <p class="eyebrow">Most requested</p>
+        <h2>Products people ask for most</h2>
+      </div>
+      <a class="link-arrow" href="/poly-mailers/">See all 29 products</a>
+    </header>
+
+    <div class="prod-grid">
+      {featuredProducts.map((product, i) => <ProductCard product={product} index={i} />)}
+    </div>
+  </section>
+
+  <!-- ======================== CAPABILITIES ======================== -->
+  <section class="section on-ink cap-band">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow">What we can change</p>
+        <h2>Every part of the specification is a decision you make</h2>
+        <p class="sec-lede">
+          There is no standard product to accept or reject. Film weight,
+          closure, colour, finish, coverage and dimensions are all selected, and
+          all confirmed in writing before anything is scheduled.
+        </p>
+      </header>
+
+      <ul role="list" class="cap-grid">
+        {
+          capabilityCards.map((card, i) => (
+            <li data-reveal style={`--reveal-delay:${i * 60}ms`}>
+              <a href={card.href}>
+                <h3>{card.title}</h3>
+                <p>{card.body}</p>
+                <span class="cap-go" aria-hidden="true">
+                  <svg width="15" height="11" viewBox="0 0 16 12">
+                    <path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========================= INDUSTRIES ========================= -->
+  <section class="wrap section-tight">
+    <header class="sec-head sec-head-row">
+      <div>
+        <p class="eyebrow">Sectors</p>
+        <h2>Written for the way your category actually ships</h2>
+      </div>
+      <a class="link-arrow" href="/industries/">All industries</a>
+    </header>
+    <ul role="list" class="ind-list">
+      {
+        industries.map((ind) => (
+          <li>
+            <a href={ind.href}>{ind.label}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <!-- ========================== PROCESS ========================== -->
+  <section class="wrap section-tight">
+    <div class="split">
+      <div class="split-copy">
+        <p class="eyebrow">How ordering works</p>
+        <h2>Five steps, and nothing runs until you approve it</h2>
+        <p class="sec-lede">
+          The sequence matters more than most buyers expect. Settling size
+          before artwork, and colour before design, removes almost every reason
+          a first order needs a second proof round.
+        </p>
+        <p><a class="link-arrow" href="/how-it-works/">See the full ordering process</a></p>
+      </div>
+
+      <ol class="process">
+        <li>
+          <h3>Brief</h3>
+          <p>What you ship, roughly how many, and which market it goes to.</p>
+        </li>
+        <li>
+          <h3>Specification</h3>
+          <p>Size, film weight, closure, colour and coverage, agreed in writing.</p>
+        </li>
+        <li>
+          <h3>Proof</h3>
+          <p>Placement, scale and colour shown back to you. Nothing runs unapproved.</p>
+        </li>
+        <li>
+          <h3>Production</h3>
+          <p>Checked through the run against the proof, not only at the end.</p>
+        </li>
+        <li>
+          <h3>Dispatch</h3>
+          <p>Counted by carton, then shipped to your address in your market.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ======================== DESIGN TOOL ======================== -->
+  <section class="wrap section-tight">
+    <div class="tool-promo panel">
+      <div class="tool-copy">
+        <p class="eyebrow">Design tool</p>
+        <h2>Configure a mailer and see it before you ask for a price</h2>
+        <p>
+          Choose the size, colour, finish, closure and print coverage, drop in
+          your logo, and position it on the front and back. The configuration
+          travels with your quote request, so we are quoting the thing you
+          actually built rather than a description of it.
+        </p>
+        <p class="tool-note">
+          The preview is an approximate visual guide, not a production proof.
+          Final artwork is confirmed on a proof you approve.
+        </p>
+        <a class="btn btn-arrow" href="/design-your-poly-mailer/">
+          Open the design tool
+          <svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true">
+            <path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+      <div class="tool-figure" aria-hidden="true">
+        <div class="tool-mock">
+          <div class="tool-mock-bar"><span></span><span></span><span></span></div>
+          <div class="tool-mock-body">
+            <div class="tool-mock-canvas"></div>
+            <div class="tool-mock-panel">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== SUSTAINABILITY ======================= -->
+  <section class="wrap section-tight">
+    <div class="split split-reverse">
+      <div class="split-copy">
+        <p class="eyebrow">Sustainability</p>
+        <h2>We publish what we can evidence, and nothing else</h2>
+        <p class="sec-lede">
+          You will not find a recycled percentage, a certification mark or a
+          breakdown timescale anywhere on this site. None was supplied to us,
+          and a figure we cannot stand behind for your order is worth less than
+          no figure at all.
+        </p>
+        <p>
+          What we do instead is go to the supplier of the specific film for your
+          order, ask what is documented, and show you the answer before you
+          commit. Where nothing is documented, you get told that too.
+        </p>
+        <p><a class="link-arrow" href="/sustainability/">Read our position on claims</a></p>
+      </div>
+      <ul role="list" class="claim-list">
+        <li>
+          <h3>Recycled content</h3>
+          <p>A question about feedstock. The easiest of the three to evidence.</p>
+        </li>
+        <li>
+          <h3>Compostable</h3>
+          <p>A disposal route, which only helps if your customers can reach one.</p>
+        </li>
+        <li>
+          <h3>Biodegradable</h3>
+          <p>The least defined term, and the one carrying the most claim risk.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==================== QUALITY & SAMPLES ==================== -->
+  <section class="wrap section-tight">
+    <div class="two-up">
+      <article class="panel">
+        <h2>Quality control</h2>
+        <p>
+          Print is checked against the proof you approved at the start, through
+          and at the end of a run. Seals are checked along both welds, adhesive
+          release is checked on samples pulled from production, and counts are
+          verified by carton before dispatch.
+        </p>
+        <p>
+          Where a run cannot meet the approved proof, we stop and talk to you.
+          Shipping something close enough is how a supplier loses a customer
+          permanently.
+        </p>
+      </article>
+      <article class="panel">
+        <h2>Samples before volume</h2>
+        <p>
+          A size question is settled in ten minutes with a physical sample and
+          never settled by looking at a chart. Ask for two candidate sizes, pack
+          your heaviest routine order into each, and buy the smaller one that
+          closes without strain.
+        </p>
+        <p><a class="link-arrow" href="/samples/">How sample requests work</a></p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ========================= RESOURCES ========================= -->
+  <section class="wrap section-tight">
+    <header class="sec-head sec-head-row">
+      <div>
+        <p class="eyebrow">Reference</p>
+        <h2>Work it out before you ask for a price</h2>
+      </div>
+      <a class="link-arrow" href="/resources/">All reference guides</a>
+    </header>
+    <ul role="list" class="res-grid">
+      {
+        resources.map((r, i) => (
+          <li data-reveal style={`--reveal-delay:${i * 55}ms`}>
+            <a href={r.href}>
+              <h3>{r.title}</h3>
+              <p>{r.body}</p>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <!-- ========================== MARKETS ========================== -->
+  <section class="wrap section-tight">
+    <header class="sec-head">
+      <p class="eyebrow">Where we ship</p>
+      <h2>Four markets, one specification process</h2>
+      <p class="sec-lede">
+        Orders are produced to order and shipped to your address. We hold no
+        local branches or depots, so what changes between markets is currency,
+        documentation and delivery arrangements rather than the product.
+      </p>
+    </header>
+    <ul role="list" class="market-grid">
+      {
+        MARKETS.map((m, i) => (
+          <li data-reveal style={`--reveal-delay:${i * 55}ms`}>
+            <a href={`/${m.slug}/`}>
+              <span class="market-name">{m.name}</span>
+              <span class="market-note">{m.serviceStatement}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <!-- ============================ FAQ ============================ -->
+  <section class="wrap section-tight">
+    <FaqList
+      faqs={faqs}
+      heading="Questions we are asked before a first order"
+      intro="Product-specific questions live on each product page. These are the ones that come up before anyone has chosen anything."
+      id="home-faq"
+    />
+  </section>
+
+  <!-- =========================== FINAL =========================== -->
+  <section class="wrap section-tight">
+    <CtaBand
+      heading="Tell us what you ship"
+      body="Send a short brief and we will come back with a size recommendation, a written specification and a price. No obligation, and no fixed price list to argue with."
+      buttonLabel="Request a quotation"
+      whatsappMessage="Hi, I would like a quotation for poly mailers. Here is what I ship:"
+    />
+  </section>
+</BaseLayout>
+
+<style>
+  /* ------------------------------- hero ------------------------------- */
+  .hero {
+    position: relative;
+    padding-block: clamp(2.5rem, 1rem + 6vw, 5.5rem) clamp(2rem, 1rem + 4vw, 4rem);
+    background:
+      radial-gradient(90% 120% at 78% 0%, rgba(45, 85, 240, 0.09), transparent 62%),
+      linear-gradient(180deg, var(--paper-sunk), var(--paper) 68%);
+    border-block-end: 1px solid var(--line);
+  }
+
+  .hero-inner {
+    display: grid;
+    gap: var(--sp-xl);
+    align-items: center;
+  }
+
+  @media (min-width: 58rem) {
+    .hero-inner { grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: var(--sp-2xl); }
+  }
+
+  .hero h1 {
+    margin-block: 0.7rem 1rem;
+    max-width: 15ch;
+    font-size: var(--step-6);
+  }
+
+  .hero .lede { max-width: 50ch; }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-block-start: var(--sp-m);
+  }
+
+  .hero-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.35rem;
+    margin-block-start: var(--sp-m);
+    padding: 0;
+    list-style: none;
+    font-size: 0.87rem;
+    color: var(--fg-muted);
+  }
+
+  .hero-points li { display: flex; align-items: center; gap: 0.42rem; }
+
+  .hero-points li::before {
+    content: '';
+    inline-size: 6px;
+    block-size: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex: none;
+  }
+
+  /* --------------------------- section heads -------------------------- */
+  .sec-head { margin-block-end: var(--sp-l); }
+  .sec-head h2 { margin-block: 0.5rem 0.6rem; max-width: 22ch; }
+  .sec-lede { color: var(--fg-muted); max-width: 58ch; font-size: var(--step-0); }
+
+  .sec-head-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+    gap: var(--sp-s) var(--sp-m);
+  }
+
+  .sec-head-row h2 { margin-block-end: 0; }
+
+  /* ---------------------------- categories --------------------------- */
+  .cat-grid {
+    display: grid;
+    gap: var(--sp-s);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cat-grid > li { min-width: 0; }
+
+  .cat-card {
+    display: grid;
+    gap: 0.3rem;
+    align-content: start;
+    height: 100%;
+    padding: 1.35rem 1.4rem 1.5rem;
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--r-m);
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: clip;
+    transition: border-color var(--dur-fast) var(--ease), transform var(--dur) var(--ease-out);
+  }
+
+  .cat-card::after {
+    content: '';
+    position: absolute;
+    inset: auto 0 0 0;
+    block-size: 3px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--dur) var(--ease-out);
+  }
+
+  .cat-card:hover { border-color: var(--ink-200); transform: translateY(-3px); }
+  .cat-card:hover::after { transform: scaleX(1); }
+
+  .cat-eyebrow {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .cat-title {
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    margin-block-start: 0.15rem;
+  }
+
+  .cat-body { color: var(--fg-muted); font-size: 0.88rem; line-height: 1.5; }
+
+  /* ----------------------------- products ---------------------------- */
+  .prod-grid {
+    display: grid;
+    gap: var(--sp-s);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  }
+
+  .prod-grid > :global(*) { min-width: 0; }
+
+  /* --------------------------- capabilities -------------------------- */
+  .cap-band { border-radius: var(--r-xl); margin-inline: clamp(0rem, -1rem + 4vw, 1.5rem); }
+
+  .cap-grid {
+    display: grid;
+    gap: var(--sp-s);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cap-grid > li { min-width: 0; }
+
+  .cap-grid a {
+    display: grid;
+    gap: 0.4rem;
+    align-content: start;
+    height: 100%;
+    padding: 1.3rem 1.35rem;
+    border: 1px solid var(--line);
+    border-radius: var(--r-m);
+    background: var(--bg-raised);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease);
+  }
+
+  .cap-grid a:hover { border-color: var(--accent); background: var(--ink-700); }
+
+  .cap-grid h3 {
+    font-family: var(--font-body);
+    font-size: 1.02rem;
+    font-weight: 650;
+    color: #fff;
+  }
+
+  .cap-grid p { color: var(--ink-200); font-size: 0.885rem; line-height: 1.55; margin: 0; }
+  .cap-go { color: var(--accent); }
+
+  /* ---------------------------- industries --------------------------- */
+  .ind-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ind-list a {
+    display: inline-flex;
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--bg-raised);
+    font-size: 0.9rem;
+    font-weight: 550;
+    text-decoration: none;
+    color: var(--ink-700);
+    transition: border-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+  }
+
+  .ind-list a:hover { border-color: var(--accent); color: var(--accent-hover); }
+
+  /* ------------------------------ split ------------------------------ */
+  .split {
+    display: grid;
+    gap: var(--sp-l);
+    align-items: start;
+  }
+
+  .split > * { min-width: 0; }
+
+  @media (min-width: 56rem) {
+    .split { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--sp-2xl); }
+    .split-reverse > :first-child { order: 2; }
+  }
+
+  .split-copy h2 { margin-block: 0.5rem 0.7rem; max-width: 20ch; }
+  .split-copy p { color: var(--fg-muted); max-width: 52ch; }
+  .split-copy p + p { margin-block-start: 0.85rem; }
+
+  .process {
+    counter-reset: step;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0;
+  }
+
+  .process li {
+    counter-increment: step;
+    position: relative;
+    padding: 1rem 0 1rem 3.2rem;
+    border-block-end: 1px solid var(--line);
+  }
+
+  .process li:last-child { border-block-end: 0; }
+
+  .process li::before {
+    content: '0' counter(step);
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 1.05rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .process h3 {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 650;
+    margin-block-end: 0.15rem;
+  }
+
+  .process p { color: var(--fg-muted); font-size: 0.9rem; margin: 0; }
+
+  .claim-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--sp-s);
+  }
+
+  .claim-list li {
+    padding: 1.1rem 1.25rem;
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    border-inline-start: 3px solid var(--accent);
+    border-radius: 0 var(--r-m) var(--r-m) 0;
+  }
+
+  .claim-list h3 {
+    font-family: var(--font-body);
+    font-size: 0.98rem;
+    font-weight: 650;
+    margin-block-end: 0.2rem;
+  }
+
+  .claim-list p { color: var(--fg-muted); font-size: 0.9rem; margin: 0; }
+
+  /* --------------------------- design tool --------------------------- */
+  .tool-promo {
+    display: grid;
+    gap: var(--sp-l);
+    align-items: center;
+    background:
+      linear-gradient(140deg, var(--cobalt-100), var(--paper-raised) 55%);
+  }
+
+  @media (min-width: 56rem) {
+    .tool-promo { grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: var(--sp-xl); }
+  }
+
+  .tool-promo > * { min-width: 0; }
+  .tool-copy h2 { margin-block: 0.5rem 0.7rem; max-width: 18ch; }
+  .tool-copy p { color: var(--fg-muted); max-width: 48ch; }
+  .tool-copy p + p { margin-block-start: 0.8rem; }
+  .tool-copy .btn { margin-block-start: var(--sp-m); }
+
+  .tool-note {
+    font-size: 0.85rem !important;
+    color: var(--fg-subtle) !important;
+  }
+
+  .tool-mock {
+    border: 1px solid var(--line-strong);
+    border-radius: var(--r-m);
+    background: var(--paper-raised);
+    overflow: clip;
+    box-shadow: var(--shadow-m);
+  }
+
+  .tool-mock-bar {
+    display: flex;
+    gap: 5px;
+    padding: 0.6rem 0.8rem;
+    background: var(--paper-sunk);
+    border-block-end: 1px solid var(--line);
+  }
+
+  .tool-mock-bar span {
+    inline-size: 9px;
+    block-size: 9px;
+    border-radius: 50%;
+    background: var(--ink-200);
+  }
+
+  .tool-mock-body { display: grid; grid-template-columns: 1fr 5.5rem; gap: 0.7rem; padding: 0.8rem; }
+
+  .tool-mock-canvas {
+    aspect-ratio: 4 / 3;
+    border-radius: var(--r-s);
+    background:
+      linear-gradient(135deg, var(--ink-700), var(--ink-900));
+    position: relative;
+  }
+
+  .tool-mock-canvas::after {
+    content: '';
+    position: absolute;
+    inset: 34% 26% 38% 22%;
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+  }
+
+  .tool-mock-panel { display: grid; gap: 0.45rem; align-content: start; }
+
+  .tool-mock-panel span {
+    block-size: 1.55rem;
+    border-radius: var(--r-xs);
+    background: var(--paper-sunk);
+    border: 1px solid var(--line);
+  }
+
+  .tool-mock-panel span:first-child { background: var(--cobalt-100); border-color: var(--cobalt-300); }
+
+  /* ----------------------------- two-up ----------------------------- */
+  .two-up {
+    display: grid;
+    gap: var(--sp-s);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  }
+
+  .two-up > * { min-width: 0; }
+  .two-up h2 { font-size: var(--step-2); margin-block-end: 0.6rem; }
+  .two-up p { color: var(--fg-muted); font-size: 0.94rem; }
+  .two-up p + p { margin-block-start: 0.8rem; }
+
+  /* ---------------------------- resources ---------------------------- */
+  .res-grid {
+    display: grid;
+    gap: var(--sp-s);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .res-grid > li { min-width: 0; }
+
+  .res-grid a {
+    display: grid;
+    gap: 0.3rem;
+    align-content: start;
+    height: 100%;
+    padding: 1.2rem 1.25rem;
+    border: 1px solid var(--line);
+    border-radius: var(--r-m);
+    background: var(--bg-raised);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color var(--dur-fast) var(--ease), transform var(--dur) var(--ease-out);
+  }
+
+  .res-grid a:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+  .res-grid h3 {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 650;
+  }
+
+  .res-grid p { color: var(--fg-muted); font-size: 0.88rem; line-height: 1.5; margin: 0; }
+
+  /* ----------------------------- markets ----------------------------- */
+  .market-grid {
+    display: grid;
+    gap: var(--sp-s);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .market-grid > li { min-width: 0; }
+
+  .market-grid a {
+    display: grid;
+    gap: 0.25rem;
+    height: 100%;
+    padding: 1.15rem 1.25rem;
+    border: 1px solid var(--line);
+    border-radius: var(--r-m);
+    background: var(--bg-raised);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color var(--dur-fast) var(--ease);
+  }
+
+  .market-grid a:hover { border-color: var(--accent); }
+
+  .market-name {
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+  }
+
+  .market-note { color: var(--fg-muted); font-size: 0.85rem; }
+</style>

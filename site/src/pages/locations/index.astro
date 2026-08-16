@@ -1,0 +1,260 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import CtaBand from '~/components/CtaBand.astro';
+import { countryHubs, locations, locationsInMarket } from '~/data/locations';
+import { breadcrumbs, graph, itemList, webPage, type Crumb } from '~/lib/schema';
+
+const path = '/locations/';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: '/' },
+  { name: 'Locations', href: path },
+];
+
+const schema = graph([
+  webPage({
+    path,
+    name: 'Markets and locations we serve',
+    description:
+      'The four markets we supply and the regions we write about, each covering a different commercial situation rather than the same page with a new name.',
+    type: 'CollectionPage',
+    hasBreadcrumb: true,
+  }),
+  breadcrumbs(crumbs),
+  itemList({
+    path,
+    name: 'Markets and locations',
+    items: [
+      ...countryHubs.map((c) => ({ href: `/${c.slug}/`, label: c.name })),
+      ...locations.map((l) => ({ href: `/locations/${l.slug}/`, label: l.name })),
+    ],
+  }),
+]);
+---
+
+<BaseLayout
+  title="Locations We Serve | US, UK, Canada & Australia"
+  description="The four markets we supply and the regions we write about — each page covering a different commercial situation rather than a renamed template."
+  path={path}
+  schema={schema}
+  crumbs={crumbs}
+>
+  <article>
+    <header class="wrap page-head">
+      <p class="eyebrow">Markets</p>
+      <h1>Where we supply</h1>
+      <p class="lede">
+        Four markets, and a set of regional pages beneath them. Orders are
+        produced to your specification and shipped to your address — we hold no
+        branch, depot or collection point in any of them.
+      </p>
+      <p class="head-p">
+        Each regional page covers a different commercial problem rather than
+        the same page with a place name substituted. Colorado is about lofty
+        products, Virginia is about returns processing, Montreal is about
+        French-language packaging. If a page could be rewritten with another
+        name and still be true, it was rewritten until it could not.
+      </p>
+    </header>
+
+    <section class="wrap section-tight">
+      <ul role="list" class="country-grid">
+        {
+          countryHubs.map((country, i) => {
+            const places = locationsInMarket(country.slug);
+            return (
+              <li data-reveal style={`--reveal-delay:${i * 50}ms`}>
+                <a href={`/${country.slug}/`}>
+                  <span class="country-name">{country.name}</span>
+                  <span class="country-count">
+                    {places.length} {places.length === 1 ? 'region' : 'regions'} covered
+                  </span>
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </section>
+
+    {
+      countryHubs.map((country) => {
+        const places = locationsInMarket(country.slug);
+        const states = places.filter((p) => p.kind === 'state');
+        const cities = places.filter((p) => p.kind === 'city');
+        return (
+          <section class="wrap section-tight">
+            <div class="market-head">
+              <h2>{country.name}</h2>
+              <a class="link-arrow" href={`/${country.slug}/`}>
+                How supply works here
+              </a>
+            </div>
+
+            {states.length > 0 && (
+              <>
+                <h3 class="sub-h">States</h3>
+                <ul role="list" class="place-list">
+                  {states.map((place) => (
+                    <li>
+                      <a href={`/locations/${place.slug}/`}>
+                        <span class="place-name">{place.name}</span>
+                        <span class="place-note">{place.summary}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+
+            {cities.length > 0 && (
+              <>
+                <h3 class="sub-h">Cities</h3>
+                <ul role="list" class="place-list">
+                  {cities.map((place) => (
+                    <li>
+                      <a href={`/locations/${place.slug}/`}>
+                        <span class="place-name">{place.name}</span>
+                        <span class="place-note">{place.summary}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+          </section>
+        );
+      })
+    }
+
+    <section class="wrap section-tight">
+      <div class="panel note-panel">
+        <h2>Not listed here?</h2>
+        <p>
+          These are the regions where we have something specific to say, not the
+          limits of where we ship. If you are somewhere else in the United
+          States, United Kingdom, Canada or Australia, the supply model is
+          identical — produced to order, shipped to your address, schedule
+          confirmed in writing.
+        </p>
+        <p>
+          We have deliberately not generated a page for every town, because a
+          page with nothing particular to say about a place is worse than no
+          page at all.
+        </p>
+        <a class="link-arrow" href="/request-a-quote/">Request a quotation</a>
+      </div>
+    </section>
+
+    <div class="wrap section-tight">
+      <CtaBand
+        heading="Wherever you are in those four markets"
+        body="Tell us what you ship and where it goes. We will confirm a specification, a schedule and a price in writing."
+        buttonLabel="Request a quotation"
+        whatsappMessage="Hi, I would like a quotation for poly mailers delivered to my market."
+      />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-head { padding-block: var(--sp-xl) var(--sp-s); max-width: 62rem; }
+  .page-head h1 { margin-block: 0.6rem 1rem; max-width: 14ch; }
+  .page-head .lede { font-size: var(--step-1); }
+  .head-p { margin-block-start: 0.9rem; color: var(--fg-muted); max-width: 62ch; }
+
+  .country-grid {
+    display: grid;
+    gap: var(--sp-s);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .country-grid > li { min-width: 0; }
+
+  .country-grid a {
+    display: grid;
+    gap: 0.2rem;
+    height: 100%;
+    padding: 1.35rem 1.4rem;
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--r-m);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color var(--dur-fast) var(--ease), transform var(--dur) var(--ease-out);
+  }
+
+  .country-grid a:hover { border-color: var(--accent); transform: translateY(-3px); }
+
+  .country-name {
+    font-family: var(--font-display);
+    font-size: var(--step-2);
+    font-weight: 500;
+    letter-spacing: -0.018em;
+  }
+
+  .country-count { color: var(--fg-muted); font-size: 0.85rem; }
+
+  .market-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.6rem var(--sp-m);
+    margin-block-end: var(--sp-m);
+    padding-block-end: 0.7rem;
+    border-block-end: 1px solid var(--line);
+  }
+
+  .market-head h2 { font-size: var(--step-3); }
+
+  .sub-h {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--fg-subtle);
+    margin-block: var(--sp-m) 0.7rem;
+  }
+
+  .sub-h:first-of-type { margin-block-start: 0; }
+
+  .place-list {
+    display: grid;
+    gap: 0.4rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .place-list > li { min-width: 0; }
+
+  .place-list a {
+    display: grid;
+    gap: 0.12rem;
+    height: 100%;
+    padding: 0.8rem 1rem;
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--r-s);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color var(--dur-fast) var(--ease);
+  }
+
+  .place-list a:hover { border-color: var(--accent); }
+
+  .place-name { font-weight: 650; font-size: 0.93rem; }
+  .place-note { color: var(--fg-muted); font-size: 0.82rem; line-height: 1.45; }
+
+  .note-panel { max-width: 46rem; }
+  .note-panel h2 { font-size: var(--step-2); margin-block-end: 0.6rem; }
+  .note-panel p { color: var(--fg-muted); }
+  .note-panel p + p { margin-block-start: 0.8rem; }
+  .note-panel .link-arrow { margin-block-start: var(--sp-s); }
+</style>

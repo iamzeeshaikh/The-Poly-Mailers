@@ -1,0 +1,109 @@
+---
+import { BRAND, whatsappLink } from '~/lib/site';
+
+interface Props {
+  heading: string;
+  body: string;
+  buttonLabel: string;
+  href?: string;
+  whatsappMessage?: string;
+}
+
+const {
+  heading,
+  body,
+  buttonLabel,
+  href = '/request-a-quote/',
+  whatsappMessage,
+} = Astro.props;
+---
+
+<section class="cta-band on-ink" data-reveal>
+  <div class="cta-inner">
+    <div class="cta-copy">
+      <h2>{heading}</h2>
+      <p>{body}</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-lg btn-arrow" href={href}>
+        {buttonLabel}
+        <svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true">
+          <path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+      <div class="cta-direct">
+        <a href={BRAND.phoneHref}>{BRAND.phoneDisplay}</a>
+        <span aria-hidden="true">·</span>
+        <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>
+        {
+          whatsappMessage && (
+            <>
+              <span aria-hidden="true">·</span>
+              <a href={whatsappLink(whatsappMessage)} target="_blank" rel="noopener">
+                WhatsApp
+              </a>
+            </>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-band {
+    border-radius: var(--r-xl);
+    padding: clamp(1.75rem, 1rem + 3.4vw, 3.25rem);
+    background:
+      radial-gradient(120% 140% at 88% 8%, rgba(45, 85, 240, 0.28), transparent 58%),
+      var(--ink-900);
+  }
+
+  .cta-inner {
+    display: grid;
+    gap: var(--sp-m);
+    align-items: center;
+  }
+
+  @media (min-width: 52rem) {
+    .cta-inner { grid-template-columns: minmax(0, 1fr) auto; gap: var(--sp-xl); }
+  }
+
+  .cta-copy h2 {
+    font-size: var(--step-3);
+    color: #fff;
+    margin-block-end: 0.5rem;
+    max-width: 20ch;
+  }
+
+  .cta-copy p {
+    color: var(--ink-200);
+    max-width: 52ch;
+    margin: 0;
+  }
+
+  .cta-actions {
+    display: grid;
+    gap: 0.85rem;
+    justify-items: start;
+  }
+
+  .cta-actions .btn {
+    --btn-bg: #fff;
+    --btn-fg: var(--ink-900);
+  }
+
+  .cta-actions .btn:hover { --btn-bg: var(--cobalt-100); }
+
+  .cta-direct {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 0.6rem;
+    font-size: 0.86rem;
+    color: var(--ink-300);
+  }
+
+  .cta-direct a { color: var(--ink-100); text-decoration: none; }
+  .cta-direct a:hover { color: #fff; text-decoration: underline; }
+</style>

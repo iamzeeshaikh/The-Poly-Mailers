@@ -1,0 +1,196 @@
+---
+import ContentView from '~/views/ContentView.astro';
+import type { Crumb } from '~/lib/schema';
+import type { ContentPage } from '~/data/types';
+
+const path = '/about/';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: '/' },
+  { name: 'About us', href: path },
+];
+
+const page: ContentPage = {
+  slug: 'about',
+  name: 'The Poly Mailers',
+  h1: 'About The Poly Mailers',
+  title: 'About The Poly Mailers | How We Work',
+  description:
+    'What The Poly Mailers does, how orders are specified and produced, and the claims we deliberately do not make about materials or delivery.',
+  summary: 'What we do, how we work, and what we will not claim.',
+  intro: [
+    'The Poly Mailers supplies custom, printed, stock, coloured, padded and size-specific poly mailers to businesses in the United States, United Kingdom, Canada and Australia. Every order is made to a written specification you approve rather than picked from a catalogue at a fixed price.',
+    'That is the whole business. This page covers how it actually works, and — more usefully — what we will not tell you, because a supplier’s exclusions say more than their claims do.',
+  ],
+  plan: {
+    intent: 'Understand who this supplier is and whether they can be trusted.',
+    audience: 'Buyers running supplier due diligence before a first order.',
+    problem: 'Packaging supplier pages are indistinguishable and say nothing verifiable.',
+    angle:
+      'Defined by what we will not claim rather than by generic capability statements.',
+    primaryKeyword: 'about the poly mailers',
+    supportingKeywords: ['poly mailer supplier', 'custom mailer manufacturer'],
+    nearestPage: '/how-it-works/',
+    boundary: 'This page is who we are. How it works is the process, step by step.',
+  },
+  blocks: [
+    {
+      kind: 'bullets',
+      heading: 'What we supply',
+      intro:
+        'One product category, in a lot of configurations. We do not pretend to be a general packaging supplier.',
+      items: [
+        {
+          term: 'Poly mailers, made to order',
+          detail:
+            'Size-specific, coloured, printed, blank, padded, cushioned and self-seal formats, quoted against a specification you approve.',
+        },
+        {
+          term: 'Custom dimensions',
+          detail:
+            'Where a standard size does not fit your packed product, quoted against your measurements rather than rounded to the nearest listing.',
+        },
+        {
+          term: 'Custom printing',
+          detail:
+            'One colour to full coverage, one side or two, exterior or interior, proofed before anything runs.',
+        },
+        {
+          term: 'Presentation and garment bags',
+          detail:
+            'Frosted zip-closure bags for garments, which are a genuinely different product from a mailer and are described as such.',
+        },
+        {
+          term: 'Samples',
+          detail:
+            'Because a size question is settled in ten minutes with a physical bag and never settled by reading a chart.',
+        },
+      ],
+    },
+    {
+      kind: 'prose',
+      heading: 'Why there is no price list',
+      standfirst: 'Because it would be wrong for most of the orders we quote.',
+      paragraphs: [
+        'Size, film weight, closure, opacity, finish, colour, print coverage, sides printed and quantity all move the price, and they interact. A figure published against a product name would be accurate for one configuration and misleading for every other.',
+        'So the model is a written quotation instead: your specification, our price, valid for a stated period, with everything named rather than implied. It takes a short conversation rather than a click, and it produces a number you can actually compare against another supplier’s.',
+        'If you want a fast answer, the shortest useful enquiry is what you ship, roughly how many, and which market it goes to.',
+      ],
+    },
+    {
+      kind: 'bullets',
+      heading: 'What we will not tell you',
+      intro:
+        'A supplier is defined by the claims it declines to make. These are ours.',
+      items: [
+        {
+          term: 'That we are local to you',
+          detail:
+            'We hold no warehouse, branch or collection point in any market we serve. Orders are produced and shipped, and we say so on every country page.',
+        },
+        {
+          term: 'A delivery time we cannot guarantee',
+          detail:
+            'Timing depends on specification, quantity, print and how quickly a proof is approved. We confirm a schedule for your order in writing rather than publishing a figure.',
+        },
+        {
+          term: 'A recycled percentage or certification',
+          detail:
+            'None was supplied to us with evidence behind it. We confirm what the film supplier can document for your specific order, including when the answer is nothing.',
+        },
+        {
+          term: 'A decomposition timescale',
+          detail:
+            'Any credible figure depends on named conditions and an assessment method. We have neither, so we publish neither.',
+        },
+        {
+          term: 'Carrier approval or compatibility',
+          detail:
+            'Whether a specific service accepts a specific parcel is a question for that carrier rather than for a packaging supplier.',
+        },
+        {
+          term: 'Customer reviews or ratings',
+          detail:
+            'There are none on this site, in the markup or in the visible content, because we hold no verified review programme to draw them from.',
+        },
+      ],
+    },
+    {
+      kind: 'linked-prose',
+      heading: 'How we handle the things that go wrong',
+      before:
+        'Made-to-order manufacturing produces a specific set of disputes: an order that does not match the approved proof, a short delivery, a quantity tolerance nobody mentioned, an artwork error approved by the customer. Each of those has a different answer, and pretending otherwise is how supplier relationships end. What we are responsible for and what sits with you is set out plainly in the ',
+      link: { href: '/custom-order-policy/', anchor: 'custom order policy' },
+      after: ', including the parts that are not in our favour.',
+    },
+    {
+      kind: 'prose',
+      heading: 'How we write about products',
+      paragraphs: [
+        'Every product page on this site names its own limitations. The economy specification page explains where the saving is a false one. The compostable page explains why the material may deliver nothing without local infrastructure. The padded page lists the three failures cushioning does not address.',
+        'That is deliberate. A buyer who orders the wrong thing because a page oversold it becomes a complaint, a return and a lost customer, and the short-term sale was never worth it.',
+        'It also means you can use these pages to evaluate other suppliers. Several of them — the material comparison, the ordering checklist, the sustainability terminology guide — are written to be used against any quotation, including one that is not ours.',
+      ],
+    },
+  ],
+  faqs: [
+    {
+      q: 'Where are your products manufactured?',
+      a: 'Production is arranged against the specification for each order, and the film available differs by specification and by market. Where the origin of a specific order matters to you — for a tender, a customer requirement or an internal policy — ask and we will confirm it in writing for that order rather than making a general statement here.',
+    },
+    {
+      q: 'Do you have a minimum order quantity?',
+      a: 'We quote against what you actually need rather than against a published threshold. Smaller runs carry a higher unit price because setup spreads across fewer units, and we show the difference so you can weigh it.',
+    },
+    {
+      q: 'Can I visit you or collect an order?',
+      a: 'No. There is no trade counter or collection point in any market we serve. Orders are produced and shipped to the address you give us.',
+    },
+    {
+      q: 'Why do so many of your pages talk about what you cannot do?',
+      a: 'Because it is the information buyers actually need and rarely get. A page that only lists benefits leaves you to find the limitations after you have ordered, which is the expensive way to find out.',
+    },
+  ],
+  related: [
+    {
+      href: '/how-it-works/',
+      label: 'The ordering process',
+      reason: 'What happens between an enquiry and a delivery.',
+    },
+    {
+      href: '/sustainability/',
+      label: 'Our position on claims',
+      reason: 'The reasoning behind the environmental claims we decline to make.',
+    },
+    {
+      href: '/contact/',
+      label: 'Contact us',
+      reason: 'The ways to reach a person, and which is fastest.',
+    },
+    {
+      href: '/faq/',
+      label: 'Common questions',
+      reason: 'Quotations, tolerances, delivery and documentation, answered.',
+    },
+    {
+      href: '/accessibility-statement/',
+      label: 'Accessibility',
+      reason: 'What has been built and tested, and what has not.',
+    },
+  ],
+  cta: {
+    heading: 'Start with a short brief',
+    body: 'What you ship, roughly how many, and which market it goes to. That is enough for a real answer rather than a holding reply.',
+    buttonLabel: 'Send a brief',
+  },
+  whatsapp: 'Hi, I would like to talk to someone about a poly mailer order.',
+};
+---
+
+<ContentView
+  page={page}
+  path={path}
+  crumbs={crumbs}
+  pageType="AboutPage"
+  eyebrow="About"
+/>

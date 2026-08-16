@@ -1,0 +1,198 @@
+---
+import ContentView from '~/views/ContentView.astro';
+import type { Crumb } from '~/lib/schema';
+import type { ContentPage } from '~/data/types';
+
+const path = '/how-it-works/';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: '/' },
+  { name: 'How it works', href: path },
+];
+
+const page: ContentPage = {
+  slug: 'how-it-works',
+  name: 'the ordering process',
+  h1: 'How Ordering Works',
+  title: 'How Ordering Works | From Brief to Delivery',
+  description:
+    'The five stages of a made-to-order packaging run, what happens at each, who is responsible for what, and where projects usually go wrong.',
+  summary: 'Five stages, what happens at each, and where things actually go wrong.',
+  intro: [
+    'Ordering made-to-order packaging has five stages, and they have to happen in order. Almost every project that runs late or needs reworking did them out of sequence — artwork before size, colour chosen from a screen, coverage decided after a designer had already produced something.',
+    'This is what each stage involves, what we do, what you do, and the specific point at which each decision stops being free to change.',
+  ],
+  plan: {
+    intent: 'Understand what ordering custom packaging actually involves.',
+    audience: 'First-time buyers who have never commissioned a manufactured run.',
+    problem: 'Not knowing the sequence, so decisions get made in an order that causes rework.',
+    angle:
+      'Names the point at which each decision becomes expensive, which no other page does.',
+    primaryKeyword: 'how to order custom poly mailers',
+    supportingKeywords: ['packaging ordering process', 'custom mailer order steps'],
+    nearestPage: '/resources/custom-mailer-ordering-checklist/',
+    boundary:
+      'This page is our process. The checklist is what you do before contacting anyone.',
+  },
+  blocks: [
+    {
+      kind: 'steps',
+      heading: 'The five stages',
+      intro:
+        'Each depends on the one before it. Anything can change until the proof is approved, and very little can after.',
+      steps: [
+        {
+          title: 'Brief',
+          detail:
+            'You tell us what you ship, roughly how many, and which market it goes to. That is enough to start. If you do not know the size or the film, working that out is part of the job rather than a prerequisite.',
+        },
+        {
+          title: 'Specification',
+          detail:
+            'We agree size, film weight, closure, opacity, colour, finish, print coverage and quantity, and put all of it in writing on a quotation with a stated validity period. Nothing here is implied.',
+        },
+        {
+          title: 'Proof',
+          detail:
+            'For printed work, you send artwork and we return a proof showing placement, scale and colour on your chosen specification. Ask for as many rounds as you need — this is the cheap part.',
+        },
+        {
+          title: 'Production',
+          detail:
+            'Scheduled against the approved proof. Print, seals and adhesive release are checked at the start, through and at the end of the run rather than only at the end.',
+        },
+        {
+          title: 'Dispatch',
+          detail:
+            'Counted and verified by carton, then shipped to your address with the arrangements confirmed for your market.',
+        },
+      ],
+    },
+    {
+      kind: 'compare',
+      heading: 'When each decision stops being free',
+      intro:
+        'The useful question is not what to decide, but by when. This is the honest answer.',
+      caption: 'Decisions and the point after which changing them has a cost.',
+      columns: ['Decision', 'Free to change until', 'What it costs after that'],
+      rows: [
+        ['Size', 'The quotation is confirmed', 'Redrawing the artwork, because it is laid out to a panel'],
+        ['Film weight and closure', 'The quotation is confirmed', 'A reissued quotation, and possibly a different price'],
+        ['Base colour and finish', 'Artwork is produced', 'Re-approving artwork, because both change how ink reads'],
+        ['Print coverage', 'Artwork is produced', 'A redesign rather than an adjustment'],
+        ['Artwork content', 'The proof is approved', 'A new proof, then a new run once material is committed'],
+        ['Quantity', 'Production is scheduled', 'A separate order rather than an amendment'],
+      ],
+      outro:
+        'The pattern is clear: the quotation and the proof are the two gates. Before them, change freely. After the second one, changes cost a run.',
+    },
+    {
+      kind: 'bullets',
+      heading: 'Who is responsible for what',
+      intro:
+        'Made-to-order work runs smoothly when both sides know which decisions belong to whom.',
+      items: [
+        {
+          term: 'You confirm the specification',
+          detail:
+            'Sizes, quantities and destination market are yours. We will advise and we will flag anything that looks wrong, but the final call is yours.',
+        },
+        {
+          term: 'You approve the proof',
+          detail:
+            'Including spelling, your web address and your social handles. We have no way to know what those should say, and once approved they are what gets printed.',
+        },
+        {
+          term: 'You hold the artwork rights',
+          detail:
+            'By sending artwork you confirm you may reproduce it commercially.',
+        },
+        {
+          term: 'We produce to the approved proof',
+          detail:
+            'And we stop and speak to you rather than shipping something approximate if a run cannot meet it.',
+        },
+        {
+          term: 'We state the tolerance',
+          detail:
+            'Manufactured runs do not stop at an exact unit. The tolerance for your order and how variation is charged are on the quotation.',
+        },
+      ],
+    },
+    {
+      kind: 'prose',
+      heading: 'Where projects actually go wrong',
+      standfirst: 'Almost never in production.',
+      paragraphs: [
+        'The most common cause of a missed date is artwork approval. A design still being argued about, an approver who is unavailable, or licensed elements that have not been cleared will all delay a project further than any production issue.',
+        'The second most common is a size change after artwork. It feels like a small adjustment and it means redrawing, because the layout was built for a specific panel.',
+        'The third is a colour approved from a screen. A monitor is backlit and film is not, and where a brand colour matters commercially the only reliable check is a physical one.',
+        'All three are within your control, which is the good news — they are also the three cheapest things to get right.',
+      ],
+    },
+    {
+      kind: 'linked-prose',
+      heading: 'Getting a fast, accurate first quotation',
+      before:
+        'A vague enquiry produces a vague quotation and three more emails before anyone can act. Answering eleven questions before you make contact means the first price you receive is one you can actually use, and it also gives you something to send to several suppliers so the quotations are comparable. Those questions are set out in the ',
+      link: {
+        href: '/resources/custom-mailer-ordering-checklist/',
+        anchor: 'ordering checklist',
+      },
+      after: ', which takes about ten minutes to work through.',
+    },
+  ],
+  faqs: [
+    {
+      q: 'How long does an order take?',
+      a: 'It depends on the specification, the quantity, whether it is printed and how quickly a proof is approved. We confirm a schedule in writing for your specific order and tell you which step is the critical path, rather than publishing a figure that would be wrong for most orders.',
+    },
+    {
+      q: 'How many proof rounds do I get?',
+      a: 'As many as you need. A proof round costs a fraction of a reprint, and a supplier discouraging additional rounds is optimising their own process rather than your outcome.',
+    },
+    {
+      q: 'Can I change the quantity after ordering?',
+      a: 'Before production is scheduled, generally yes, with a reissued quotation. Once material is committed it becomes a separate order rather than an amendment.',
+    },
+    {
+      q: 'What if I do not know what specification I need?',
+      a: 'That is a normal starting point rather than a problem. Tell us what you ship and what is going wrong with your current packaging, and working out the specification is part of the job.',
+    },
+    {
+      q: 'Do I have to order samples first?',
+      a: 'You do not have to, and for a first order it is usually the most useful money you will spend. A size question is settled in ten minutes with two physical bags and is never settled reliably by a chart.',
+    },
+  ],
+  related: [
+    {
+      href: '/request-a-quote/',
+      label: 'Request a quotation',
+      reason: 'Start the process with a short brief.',
+    },
+    {
+      href: '/samples/',
+      label: 'Request samples',
+      reason: 'The step that removes most first-order risk.',
+    },
+    {
+      href: '/design-your-poly-mailer/',
+      label: 'Design tool',
+      reason: 'Assemble a specification visually before sending it.',
+    },
+    {
+      href: '/about/',
+      label: 'Who you are dealing with',
+      reason: 'What we supply, and the claims we decline to make.',
+    },
+  ],
+  cta: {
+    heading: 'Start at stage one',
+    body: 'What you ship, roughly how many, and which market it goes to. We will take it from there and confirm everything in writing.',
+    buttonLabel: 'Send a brief',
+  },
+  whatsapp: 'Hi, I would like to start a poly mailer order. Here is what I ship:',
+};
+---
+
+<ContentView page={page} path={path} crumbs={crumbs} eyebrow="Process" />

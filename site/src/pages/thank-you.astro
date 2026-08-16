@@ -1,0 +1,171 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { BRAND } from '~/lib/site';
+
+const path = '/thank-you/';
+---
+
+<BaseLayout
+  title="Request Received | The Poly Mailers"
+  description="Your request has reached us. Here is what happens next and how to reach a person in the meantime."
+  path={path}
+  noindex
+>
+  <article class="wrap ty">
+    <div class="ty-inner">
+      <div class="ty-mark" aria-hidden="true">
+        <svg width="34" height="34" viewBox="0 0 32 32">
+          <path
+            d="M6 16.5 13 23.5 26 9.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </div>
+
+      <h1>Your request has reached us</h1>
+      <p class="lede">
+        A person will read it and reply by email to the address you gave us. If
+        you attached artwork, it came through with the enquiry.
+      </p>
+
+      <section class="ty-next">
+        <h2>What happens next</h2>
+        <ol>
+          <li>
+            <strong>We read the brief</strong>
+            <span>And come back with questions if anything is unclear, rather than guessing.</span>
+          </li>
+          <li>
+            <strong>We confirm a specification</strong>
+            <span>Size, film weight, closure, colour, coverage and quantity, all in writing.</span>
+          </li>
+          <li>
+            <strong>You receive a price and a schedule</strong>
+            <span>With a stated validity period, so it can be compared properly.</span>
+          </li>
+          <li>
+            <strong>Nothing is scheduled until you say so</strong>
+            <span>And for printed work, not until you have approved a proof.</span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="ty-meanwhile">
+        <h2>In the meantime</h2>
+        <ul role="list">
+          <li>
+            <a href="/resources/custom-mailer-ordering-checklist/">
+              The ordering checklist
+            </a>
+            <span>Eleven decisions that make a quotation accurate first time.</span>
+          </li>
+          <li>
+            <a href="/size-guide/">Choosing a size</a>
+            <span>The method, if the size question is still open.</span>
+          </li>
+          <li>
+            <a href="/blog/">Articles</a>
+            <span>Longer reads on cushioning, colour, artwork and materials.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="ty-contact">
+        <h2>If it is urgent</h2>
+        <p>
+          Email <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a> or call
+          <a href={BRAND.phoneHref}>{BRAND.phoneDisplay}</a>. Mention that you
+          have already sent a request so we can find it.
+        </p>
+      </section>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .ty { padding-block: var(--sp-2xl) var(--sp-2xl); }
+
+  .ty-inner { max-width: 42rem; }
+
+  .ty-mark {
+    inline-size: 58px;
+    block-size: 58px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--success-100);
+    color: var(--success-600);
+    margin-block-end: var(--sp-m);
+  }
+
+  .ty h1 { margin-block-end: 0.8rem; max-width: 16ch; }
+  .ty .lede { font-size: var(--step-1); max-width: 48ch; }
+
+  .ty-next,
+  .ty-meanwhile,
+  .ty-contact { margin-block-start: var(--sp-xl); }
+
+  .ty h2 {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--fg-subtle);
+    margin-block-end: var(--sp-s);
+  }
+
+  .ty-next ol {
+    counter-reset: s;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .ty-next li {
+    counter-increment: s;
+    position: relative;
+    padding-inline-start: 2.2rem;
+    display: grid;
+    gap: 0.12rem;
+  }
+
+  .ty-next li::before {
+    content: counter(s);
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0.05rem;
+    inline-size: 1.6rem;
+    block-size: 1.6rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--accent-hover);
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  .ty-next strong { font-size: 0.98rem; font-weight: 650; }
+  .ty-next span { color: var(--fg-muted); font-size: 0.9rem; }
+
+  .ty-meanwhile ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  .ty-meanwhile li { display: grid; gap: 0.1rem; }
+  .ty-meanwhile a { color: var(--accent); font-weight: 600; font-size: 0.98rem; }
+  .ty-meanwhile span { color: var(--fg-muted); font-size: 0.88rem; }
+
+  .ty-contact p { color: var(--fg-muted); }
+  .ty-contact a { color: var(--accent); }
+</style>
