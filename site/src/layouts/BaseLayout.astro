@@ -4,7 +4,7 @@ import Header from '~/components/Header.astro';
 import Footer from '~/components/Footer.astro';
 import WhatsAppButton from '~/components/WhatsAppButton.astro';
 import Breadcrumbs from '~/components/Breadcrumbs.astro';
-import { abs, BRAND } from '~/lib/site';
+import { abs, BRAND, GOOGLE_SITE_VERIFICATION } from '~/lib/site';
 import type { Crumb } from '~/lib/schema';
 
 interface Props {
@@ -49,6 +49,7 @@ const socialImage = ogImage ? (ogImage.startsWith('http') ? ogImage : abs(ogImag
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    <meta name="google-site-verification" content={GOOGLE_SITE_VERIFICATION} />
     {noindex && <meta name="robots" content="noindex, follow" />}
     {!noindex && <meta name="robots" content="index, follow, max-image-preview:large" />}
 

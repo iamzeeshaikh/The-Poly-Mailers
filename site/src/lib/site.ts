@@ -10,6 +10,19 @@
 export const SITE_URL = 'https://thepolymailers.com';
 
 /**
+ * Google Search Console verification token.
+ *
+ * Rendered into the head of every page rather than the homepage alone. Google
+ * only checks the homepage, but a token that exists on one page is a token that
+ * silently disappears if that page is ever restructured — and losing
+ * verification loses the property's access, not just the badge.
+ *
+ * Google's own instruction is to leave it in place permanently, so it is not
+ * removed after verification succeeds.
+ */
+export const GOOGLE_SITE_VERIFICATION = 'nZd7_jqxAMyZGqaqTdxyVFKepHtNEvmUFaabsbZVzrw';
+
+/**
  * Stamped once at build time. `priceValidUntil` in Product schema is derived
  * from it, so the offer expiry moves forward with each deploy rather than
  * going stale on a date somebody typed in a year ago.
