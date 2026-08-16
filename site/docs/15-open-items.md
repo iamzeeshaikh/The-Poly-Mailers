@@ -51,7 +51,7 @@ Five distinct photographs were excluded and are listed in
 * Mailers printed with a competing packaging company's brand mark.
 * Kraft paper padded mailers filed under a poly self-seal product.
 
-### Retained but qualified
+### Retained, uncaptioned, at the client's instruction
 
 Three photographs carry sustainability wording printed on the bag by whoever
 produced the original sample: a green mailer reading "100% eco-friendly
@@ -59,14 +59,23 @@ compostable and biodegradable", a grey mailer reading "made of up to 50%
 recycled polyethylene", and a white mailer reading "made from 100% recycled
 materials".
 
-They are used with a visible caption stating that printed messaging is the
-artwork of the business that ordered those samples, that The Poly Mailers does
-not certify those claims, and that composition is confirmed at quotation. Alt
-text describes the wording as printed artwork, never as a property of the
-material.
+They shipped with visible captions attributing the wording to the customer who
+ordered those samples. On 2026-08-16 the client reviewed that and instructed
+that the printed claims are acceptable and the captions should come off. They
+have been removed, along with the placeholder-artwork captions elsewhere.
 
-**Recommendation:** replace all three with unbranded photography. A caption
-manages the risk; it does not remove it.
+Alt text still describes the wording as printed artwork rather than as a
+property of the material, so the markup does not assert the claim either.
+
+**What that leaves open.** Environmental claims are enforced in all four markets
+this site sells into — the FTC Green Guides in the US, the CMA in the UK, the
+ACCC in Australia and the Competition Bureau in Canada — and a photograph on a
+product page is published material whoever wrote the words on the bag. The
+company holds no document supporting any of the three claims, because none was
+supplied.
+
+Replacing the three photographs removes the exposure entirely and costs nothing
+but a photoshoot. That remains the recommendation.
 
 ### Third-party brand marks
 

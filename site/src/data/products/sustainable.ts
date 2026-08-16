@@ -50,14 +50,10 @@ export const sustainableProducts: ProductPage[] = [
       {
         file: 'grey-mailer-printed-with-recycled-content-artwork.jpg',
         alt: 'Grey mailer packed and sealed, printed along one edge with a recycled-content message',
-        caption:
-          'The recycled-content wording shown is printed artwork supplied by the business that ordered these samples. It is not a claim by The Poly Mailers about the film, and we confirm composition on your own quotation.',
       },
       {
         file: 'white-mailer-printed-with-recycled-materials-artwork.jpg',
         alt: 'White mailer with a printed vertical line of text down the right-hand edge',
-        caption:
-          'Another customer’s printed messaging. Wording of this kind is your responsibility to substantiate in the market you sell into.',
       },
       {
         file: 'white-mailer-holding-folded-tie-dye-garment.jpg',
@@ -275,8 +271,6 @@ export const sustainableProducts: ProductPage[] = [
       {
         file: 'green-mailer-printed-with-eco-message-artwork.png',
         alt: 'Green mailer printed with a customer’s environmental message across the front panel',
-        caption:
-          'The printed wording is artwork supplied by the business that ordered these samples. We do not certify it, and we would not print a claim of this kind for you without documentation supporting it.',
       },
       {
         file: 'white-mailer-holding-folded-tie-dye-garment.jpg',
@@ -506,8 +500,6 @@ export const sustainableProducts: ProductPage[] = [
       {
         file: 'green-mailer-printed-with-eco-message-artwork.png',
         alt: 'Green mailer photographed at an angle, carrying a printed environmental slogan from a customer’s own design',
-        caption:
-          'An example of the kind of unqualified wording this page argues against. It is the customer’s artwork on a supplier sample, not a claim we make or endorse.',
       },
       {
         file: 'plain-white-poly-mailer-standing-filled.jpg',

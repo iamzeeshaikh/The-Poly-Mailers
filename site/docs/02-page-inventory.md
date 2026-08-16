@@ -5,7 +5,7 @@ Generated from the built output at `dist/client`, not from the source data.
 **148 indexable pages**, plus `/thank-you/` and `/404` which are
 noindex and excluded from the XML sitemap.
 
-Total body copy across indexable pages: **162,712 words**
+Total body copy across indexable pages: **162,596 words**
 (median 1027 words per page, shortest 455,
 longest 2303).
 
@@ -42,7 +42,7 @@ longest 2303).
 | `/artwork-guidelines/` | 1246 | BreadcrumbList, FAQPage, WebPage |
 | `/australia/` | 884 | BreadcrumbList, CollectionPage, FAQPage, ItemList |
 | `/bee-poly-mailers/` | 1243 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
-| `/biodegradable-poly-mailers/` | 1514 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
+| `/biodegradable-poly-mailers/` | 1486 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
 | `/black-poly-mailers/` | 1305 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
 | `/blank-poly-mailers/` | 1320 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
 | `/blog/` | 455 | BreadcrumbList, CollectionPage, ItemList |
@@ -59,7 +59,7 @@ longest 2303).
 | `/canada/` | 897 | BreadcrumbList, CollectionPage, FAQPage, ItemList |
 | `/christmas-poly-mailers/` | 1475 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
 | `/colored-poly-mailers/` | 1367 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
-| `/compostable-poly-mailers/` | 1580 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
+| `/compostable-poly-mailers/` | 1546 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
 | `/contact/` | 536 | BreadcrumbList, ContactPage |
 | `/custom-frosted-poly-bags/` | 1314 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
 | `/custom-order-policy/` | 853 | BreadcrumbList, FAQPage, WebPage |
@@ -150,7 +150,7 @@ longest 2303).
 | `/printing-options/` | 1192 | BreadcrumbList, FAQPage, WebPage |
 | `/privacy-policy/` | 664 | BreadcrumbList, WebPage |
 | `/protective-mailers/` | 799 | BreadcrumbList, CollectionPage, FAQPage, ItemList |
-| `/recycled-poly-mailers/` | 1652 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
+| `/recycled-poly-mailers/` | 1598 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
 | `/request-a-quote/` | 501 | BreadcrumbList, WebPage |
 | `/resources/` | 493 | BreadcrumbList, CollectionPage, ItemList |
 | `/resources/closure-and-self-seal-guide/` | 744 | BreadcrumbList, FAQPage, WebPage |
