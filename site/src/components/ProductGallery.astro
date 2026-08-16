@@ -33,6 +33,20 @@ const [hero, ...rest] = resolved;
 <div class="gallery" data-gallery>
   <figure class="gallery-stage">
     {
+      /*
+       * Every slide loads eagerly, including the hidden ones.
+       *
+       * `loading="lazy"` looks like the careful choice here and is the
+       * opposite: a lazy image inside a `display: none` slide is never near the
+       * viewport, so the browser does not fetch it at all until the slide is
+       * shown — which is exactly the moment the reader is waiting and looking
+       * at an empty box.
+       *
+       * `fetchpriority="low"` is what keeps that honest. The browser still
+       * downloads the other slides, but behind the LCP image and behind
+       * anything else that blocks first paint, so the swap is instant without
+       * the extra requests costing anything measurable.
+       */
       resolved.map((img, i) => (
         <div class="stage-slide" data-slide={i} hidden={i !== 0}>
           <Picture
@@ -43,8 +57,8 @@ const [hero, ...rest] = resolved;
             formats={['avif', 'webp']}
             fallbackFormat="jpeg"
             quality={72}
-            loading={i === 0 ? 'eager' : 'lazy'}
-            fetchpriority={i === 0 ? 'high' : 'auto'}
+            loading="eager"
+            fetchpriority={i === 0 ? 'high' : 'low'}
             decoding={i === 0 ? 'sync' : 'async'}
           />
         </div>

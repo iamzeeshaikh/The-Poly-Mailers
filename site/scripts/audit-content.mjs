@@ -664,17 +664,32 @@ for (const id of [`${SITE}/#organization`, `${SITE}/#website`]) {
 
 /* ----------------------------- sitemap ------------------------------ */
 
+// One file at /sitemap.xml rather than an index. 148 URLs is far below the
+// 50,000 at which an index earns its extra hop, and /sitemap.xml is the URL a
+// person actually types.
 let sitemapUrls = new Set();
 try {
-  const index = await readFile(path.join(DIST, 'sitemap-index.xml'), 'utf8');
-  const parts = [...index.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-  for (const part of parts) {
-    const file = path.join(DIST, path.basename(new URL(part).pathname));
-    const xml = await readFile(file, 'utf8');
-    for (const m of xml.matchAll(/<loc>([^<]+)<\/loc>/g)) sitemapUrls.add(m[1]);
+  const xml = await readFile(path.join(DIST, 'sitemap.xml'), 'utf8');
+  for (const m of xml.matchAll(/<loc>([^<]+)<\/loc>/g)) sitemapUrls.add(m[1]);
+  if (!sitemapUrls.size) {
+    add('error', 'sitemap', '/sitemap.xml', 'Sitemap parsed but contains no URLs.');
   }
 } catch (error) {
-  add('error', 'sitemap', '/sitemap-index.xml', `Could not read sitemap: ${error.message}`);
+  add('error', 'sitemap', '/sitemap.xml', `Could not read sitemap: ${error.message}`);
+}
+
+// robots.txt has to point at the sitemap that exists. A stale reference here
+// sends every crawler to a 404 and fails silently.
+try {
+  const robots = await readFile(path.join(DIST, 'robots.txt'), 'utf8');
+  const declared = robots.match(/^Sitemap:\s*(\S+)/im)?.[1];
+  if (!declared) {
+    add('error', 'sitemap', '/robots.txt', 'robots.txt declares no Sitemap.');
+  } else if (declared !== `${SITE}/sitemap.xml`) {
+    add('error', 'sitemap', '/robots.txt', `robots.txt points at ${declared}, not ${SITE}/sitemap.xml.`);
+  }
+} catch (error) {
+  add('error', 'sitemap', '/robots.txt', `Could not read robots.txt: ${error.message}`);
 }
 
 if (sitemapUrls.size) {

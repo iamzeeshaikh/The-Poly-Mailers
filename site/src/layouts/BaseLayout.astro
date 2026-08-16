@@ -68,7 +68,15 @@ const socialImage = ogImage ? (ogImage.startsWith('http') ? ogImage : abs(ogImag
     {socialImage && <meta name="twitter:image" content={socialImage} />}
 
     <meta name="theme-color" content="#0d1116" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {/*
+      favicon.ico is listed first and is not optional. Google fetches
+      /favicon.ico by convention when deciding what to show beside a search
+      result, and an SVG-only site tends to get the generic globe instead.
+      Browsers that prefer the SVG still take it — they read the whole list.
+    */}
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
+    <link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
@@ -136,5 +144,17 @@ const socialImage = ogImage ? (ogImage.startsWith('http') ? ogImage : abs(ogImag
         targets.forEach((el) => io.observe(el));
       }
     </script>
+
+    {/*
+      Live chat, served from the ZeeOps dashboard under the `thepolymailers`
+      site id. `async` rather than `defer` because it has no dependency on the
+      DOM being parsed and nothing on the page waits for it.
+
+      It is the only third-party request the site makes, and it is the reason
+      chat.zeeops.dev appears in script-src, connect-src and img-src in
+      vercel.json — the CSP permits no other external origin, so adding any
+      further third-party script is a deliberate act rather than an accident.
+    */}
+    <script async src="https://chat.zeeops.dev/widget.js?siteId=thepolymailers"></script>
   </body>
 </html>
