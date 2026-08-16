@@ -14,7 +14,6 @@ author: The Poly Mailers editorial team
 reviewer: Production and specification desk
 heroImage: ../../assets/products/black-poly-mailer-printed-with-message-copy.jpg
 heroAlt: A printed message filling the front of a black mailer, sized to read at arm’s length
-heroCaption: The message shown is the artwork of the business that ordered those samples.
 related:
   - href: /custom-poly-mailers/
     label: Ordering a printed run

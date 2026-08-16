@@ -5,7 +5,7 @@ Generated from the built output at `dist/client`, not from the source data.
 **148 indexable pages**, plus `/thank-you/` and `/404` which are
 noindex and excluded from the XML sitemap.
 
-Total body copy across indexable pages: **162,800 words**
+Total body copy across indexable pages: **162,712 words**
 (median 1027 words per page, shortest 455,
 longest 2303).
 
@@ -38,18 +38,18 @@ longest 2303).
 | `/9x12-poly-mailers/` | 1422 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
 | `/about/` | 1059 | AboutPage, BreadcrumbList, FAQPage |
 | `/accessibility-statement/` | 531 | BreadcrumbList, WebPage |
-| `/apparel-shipping-bags/` | 1518 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
+| `/apparel-shipping-bags/` | 1502 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
 | `/artwork-guidelines/` | 1246 | BreadcrumbList, FAQPage, WebPage |
 | `/australia/` | 884 | BreadcrumbList, CollectionPage, FAQPage, ItemList |
-| `/bee-poly-mailers/` | 1259 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
+| `/bee-poly-mailers/` | 1243 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
 | `/biodegradable-poly-mailers/` | 1514 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
-| `/black-poly-mailers/` | 1319 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
+| `/black-poly-mailers/` | 1305 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
 | `/blank-poly-mailers/` | 1320 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
 | `/blog/` | 455 | BreadcrumbList, CollectionPage, ItemList |
 | `/blog/choosing-colors-for-branded-shipping-mailers/` | 1679 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
-| `/blog/how-custom-printed-poly-mailers-support-brand-recognition/` | 1630 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
+| `/blog/how-custom-printed-poly-mailers-support-brand-recognition/` | 1617 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
 | `/blog/how-to-choose-the-right-poly-mailer-size/` | 1932 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
-| `/blog/how-to-prepare-artwork-for-custom-poly-mailer-printing/` | 1662 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
+| `/blog/how-to-prepare-artwork-for-custom-poly-mailer-printing/` | 1646 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
 | `/blog/packaging-ideas-for-small-ecommerce-businesses/` | 1462 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
 | `/blog/poly-mailer-thickness-and-durability-explained/` | 1637 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
 | `/blog/poly-mailers-for-clothing-and-apparel-shipping/` | 1651 | BlogPosting, BreadcrumbList, FAQPage, WebPage |
@@ -63,7 +63,7 @@ longest 2303).
 | `/contact/` | 536 | BreadcrumbList, ContactPage |
 | `/custom-frosted-poly-bags/` | 1314 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
 | `/custom-order-policy/` | 853 | BreadcrumbList, FAQPage, WebPage |
-| `/custom-poly-mailers/` | 1585 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
+| `/custom-poly-mailers/` | 1572 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |
 | `/custom-printed-poly-mailers/` | 817 | BreadcrumbList, CollectionPage, FAQPage, ItemList |
 | `/design-your-poly-mailer/` | 989 | BreadcrumbList, FAQPage, WebPage |
 | `/economy-poly-mailers/` | 1318 | BreadcrumbList, FAQPage, ImageObject, Product, WebPage |

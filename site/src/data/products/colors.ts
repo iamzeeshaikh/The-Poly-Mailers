@@ -854,8 +854,6 @@ export const colorProducts: ProductPage[] = [
       {
         file: 'black-poly-mailers-printed-logo-flat-lay.png',
         alt: 'Black poly mailers arranged flat with white printed lettering and pine cones alongside',
-        caption:
-          'The lettering shown is placeholder artwork on a supplier sample, not a stock design.',
       },
     ],
     blocks: [

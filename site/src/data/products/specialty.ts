@@ -61,8 +61,6 @@ export const specialtyProducts: ProductPage[] = [
       {
         file: 'white-apparel-mailer-with-placeholder-logo-artwork.png',
         alt: 'White garment mailer printed with placeholder logo and social handle artwork',
-        caption:
-          'A supplier sample showing placeholder artwork in the positions a brand mark and handles would occupy.',
       },
     ],
     blocks: [
@@ -299,8 +297,6 @@ export const specialtyProducts: ProductPage[] = [
       {
         file: 'white-mailer-printed-honey-and-bee-pattern.png',
         alt: 'White mailer covered in a printed pattern of bees, honey jars and honeycomb shapes',
-        caption:
-          'A supplier sample carrying another business’s brand mark within the pattern; your own design replaces it.',
       },
       {
         file: 'sunflower-and-bee-printed-mailers-fanned.png',

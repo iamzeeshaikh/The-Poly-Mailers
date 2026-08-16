@@ -5,7 +5,7 @@
 | | |
 | --- | ---: |
 | HTML pages | 150 |
-| Total HTML | 10534 KB |
+| Total HTML | 10533 KB |
 | Average page HTML | 70.2 KB |
 | Largest page HTML | 115.4 KB |
 | JavaScript bundles | 3 |

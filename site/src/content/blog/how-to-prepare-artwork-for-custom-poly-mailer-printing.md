@@ -14,7 +14,6 @@ author: The Poly Mailers editorial team
 reviewer: Production and specification desk
 heroImage: ../../assets/products/white-apparel-mailer-with-placeholder-logo-artwork.png
 heroAlt: A printed mailer showing a placeholder mark centred on the panel with handles set beneath it
-heroCaption: A supplier sample showing placeholder artwork in the positions a brand mark and handles would occupy.
 related:
   - href: /artwork-guidelines/
     label: The file specification

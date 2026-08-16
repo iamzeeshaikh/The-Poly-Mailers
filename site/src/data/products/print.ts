@@ -50,8 +50,6 @@ export const printProducts: ProductPage[] = [
       {
         file: 'black-poly-mailer-printed-with-message-copy.jpg',
         alt: 'Black poly mailer printed with a large white message across the front panel',
-        caption:
-          'Message wording shown is the artwork of the business that ordered the sample.',
       },
       {
         file: 'orange-poly-mailer-printed-edge-pattern.jpg',
