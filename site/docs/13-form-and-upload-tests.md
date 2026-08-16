@@ -91,9 +91,32 @@ If SMTP is not configured, the endpoint logs the misconfiguration server-side
 and returns a polite failure that names the email address instead. It never
 tells the browser which variable is missing.
 
-## Not tested
+## Live delivery — 2 checks, 0 failures
 
-Delivery against a real SMTP provider, because no credentials were supplied. The
-transport code is standard nodemailer and the message construction is verified,
-but SPF, DKIM and DMARC alignment can only be confirmed once the real host,
-credentials and sending domain exist. See `docs/14-environment-variables.md`.
+`npm run test:smtp` is separate from the suite above. It talks to the real
+provider using the values in `.env` and sends one genuine enquiry, so the
+message that arrives is the one a visitor would produce rather than a synthetic
+one written by the script.
+
+Run on 2026-08-16 against Gmail SMTP:
+
+| Check | Result |
+| --- | --- |
+| Authentication | `smtp.gmail.com:587` accepted the account and App Password |
+| End-to-end send | HTTP 200, message accepted and delivered to the sales inbox |
+
+It runs in two stages deliberately. Authenticating first, without sending,
+means a failure says which half is wrong — credentials or message construction.
+
+## Still not verified
+
+**SPF, DKIM and DMARC alignment.** The current sender is a Gmail account, not
+the `thepolymailers.com` domain, so the notification passes Gmail's own
+authentication but is not aligned with the site's domain. Two consequences:
+
+1. Gmail rewrites the `From` header to the authenticated account unless
+   `info@thepolymailers.com` is added as a verified send-as alias.
+2. Deliverability rests on Gmail's reputation rather than the domain's.
+
+Neither affects whether mail arrives at the sales inbox today. Both matter once
+the site is live and sending at volume. See `docs/14-environment-variables.md`.

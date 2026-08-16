@@ -14,6 +14,7 @@ npm run dev          # local development
 npm run verify       # build + type check + content audit + regenerate reports
 npm run qa           # Playwright browser QA (needs a built dist/)
 npm run test:quote   # endpoint security tests against a throwaway SMTP server
+npm run test:smtp    # live send through the real provider in .env
 ```
 
 `npm run build` runs `astro build` and then prunes the unreferenced originals
@@ -31,6 +32,7 @@ Forms need SMTP credentials. Copy `.env.example` to `.env` — see
 | `npm run audit` | 0 errors, 0 warnings across 150 built pages |
 | `npm run qa` | 17 / 17 pass |
 | `npm run test:quote` | 15 / 15 pass |
+| `npm run test:smtp` | 2 / 2 pass — real enquiry delivered |
 | Internal links | 1,466 contextual, 0 orphans, 0 broken, 0 generic anchors |
 | Client JavaScript | 15.0 KB total across the whole site |
 

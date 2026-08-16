@@ -85,6 +85,19 @@ const freePort = await new Promise((resolve) => {
   });
 });
 
+/* Astro 7 daemonises `astro dev`, so a killed child leaves the server running
+   and the next run refuses to bind. Stop any survivor before starting, and stop
+   this one on the way out however the script exits. */
+const stopDaemon = () =>
+  new Promise((resolve) => {
+    const s = spawn('npx', ['astro', 'dev', 'stop'], { cwd: ROOT, stdio: 'ignore' });
+    s.on('exit', resolve);
+    s.on('error', resolve);
+  });
+
+await stopDaemon();
+process.on('exit', () => spawn('npx', ['astro', 'dev', 'stop'], { cwd: ROOT, stdio: 'ignore' }));
+
 const server = spawn('npx', ['astro', 'dev', '--port', String(freePort)], {
   cwd: ROOT,
   env: { ...process.env, ...env },
@@ -121,11 +134,12 @@ const body = new FormData();
 body.set('name', 'Deliverability check');
 body.set('email', env.SMTP_TO || env.SMTP_USER);
 body.set('company', 'The Poly Mailers');
+body.set('phone', '+44 7458 651107');
 body.set('country', 'United States');
 body.set('product', '10x13 Poly Mailers');
 body.set('quantity', '1,000 – 5,000');
 body.set('message', `Live SMTP verification sent at ${stamp}. If this arrived, the quote form works end to end.`);
-body.set('consent', 'on');
+body.set('consent', 'yes');
 body.set('company_url', '');
 body.set('started_at', String(Date.now() - 30_000));
 
@@ -155,7 +169,7 @@ const rewritten = serverLog.join('').match(/from address/i);
 if (rewritten) fail('from address', 'the provider objected to SMTP_FROM_EMAIL');
 
 server.kill();
-await new Promise((r) => setTimeout(r, 400));
+await stopDaemon();
 
 report();
 

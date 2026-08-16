@@ -158,8 +158,12 @@ adapter ships a patched dependency.
 
 ## 7. Recommended before launch
 
-1. Set the four SMTP variables and send a live test through the form.
-2. Publish SPF, DKIM and DMARC records for the sending domain.
+1. ~~Set the four SMTP variables and send a live test through the form.~~ Done
+   2026-08-16 — verified with `npm run test:smtp`. Still to do: set the same
+   values in Vercel, and move off the personal Gmail sender onto a mailbox on
+   the domain. See `docs/14-environment-variables.md`.
+2. Publish SPF, DKIM and DMARC records for the sending domain, once the sender
+   is on that domain — they cannot align with a Gmail account.
 3. Supply company registration details, or confirm they should stay off the site.
 4. Decide the retention period for enquiry data.
 5. Replace the three claim-bearing photographs.

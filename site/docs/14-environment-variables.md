@@ -1,4 +1,8 @@
-# Environment variables still to configure
+# Environment variables
+
+**Status as of 2026-08-16: configured locally and verified end to end.**
+`npm run test:smtp` authenticates against Gmail and delivers a real enquiry.
+The same values still need setting in Vercel before the first production deploy.
 
 The site builds, deploys and serves without any of these. What does not work
 until they are set is **sending** the quote and contact forms — the endpoint
@@ -6,6 +10,24 @@ validates the submission correctly, then returns a polite failure naming the
 email address instead, and logs the misconfiguration server-side.
 
 `.env.example` in the project root carries the same list with inline notes.
+
+## Current sender, and why it is a stopgap
+
+The account in use is a personal Gmail address rather than a mailbox on
+`thepolymailers.com`. It works, and it is fine for testing, but it carries two
+limits worth fixing before launch:
+
+* **Gmail rewrites the `From` header** to the authenticated account unless
+  `info@thepolymailers.com` is added under Settings → Accounts → *Send mail as*
+  and verified with the code Gmail posts to that inbox. Until then the
+  notification arrives from the Gmail address.
+* **Roughly 500 messages a day**, and the domain's own SPF and DKIM records
+  cannot cover a sender outside the domain — so alignment stays broken no matter
+  what DNS says.
+
+For production, move to a sender on the domain: Google Workspace, Zoho Mail, or
+a transactional provider such as Resend or Postmark. Only the four variables
+below change; no code changes.
 
 ## Required for the forms to send
 
