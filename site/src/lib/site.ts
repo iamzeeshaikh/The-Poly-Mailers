@@ -47,8 +47,14 @@ export const BRAND = {
    */
   phoneAltDisplay: '+44 7458 651107',
   phoneAltHref: 'tel:+447458651107',
-  whatsappDisplay: '+1 503-461-4788',
-  whatsappNumber: '15034614788',
+  // WhatsApp is deliberately on the OLD company number, not the new one on
+  // the phone line above. WhatsApp has to be registered on a number with
+  // Meta before wa.me will open a chat, and +1 503-461-4788 has not been
+  // through that yet — a link to it shows the customer "This phone number
+  // isn't on WhatsApp", which is what it did on this site until 2026-09-02.
+  // Change these two lines the day the new number is a registered sender.
+  whatsappDisplay: '+1 503-358-0443',
+  whatsappNumber: '15033580443',
   tagline: 'Custom poly mailers made to order for growing brands',
 } as const;
 
