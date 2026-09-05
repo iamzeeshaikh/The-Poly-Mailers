@@ -150,5 +150,8 @@ export function href(path: string): string {
 
 /** Pre-filled WhatsApp deep link. Text is page specific at every call site. */
 export function whatsappLink(message: string): string {
-  return `https://wa.me/${BRAND.whatsappNumber}?text=${encodeURIComponent(message)}`;
+  // The shared-number rule: the site URL in every prefill is how the CRM tells
+  // which site an inbound WhatsApp came from (owner, 2026-09-05).
+  return `https://wa.me/${BRAND.whatsappNumber}?text=${encodeURIComponent(
+    message.includes('thepolymailers.com') ? message : `${message} — https://thepolymailers.com/`)}`;
 }
