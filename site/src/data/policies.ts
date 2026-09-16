@@ -61,7 +61,7 @@ export const policyPages: readonly ContentPage[] = [
           {
             term: 'Nothing else',
             detail:
-              'There is no analytics script, no advertising pixel, no third-party tag manager and no cookie set by us on this website.',
+              'Google Analytics records the pages you view and a trimmed version of your IP address, and sets its own analytics cookies. There is no advertising pixel and no third-party tag manager on this website.',
           },
         ],
       },
@@ -134,7 +134,7 @@ export const policyPages: readonly ContentPage[] = [
       {
         kind: 'callout',
         heading: 'Cookies',
-        body: 'This website sets no cookies of its own and runs no analytics or advertising scripts. The design tool stores your configuration in your browser\'s own session storage so a page reload does not lose your work; that data never leaves your device unless you submit it with an enquiry, and closing the tab clears it.',
+        body: 'This website runs Google Analytics, which sets analytics cookies that tell us how many people read each page; it never receives your name, email or enquiry details. There is no advertising script. The design tool stores your configuration in your browser\'s own session storage so a page reload does not lose your work; that data never leaves your device unless you submit it with an enquiry, and closing the tab clears it.',
       },
     ],
     related: [
