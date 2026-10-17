@@ -1,4 +1,5 @@
 ---
+import { withExtras } from '../lib/page-faqs';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Blocks from '~/components/Blocks.astro';
 import FaqList from '~/components/FaqList.astro';
@@ -43,7 +44,7 @@ const schema = graph([
     hasBreadcrumb: crumbs.length > 1,
   }),
   crumbs.length > 1 ? breadcrumbs(crumbs) : null,
-  page.faqs?.length ? faqPage(path, page.faqs) : null,
+  faqPage(path, page.faqs ?? []),
   ...extraSchema,
 ]);
 ---
@@ -85,10 +86,10 @@ const schema = graph([
     <slot />
 
     {
-      page.faqs && page.faqs.length > 0 && (
+      withExtras(path, page.faqs ?? []).length > 0 && (
         <div class="wrap section-tight">
           <FaqList
-            faqs={page.faqs}
+            faqs={page.faqs ?? []}
             heading={`Questions about ${page.name.toLowerCase()}`}
             id={`faq-${page.slug}`}
           />

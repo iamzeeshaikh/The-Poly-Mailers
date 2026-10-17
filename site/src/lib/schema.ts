@@ -1,3 +1,4 @@
+import { withExtras } from './page-faqs';
 /**
  * JSON-LD construction.
  *
@@ -253,7 +254,9 @@ export function product(opts: {
   };
 }
 
-export function faqPage(path: string, faqs: readonly Faq[]): Json | null {
+export function faqPage(path: string, ownFaqs: readonly Faq[]): Json | null {
+  // the route's extra questions are added here and in FaqList alike
+  const faqs = withExtras(path, ownFaqs);
   if (!faqs.length) return null;
   return {
     '@type': 'FAQPage',
@@ -261,7 +264,7 @@ export function faqPage(path: string, faqs: readonly Faq[]): Json | null {
     mainEntity: faqs.map((f) => ({
       '@type': 'Question',
       name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
+      acceptedAnswer: { '@type': 'Answer', text: f.a.replace(/<[^>]+>/g, '') },
     })),
   };
 }

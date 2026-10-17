@@ -1,4 +1,5 @@
 ---
+import { withExtras } from '../../lib/page-faqs';
 import type { GetStaticPaths } from 'astro';
 import { getCollection, render } from 'astro:content';
 import { Picture, getImage } from 'astro:assets';
@@ -65,7 +66,7 @@ const schema = graph([
     reviewedBy: data.reviewer,
     wordCount: remarkPluginFrontmatter?.wordCount as number | undefined,
   }),
-  data.faqs.length ? faqPage(path, data.faqs) : null,
+  faqPage(path, data.faqs),
 ]);
 
 /** Only h2s go in the contents list; h3s are detail within a section. */
@@ -169,7 +170,7 @@ const toc = headings.filter((h) => h.depth === 2);
     }
 
     {
-      data.faqs.length > 0 && (
+      withExtras(path, data.faqs).length > 0 && (
         <div class="wrap-narrow section-tight">
           <FaqList faqs={data.faqs} heading="Questions this raises" id={`faq-${post.id}`} />
         </div>

@@ -1,4 +1,5 @@
 ---
+import ExtraFaqs from '../components/ExtraFaqs.astro';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import QuoteForm from '~/components/QuoteForm.astro';
 import { BRAND, MARKETS, whatsappLink } from '~/lib/site';
@@ -139,6 +140,7 @@ const schema = graph([
       />
     </div>
   </article>
+  <ExtraFaqs />
 </BaseLayout>
 
 <style>
