@@ -1,0 +1,31 @@
+---
+/** Payment marks. Every order is paid on a PayPal invoice (or bank transfer, or
+ *  cash on delivery in the US and Canada); PayPal takes cards, Apple Pay and
+ *  Google Pay. `variant="footer"` is the compact "We accept" row on the footer. */
+interface Props { variant?: 'box' | 'footer'; }
+const { variant = 'box' } = Astro.props;
+const cards = [
+  ['visa', 'Visa'],
+  ['mastercard', 'Mastercard'],
+  ['amex', 'American Express'],
+  ['discover', 'Discover'],
+  ['apple-pay', 'Apple Pay'],
+  ['google-pay', 'Google Pay'],
+];
+---
+{variant === 'footer' ? (
+  <div class="accepts" aria-label="Payment methods we accept">
+    <p class="accepts-label">We accept</p>
+    <ul class="accepts-logos" role="list">
+      <li class="accepts-pp"><img src="/badges/paypal.svg" alt="" width="14" height="14" loading="lazy" decoding="async" /><span>PayPal</span></li>
+      {cards.map(([file, name]) => (
+        <li><img src={`/badges/${file}.svg`} alt={name} width="40" height="25" loading="lazy" decoding="async" /></li>
+      ))}
+    </ul>
+  </div>
+) : (
+  <div class="paybadge">
+    <span class="paybadge-pp"><img src="/badges/paypal.svg" alt="" width="20" height="20" loading="lazy" decoding="async" /><span>We accept <b>PayPal</b></span></span>
+    <span class="paybadge-cards"><span class="paybadge-logos">{cards.map(([file, name]) => <img src={`/badges/${file}.svg`} alt={name} width="40" height="25" loading="lazy" decoding="async" />)}</span><span>Pay by card through PayPal</span></span>
+  </div>
+)}

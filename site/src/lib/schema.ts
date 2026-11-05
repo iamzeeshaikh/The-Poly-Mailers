@@ -243,7 +243,7 @@ export function product(opts: {
       {
         '@type': 'PropertyValue',
         name: 'Supply model',
-        value: 'Made to order against a written quotation',
+        value: 'Made to order against a quotation',
       },
       {
         '@type': 'PropertyValue',

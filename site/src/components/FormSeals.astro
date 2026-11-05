@@ -1,0 +1,13 @@
+---
+/** Compact trust row that sits directly under a form's submit button: the three
+ *  order seals and the payment marks. `.formseals` in global.css tightens them
+ *  to fit under a button at 375px. */
+import TrustSeals from './TrustSeals.astro';
+import PayBadge from './PayBadge.astro';
+interface Props { class?: string; }
+const { class: extra = '' } = Astro.props;
+---
+<div class={`formseals ${extra}`.trim()}>
+  <TrustSeals class="seals-form" />
+  <PayBadge />
+</div>

@@ -7,6 +7,7 @@ import QuoteForm from '~/components/QuoteForm.astro';
 import FaqList from '~/components/FaqList.astro';
 import RelatedLinks from '~/components/RelatedLinks.astro';
 import CtaBand from '~/components/CtaBand.astro';
+import OrderBox from '~/components/OrderBox.astro';
 import { collections } from '~/data/collections';
 import {
   breadcrumbs,
@@ -118,11 +119,9 @@ const schema = graph([
           see is a structured-data violation. The two read from PRICING so they
           cannot drift apart.
         */}
-        <p class="price-line">
-          <span class="price-from">From</span>
-          <span class="price-value">{PRICING.display}</span>
-          <span class="price-qual">{PRICING.qualifier}</span>
-        </p>
+        <div class="product-order">
+          <OrderBox product={product.name} slug={product.slug} quoteId={`quote-${product.slug}`} />
+        </div>
 
         <p class="whats-next">
           <a class="link-arrow" href={`#quote-${product.slug}`}>
@@ -143,7 +142,7 @@ const schema = graph([
         compact
         id={`quote-${product.slug}`}
         heading={`Price ${product.name.toLowerCase()}`}
-        intro="A short brief is enough to start. We come back with a written specification and a price."
+        intro="A short brief is enough to start. We come back with a specification and a price."
       />
     </div>
 
@@ -243,6 +242,7 @@ const schema = graph([
     color: var(--fg-muted);
   }
 
+  .product-order { margin-block-start: var(--sp-m); }
   .whats-next { margin-block-start: var(--sp-m); }
 
   @media (min-width: 60rem) {

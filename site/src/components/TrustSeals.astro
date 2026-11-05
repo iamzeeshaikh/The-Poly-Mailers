@@ -1,0 +1,23 @@
+---
+/** Three order seals, each one a fact stated elsewhere on the site: the site and
+ *  the order form run over HTTPS with payment on PayPal's own checkout, every
+ *  order gets a free digital proof before anything runs, and we ship to the
+ *  four markets named on /shipping-and-delivery/. No free-shipping claim: this
+ *  site quotes shipping rather than absorbing it. */
+interface Props { class?: string; }
+const { class: extra = '' } = Astro.props;
+---
+<ul class={`seals ${extra}`.trim()} aria-label="Ordering with The Poly Mailers" role="list">
+  <li class="seal">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><rect x="4.5" y="10.5" width="15" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 14.5v2.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    <span><b>SSL secure</b> checkout</span>
+  </li>
+  <li class="seal">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M5.5 2.5h9l4 4v15h-13z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 13.5l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span><b>Free digital</b> proof</span>
+  </li>
+  <li class="seal">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M1.5 5.5h12v11h-12zM13.5 9.5h4.5l3.5 3.5v3.5h-8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="6" cy="18" r="2" fill="var(--bg-raised)" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="18" r="2" fill="var(--bg-raised)" stroke="currentColor" stroke-width="1.8"/></svg>
+    <span><b>Ships to</b> US, UK, CA &amp; AU</span>
+  </li>
+</ul>

@@ -2,7 +2,6 @@ User-agent: *
 Allow: /
 
 # Nothing here is a crawl trap, but these are not useful to index.
-Disallow: /api/
 Disallow: /thank-you/
 
 # No internal search exists on this site, so there are no search-result URLs

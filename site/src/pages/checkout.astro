@@ -1,0 +1,188 @@
+---
+/** Checkout for the product-page order box. No card is taken here: the order
+ *  is emailed to the office and paid by PayPal invoice or bank transfer after
+ *  the free digital proof, or cash on delivery in the US and Canada. Lines
+ *  live in localStorage (public/scripts/checkout.js); /api/order/ re-prices
+ *  every line from src/lib/order.ts. Noindex and absent from the sitemap. */
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import PayBadge from '~/components/PayBadge.astro';
+import TrustSeals from '~/components/TrustSeals.astro';
+import { products } from '~/data/products';
+import { BRAND } from '~/lib/site';
+import type { Crumb } from '~/lib/schema';
+import {
+  UNIT_PRICE, UNIT_PRICE_TEXT, PACK_QTY, MAX_QTY, SHIP_COUNTRIES, COD_COUNTRIES, PAYMENT_METHODS, DELIVERY_LINE,
+} from '~/lib/order';
+
+const path = '/checkout/';
+const catalog = Object.fromEntries(products.map((product) => [product.slug, product.name]));
+const cfg = { catalog, unit: UNIT_PRICE, pack: PACK_QTY, max: MAX_QTY, cod: COD_COUNTRIES, phone: BRAND.phoneDisplay, email: BRAND.email };
+const crumbs: Crumb[] = [{ name: 'Home', href: '/' }, { name: 'Checkout', href: path }];
+---
+<BaseLayout
+  title="Checkout | The Poly Mailers"
+  description={`Order custom poly mailers from ${UNIT_PRICE_TEXT} per unit in runs of ${PACK_QTY}, shipped to the US, UK, Canada and Australia. Pay by invoice after you approve your free proof, or cash on delivery in the US and Canada.`}
+  path={path}
+  crumbs={crumbs}
+  noindex
+>
+  <article class="wrap checkout-page">
+    <header class="checkout-head">
+      <p class="eyebrow">Checkout</p>
+      <h1>Your order</h1>
+      <p class="lede">
+        Every mailer starts from {UNIT_PRICE_TEXT} per unit, in runs of {PACK_QTY}, shipped to the United States,
+        United Kingdom, Canada and Australia. Nothing runs or is paid before you approve a free digital proof.
+      </p>
+    </header>
+
+    <form id="checkout-form" class="checkout" method="post" action="/api/order/" enctype="multipart/form-data" novalidate>
+      <div class="checkout-main">
+        <section class="ck-card">
+          <div class="ck-head">
+            <p class="eyebrow">01 — Your details</p>
+            <h2>Who is ordering</h2>
+          </div>
+          <div class="ck-grid">
+            <p class="field">
+              <label for="co-name">Full name <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="co-name" name="name" autocomplete="name" required maxlength="120" />
+              <span class="err" role="alert"></span>
+            </p>
+            <p class="field">
+              <label for="co-company">Business name</label>
+              <input type="text" id="co-company" name="company" autocomplete="organization" maxlength="140" />
+            </p>
+            <p class="field">
+              <label for="co-email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="co-email" name="email" autocomplete="email" required maxlength="160" />
+              <span class="err" role="alert"></span>
+            </p>
+            <p class="field">
+              <label for="co-phone">Phone <span class="req" aria-hidden="true">*</span></label>
+              <input type="tel" id="co-phone" name="phone" autocomplete="tel" required maxlength="40" />
+              <span class="err" role="alert"></span>
+            </p>
+          </div>
+        </section>
+
+        <section class="ck-card">
+          <div class="ck-head">
+            <p class="eyebrow">02 — Delivery address</p>
+            <h2>Where the mailers ship</h2>
+            <p>{DELIVERY_LINE}</p>
+          </div>
+          <div class="ck-grid">
+            <p class="field field-wide">
+              <label for="co-country">Country <span class="req" aria-hidden="true">*</span></label>
+              <select id="co-country" name="country" autocomplete="country" required>
+                {SHIP_COUNTRIES.map((country) => <option value={country.code}>{country.name}</option>)}
+              </select>
+            </p>
+            <p class="field field-wide">
+              <label for="co-address1">Street address <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="co-address1" name="address1" autocomplete="address-line1" required maxlength="200" />
+              <span class="err" role="alert"></span>
+            </p>
+            <p class="field field-wide">
+              <label for="co-address2">Apartment, suite or unit</label>
+              <input type="text" id="co-address2" name="address2" autocomplete="address-line2" maxlength="200" />
+            </p>
+            <p class="field">
+              <label for="co-city">City <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="co-city" name="city" autocomplete="address-level2" required maxlength="100" />
+              <span class="err" role="alert"></span>
+            </p>
+            <p class="field">
+              <label for="co-region">State, province or county</label>
+              <input type="text" id="co-region" name="region" autocomplete="address-level1" maxlength="60" />
+            </p>
+            <p class="field">
+              <label for="co-postal">ZIP or postcode <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="co-postal" name="postal" autocomplete="postal-code" required maxlength="20" />
+              <span class="err" role="alert"></span>
+            </p>
+          </div>
+        </section>
+
+        <fieldset class="ck-card ck-fieldset">
+          <legend class="ck-head ck-legend">
+            <p class="eyebrow">03 — Payment</p>
+            <h2>How you will pay</h2>
+            <p>No card is taken on this site. Choose how we invoice you after the proof is approved.</p>
+          </legend>
+          <div class="pay-choice">
+            {PAYMENT_METHODS.map((method, index) => (
+              <label>
+                <input type="radio" name="payment" value={method.id} checked={index === 0} />
+                <span><strong>{method.name}</strong><small>{method.detail}</small></span>
+              </label>
+            ))}
+          </div>
+          <PayBadge />
+        </fieldset>
+
+        <section class="ck-card">
+          <div class="ck-head">
+            <p class="eyebrow">04 — Artwork and notes</p>
+            <h2>What goes on the mailer</h2>
+            <p>Optional now. You can also send artwork by email after ordering, and our team asks for anything missing before the proof.</p>
+          </div>
+          <div class="ck-grid">
+            <p class="field field-wide">
+              <label for="co-artwork">Artwork or logo</label>
+              <input type="file" id="co-artwork" name="artwork" accept=".pdf,.ai,.eps,.svg,.psd,.jpg,.jpeg,.png,.webp,.zip" />
+              <span class="hint" id="co-artwork-hint">PDF, AI, EPS, PSD, JPG, PNG or ZIP, up to 12 MB. Our <a href="/artwork-guidelines/">artwork guide</a> covers bleed and safe areas.</span>
+            </p>
+            <p class="field field-wide">
+              <label for="co-notes">Size, film, print, closure or deadline</label>
+              <textarea id="co-notes" name="notes" rows="4" maxlength="3000" placeholder="Mailer size or what it holds, film color or weight, print colors, the date you need delivery"></textarea>
+            </p>
+          </div>
+        </section>
+
+        <div class="ck-hp" aria-hidden="true">
+          <label for="co-company-website">Leave this field empty</label>
+          <input type="text" id="co-company-website" name="company_website" tabindex="-1" autocomplete="off" />
+        </div>
+        <input type="hidden" name="submitted_at" value="" />
+        <input type="hidden" name="source_url" value="" />
+        <input type="hidden" name="items" value="[]" />
+      </div>
+
+      <aside class="checkout-side">
+        <div class="ck-card">
+          <div class="ck-head">
+            <h2>Order summary</h2>
+            <p><span data-order-count>0 units</span> at {UNIT_PRICE_TEXT} per unit</p>
+          </div>
+          <table class="olines">
+            <tbody data-lines>
+              <tr><td colspan="2" class="olines-empty">Your order is empty. <a href="/poly-mailers/">Choose a poly mailer</a> to add it here.</td></tr>
+            </tbody>
+          </table>
+          <table class="osum">
+            <tbody>
+              <tr><td>Shipping</td><td class="r osum-note">Confirmed with your proof</td></tr>
+              <tr><th scope="row">Total</th><td class="r" data-grand>$0.00</td></tr>
+            </tbody>
+          </table>
+          <p class="orderbox-hint">Prices in US dollars, before shipping. {DELIVERY_LINE}</p>
+          <p class="err form-err" data-status role="status" aria-live="polite" hidden></p>
+          <button type="submit" class="btn btn-lg orderbox-btn" data-place disabled>Place order</button>
+          <TrustSeals />
+          <PayBadge />
+          <p class="orderbox-note">
+            By placing the order you agree to our <a href="/terms-and-conditions/">terms</a>, our
+            <a href="/shipping-and-delivery/">shipping and delivery</a> page and the
+            <a href="/custom-order-policy/">custom order policy</a>.
+            Questions? Call <a href={BRAND.phoneHref}>{BRAND.phoneDisplay}</a> or email
+            <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>.
+          </p>
+        </div>
+      </aside>
+    </form>
+  </article>
+  <script is:inline define:vars={{ cfg }}>window.TPM_CHECKOUT = cfg;</script>
+  <script src="/scripts/checkout.js" defer is:inline></script>
+</BaseLayout>

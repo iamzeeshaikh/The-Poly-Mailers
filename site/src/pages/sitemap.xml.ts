@@ -14,7 +14,7 @@ import type { APIRoute } from 'astro';
 import { SITE_URL } from '~/lib/site';
 
 /** Never indexable, so never in the sitemap. Mirrors the noindex on each page. */
-const EXCLUDED = new Set(['/thank-you/', '/404/']);
+const EXCLUDED = new Set(['/thank-you/', '/checkout/', '/order-confirmed/', '/404/']);
 
 /**
  * Priority tells a crawler which pages matter most when it has to choose. It is

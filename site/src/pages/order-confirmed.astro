@@ -1,0 +1,141 @@
+---
+/** Landing page after /api/order/ accepts an order. The order number and the
+ *  chosen payment method arrive in the query string; the office and the buyer
+ *  both already have the email. Noindex and absent from the sitemap. */
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { BRAND, whatsappLink } from '~/lib/site';
+import { PAYMENT_METHODS } from '~/lib/order';
+
+const path = '/order-confirmed/';
+const pay = Object.fromEntries(PAYMENT_METHODS.map((method) => [method.id, method.detail]));
+---
+<BaseLayout
+  title="Order Received | The Poly Mailers"
+  description="Your custom poly mailer order has reached The Poly Mailers. We email a free digital proof before anything runs."
+  path={path}
+  noindex
+>
+  <article class="wrap ty">
+    <div class="ty-inner">
+      <div class="ty-mark" aria-hidden="true">
+        <svg width="34" height="34" viewBox="0 0 32 32">
+          <path d="M6 16.5 13 23.5 26 9.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </div>
+
+      <h1>Thank you, your order is in</h1>
+      <p class="lede">
+        Your order is with our production team and a copy is on its way to your inbox. Keep the order
+        number below for any question about it.
+      </p>
+      <p class="order-ref-wrap" data-ref hidden>
+        <span class="order-ref-label">Your order number</span>
+        <strong class="order-ref" data-ref-value></strong>
+      </p>
+
+      <section class="ty-next">
+        <h2>What happens next</h2>
+        <ol>
+          <li>
+            <strong>We check the artwork and send a free digital proof</strong>
+            <span>If a file or a dimension is missing we ask for it first, rather than proofing around it.</span>
+          </li>
+          <li>
+            <strong>You approve the proof, or ask for changes</strong>
+            <span>Nothing runs before you approve it. Shipping cost and the production schedule are confirmed with the proof.</span>
+          </li>
+          <li>
+            <strong>Payment</strong>
+            <span data-pay>{pay.paypal}</span>
+          </li>
+          <li>
+            <strong>Production and delivery</strong>
+            <span>
+              Counts are verified by carton before dispatch. Our
+              <a href="/shipping-and-delivery/">shipping and delivery</a> page and the
+              <a href="/custom-order-policy/">custom order policy</a> cover the details.
+            </span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="ty-contact">
+        <h2>Questions about this order</h2>
+        <p>
+          Email <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>, call
+          <a href={BRAND.phoneHref}>{BRAND.phoneDisplay}</a> or
+          <a href={whatsappLink('Hi The Poly Mailers! I have just placed an order and have a question.')}>message us on WhatsApp</a>,
+          and quote your order number.
+        </p>
+        <p class="ty-actions">
+          <a class="btn" href="/poly-mailers/">Browse all poly mailers</a>
+          <a class="btn btn-ghost" href="/artwork-guidelines/">Artwork guide</a>
+        </p>
+      </section>
+    </div>
+  </article>
+  <script is:inline define:vars={{ pay }}>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var ref = params.get('ref');
+      var method = params.get('pay');
+      if (ref && /^[A-Z0-9-]{6,32}$/.test(ref)) {
+        var holder = document.querySelector('[data-ref]');
+        holder.querySelector('[data-ref-value]').textContent = ref;
+        holder.hidden = false;
+      }
+      if (method && pay[method]) document.querySelector('[data-pay]').textContent = pay[method];
+      try { localStorage.removeItem('tpm-cart'); } catch (error) { /* ignore */ }
+    })();
+  </script>
+</BaseLayout>
+
+<style>
+  .ty { padding-block: var(--sp-2xl) var(--sp-2xl); }
+  .ty-inner { max-width: 42rem; }
+  .ty-mark {
+    inline-size: 58px;
+    block-size: 58px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--success-100);
+    color: var(--success-600);
+    margin-block-end: var(--sp-m);
+  }
+  .ty h1 { margin-block-end: 0.8rem; max-width: 16ch; }
+  .ty .lede { font-size: var(--step-1); max-width: 48ch; }
+  .ty-next, .ty-contact { margin-block-start: var(--sp-xl); }
+  .ty h2 {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--fg-subtle);
+    margin-block-end: var(--sp-s);
+  }
+  .ty-next ol { counter-reset: s; list-style: none; margin: 0; padding: 0; display: grid; gap: 0.9rem; }
+  .ty-next li { counter-increment: s; position: relative; padding-inline-start: 2.2rem; display: grid; gap: 0.12rem; }
+  .ty-next li::before {
+    content: counter(s);
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0.05rem;
+    inline-size: 1.6rem;
+    block-size: 1.6rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--accent-hover);
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+  .ty-next strong { font-size: 0.98rem; font-weight: 650; }
+  .ty-next span { color: var(--fg-muted); font-size: 0.9rem; }
+  .ty-next a, .ty-contact a { color: var(--accent); }
+  .ty-contact p { color: var(--fg-muted); }
+  .ty-actions { display: flex; flex-wrap: wrap; gap: var(--sp-xs); margin-block-start: var(--sp-m); }
+  .ty-actions a.btn { color: var(--btn-fg); }
+</style>

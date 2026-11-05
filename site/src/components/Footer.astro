@@ -1,5 +1,6 @@
 ---
 import { whatsappLink, BRAND, MARKETS } from '~/lib/site';
+import PayBadge from './PayBadge.astro';
 
 const year = 2026;
 
@@ -141,10 +142,11 @@ const columns = [
       </ul>
     </div>
 
+    <PayBadge variant="footer" />
     <div class="footer-bottom">
       <p class="footer-legal">
         © {year} {BRAND.name}. Specifications, materials and pricing are confirmed
-        in writing on each quotation.
+        on each quotation.
       </p>
       <ul role="list" class="footer-policies">
         <li><a href="/privacy-policy/">Privacy policy</a></li>
