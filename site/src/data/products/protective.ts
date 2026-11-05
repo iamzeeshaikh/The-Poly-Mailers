@@ -81,7 +81,7 @@ export const protectiveProducts: ProductPage[] = [
             'Foam lining',
             'Surface scratching and light impact',
             'Light, low bulk',
-            'Jewellery, lenses, screens, polished surfaces',
+            'Jewelry, lenses, screens, polished surfaces',
           ],
           [
             'Plain film, no lining',
@@ -155,7 +155,7 @@ export const protectiveProducts: ProductPage[] = [
           {
             term: 'Packing time',
             detail:
-              'One motion instead of assemble, fill, close and tape. At volume this is a real labour saving.',
+              'One motion instead of assemble, fill, close and tape. At volume this is a real labor saving.',
           },
           {
             term: 'Moisture resistance',
@@ -172,7 +172,7 @@ export const protectiveProducts: ProductPage[] = [
       {
         kind: 'specs',
         heading: 'What to specify',
-        intro: 'Confirmed in writing on your quotation.',
+        intro: 'Confirmed on your quotation.',
         rows: [
           {
             label: 'Lining',
@@ -278,7 +278,7 @@ export const protectiveProducts: ProductPage[] = [
       problem:
         'Choosing between a film outer and a paper outer, and understanding what the lining does.',
       angle:
-        'Focuses on the outer-material decision and lining behaviour rather than on cushioning in general.',
+        'Focuses on the outer-material decision and lining behavior rather than on cushioning in general.',
       primaryKeyword: 'poly bubble mailers',
       supportingKeywords: [
         'bubble mailers poly',
@@ -302,7 +302,7 @@ export const protectiveProducts: ProductPage[] = [
       },
       {
         file: 'colored-printed-bubble-lined-mailers-arranged-fan.png',
-        alt: 'Several coloured bubble-lined mailers arranged in a fan, each with a different printed design',
+        alt: 'Several colored bubble-lined mailers arranged in a fan, each with a different printed design',
       },
     ],
     blocks: [
@@ -317,7 +317,7 @@ export const protectiveProducts: ProductPage[] = [
           ['Moisture resistance', 'Keeps rain off the contents', 'Absorbs water and softens'],
           ['Weight', 'Lighter', 'Heavier for the same size'],
           ['Tear resistance', 'Stretches before it tears', 'Tears cleanly once started'],
-          ['Print surface', 'Takes solid colour well', 'Takes detail and type more crisply'],
+          ['Print surface', 'Takes solid color well', 'Takes detail and type more crisply'],
           ['Feel', 'Smooth, contemporary', 'Textured, traditional'],
           ['Disposal route', 'Flexible plastic stream', 'Mixed material — hard to separate'],
         ],
@@ -346,7 +346,7 @@ export const protectiveProducts: ProductPage[] = [
             detail: 'Earbuds, chargers, cables and components that are light but easily damaged.',
           },
           {
-            term: 'Jewellery in boxes',
+            term: 'Jewelry in boxes',
             detail:
               'The box protects the piece, and the lining stops the box arriving crushed at the corners.',
           },
@@ -372,9 +372,9 @@ export const protectiveProducts: ProductPage[] = [
             note: 'Larger bubbles absorb bigger impacts and add bulk to the packed parcel.',
           },
           {
-            label: 'Outer film colour',
-            options: ['White', 'Black', 'Stock colour range', 'Matched colour'],
-            note: 'Colour carries across the cushioned range, so a range can stay consistent.',
+            label: 'Outer film color',
+            options: ['White', 'Black', 'Stock color range', 'Matched color'],
+            note: 'Color carries across the cushioned range, so a range can stay consistent.',
           },
           {
             label: 'Finish',
@@ -428,7 +428,7 @@ export const protectiveProducts: ProductPage[] = [
         kind: 'linked-prose',
         heading: 'Printing on a cushioned surface',
         before:
-          'The dimpled surface changes what artwork can do. Fine lines cross ridges and valleys, small type loses its edge, and a large flat colour reveals every dimple as a highlight. Designs for this format are usually simplified rather than scaled down, and the practical constraints are set out on the ',
+          'The dimpled surface changes what artwork can do. Fine lines cross ridges and valleys, small type loses its edge, and a large flat color reveals every dimple as a highlight. Designs for this format are usually simplified rather than scaled down, and the practical constraints are set out on the ',
         link: { href: '/personalized-bubble-mailers/', anchor: 'printed bubble mailer page' },
         after: ', which deals with the surface specifically rather than with protection.',
       },
@@ -506,7 +506,7 @@ export const protectiveProducts: ProductPage[] = [
       problem:
         'Artwork designed for flat film loses definition on a textured cushioned surface.',
       angle:
-        'Purely about the print surface. Protection is covered on the neighbouring pages and is not repeated here.',
+        'Purely about the print surface. Protection is covered on the neighboring pages and is not repeated here.',
       primaryKeyword: 'personalized bubble mailers',
       supportingKeywords: [
         'custom bubble mailers',
@@ -551,12 +551,12 @@ export const protectiveProducts: ProductPage[] = [
           {
             term: 'Small type loses its counters',
             detail:
-              'The enclosed spaces in letters like a, e and o close up, and text below a certain size becomes a grey band.',
+              'The enclosed spaces in letters like a, e and o close up, and text below a certain size becomes a gray band.',
           },
           {
             term: 'Large solids look uneven',
             detail:
-              'A flat area of colour reveals the dimple pattern as highlights and shadows, which reads as inconsistent printing even when it is not.',
+              'A flat area of color reveals the dimple pattern as highlights and shadows, which reads as inconsistent printing even when it is not.',
           },
           {
             term: 'Gradients and photographs soften',
@@ -587,9 +587,9 @@ export const protectiveProducts: ProductPage[] = [
               'Solid silhouettes and heavy marks read cleanly. Detailed illustration and fine ornament do not.',
           },
           {
-            title: 'Use fewer colours, with strong contrast',
+            title: 'Use fewer colors, with strong contrast',
             detail:
-              'One or two colours with real separation from the base outperforms a subtle multi-colour palette.',
+              'One or two colors with real separation from the base outperforms a subtle multi-color palette.',
           },
           {
             title: 'Plan a flat panel for the label',
@@ -626,7 +626,7 @@ export const protectiveProducts: ProductPage[] = [
         paragraphs: [
           'The constraints are real, and the format is still one of the most effective branded parcels available. A printed cushioned mailer arrives feeling substantial, and the texture that fights fine artwork is exactly what makes the parcel feel considered in the hand.',
           'It also reaches a customer at a moment of anticipation. A cushioned parcel signals that something worth protecting is inside, and a printed one turns that signal into recognition of who sent it.',
-          'The brands that get the most from it treat the bag as a poster rather than a page: one idea, large, in strong colour, with everything detailed moved to a card inside.',
+          'The brands that get the most from it treat the bag as a poster rather than a page: one idea, large, in strong color, with everything detailed moved to a card inside.',
         ],
       },
       {
@@ -640,9 +640,9 @@ export const protectiveProducts: ProductPage[] = [
             note: 'Full coverage on a textured surface shows the dimple pattern; many brands prefer partial.',
           },
           {
-            label: 'Colours',
-            options: ['One colour', 'Two colours', 'Full colour'],
-            note: 'One or two strong colours generally outperform full colour on this surface.',
+            label: 'Colors',
+            options: ['One color', 'Two colors', 'Full color'],
+            note: 'One or two strong colors generally outperform full color on this surface.',
           },
           {
             label: 'Sides',
@@ -650,9 +650,9 @@ export const protectiveProducts: ProductPage[] = [
             note: 'The reverse suits a single large mark rather than information.',
           },
           {
-            label: 'Base colour',
-            options: ['White', 'Black', 'Stock colour', 'Matched colour'],
-            note: 'A coloured base plus one strong ink is the most reliable combination here.',
+            label: 'Base color',
+            options: ['White', 'Black', 'Stock color', 'Matched color'],
+            note: 'A colored base plus one strong ink is the most reliable combination here.',
           },
           {
             label: 'Label panel',
@@ -672,8 +672,8 @@ export const protectiveProducts: ProductPage[] = [
     ],
     faqs: [
       {
-        q: 'Can you print full colour on bubble mailers?',
-        a: 'You can, and it rarely gives the result brands expect. The dimpled surface breaks up continuous tone and reveals the texture in large solids. One or two strong colours on a coloured base produce a cleaner, more deliberate result.',
+        q: 'Can you print full color on bubble mailers?',
+        a: 'You can, and it rarely gives the result brands expect. The dimpled surface breaks up continuous tone and reveals the texture in large solids. One or two strong colors on a colored base produce a cleaner, more deliberate result.',
       },
       {
         q: 'What is the smallest type size that will read?',
@@ -701,7 +701,7 @@ export const protectiveProducts: ProductPage[] = [
       },
       {
         href: '/design-your-poly-mailer/',
-        label: 'Design tool',
+        label: 'Design Your Poly Mailers',
         reason: 'Position artwork and see approximate placement before you commit.',
       },
     ],
@@ -735,7 +735,7 @@ export const protectiveProducts: ProductPage[] = [
     plan: {
       intent: 'Understand or buy self-seal poly mailer closures.',
       audience:
-        'Operations managers optimising packing speed, and retailers handling returns at volume.',
+        'Operations managers optimizing packing speed, and retailers handling returns at volume.',
       problem:
         'Choosing a closure that suits both the bench and the returns process.',
       angle:

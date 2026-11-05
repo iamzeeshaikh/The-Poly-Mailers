@@ -17,12 +17,12 @@ export const printProducts: ProductPage[] = [
     h1: 'Custom Poly Mailers',
     title: 'Custom Poly Mailers | Printed With Your Artwork',
     description:
-      'Custom printed poly mailers made to your artwork, size and colour. What a printed run involves, what to prepare, and how proofing works.',
+      'Custom printed poly mailers made to your artwork, size and color. What a printed run involves, what to prepare, and how proofing works.',
     summary:
       'A printed run to your artwork — the page for buyers who have decided to print and want to know what happens next.',
     intro: [
-      'A custom poly mailer is a manufacturing order, not a purchase. You are commissioning a run of film to your size, your colour and your artwork, and everything that follows depends on decisions made before anything is printed.',
-      'Most of the friction in a first order comes from those decisions being made in the wrong sequence — artwork approved before the size is settled, colour chosen from a screen, coverage picked without knowing what it does to price. This page puts them in the order that works.',
+      'A custom poly mailer is a manufacturing order, not a purchase. You are commissioning a run of film to your size, your color and your artwork, and everything that follows depends on decisions made before anything is printed.',
+      'Most of the friction in a first order comes from those decisions being made in the wrong sequence — artwork approved before the size is settled, color chosen from a screen, coverage picked without knowing what it does to price. This page puts them in the order that works.',
       'It is written for the buyer who has decided to print. If you are still weighing whether printing is worth it at your volume, the case for staying on plain stock is worth reading first.',
     ],
     plan: {
@@ -75,9 +75,9 @@ export const printProducts: ProductPage[] = [
               'Pack a real order into a physical sample before artwork exists. A size change after artwork is approved means redrawing the file.',
           },
           {
-            title: 'Choose the base colour and finish',
+            title: 'Choose the base color and finish',
             detail:
-              'The base narrows your ink options and the finish changes how the colour reads. Both come before design, not after.',
+              'The base narrows your ink options and the finish changes how the color reads. Both come before design, not after.',
           },
           {
             title: 'Decide coverage and sides',
@@ -87,12 +87,12 @@ export const printProducts: ProductPage[] = [
           {
             title: 'Prepare artwork to specification',
             detail:
-              'Vector where possible, correct colour mode, bleed allowance, fonts outlined. The file requirements are set out in full on the artwork page.',
+              'Vector where possible, correct color mode, bleed allowance, fonts outlined. The file requirements are set out in full on the artwork page.',
           },
           {
             title: 'Approve a proof',
             detail:
-              'We return a proof showing placement, scale and colour on your chosen base. Nothing runs until you approve it in writing.',
+              'We return a proof showing placement, scale and color on your chosen base. Nothing runs until you approve it by email.',
           },
           {
             title: 'Production and checks',
@@ -105,7 +105,7 @@ export const printProducts: ProductPage[] = [
         kind: 'bullets',
         heading: 'What actually changes the price',
         intro:
-          'Buyers usually assume colour count drives cost. It matters, but three other things matter more.',
+          'Buyers usually assume color count drives cost. It matters, but three other things matter more.',
         items: [
           {
             term: 'Quantity',
@@ -115,7 +115,7 @@ export const printProducts: ProductPage[] = [
           {
             term: 'Coverage',
             detail:
-              'A logo uses a fraction of the ink of a full-bleed design. Coverage moves cost more than the number of colours in the artwork.',
+              'A logo uses a fraction of the ink of a full-bleed design. Coverage moves cost more than the number of colors in the artwork.',
           },
           {
             term: 'Sides printed',
@@ -123,9 +123,9 @@ export const printProducts: ProductPage[] = [
               'A second side adds a production stage. It is worth it when the reverse carries returns or disposal information; less so for decoration alone.',
           },
           {
-            term: 'Colour matching',
+            term: 'Color matching',
             detail:
-              'A stock base with stock inks is cheaper than a matched brand colour, which needs a reference and a proof round of its own.',
+              'A stock base with stock inks is cheaper than a matched brand color, which needs a reference and a proof round of its own.',
           },
           {
             term: 'Interior printing',
@@ -139,16 +139,16 @@ export const printProducts: ProductPage[] = [
         heading: 'Designing for a bag that will be handled',
         standfirst: 'A mailer is not a flat sheet, and it is not seen flat.',
         paragraphs: [
-          'By the time a customer sees your artwork, the bag has been packed, folded at the flap, sealed, labelled, stacked and carried. Designs that ignore that arrive looking wrong even when they printed perfectly.',
+          'By the time a customer sees your artwork, the bag has been packed, folded at the flap, sealed, labeled, stacked and carried. Designs that ignore that arrive looking wrong even when they printed perfectly.',
           'Keep important elements away from the flap, which folds over and disappears. Keep them away from the side welds, which pinch. Leave a deliberate clear zone for the shipping label rather than hoping it lands somewhere kind.',
-          'And design for the packed shape, not the flat one. Artwork that runs edge to edge on a flat bag distorts across a full parcel, so a centred mark with breathing room around it survives packing better than a tight full-bleed composition.',
+          'And design for the packed shape, not the flat one. Artwork that runs edge to edge on a flat bag distorts across a full parcel, so a centered mark with breathing room around it survives packing better than a tight full-bleed composition.',
         ],
       },
       {
         kind: 'specs',
         heading: 'The specification we quote against',
         intro:
-          'These are your decisions. The final specification, including everything not listed here, is confirmed in writing on your quotation.',
+          'These are your decisions. The final specification, including everything not listed here, is confirmed on your quotation.',
         rows: [
           {
             label: 'Size',
@@ -156,9 +156,9 @@ export const printProducts: ProductPage[] = [
             note: 'Custom dimensions are quoted against your packed product measurements.',
           },
           {
-            label: 'Base colour',
-            options: ['Stock colour', 'Matched to a reference'],
-            note: 'The base determines which ink colours will read; check the colour pages for contrast guidance.',
+            label: 'Base color',
+            options: ['Stock color', 'Matched to a reference'],
+            note: 'The base determines which ink colors will read; check the color pages for contrast guidance.',
           },
           {
             label: 'Print coverage',
@@ -173,7 +173,7 @@ export const printProducts: ProductPage[] = [
           {
             label: 'Finish',
             options: ['Gloss', 'Matte'],
-            note: 'Finish changes how printed colour reads as much as the ink does.',
+            note: 'Finish changes how printed color reads as much as the ink does.',
           },
           {
             label: 'Closure',
@@ -191,15 +191,15 @@ export const printProducts: ProductPage[] = [
         kind: 'linked-prose',
         heading: 'Seeing it before you commit',
         before:
-          'A digital proof shows placement and scale reliably; it shows colour approximately, because a screen is backlit and film is not. Where colour accuracy is commercially important, ask for a physical check rather than approving on a monitor. You can also assemble the whole specification visually first, choosing size, colour, finish and print coverage and positioning your own artwork, using the ',
-        link: { href: '/design-your-poly-mailer/', anchor: 'mailer configuration tool' },
+          'A digital proof shows placement and scale reliably; it shows color approximately, because a screen is backlit and film is not. Where color accuracy is commercially important, ask for a physical check rather than approving on a monitor. You can also assemble the whole specification visually first, choosing size, color, finish and print coverage and positioning your own artwork, using the ',
+        link: { href: '/design-your-poly-mailer/', anchor: 'Design Your Poly Mailers page' },
         after: ' and submitting the result with your quote request.',
       },
       {
         kind: 'prose',
         heading: 'Quality control on a printed run',
         paragraphs: [
-          'Printed runs are checked against your approved proof rather than against the original file, because the proof is what you signed off. We check colour and registration at the start, through and at the end of the run.',
+          'Printed runs are checked against your approved proof rather than against the original file, because the proof is what you signed off. We check color and registration at the start, through and at the end of the run.',
           'Seals are checked along both welds, adhesive release is checked on samples pulled from the run, and counts are verified by carton before dispatch. Where a run cannot meet the approved proof, we stop and speak to you rather than shipping something approximate.',
         ],
       },
@@ -207,7 +207,7 @@ export const printProducts: ProductPage[] = [
     faqs: [
       {
         q: 'What file format should I send for custom printing?',
-        a: 'Vector artwork is the reliable choice — AI, EPS, PDF or SVG with fonts outlined. High-resolution PNG or JPG can work for photographic elements. The full file requirements, including bleed and colour mode, are set out on the artwork guidelines page.',
+        a: 'Vector artwork is the reliable choice — AI, EPS, PDF or SVG with fonts outlined. High-resolution PNG or JPG can work for photographic elements. The full file requirements, including bleed and color mode, are set out on the artwork guidelines page.',
       },
       {
         q: 'Can I print on both sides of a poly mailer?',
@@ -218,8 +218,8 @@ export const printProducts: ProductPage[] = [
         a: 'Artwork intended to run to the edge needs a bleed allowance, because film moves fractionally on press. Without it you get an uneven white sliver on one side across part of the run. We flag this at proof stage if the file does not allow for it.',
       },
       {
-        q: 'Will my brand colour print exactly?',
-        a: 'We quote a match against a reference you supply and proof it before running. Film is not paper, and some colours cannot be reached on some films. Where that is the case we tell you before you order rather than delivering an approximation.',
+        q: 'Will my brand color print exactly?',
+        a: 'We quote a match against a reference you supply and proof it before running. Film is not paper, and some colors cannot be reached on some films. Where that is the case we tell you before you order rather than delivering an approximation.',
       },
       {
         q: 'Can I order a small first run to test the design?',
@@ -324,7 +324,7 @@ export const printProducts: ProductPage[] = [
             'Branding lives on inserts, stickers or the product itself',
           ],
           [
-            'Stock colour instead of matched',
+            'Stock color instead of matched',
             'Exact tone control',
             'The parcel is not part of the customer experience',
           ],
@@ -366,7 +366,7 @@ export const printProducts: ProductPage[] = [
               'If the inserts and the product packaging carry the identity, the outer bag does not need to.',
           },
           {
-            term: 'Marketplace fulfilment',
+            term: 'Marketplace fulfillment',
             detail:
               'Where the platform controls presentation, a plain bag is often the requirement rather than a compromise.',
           },
@@ -418,14 +418,14 @@ export const printProducts: ProductPage[] = [
             note: 'The one saving worth reconsidering if there is anything rigid in your parcels.',
           },
           {
-            label: 'Colour',
-            options: ['White', 'Grey', 'Stock colour range'],
-            note: 'Stock colours carry little premium; a matched colour is where cost climbs.',
+            label: 'Color',
+            options: ['White', 'Gray', 'Stock color range'],
+            note: 'Stock colors carry little premium; a matched color is where cost climbs.',
           },
           {
             label: 'Print',
-            options: ['Unprinted', 'Single-colour logo'],
-            note: 'A one-colour mark is the cheapest print available and still reads as intentional.',
+            options: ['Unprinted', 'Single-color logo'],
+            note: 'A one-color mark is the cheapest print available and still reads as intentional.',
           },
           {
             label: 'Closure',
@@ -459,11 +459,11 @@ export const printProducts: ProductPage[] = [
       },
       {
         q: 'Can economy mailers still be printed?',
-        a: 'Yes. A single-colour logo is the cheapest print available and keeps most of the cost saving while still making the parcel look deliberate.',
+        a: 'Yes. A single-color logo is the cheapest print available and keeps most of the cost saving while still making the parcel look deliberate.',
       },
       {
         q: 'What is the difference between economy and standard mailers?',
-        a: 'Mainly film weight, and after that the closure and colour options. The construction and the sizes are the same; what changes is how much stress the bag will take before it fails.',
+        a: 'Mainly film weight, and after that the closure and color options. The construction and the sizes are the same; what changes is how much stress the bag will take before it fails.',
       },
     ],
     related: [
@@ -480,7 +480,7 @@ export const printProducts: ProductPage[] = [
       {
         href: '/white-poly-mailers/',
         label: 'White Poly Mailers',
-        reason: 'The lowest-cost base colour, in more detail.',
+        reason: 'The lowest-cost base color, in more detail.',
       },
     ],
     cta: {
@@ -547,7 +547,7 @@ export const printProducts: ProductPage[] = [
         kind: 'compare',
         heading: 'Frosted zip bag or poly mailer',
         intro:
-          'They look similar in a catalogue and behave completely differently in an operation.',
+          'They look similar in a catalog and behave completely differently in an operation.',
         caption: 'What separates a frosted garment bag from a poly mailer.',
         columns: ['', 'Frosted zip bag', 'Poly mailer'],
         rows: [
@@ -596,14 +596,14 @@ export const printProducts: ProductPage[] = [
         heading: 'Printing on a translucent surface',
         paragraphs: [
           'Frosted film is not white film with a haze over it. It is translucent, so ink sits on a surface that light passes through, and the contents behind the print affect how it reads.',
-          'Dark inks work reliably because they hold their edge whatever is behind them. White ink can look either crisp or washed out depending on the garment inside, which makes it a risk on a bag whose contents vary. Large solid areas of any colour reduce the transparency that is the reason for choosing the bag in the first place.',
+          'Dark inks work reliably because they hold their edge whatever is behind them. White ink can look either crisp or washed out depending on the garment inside, which makes it a risk on a bag whose contents vary. Large solid areas of any color reduce the transparency that is the reason for choosing the bag in the first place.',
           'The layouts that work most reliably are restrained: a mark, a care-symbol row, a size marker. If you want a heavily printed bag, an opaque film will serve you better and cost less.',
         ],
       },
       {
         kind: 'specs',
         heading: 'What can be specified',
-        intro: 'Confirmed in writing on your quotation.',
+        intro: 'Confirmed on your quotation.',
         rows: [
           {
             label: 'Closure',

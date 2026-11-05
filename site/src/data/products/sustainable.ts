@@ -49,7 +49,7 @@ export const sustainableProducts: ProductPage[] = [
     images: [
       {
         file: 'grey-mailer-printed-with-recycled-content-artwork.jpg',
-        alt: 'Grey mailer packed and sealed, printed along one edge with a recycled-content message',
+        alt: 'Gray mailer packed and sealed, printed along one edge with a recycled-content message',
       },
       {
         file: 'white-mailer-printed-with-recycled-materials-artwork.jpg',
@@ -93,7 +93,7 @@ export const sustainableProducts: ProductPage[] = [
         paragraphs: [
           'Recycled content in poly film varies with the feedstock available at the time of production. The proportion achievable in one batch is not necessarily achievable in the next, and it differs between films and between the markets we supply.',
           'Publishing a single figure would mean stating something we could not guarantee for your specific order, in a category where regulators in every market we serve treat unsupported environmental claims seriously.',
-          'So we do it the other way round. You tell us what you need to be able to say. We confirm what the film available for your order can actually support, in writing, with whatever documentation the supplier of that film provides. If we cannot support the claim you need, we say so before you order.',
+          'So we do it the other way round. You tell us what you need to be able to say. We confirm what the film available for your order can actually support, by email, with whatever documentation the supplier of that film provides. If we cannot support the claim you need, we say so before you order.',
         ],
       },
       {
@@ -108,7 +108,7 @@ export const sustainableProducts: ProductPage[] = [
               'Post-consumer, post-industrial or blended. If a supplier is vague at this question, the rest of the answers will be vague too.',
           },
           {
-            title: 'Ask for the proportion in writing, for your order',
+            title: 'Ask for the proportion for your order, confirmed by email',
             detail:
               'Not a range on a website. A figure tied to the film being quoted, on the quotation itself.',
           },
@@ -134,7 +134,7 @@ export const sustainableProducts: ProductPage[] = [
         heading: 'Recycled content and recyclability are not the same thing',
         paragraphs: [
           'These two get conflated constantly, including by suppliers. Recycled content is about where the material came from. Recyclability is about whether a customer can get it collected and reprocessed where they live.',
-          'A mailer can have high recycled content and still be difficult for a household to recycle, because flexible plastic film is not accepted in most household kerbside collections. In several of the markets we serve it is instead collected at supermarket or retail drop-off points, and availability varies by area.',
+          'A mailer can have high recycled content and still be difficult for a household to recycle, because flexible plastic film is not accepted in most household curbside collections. In several of the markets we serve it is instead collected at supermarket or retail drop-off points, and availability varies by area.',
           'If recyclability is what your customers actually care about, the honest thing to print is where the film can be taken, not a general symbol that implies a collection which may not exist for them.',
         ],
       },
@@ -142,7 +142,7 @@ export const sustainableProducts: ProductPage[] = [
         kind: 'specs',
         heading: 'What we confirm on your quotation',
         intro:
-          'These are the lines we will put in writing. Anything not listed here is something we will not assert.',
+          'These are the lines we will confirm for your order. Anything not listed here is something we will not assert.',
         rows: [
           {
             label: 'Feedstock type',
@@ -160,8 +160,8 @@ export const sustainableProducts: ProductPage[] = [
             note: 'Recycled-content films can behave differently, so specification is checked against your contents.',
           },
           {
-            label: 'Colour',
-            options: ['Natural or grey', 'Stock colour', 'Matched colour where achievable'],
+            label: 'Color',
+            options: ['Natural or gray', 'Stock color', 'Matched color where achievable'],
             note: 'Recycled feedstock limits how pale or how precisely matched a film can be.',
           },
           {
@@ -186,11 +186,11 @@ export const sustainableProducts: ProductPage[] = [
     faqs: [
       {
         q: 'What percentage of recycled content is in your mailers?',
-        a: 'We do not publish a figure, because the content achievable varies by film, by batch and by market. We confirm the feedstock type and the proportion in writing on your quotation for the specific film being supplied, with the supporting documentation available before you order.',
+        a: 'We do not publish a figure, because the content achievable varies by film, by batch and by market. We confirm the feedstock type and the proportion on your quotation for the specific film being supplied, with the supporting documentation available before you order.',
       },
       {
         q: 'Are recycled poly mailers recyclable after use?',
-        a: 'Recycled content and recyclability are separate questions. Flexible film is generally not accepted in household kerbside collections in the markets we serve, and is instead collected at store drop-off points where those exist. Availability varies by area, so check what applies where your customers live before printing any disposal instruction.',
+        a: 'Recycled content and recyclability are separate questions. Flexible film is generally not accepted in household curbside collections in the markets we serve, and is instead collected at store drop-off points where those exist. Availability varies by area, so check what applies where your customers live before printing any disposal instruction.',
       },
       {
         q: 'Is recycled film weaker than virgin film?',
@@ -224,7 +224,7 @@ export const sustainableProducts: ProductPage[] = [
     ],
     cta: {
       heading: 'Ask about recycled-content film',
-      body: 'Tell us what you need to be able to claim. We will confirm what the available film supports, in writing, with the documentation to back it.',
+      body: 'Tell us what you need to be able to claim. We will confirm what the available film supports, by email, with the documentation to back it.',
       buttonLabel: 'Request recycled film details',
     },
     whatsapp:
@@ -246,7 +246,7 @@ export const sustainableProducts: ProductPage[] = [
       'An end-of-life route that only works if the route exists — what to check before you promise it to customers.',
     intro: [
       'Compostable describes a disposal route, not a property of a bag sitting in a carton. A compostable mailer only composts if it reaches a process that can break it down, and whether that process is available to your customer is the question that decides whether the claim is worth anything.',
-      'This is where most compostable packaging programmes go wrong. A brand buys the material, prints "compostable" on it, and the bag goes into a general waste bin because the customer had nowhere else to put it. The environmental benefit does not happen, and the brand has made a claim it cannot support.',
+      'This is where most compostable packaging programs go wrong. A brand buys the material, prints "compostable" on it, and the bag goes into a general waste bin because the customer had nowhere else to put it. The environmental benefit does not happen, and the brand has made a claim it cannot support.',
       'We can quote compostable-material mailers. Before you order them, this page sets out what has to be true for the choice to do what you want it to do.',
     ],
     plan: {
@@ -290,9 +290,9 @@ export const sustainableProducts: ProductPage[] = [
       },
       {
         kind: 'steps',
-        heading: 'Before you commit to a compostable programme',
+        heading: 'Before you commit to a compostable program',
         intro:
-          'Work through these in order. If you fail at step two, the material choice will not save the programme.',
+          'Work through these in order. If you fail at step two, the material choice will not save the program.',
         steps: [
           {
             title: 'Find out what your customers can actually access',
@@ -326,7 +326,7 @@ export const sustainableProducts: ProductPage[] = [
         heading: 'Compostable against the alternatives',
         intro:
           'Set against the other two routes, compostable has the strongest story and the hardest execution.',
-        caption: 'How the three routes differ on the questions that decide a programme.',
+        caption: 'How the three routes differ on the questions that decide a program.',
         columns: ['', 'Compostable', 'Recycled content', 'Conventional film'],
         rows: [
           ['Question it answers', 'Where does it go after use', 'What was it made from', 'Neither'],
@@ -354,9 +354,9 @@ export const sustainableProducts: ProductPage[] = [
               'Heat and humidity affect these films more than conventional polyethylene. Cool, dry and dark matters more here.',
           },
           {
-            term: 'Print behaviour',
+            term: 'Print behavior',
             detail:
-              'Ink adhesion and colour can differ from conventional film, so proof on the actual material rather than on a substitute.',
+              'Ink adhesion and color can differ from conventional film, so proof on the actual material rather than on a substitute.',
           },
           {
             term: 'Seal and strength characteristics',
@@ -415,7 +415,7 @@ export const sustainableProducts: ProductPage[] = [
     faqs: [
       {
         q: 'Are your compostable mailers home compostable or industrially compostable?',
-        a: 'We do not state either, because we were not supplied documentation to support a claim in either direction. We confirm what the supplier of the specific film can evidence for your order, in writing, before you commit.',
+        a: 'We do not state either, because we were not supplied documentation to support a claim in either direction. We confirm what the supplier of the specific film can evidence for your order, by email, before you commit.',
       },
       {
         q: 'How long does a compostable mailer take to break down?',
@@ -427,7 +427,7 @@ export const sustainableProducts: ProductPage[] = [
       },
       {
         q: 'Can compostable mailers be printed?',
-        a: 'Yes, and we proof on the actual material because ink adhesion and colour can differ from conventional film. We will not print certification marks or environmental claims without documentation supporting them.',
+        a: 'Yes, and we proof on the actual material because ink adhesion and color can differ from conventional film. We will not print certification marks or environmental claims without documentation supporting them.',
       },
       {
         q: 'Do compostable mailers have a shelf life?',
@@ -438,7 +438,7 @@ export const sustainableProducts: ProductPage[] = [
       {
         href: '/biodegradable-poly-mailers/',
         label: 'Biodegradable Poly Mailers',
-        reason: 'Why the neighbouring term carries more claim risk than this one.',
+        reason: 'Why the neighboring term carries more claim risk than this one.',
       },
       {
         href: '/recycled-poly-mailers/',
@@ -452,7 +452,7 @@ export const sustainableProducts: ProductPage[] = [
       },
     ],
     cta: {
-      heading: 'Talk through a compostable programme',
+      heading: 'Talk through a compostable program',
       body: 'Tell us which markets you ship to and what you want to be able to say. We will tell you what can be evidenced before anything is quoted.',
       buttonLabel: 'Ask about compostable material',
     },
@@ -485,7 +485,7 @@ export const sustainableProducts: ProductPage[] = [
       problem:
         'The term is undefined without conditions, and printing it unqualified creates regulatory exposure.',
       angle:
-        'Claim risk and how to specify without exposure — a subject neither of the neighbouring pages covers.',
+        'Claim risk and how to specify without exposure — a subject neither of the neighboring pages covers.',
       primaryKeyword: 'biodegradable poly mailers',
       supportingKeywords: [
         'biodegradable mailers',
@@ -550,7 +550,7 @@ export const sustainableProducts: ProductPage[] = [
         standfirst: 'We were supplied no documentation, so we make no claim.',
         paragraphs: [
           'We publish no degradation timescale, no standard reference, no certification mark and no comparison against conventional film on this page. Not because the information is commercially sensitive, but because it was not supplied to us and we will not invent it.',
-          'If you need to make a degradation claim, we will go to the supplier of the specific film for your order and ask the four questions above. You will get what they can evidence, in writing, before you commit. If the answer is that nothing is documented, you will get that answer too.',
+          'If you need to make a degradation claim, we will go to the supplier of the specific film for your order and ask the four questions above. You will get what they can evidence, by email, before you commit. If the answer is that nothing is documented, you will get that answer too.',
           'That is a less appealing position than a page full of green symbols. It is also the only one that leaves you able to defend what you print.',
         ],
       },
@@ -585,7 +585,7 @@ export const sustainableProducts: ProductPage[] = [
         kind: 'specs',
         heading: 'How we quote this material',
         intro:
-          'The specification is the same shape as any other order. What differs is what we will put in writing about the material.',
+          'The specification is the same shape as any other order. What differs is what we will confirm about the material.',
         rows: [
           {
             label: 'Material description',

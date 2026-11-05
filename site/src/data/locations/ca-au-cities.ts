@@ -33,7 +33,7 @@ export const caAuCities: readonly LocationPage[] = [
     sectors: [
       { name: 'Ecommerce selling into the US', note: 'Own-channel brands with a customer base on both sides of the border.' },
       { name: 'Fashion and apparel', note: 'A substantial base selling direct, much of it cross-border.' },
-      { name: 'Distribution and fulfilment', note: 'Operations serving both markets from one location.' },
+      { name: 'Distribution and fulfillment', note: 'Operations serving both markets from one location.' },
     ],
     recommended: [
       { slug: '10x13-poly-mailers', why: 'The general-purpose format for cross-border apparel and small goods.' },
@@ -49,7 +49,7 @@ export const caAuCities: readonly LocationPage[] = [
           'Four things, all of which the packaging has to accommodate.',
         items: [
           { term: 'Documentation that must stay attached', detail: 'A pouch or label that lifts is a customs problem rather than a cosmetic one, and a flexible bag is a harder surface to attach to than a carton.' },
-          { term: 'The possibility of inspection', detail: 'A parcel opened by an authority should still arrive intact, which favours a resealable closure over a single-use one.' },
+          { term: 'The possibility of inspection', detail: 'A parcel opened by an authority should still arrive intact, which favors a resealable closure over a single-use one.' },
           { term: 'More custody changes', detail: 'Each transfer is another handling event, and another test of a seal that was only partially pressed.' },
           { term: 'Longer dwell time', detail: 'Parcels can sit at a border facility, which extends exposure to whatever conditions are there.' },
         ],
@@ -67,7 +67,7 @@ export const caAuCities: readonly LocationPage[] = [
         kind: 'linked-prose',
         heading: 'Ordering packaging across a border',
         before:
-          'The same considerations apply to the packaging order itself. Documentation, charges and delivery arrangements are confirmed in writing on your quotation rather than assumed, and they differ by destination and by shipping arrangement. What to settle before placing an order into a market you have not ordered into before is set out in the ',
+          'The same considerations apply to the packaging order itself. Documentation, charges and delivery arrangements are confirmed on your quotation rather than assumed, and they differ by destination and by shipping arrangement. What to settle before placing an order into a market you have not ordered into before is set out in the ',
         link: { href: '/resources/international-ordering-guide/', anchor: 'international ordering guide' },
         after: '.',
       },
@@ -83,7 +83,7 @@ export const caAuCities: readonly LocationPage[] = [
       },
       {
         q: 'Do you ship packaging orders to Canada?',
-        a: 'Yes. Orders are produced to your specification and shipped to your Canadian address, with documentation, charges and arrangements confirmed in writing on the quotation rather than assumed.',
+        a: 'Yes. Orders are produced to your specification and shipped to your Canadian address, with documentation, charges and arrangements confirmed on the quotation rather than assumed.',
       },
     ],
     related: [
@@ -119,7 +119,7 @@ export const caAuCities: readonly LocationPage[] = [
     primaryKeyword: 'poly mailers vancouver',
     supportingKeywords: ['plastic packaging regulation canada', 'shipping bags vancouver', 'sustainable mailers canada'],
     sectors: [
-      { name: 'Direct-to-consumer brands', note: 'Businesses making customer-facing sustainability commitments in a market that scrutinises them.' },
+      { name: 'Direct-to-consumer brands', note: 'Businesses making customer-facing sustainability commitments in a market that scrutinizes them.' },
       { name: 'Outdoor and technical goods', note: 'A strong regional cluster with environmentally engaged customers.' },
       { name: 'Food and speciality retail', note: 'Categories where packaging regulation is most active and most specific.' },
     ],
@@ -156,7 +156,7 @@ export const caAuCities: readonly LocationPage[] = [
         kind: 'linked-prose',
         heading: 'Recyclability in practice',
         before:
-          'Whatever the regulatory position, the practical question your customers face is where a mailer can actually be taken. Flexible film is generally not accepted in household kerbside collection across the markets we serve, and is instead collected at store drop-off points where those exist, with availability varying by area. Printing an instruction that works where your customers live is more useful than a symbol implying a collection they cannot reach, and the distinctions behind that are set out in the ',
+          'Whatever the regulatory position, the practical question your customers face is where a mailer can actually be taken. Flexible film is generally not accepted in household curbside collection across the markets we serve, and is instead collected at store drop-off points where those exist, with availability varying by area. Printing an instruction that works where your customers live is more useful than a symbol implying a collection they cannot reach, and the distinctions behind that are set out in the ',
         link: { href: '/resources/sustainable-mailer-terminology-guide/', anchor: 'terminology guide' },
         after: '.',
       },
@@ -172,7 +172,7 @@ export const caAuCities: readonly LocationPage[] = [
       },
       {
         q: 'Are poly mailers recyclable in Canada?',
-        a: 'Flexible film is generally not accepted kerbside and is instead collected at store drop-off points where those exist, with availability varying by area. Check what applies where your customers live before printing any disposal instruction.',
+        a: 'Flexible film is generally not accepted curbside and is instead collected at store drop-off points where those exist, with availability varying by area. Check what applies where your customers live before printing any disposal instruction.',
       },
     ],
     related: [
@@ -289,8 +289,8 @@ export const caAuCities: readonly LocationPage[] = [
     h1: 'Poly Mailers for Calgary Businesses',
     title: 'Poly Mailers Calgary | Packaging in Deep Cold',
     description:
-      'Poly mailers for Calgary businesses — how sustained cold changes film behaviour and adhesive performance, and what to do about it.',
-    summary: 'How sustained cold changes film behaviour and adhesive performance.',
+      'Poly mailers for Calgary businesses — how sustained cold changes film behavior and adhesive performance, and what to do about it.',
+    summary: 'How sustained cold changes film behavior and adhesive performance.',
     intro: [
       'Cold does two things to a poly mailer, and only one of them is widely understood. The film becomes less flexible, which is the obvious effect. The adhesive bonds less readily, which is the one that actually causes failures.',
       'In a climate with sustained deep cold rather than occasional frost, both effects are present for months rather than days, and packaging practice has to account for them.',
@@ -334,7 +334,7 @@ export const caAuCities: readonly LocationPage[] = [
         kind: 'linked-prose',
         heading: 'Storage between seasons',
         before:
-          'Cold storage does not damage packaging in the way heat does — the adhesive is affected while it is cold rather than permanently degraded, and it recovers as it warms. That means the sensible approach is about handling rather than about avoiding cold storage entirely: keep stock somewhere it can be brought inside ahead of use. The wider material behaviour is set out on the ',
+          'Cold storage does not damage packaging in the way heat does — the adhesive is affected while it is cold rather than permanently degraded, and it recovers as it warms. That means the sensible approach is about handling rather than about avoiding cold storage entirely: keep stock somewhere it can be brought inside ahead of use. The wider material behavior is set out on the ',
         link: { href: '/materials/', anchor: 'materials page' },
         after: '.',
       },
@@ -387,7 +387,7 @@ export const caAuCities: readonly LocationPage[] = [
     supportingKeywords: ['national shipping canada', 'shipping bags ottawa', 'remote delivery packaging'],
     sectors: [
       { name: 'National distribution', note: 'Operations serving the whole country from a single eastern location.' },
-      { name: 'Institutional and organisational supply', note: 'Membership mailings and document distribution across a wide geography.' },
+      { name: 'Institutional and organizational supply', note: 'Membership mailings and document distribution across a wide geography.' },
       { name: 'Ecommerce', note: 'Own-channel brands with customers spread across every region.' },
     ],
     recommended: [
@@ -444,7 +444,7 @@ export const caAuCities: readonly LocationPage[] = [
       },
       {
         q: 'Do you ship packaging orders across Canada?',
-        a: 'Yes. Orders are produced to your specification and shipped to your address, with the arrangements and any documentation confirmed in writing on the quotation.',
+        a: 'Yes. Orders are produced to your specification and shipped to your address, with the arrangements and any documentation confirmed on the quotation.',
       },
     ],
     related: [
@@ -482,7 +482,7 @@ export const caAuCities: readonly LocationPage[] = [
     sectors: [
       { name: 'Ecommerce and direct selling', note: 'The largest concentration of online retail in the country.' },
       { name: 'Fashion and apparel', note: 'A substantial design and retail base selling nationally and internationally.' },
-      { name: 'Fulfilment and distribution', note: 'Operations serving the east coast and beyond from one location.' },
+      { name: 'Fulfillment and distribution', note: 'Operations serving the east coast and beyond from one location.' },
     ],
     recommended: [
       { slug: '10x13-poly-mailers', why: 'A single standard is easier to forecast and hold than a range.' },
@@ -508,7 +508,7 @@ export const caAuCities: readonly LocationPage[] = [
         kind: 'bullets',
         heading: 'Why holding more makes sense here',
         intro:
-          'The usual advice about minimising stock assumes a fast top-up. That assumption is weaker in this market.',
+          'The usual advice about minimizing stock assumes a fast top-up. That assumption is weaker in this market.',
         items: [
           { term: 'Running out is a longer problem', detail: 'The recovery from a stockout takes longer than it would in a market close to its suppliers.' },
           { term: 'The unit cost falls with quantity', detail: 'Which offsets part of the cost of holding more, if you have the space.' },
@@ -520,7 +520,7 @@ export const caAuCities: readonly LocationPage[] = [
         kind: 'linked-prose',
         heading: 'What we confirm before you commit',
         before:
-          'Because timing matters more here, we confirm a schedule in writing for your specific order rather than quoting a general figure, and we tell you which step is the critical path. For most printed orders it is proof approval rather than production, which means the date is largely in your hands. What is confirmed for each market is set out on the ',
+          'Because timing matters more here, we confirm a schedule by email for your specific order rather than quoting a general figure, and we tell you which step is the critical path. For most printed orders it is proof approval rather than production, which means the date is largely in your hands. What is confirmed for each market is set out on the ',
         link: { href: '/shipping-and-delivery/', anchor: 'shipping and delivery page' },
         after: '.',
       },
@@ -532,11 +532,11 @@ export const caAuCities: readonly LocationPage[] = [
       },
       {
         q: 'How far ahead should I order?',
-        a: 'Work backwards from the date stock must be on the bench rather than forwards from today, and settle artwork well before that. We confirm the schedule for your specific order in writing so you are planning against a real date.',
+        a: 'Work backwards from the date stock must be on the bench rather than forwards from today, and settle artwork well before that. We confirm the schedule for your specific order by email so you are planning against a real date.',
       },
       {
         q: 'Do you ship packaging orders to Australia?',
-        a: 'Yes. Orders are produced to your specification and shipped to your Australian address, with arrangements, documentation and timing confirmed in writing on your quotation.',
+        a: 'Yes. Orders are produced to your specification and shipped to your Australian address, with arrangements, documentation and timing confirmed on your quotation.',
       },
     ],
     related: [
@@ -579,7 +579,7 @@ export const caAuCities: readonly LocationPage[] = [
     recommended: [
       { slug: 'black-poly-mailers', why: 'A premium signal with no print cost, which is the right trade at this scale.' },
       { slug: 'light-pink-poly-mailers', why: 'Tonal options for labels whose palette is softer than black.' },
-      { slug: 'blank-poly-mailers', why: 'Coloured stock plus a printed seal is the small-batch answer to branding.' },
+      { slug: 'blank-poly-mailers', why: 'Colored stock plus a printed seal is the small-batch answer to branding.' },
       { slug: 'custom-frosted-poly-bags', why: 'A presentation layer that costs less than printing the outer bag.' },
     ],
     blocks: [
@@ -591,7 +591,7 @@ export const caAuCities: readonly LocationPage[] = [
         caption: 'Presentation options ranked for a small-batch label.',
         columns: ['Option', 'Cost at low volume', 'What it buys'],
         rows: [
-          ['Coloured or black film', 'Small premium', 'Immediate recognition, no artwork needed'],
+          ['Colored or black film', 'Small premium', 'Immediate recognition, no artwork needed'],
           ['Printed seal sticker', 'Low, reorders in tiny runs', 'The mark, changeable at will'],
           ['Presentation bag inside', 'Moderate', 'A garment that arrives presented rather than loose'],
           ['Printed card', 'Low', 'The voice, and the thing customers keep'],
@@ -603,7 +603,7 @@ export const caAuCities: readonly LocationPage[] = [
         heading: 'What small-batch fashion needs from packaging',
         items: [
           { term: 'To match the product’s standard', detail: 'A considered garment in careless packaging reads as a contradiction, and customers notice it immediately.' },
-          { term: 'To photograph without styling', detail: 'Matte finishes and considered colours photograph evenly. Gloss white needs lighting to look right.' },
+          { term: 'To photograph without styling', detail: 'Matte finishes and considered colors photograph evenly. Gloss white needs lighting to look right.' },
           { term: 'Not to commit a season ahead', detail: 'Small-batch production means the range moves, and packaging that outlives it is waste.' },
           { term: 'To handle returns without a second bag', detail: 'Sizing returns are certain in fashion at any scale.' },
         ],
@@ -620,10 +620,10 @@ export const caAuCities: readonly LocationPage[] = [
     faqs: [
       {
         q: 'Can a small label order printed mailers?',
-        a: 'Yes, at a higher unit price because setup spreads across fewer units. Many labels at this scale get more visible effect from coloured film, a printed seal and something presented inside than from printing the bag itself.',
+        a: 'Yes, at a higher unit price because setup spreads across fewer units. Many labels at this scale get more visible effect from colored film, a printed seal and something presented inside than from printing the bag itself.',
       },
       {
-        q: 'What colour suits an independent fashion label?',
+        q: 'What color suits an independent fashion label?',
         a: 'Black and blush are the two most requested, for opposite reasons — one reads premium and hides handling marks completely, the other reads considered and soft. Both work without any printing.',
       },
       {
@@ -672,7 +672,7 @@ export const caAuCities: readonly LocationPage[] = [
       { slug: 'christmas-poly-mailers', why: 'The peak window, planned around a summer rather than a winter one.' },
       { slug: 'seasonal-poly-mailers', why: 'Planning a year of campaigns on the calendar you actually trade on.' },
       { slug: 'blank-poly-mailers', why: 'The fallback that means a seasonal shortfall never stops orders leaving.' },
-      { slug: 'colored-poly-mailers', why: 'A colour per campaign is cheaper than a printed run per campaign.' },
+      { slug: 'colored-poly-mailers', why: 'A color per campaign is cheaper than a printed run per campaign.' },
     ],
     blocks: [
       {
@@ -791,7 +791,7 @@ export const caAuCities: readonly LocationPage[] = [
         kind: 'linked-prose',
         heading: 'Ordering to a schedule',
         before:
-          'Because a top-up takes real time, ordering here works most reliably against a stock level that triggers a reorder rather than against a calendar. Set the trigger high enough that a delivery has time to arrive before you reach the bottom, and confirm the schedule in writing so you are planning against a real date rather than an estimate. What is confirmed for each order is set out on the ',
+          'Because a top-up takes real time, ordering here works most reliably against a stock level that triggers a reorder rather than against a calendar. Set the trigger high enough that a delivery has time to arrive before you reach the bottom, and confirm the schedule by email so you are planning against a real date rather than an estimate. What is confirmed for each order is set out on the ',
         link: { href: '/shipping-and-delivery/', anchor: 'shipping and delivery page' },
         after: '.',
       },
@@ -843,7 +843,7 @@ export const caAuCities: readonly LocationPage[] = [
     primaryKeyword: 'sustainable poly mailers adelaide',
     supportingKeywords: ['environmental claims packaging australia', 'shipping bags adelaide', 'eco mailers australia'],
     sectors: [
-      { name: 'Food, wine and speciality producers', note: 'Categories where packaging claims are visible and scrutinised.' },
+      { name: 'Food, wine and speciality producers', note: 'Categories where packaging claims are visible and scrutinized.' },
       { name: 'Direct-to-consumer brands', note: 'Own-channel businesses making customer-facing sustainability statements.' },
       { name: 'Independent retail', note: 'Smaller businesses whose brand position includes an environmental element.' },
     ],

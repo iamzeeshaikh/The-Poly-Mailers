@@ -2,7 +2,7 @@
 import { PREVIEW_NOTE } from '~/lib/claims';
 
 /**
- * "Design Your Poly Mailer" configurator.
+ * "Design Your Poly Mailer" page.
  *
  * Implementation notes:
  *  - The preview is SVG rather than canvas, so it scales without pixelation,
@@ -33,7 +33,7 @@ const COLOURS = [
   { id: 'white', label: 'White', hex: '#f4f4f2', ink: '#1b1f26' },
   { id: 'bone', label: 'Bone', hex: '#e8e2d6', ink: '#2b3038' },
   { id: 'black', label: 'Black', hex: '#1b1f26', ink: '#f5f6f8' },
-  { id: 'grey', label: 'Grey', hex: '#8a9099', ink: '#12161b' },
+  { id: 'grey', label: 'Gray', hex: '#8a9099', ink: '#12161b' },
   { id: 'blush', label: 'Blush pink', hex: '#f3c9d2', ink: '#4a2732' },
   { id: 'pink', label: 'Bright pink', hex: '#e0559a', ink: '#ffffff' },
   { id: 'cobalt', label: 'Cobalt blue', hex: '#2f52d8', ink: '#ffffff' },
@@ -72,7 +72,7 @@ const COVERAGE = [
 ];
 ---
 
-<section class="designer" data-designer aria-label="Mailer configuration tool">
+<section class="designer" data-designer aria-label="Design your poly mailer">
   <div class="designer-grid">
     <!-- ============================ PREVIEW =========================== -->
     <div class="preview-col">
@@ -273,7 +273,7 @@ const COVERAGE = [
           <legend>Appearance</legend>
 
           <div class="field">
-            <span class="field-label" id="dz-colour-label">Film colour</span>
+            <span class="field-label" id="dz-colour-label">Film color</span>
             <div class="swatches" role="radiogroup" aria-labelledby="dz-colour-label">
               {
                 COLOURS.map((c, i) => (
@@ -408,7 +408,7 @@ const COVERAGE = [
   .preview {
     inline-size: 100%;
     /* Capped so the figure stays a considered object rather than filling a
-       wide column, and centred within whatever space is available. */
+       wide column, and centered within whatever space is available. */
     max-inline-size: 26rem;
     margin-inline: auto;
     block-size: auto;
@@ -832,7 +832,7 @@ const COVERAGE = [
         ['Type', LABELS.type[config.type]!],
         ['Size', config.size === 'custom' ? config.customSize || 'Custom (to confirm)' : config.size],
         ['Material', LABELS.material[config.material]!],
-        ['Colour', config.colourLabel],
+        ['Color', config.colourLabel],
         ['Finish', LABELS.finish[config.finish]!],
         ['Closure', LABELS.closure[config.closure]!],
         ['Coverage', LABELS.coverage[config.coverage]!],
@@ -852,14 +852,14 @@ const COVERAGE = [
         `Type: ${LABELS.type[config.type]}`,
         `Size: ${config.size === 'custom' ? config.customSize || 'custom, to confirm' : config.size}`,
         `Material: ${LABELS.material[config.material]}`,
-        `Colour: ${config.colourLabel}`,
+        `Color: ${config.colourLabel}`,
         `Finish: ${LABELS.finish[config.finish]}`,
         `Closure: ${LABELS.closure[config.closure]}`,
         `Print coverage: ${LABELS.coverage[config.coverage]}`,
         `Sides printed: ${LABELS.sides[config.sides]}`,
         `Front text: ${config.frontText || '(none)'}`,
         `Back text: ${config.backText || '(none)'}`,
-        `Artwork file: ${config.artworkName || '(none uploaded in the tool)'}`,
+        `Artwork file: ${config.artworkName || '(none uploaded)'}`,
         `Artwork placement: ${config.scale}% width, ${config.x}% across, ${config.y}% down`,
         '',
         PREVIEW_NOTE,
@@ -923,7 +923,7 @@ const COVERAGE = [
       sync();
     });
 
-    // Colour swatches behave as a radio group, arrow keys included.
+    // Color swatches behave as a radio group, arrow keys included.
     swatches.forEach((swatch, index) => {
       swatch.addEventListener('click', () => selectColour(index));
       swatch.addEventListener('keydown', (event) => {

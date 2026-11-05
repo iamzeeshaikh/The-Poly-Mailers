@@ -3,7 +3,7 @@
  *  order costs. The office gets the order (subject leads with the payment
  *  method); the buyer gets a confirmation copy. Spam signals only LABEL the
  *  email ("[Possible spam]"), they never refuse an order: the owner's rule is
- *  that no lead is ever dropped. Google's Storebot test orders are labelled
+ *  that no lead is ever dropped. Google's Storebot test orders are labeled
  *  the same way and go through like any other order. */
 import type { APIRoute } from 'astro';
 import { productBySlug } from '~/data/products';

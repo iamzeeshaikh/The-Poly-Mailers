@@ -13,7 +13,7 @@
 
 /** Standing sentence appended wherever a specification is shown. */
 export const SPEC_NOTE =
-  'Options shown are the choices we can quote against. The exact specification for your order — including film weight, closure and print method — is confirmed in writing on your quotation.';
+  'Options shown are the choices we can quote against. The exact specification for your order — including film weight, closure and print method — is confirmed on your quotation.';
 
 export const SUSTAINABILITY_NOTE =
   'We do not publish certification marks, recycled-content percentages or breakdown timescales for these materials. Material composition and any supporting documentation are confirmed with your quotation, against the specific film available for your order and market.';
@@ -22,7 +22,7 @@ export const IMAGE_ARTWORK_NOTE =
   'Printed messaging shown is artwork chosen by the business that ordered those samples. It is not a claim by The Poly Mailers about the material.';
 
 export const PREVIEW_NOTE =
-  'The preview is an approximate visual guide, not a production proof. Position, scale and colour are confirmed on a digital proof that you approve before printing.';
+  'The preview is an approximate visual guide, not a production proof. Position, scale and color are confirmed on a digital proof that you approve before printing.';
 
 /**
  * A specification row. `options` are the values a customer can pick between.
@@ -82,7 +82,7 @@ export const BANNED_CLAIM_PATTERNS: readonly RegExp[] = [
   /\bcertified\s+(compostable|biodegradable|recyclable)\b/i,
   /\bbreaks?\s+down\s+in\s+\d+/i,
   /\bdecomposes?\s+(in|within)\s+\d+/i,
-  /\b\d+\s?(microns?|mils?|micrometres?)\b/i,
+  /\b\d+\s?(microns?|mils?|micrometers?)\b/i,
   /\bminimum\s+order\s+(quantity\s+)?(is\s+)?\d/i,
   /\bMOQ\s*(of|:)?\s*\d/i,
   /\b(ships?|delivered|dispatch(ed)?|turnaround|lead time)\s+in\s+\d+\s*(–|-|to)?\s*\d*\s*(working\s+|business\s+)?(day|week)/i,

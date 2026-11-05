@@ -12,13 +12,13 @@ import FormSeals from './FormSeals.astro';
 interface Props {
   /** Pre-selects the product dropdown. */
   preset?: string;
-  /** Which page the enquiry came from. Sent as a hidden field. */
+  /** Which page the inquiry came from. Sent as a hidden field. */
   source: string;
   /** Compact variant used near the top of product and collection pages. */
   compact?: boolean;
   heading?: string;
   intro?: string;
-  /** Adds the design-configuration hidden field, populated by the design tool. */
+  /** Adds the design-configuration hidden field, populated by the Design Your Poly Mailer page. */
   withDesign?: boolean;
   id?: string;
 }
@@ -208,7 +208,7 @@ const maxMb = Math.round(MAX_UPLOAD_BYTES / (1024 * 1024));
         <input type="checkbox" id={`${id}-consent`} name="consent" value="yes" required />
         <label for={`${id}-consent`}>
           I am happy for The Poly Mailers to use these details to reply to my
-          enquiry, as described in the <a href="/privacy-policy/">privacy policy</a>.
+          inquiry, as described in the <a href="/privacy-policy/">privacy policy</a>.
           <span class="req" aria-hidden="true">*</span>
         </label>
         <span class="err" data-error-for="consent" role="alert"></span>

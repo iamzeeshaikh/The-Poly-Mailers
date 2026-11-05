@@ -31,7 +31,7 @@ export const ukCities: readonly LocationPage[] = [
     primaryKeyword: 'poly mailers london',
     supportingKeywords: ['polythene mailing bags london', 'letterbox friendly packaging', 'shipping bags london'],
     sectors: [
-      { name: 'Small-item ecommerce', note: 'Jewellery, cosmetics, accessories and print — the categories that can realistically stay inside a letterbox format.' },
+      { name: 'Small-item ecommerce', note: 'Jewelry, cosmetics, accessories and print — the categories that can realistically stay inside a letterbox format.' },
       { name: 'Fashion and boutique retail', note: 'A dense independent retail base with high presentation expectations.' },
       { name: 'Publishing and print', note: 'Flat goods where the thickness question is decided by the item rather than the packaging.' },
     ],
@@ -46,7 +46,7 @@ export const ukCities: readonly LocationPage[] = [
         kind: 'prose',
         heading: 'Thickness, not weight, is usually the deciding measurement',
         paragraphs: [
-          'Most people optimising shipping cost start with weight. For small UK parcels the more consequential measurement is often depth, because a format threshold sits at a specific thickness and crossing it moves the item into a different pricing band entirely.',
+          'Most people optimizing shipping cost start with weight. For small UK parcels the more consequential measurement is often depth, because a format threshold sits at a specific thickness and crossing it moves the item into a different pricing band entirely.',
           'That is why a slightly larger mailer can be cheaper to send. A folded item lying flat in a bag with a bigger footprint stays thin; the same item compressed into a smaller bag becomes a compact lump that no longer fits through a letterbox.',
           'Check the current thresholds with your carrier rather than relying on a figure published anywhere, including here — they are reviewed periodically. Then measure a real packed parcel against them rather than estimating.',
         ],
@@ -57,7 +57,7 @@ export const ukCities: readonly LocationPage[] = [
         items: [
           { term: 'Choose footprint over compression', detail: 'A wider, flatter parcel frequently costs less to send than a smaller, thicker one.' },
           { term: 'Fold to a rectangle', detail: 'An irregular bundle has a thick point, and the thick point is what gets measured.' },
-          { term: 'Rethink the insert', detail: 'A folded card, a sample and a returns slip can be the millimetres that cross a threshold.' },
+          { term: 'Rethink the insert', detail: 'A folded card, a sample and a returns slip can be the millimeters that cross a threshold.' },
           { term: 'Measure a packed parcel, not the product', detail: 'Flat product dimensions tell you nothing about what it becomes once bagged.' },
         ],
       },
@@ -81,7 +81,7 @@ export const ukCities: readonly LocationPage[] = [
       },
       {
         q: 'Do you supply polythene mailing bags in the UK?',
-        a: 'Yes. Orders are produced to your specification and shipped to your UK address; we hold no local stock, so we confirm the schedule in writing rather than implying next-day availability.',
+        a: 'Yes. Orders are produced to your specification and shipped to your UK address; we hold no local stock, so we confirm the schedule by email rather than implying next-day availability.',
       },
     ],
     related: [
@@ -118,7 +118,7 @@ export const ukCities: readonly LocationPage[] = [
     supportingKeywords: ['trade packaging birmingham', 'polythene mailing bags', 'B2B shipping bags'],
     sectors: [
       { name: 'Manufacturing and components', note: 'Parts and small assemblies shipped to trade customers rather than consumers.' },
-      { name: 'Jewellery and small goods', note: 'A long-established trade in small, valuable items where discretion matters.' },
+      { name: 'Jewelry and small goods', note: 'A long-established trade in small, valuable items where discretion matters.' },
       { name: 'Trade and wholesale distribution', note: 'Mixed order sizes going to businesses across the region.' },
     ],
     recommended: [
@@ -206,7 +206,7 @@ export const ukCities: readonly LocationPage[] = [
     supportingKeywords: ['fashion packaging manchester', 'polythene mailing bags', 'peak volume packaging'],
     sectors: [
       { name: 'Online fashion', note: 'A substantial cluster of high-volume, campaign-driven retailers.' },
-      { name: 'Fulfilment and logistics', note: 'Operations built around handling burst volume for others.' },
+      { name: 'Fulfillment and logistics', note: 'Operations built around handling burst volume for others.' },
       { name: 'Creative and merchandise', note: 'Music and event-linked merchandise with similarly spiky demand.' },
     ],
     recommended: [
@@ -261,7 +261,7 @@ export const ukCities: readonly LocationPage[] = [
       },
       {
         q: 'Should I simplify the size range before a peak?',
-        a: 'Yes. Complexity that is manageable on a normal day becomes error under pressure, particularly with temporary staff. Fewer sizes with written rules costs less than a perfectly optimised range nobody applies.',
+        a: 'Yes. Complexity that is manageable on a normal day becomes error under pressure, particularly with temporary staff. Fewer sizes with written rules costs less than a perfectly optimized range nobody applies.',
       },
     ],
     related: [
@@ -349,7 +349,7 @@ export const ukCities: readonly LocationPage[] = [
       },
       {
         q: 'Can you deliver a packaging order to a Scottish address?',
-        a: 'Yes. Delivery arrangements to some addresses differ from those to the rest of the UK, so we confirm them in writing on your quotation rather than assuming a standard arrangement.',
+        a: 'Yes. Delivery arrangements to some addresses differ from those to the rest of the UK, so we confirm them on your quotation rather than assuming a standard arrangement.',
       },
     ],
     related: [
@@ -381,12 +381,12 @@ export const ukCities: readonly LocationPage[] = [
       'Multi-channel retail creates a packaging problem that pure online businesses never face: the same order might be packed in a warehouse by a trained packer, or in a stockroom by a shop assistant between customers.',
       'Both parcels reach the same customer and carry the same brand. Making them look and perform the same is a packaging and process decision rather than a training one.',
     ],
-    angle: 'Store fulfilment — the same order packed in a warehouse or in a shop stockroom.',
+    angle: 'Store fulfillment — the same order packed in a warehouse or in a shop stockroom.',
     primaryKeyword: 'poly mailers leeds',
-    supportingKeywords: ['retail packaging leeds', 'store fulfilment packaging', 'polythene mailing bags'],
+    supportingKeywords: ['retail packaging leeds', 'store fulfillment packaging', 'polythene mailing bags'],
     sectors: [
       { name: 'Multi-channel retail', note: 'Businesses fulfilling online orders from stores as well as from a central warehouse.' },
-      { name: 'Fashion and homeware', note: 'Categories where store fulfilment is most common and presentation matters most.' },
+      { name: 'Fashion and homeware', note: 'Categories where store fulfillment is most common and presentation matters most.' },
       { name: 'Independent retail', note: 'Smaller businesses adding an online channel to a physical shop.' },
     ],
     recommended: [
@@ -398,7 +398,7 @@ export const ukCities: readonly LocationPage[] = [
     blocks: [
       {
         kind: 'bullets',
-        heading: 'What makes store fulfilment inconsistent',
+        heading: 'What makes store fulfillment inconsistent',
         intro:
           'Four causes, all fixable with packaging and process rather than training.',
         items: [
@@ -440,7 +440,7 @@ export const ukCities: readonly LocationPage[] = [
         a: 'No. It is the most common source of inconsistency in multi-channel retail, because a store that runs out will use whatever is available and the customer sees the difference.',
       },
       {
-        q: 'Is printed packaging worth it for store fulfilment?',
+        q: 'Is printed packaging worth it for store fulfillment?',
         a: 'It is unusually valuable here, because it makes every parcel identifiably yours whoever packed it, and it removes the option of substituting something else when stock runs low.',
       },
     ],
@@ -450,10 +450,10 @@ export const ukCities: readonly LocationPage[] = [
       { href: '/industries/ecommerce/', label: 'Ecommerce operations', reason: 'The wider operational picture.' },
     ],
     cta: {
-      heading: 'Standardise across locations',
+      heading: 'Standardize across locations',
       body: 'Tell us how many places an order might be packed. We will specify something that works in a stockroom as well as a warehouse.',
       buttonLabel: 'Quote multi-site packaging',
     },
-    whatsapp: 'Hi, we fulfil from stores as well as a warehouse in Leeds and need consistent packaging.',
+    whatsapp: 'Hi, we fulfill from stores as well as a warehouse in Leeds and need consistent packaging.',
   },
 ];

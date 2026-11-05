@@ -91,9 +91,9 @@ export interface QuoteFields {
   quantity: string;
   message: string;
   consent: boolean;
-  /** Serialized configuration from the design tool, when present. */
+  /** Serialized selections from the Design Your Poly Mailer page, when present. */
   design?: string;
-  /** Which page the enquiry came from — set by a hidden field. */
+  /** Which page the inquiry came from — set by a hidden field. */
   source?: string;
 }
 
@@ -160,7 +160,7 @@ export function validateQuote(fields: Partial<QuoteFields>): Errors {
   if (message.length > 4000) errors.message = 'Keep your message under 4,000 characters.';
 
   if (!fields.consent) {
-    errors.consent = 'Please confirm you are happy for us to reply to your enquiry.';
+    errors.consent = 'Please confirm you are happy for us to reply to your inquiry.';
   }
 
   return errors;

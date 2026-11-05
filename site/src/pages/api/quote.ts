@@ -117,7 +117,7 @@ async function checkFile(file: File): Promise<string | null> {
 /**
  * Uploaded files are never written to disk and never given a public URL. They
  * are held in memory only long enough to be attached to the notification email,
- * under a randomised filename that keeps the original for reference in the body.
+ * under a randomized filename that keeps the original for reference in the body.
  */
 function safeAttachmentName(original: string): string {
   const ext = extensionOf(original);
@@ -317,7 +317,7 @@ export const POST: APIRoute = async ({ request }) => {
   ];
 
   const designNote = fields.design
-    ? `<h3 style="font:600 14px system-ui;margin:24px 0 8px">Design tool configuration</h3>
+    ? `<h3 style="font:600 14px system-ui;margin:24px 0 8px">Design Your Poly Mailer selections</h3>
        <pre style="font:12px ui-monospace,monospace;white-space:pre-wrap;background:#f4f4f5;padding:12px;border-radius:6px;margin:0">${e(
          fields.design,
        )}</pre>`

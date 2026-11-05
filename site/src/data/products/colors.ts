@@ -1,12 +1,12 @@
 import type { ProductPage } from '../types';
 
 /**
- * Colour family. Six pages that must not blur into each other.
+ * Color family. Six pages that must not blur into each other.
  *
  * Pink and Light Pink are separated by tone, buyer and application, not by
- * adjective. Colored is the mixed-range page and never repeats a single-colour
- * page's copy. White is a colour decision. Blank is a print-status decision that
- * happens to span colours — its whole argument is about not printing yet.
+ * adjective. Colored is the mixed-range page and never repeats a single-color
+ * page's copy. White is a color decision. Blank is a print-status decision that
+ * happens to span colors — its whole argument is about not printing yet.
  */
 
 export const colorProducts: ProductPage[] = [
@@ -17,11 +17,11 @@ export const colorProducts: ProductPage[] = [
     h1: 'Pink Poly Mailers',
     title: 'Pink Poly Mailers | Bright & Deep Pink Shipping Bags',
     description:
-      'Saturated pink poly mailers for retail and promotional shipping. Tone range, print contrast on pink film, and where the colour works hardest.',
+      'Saturated pink poly mailers for retail and promotional shipping. Tone range, print contrast on pink film, and where the color works hardest.',
     summary:
-      'Saturated, high-visibility pinks — the retail and promotional end of the colour range.',
+      'Saturated, high-visibility pinks — the retail and promotional end of the color range.',
     intro: [
-      'Pink is the colour that made poly mailers a marketing surface rather than a shipping supply. A saturated pink parcel is identifiable across a room, photographs well without styling, and gets opened on camera by customers who would never have filmed a white bag.',
+      'Pink is the color that made poly mailers a marketing surface rather than a shipping supply. A saturated pink parcel is identifiable across a room, photographs well without styling, and gets opened on camera by customers who would never have filmed a white bag.',
       'This page covers the strong end of the range: hot pink, fuchsia, deep rose and the mid pinks that read clearly under artificial light. If you are looking for blush and pastel tones, those behave differently in print and in photography, and they have their own page.',
     ],
     plan: {
@@ -31,7 +31,7 @@ export const colorProducts: ProductPage[] = [
       problem:
         'Getting a pink that reads as their pink across a run, and knowing what will print legibly on it.',
       angle:
-        'Owns the saturated end of the pink range, including how print contrast behaves on a strong base colour.',
+        'Owns the saturated end of the pink range, including how print contrast behaves on a strong base color.',
       primaryKeyword: 'pink poly mailers',
       supportingKeywords: [
         'pink poly mailer bags',
@@ -57,18 +57,18 @@ export const colorProducts: ProductPage[] = [
       {
         kind: 'prose',
         heading: 'Which pink, and why it matters',
-        standfirst: 'Pink covers a wider range than any other mailer colour.',
+        standfirst: 'Pink covers a wider range than any other mailer color.',
         paragraphs: [
-          'Between a hot magenta and a dusty rose there is more visual distance than between most brands’ entire palettes. Two suppliers can both sell you a "pink mailer" and deliver colours that would never sit on the same shelf together.',
-          'That makes a reference essential. Send a physical swatch, a printed sample, or a defined colour value, and we quote a match against it rather than against a word. Where an exact match is not achievable on the film available for your market, we say so before you order rather than after.',
-          'Colour also drifts between production batches more visibly on strong tones than on pale ones. If you are reordering to sit alongside existing stock, tell us at quotation stage so the batch can be checked against your previous run.',
+          'Between a hot magenta and a dusty rose there is more visual distance than between most brands’ entire palettes. Two suppliers can both sell you a "pink mailer" and deliver colors that would never sit on the same shelf together.',
+          'That makes a reference essential. Send a physical swatch, a printed sample, or a defined color value, and we quote a match against it rather than against a word. Where an exact match is not achievable on the film available for your market, we say so before you order rather than after.',
+          'Color also drifts between production batches more visibly on strong tones than on pale ones. If you are reordering to sit alongside existing stock, tell us at quotation stage so the batch can be checked against your previous run.',
         ],
       },
       {
         kind: 'bullets',
         heading: 'Where a strong pink does real work',
         intro:
-          'Colour is a cost, so it should be doing something. These are the situations where a saturated pink earns it.',
+          'Color is a cost, so it should be doing something. These are the situations where a saturated pink earns it.',
         items: [
           {
             term: 'Doorstep recognition',
@@ -78,17 +78,17 @@ export const colorProducts: ProductPage[] = [
           {
             term: 'Unboxing content',
             detail:
-              'A strong colour gives a video or a photograph its subject without any styling. White parcels have to be styled to be worth filming.',
+              'A strong color gives a video or a photograph its subject without any styling. White parcels have to be styled to be worth filming.',
           },
           {
             term: 'Campaign and launch runs',
             detail:
-              'A limited colour signals a limited drop without printing anything, which keeps setup cost low on short runs.',
+              'A limited color signals a limited drop without printing anything, which keeps setup cost low on short runs.',
           },
           {
             term: 'Warehouse sorting by eye',
             detail:
-              'Colour-coding an order type by mailer colour is faster than reading a label on a busy bench.',
+              'Color-coding an order type by mailer color is faster than reading a label on a busy bench.',
           },
         ],
       },
@@ -96,22 +96,22 @@ export const colorProducts: ProductPage[] = [
         kind: 'compare',
         heading: 'What prints legibly on a strong pink base',
         intro:
-          'Ink on coloured film behaves differently from ink on white. This is the practical guide before you commit artwork.',
+          'Ink on colored film behaves differently from ink on white. This is the practical guide before you commit artwork.',
         caption: 'Print legibility on a saturated pink base film.',
-        columns: ['Print colour', 'Legibility on strong pink', 'Notes'],
+        columns: ['Print color', 'Legibility on strong pink', 'Notes'],
         rows: [
           ['White', 'Very high', 'The default choice, and the most forgiving at small sizes.'],
           ['Black', 'High', 'Strong contrast, though it reads heavier than it does on white film.'],
           ['Deep navy or charcoal', 'Good', 'Softer than black while keeping contrast.'],
           ['Metallic silver or gold', 'Moderate', 'Depends heavily on finish and lighting; proof before committing.'],
-          ['Mid greys and pastels', 'Low', 'Loses definition at small sizes; avoid for body text.'],
+          ['Mid grays and pastels', 'Low', 'Loses definition at small sizes; avoid for body text.'],
           ['Red or orange', 'Low', 'Sits too close to the base tone and vibrates at the edges.'],
         ],
       },
       {
         kind: 'specs',
         heading: 'Options to select',
-        intro: 'Confirmed in writing on your quotation, as with any specification.',
+        intro: 'Confirmed on your quotation, as with any specification.',
         rows: [
           {
             label: 'Tone',
@@ -131,7 +131,7 @@ export const colorProducts: ProductPage[] = [
           {
             label: 'Print',
             options: ['Unprinted', 'One side', 'Both sides'],
-            note: 'Coloured film alone is often enough; print is what adds the name and the message.',
+            note: 'Colored film alone is often enough; print is what adds the name and the message.',
           },
           {
             label: 'Closure',
@@ -142,33 +142,33 @@ export const colorProducts: ProductPage[] = [
       },
       {
         kind: 'linked-prose',
-        heading: 'Running pink alongside other colours',
+        heading: 'Running pink alongside other colors',
         before:
-          'Brands rarely stop at one colour. A second tone for a different product line, or a seasonal colour for a campaign, is a common second order. Where several colours run together, the setup can often be shared, which makes the incremental colour cheaper than a standalone run. The full range and how each base behaves is set out in the ',
-        link: { href: '/poly-mailer-colors/', anchor: 'colour selection overview' },
+          'Brands rarely stop at one color. A second tone for a different product line, or a seasonal color for a campaign, is a common second order. Where several colors run together, the setup can often be shared, which makes the incremental color cheaper than a standalone run. The full range and how each base behaves is set out in the ',
+        link: { href: '/poly-mailer-colors/', anchor: 'color selection overview' },
         after: ', which compares tones side by side rather than one at a time.',
       },
       {
         kind: 'prose',
-        heading: 'Checking colour before a production run',
+        heading: 'Checking color before a production run',
         paragraphs: [
-          'Colour is the specification most likely to cause a dispute, so we handle it in a fixed sequence. You supply a reference. We confirm what can be matched on the film available. A proof is produced and approved before the run is scheduled.',
-          'Screen colour is not a reference. A pink that looks right on a calibrated monitor can arrive materially different on film, because the film is not paper and it is not backlit. Where colour accuracy matters commercially, ask for a physical check rather than a digital one.',
+          'Color is the specification most likely to cause a dispute, so we handle it in a fixed sequence. You supply a reference. We confirm what can be matched on the film available. A proof is produced and approved before the run is scheduled.',
+          'Screen color is not a reference. A pink that looks right on a calibrated monitor can arrive materially different on film, because the film is not paper and it is not backlit. Where color accuracy matters commercially, ask for a physical check rather than a digital one.',
         ],
       },
     ],
     faqs: [
       {
         q: 'Can you match an exact shade of pink?',
-        a: 'We quote a match against a reference you supply — a physical swatch, a previous sample or a defined colour value. Where the film available for your market cannot reach the tone, we tell you before you order rather than delivering something close.',
+        a: 'We quote a match against a reference you supply — a physical swatch, a previous sample or a defined color value. Where the film available for your market cannot reach the tone, we tell you before you order rather than delivering something close.',
       },
       {
-        q: 'Which print colour reads most clearly on pink mailers?',
-        a: 'White is the most reliable, and black is a strong second. Mid-tone greys, pastels and anything in the red-to-orange range lose definition against a saturated pink and are worth avoiding for small type.',
+        q: 'Which print color reads most clearly on pink mailers?',
+        a: 'White is the most reliable, and black is a strong second. Mid-tone grays, pastels and anything in the red-to-orange range lose definition against a saturated pink and are worth avoiding for small type.',
       },
       {
         q: 'Will pink mailers fade in transit or storage?',
-        a: 'Colour on film is affected by prolonged sunlight rather than by handling. Store cartons out of direct light and the tone stays consistent; a window-facing pallet is what causes visible change.',
+        a: 'Color on film is affected by prolonged sunlight rather than by handling. Store cartons out of direct light and the tone stays consistent; a window-facing pallet is what causes visible change.',
       },
       {
         q: 'Is there a difference between hot pink and fuchsia on film?',
@@ -184,21 +184,21 @@ export const colorProducts: ProductPage[] = [
       {
         href: '/colored-poly-mailers/',
         label: 'Colored Poly Mailers',
-        reason: 'The full selectable colour range when pink is one of several.',
+        reason: 'The full selectable color range when pink is one of several.',
       },
       {
         href: '/printing-options/',
         label: 'Printing options',
-        reason: 'How print method and coverage change what a coloured base can carry.',
+        reason: 'How print method and coverage change what a colored base can carry.',
       },
     ],
     cta: {
       heading: 'Get pink mailers quoted',
-      body: 'Send a colour reference and your quantity. We will confirm what can be matched on the film for your market and price it.',
+      body: 'Send a color reference and your quantity. We will confirm what can be matched on the film for your market and price it.',
       buttonLabel: 'Quote pink mailers',
     },
     whatsapp:
-      'Hi, I would like a quotation for pink poly mailers. I can send a colour reference.',
+      'Hi, I would like a quotation for pink poly mailers. I can send a color reference.',
     collections: ['poly-mailer-colors'],
     group: 'color',
     quotePreset: 'Pink Poly Mailers',
@@ -215,17 +215,17 @@ export const colorProducts: ProductPage[] = [
     summary:
       'Blush, nude and pastel pinks — quieter tones for boutique, beauty and considered brand palettes.',
     intro: [
-      'Blush behaves nothing like hot pink. It is a low-saturation colour, which means it takes light differently, hides less, and asks more of both the film and the print.',
-      'The brands buying it are usually the ones treating packaging as part of a considered identity rather than as a signal flare: beauty, fine jewellery, boutique fashion, stationery. For them the tone has to be right, the film has to be opaque enough that a dark product does not shadow through, and the print has to hold up against a pale base.',
+      'Blush behaves nothing like hot pink. It is a low-saturation color, which means it takes light differently, hides less, and asks more of both the film and the print.',
+      'The brands buying it are usually the ones treating packaging as part of a considered identity rather than as a signal flare: beauty, fine jewelry, boutique fashion, stationery. For them the tone has to be right, the film has to be opaque enough that a dark product does not shadow through, and the print has to hold up against a pale base.',
       'Those three things are what this page covers, and they are why blush is quoted differently from a saturated tone.',
     ],
     plan: {
       intent: 'Buy light pink, blush or pastel poly mailers.',
-      audience: 'Beauty, boutique fashion, jewellery and stationery brands with soft palettes.',
+      audience: 'Beauty, boutique fashion, jewelry and stationery brands with soft palettes.',
       problem:
-        'Pale film shows contents through it and offers less contrast for print than a saturated colour.',
+        'Pale film shows contents through it and offers less contrast for print than a saturated color.',
       angle:
-        'Opacity and low-contrast print behaviour — problems that only exist at the pale end of the range.',
+        'Opacity and low-contrast print behavior — problems that only exist at the pale end of the range.',
       primaryKeyword: 'light pink poly mailers',
       supportingKeywords: [
         'blush poly mailers',
@@ -254,8 +254,8 @@ export const colorProducts: ProductPage[] = [
         kind: 'prose',
         heading: 'Opacity is the first thing to settle',
         paragraphs: [
-          'Pale film is translucent film unless it is specified not to be. A black garment inside a standard blush mailer will read as a grey shadow through the front panel, and that shadow is what makes an otherwise considered parcel look cheap.',
-          'The fix is a higher-opacity film or a heavier film weight, both of which we can quote. It is worth deciding this before colour, because the opacity choice affects how the tone itself reads: the same blush on a denser film sits slightly cooler and flatter.',
+          'Pale film is translucent film unless it is specified not to be. A black garment inside a standard blush mailer will read as a gray shadow through the front panel, and that shadow is what makes an otherwise considered parcel look cheap.',
+          'The fix is a higher-opacity film or a heavier film weight, both of which we can quote. It is worth deciding this before color, because the opacity choice affects how the tone itself reads: the same blush on a denser film sits slightly cooler and flatter.',
           'If most of what you ship is pale — cosmetics in white cartons, stationery, light garments — standard opacity is usually fine and there is no reason to pay for more.',
         ],
       },
@@ -265,7 +265,7 @@ export const colorProducts: ProductPage[] = [
         intro:
           'A blush base gives you far less contrast to work with than a saturated one. This is what survives at small sizes.',
         caption: 'Print legibility on a blush or pastel pink base film.',
-        columns: ['Print colour', 'Legibility on blush', 'Notes'],
+        columns: ['Print color', 'Legibility on blush', 'Notes'],
         rows: [
           ['Black or charcoal', 'Very high', 'The dependable choice, and the one most blush ranges use.'],
           ['Deep brown or aubergine', 'High', 'Warmer than black and reads as more considered at large sizes.'],
@@ -287,7 +287,7 @@ export const colorProducts: ProductPage[] = [
               'Sits with the tones the category already uses on cartons and secondary packaging.',
           },
           {
-            term: 'Fine jewellery and accessories',
+            term: 'Fine jewelry and accessories',
             detail: 'A quiet outer parcel keeps attention on the box inside rather than competing with it.',
           },
           {
@@ -308,7 +308,7 @@ export const colorProducts: ProductPage[] = [
         kind: 'specs',
         heading: 'What to specify',
         intro:
-          'Opacity and finish matter more here than on any other colour. All choices are confirmed on your quotation.',
+          'Opacity and finish matter more here than on any other color. All choices are confirmed on your quotation.',
         rows: [
           {
             label: 'Opacity',
@@ -341,7 +341,7 @@ export const colorProducts: ProductPage[] = [
         kind: 'linked-prose',
         heading: 'Photography and content considerations',
         before:
-          'Pale packaging photographs differently from strong colour. Blush picks up whatever is around it, so a parcel shot on a warm wooden surface reads peach and the same parcel on a cool grey surface reads mauve. Teams shooting product content should settle their surface and lighting before ordering a matched tone, or the mailer will never look like the sample. Where a printed design is doing the identity work rather than the colour, the ',
+          'Pale packaging photographs differently from strong color. Blush picks up whatever is around it, so a parcel shot on a warm wooden surface reads peach and the same parcel on a cool gray surface reads mauve. Teams shooting product content should settle their surface and lighting before ordering a matched tone, or the mailer will never look like the sample. Where a printed design is doing the identity work rather than the color, the ',
         link: { href: '/custom-poly-mailers/', anchor: 'custom printed mailer options' },
         after: ' set out how coverage and method affect what is achievable.',
       },
@@ -349,7 +349,7 @@ export const colorProducts: ProductPage[] = [
     faqs: [
       {
         q: 'Will dark products show through a light pink mailer?',
-        a: 'Through a standard-opacity blush film, usually yes — as a soft grey shadow. If you ship dark garments or dark cartons, specify higher opacity or a heavier film weight when you request a quote.',
+        a: 'Through a standard-opacity blush film, usually yes — as a soft gray shadow. If you ship dark garments or dark cartons, specify higher opacity or a heavier film weight when you request a quote.',
       },
       {
         q: 'Is light pink the same as rose gold or nude?',
@@ -373,17 +373,17 @@ export const colorProducts: ProductPage[] = [
       {
         href: '/industries/beauty-and-cosmetics/',
         label: 'Beauty and cosmetics packaging',
-        reason: 'How this tone fits into a beauty fulfilment operation.',
+        reason: 'How this tone fits into a beauty fulfillment operation.',
       },
       {
         href: '/poly-mailer-colors/',
-        label: 'Colour options',
+        label: 'Color options',
         reason: 'Compare blush against the rest of the range in one place.',
       },
     ],
     cta: {
       heading: 'Quote blush pink mailers',
-      body: 'Tell us what you ship and how dark it is, and send a tone reference if you have one. We will confirm opacity and colour before pricing.',
+      body: 'Tell us what you ship and how dark it is, and send a tone reference if you have one. We will confirm opacity and color before pricing.',
       buttonLabel: 'Request a blush quotation',
     },
     whatsapp:
@@ -398,23 +398,23 @@ export const colorProducts: ProductPage[] = [
     slug: 'colored-poly-mailers',
     name: 'Colored Poly Mailers',
     h1: 'Colored Poly Mailers',
-    title: 'Colored Poly Mailers | Full Colour Range & Matching',
+    title: 'Colored Poly Mailers | Full Color Range & Matching',
     description:
-      'Colored poly mailers across blue, green, purple, red, yellow and more. How colour is matched, what it costs, and how to run several tones.',
+      'Colored poly mailers across blue, green, purple, red, yellow and more. How color is matched, what it costs, and how to run several tones.',
     summary:
-      'The mixed-colour page — selecting across the range, running several tones, and how matching works.',
+      'The mixed-color page — selecting across the range, running several tones, and how matching works.',
     intro: [
-      'This page is for buyers who are not committed to one colour. Either you want a range — a tone per product line, per season or per market — or you want a colour we have not given its own page to, such as blue, green, purple, red or yellow.',
-      'The questions that come up are different from single-colour questions. How many tones can run on one order. Whether colours can be matched or only selected from stock. What running several colours does to cost, storage and reordering. Those are what this page answers.',
+      'This page is for buyers who are not committed to one color. Either you want a range — a tone per product line, per season or per market — or you want a color we have not given its own page to, such as blue, green, purple, red or yellow.',
+      'The questions that come up are different from single-color questions. How many tones can run on one order. Whether colors can be matched or only selected from stock. What running several colors does to cost, storage and reordering. Those are what this page answers.',
     ],
     plan: {
-      intent: 'Find coloured poly mailers across a range of tones, or in a colour without its own page.',
+      intent: 'Find colored poly mailers across a range of tones, or in a color without its own page.',
       audience:
-        'Brands running multiple colour lines, and buyers looking for a colour outside the four with dedicated pages.',
+        'Brands running multiple color lines, and buyers looking for a color outside the four with dedicated pages.',
       problem:
-        'Understanding what running several colours costs operationally rather than just per unit.',
+        'Understanding what running several colors costs operationally rather than just per unit.',
       angle:
-        'The multi-colour operational decision — setup sharing, stock-keeping and reorder complexity.',
+        'The multi-color operational decision — setup sharing, stock-keeping and reorder complexity.',
       primaryKeyword: 'colored poly mailers',
       supportingKeywords: [
         'colored poly mailer bags',
@@ -426,12 +426,12 @@ export const colorProducts: ProductPage[] = [
       ],
       nearestPage: '/poly-mailer-colors/',
       boundary:
-        'This is the product page: ordering coloured film. The colour collection is a chooser that routes to each colour page and compares tones.',
+        'This is the product page: ordering colored film. The color collection is a chooser that routes to each color page and compares tones.',
     },
     images: [
       {
         file: 'colored-poly-mailers-blue-yellow-red-black-fan.png',
-        alt: 'Poly mailers fanned in blue, yellow, red and black to show the stock colour range',
+        alt: 'Poly mailers fanned in blue, yellow, red and black to show the stock color range',
       },
       {
         file: 'blue-poly-mailers-pair-angled.png',
@@ -439,54 +439,54 @@ export const colorProducts: ProductPage[] = [
       },
       {
         file: 'violet-poly-mailer-filled-angled.png',
-        alt: 'Violet poly mailer packed and angled, showing how a saturated colour looks when filled',
+        alt: 'Violet poly mailer packed and angled, showing how a saturated color looks when filled',
       },
     ],
     blocks: [
       {
         kind: 'bullets',
-        heading: 'How colour is supplied',
+        heading: 'How color is supplied',
         intro:
           'There are two routes, and they price and schedule differently.',
         items: [
           {
-            term: 'Stock colours',
+            term: 'Stock colors',
             detail:
               'Tones already produced on the film we quote against. Lower cost, shorter setup, and the tone is what it is — you select rather than specify.',
           },
           {
-            term: 'Matched colours',
+            term: 'Matched colors',
             detail:
               'Produced against a reference you supply. Higher setup, a proof round before production, and a tone that sits with the rest of your identity.',
           },
         ],
         outro:
-          'Most brands start on a stock colour and move to a matched tone once volume justifies it. There is no need to start with matching.',
+          'Most brands start on a stock color and move to a matched tone once volume justifies it. There is no need to start with matching.',
       },
       {
         kind: 'prose',
-        heading: 'What running several colours actually costs',
+        heading: 'What running several colors actually costs',
         standfirst: 'The per-unit price is the smallest part of it.',
         paragraphs: [
-          'Adding a second colour to an order is usually cheaper than most buyers expect, because where the size, film and artwork match, much of the setup is shared across the colours on that run.',
-          'What is not shared is everything after production. Each colour is a separate line to store, a separate carton on the bench, a separate run-out date to track, and a separate decision for a packer to get right under pressure.',
-          'That is the real cost of a colour range, and it is why a two-colour range managed properly usually outperforms a five-colour range managed loosely. Decide what each colour is for before you order it.',
+          'Adding a second color to an order is usually cheaper than most buyers expect, because where the size, film and artwork match, much of the setup is shared across the colors on that run.',
+          'What is not shared is everything after production. Each color is a separate line to store, a separate carton on the bench, a separate run-out date to track, and a separate decision for a packer to get right under pressure.',
+          'That is the real cost of a color range, and it is why a two-color range managed properly usually outperforms a five-color range managed loosely. Decide what each color is for before you order it.',
         ],
       },
       {
         kind: 'compare',
         heading: 'Choosing a base tone for print',
         intro:
-          'If you plan to print, the base colour narrows your ink options. This table is the short version.',
-        caption: 'Reliable ink choices on common coloured base films.',
-        columns: ['Base film', 'Reliable print colours', 'Avoid'],
+          'If you plan to print, the base color narrows your ink options. This table is the short version.',
+        caption: 'Reliable ink choices on common colored base films.',
+        columns: ['Base film', 'Reliable print colors', 'Avoid'],
         rows: [
-          ['Royal or navy blue', 'White, pale grey, metallic silver', 'Black, dark greens'],
-          ['Green', 'White, black', 'Yellow, mid greys'],
+          ['Royal or navy blue', 'White, pale gray, metallic silver', 'Black, dark greens'],
+          ['Green', 'White, black', 'Yellow, mid grays'],
           ['Purple or violet', 'White, pale gold', 'Blue, black at small sizes'],
           ['Red', 'White, black', 'Orange, pink, dark brown'],
           ['Yellow', 'Black, deep navy, dark brown', 'White, pale pastels'],
-          ['Grey or silver', 'Black, navy, white as a solid', 'Mid-tone anything'],
+          ['Gray or silver', 'Black, navy, white as a solid', 'Mid-tone anything'],
         ],
         outro:
           'Where a combination is marginal, we proof it on the actual film and finish rather than approving it on screen.',
@@ -498,14 +498,14 @@ export const colorProducts: ProductPage[] = [
           'The same choices apply whichever tone you select. Everything is confirmed on the quotation.',
         rows: [
           {
-            label: 'Colour route',
-            options: ['Stock colour', 'Matched to a reference'],
-            note: 'Matching needs a reference and a proof round; stock colours do not.',
+            label: 'Color route',
+            options: ['Stock color', 'Matched to a reference'],
+            note: 'Matching needs a reference and a proof round; stock colors do not.',
           },
           {
             label: 'Finish',
             options: ['Gloss', 'Matte'],
-            note: 'Finish changes the read of a colour as much as the pigment does.',
+            note: 'Finish changes the read of a color as much as the pigment does.',
           },
           {
             label: 'Opacity',
@@ -515,7 +515,7 @@ export const colorProducts: ProductPage[] = [
           {
             label: 'Format',
             options: ['Plain film', 'Bubble-lined'],
-            note: 'Colour can carry across both, though matching between formats needs checking.',
+            note: 'Color can carry across both, though matching between formats needs checking.',
           },
           {
             label: 'Sizes per order',
@@ -526,12 +526,12 @@ export const colorProducts: ProductPage[] = [
       },
       {
         kind: 'steps',
-        heading: 'Building a colour range without overcomplicating it',
+        heading: 'Building a color range without overcomplicating it',
         steps: [
           {
-            title: 'Decide what the colour signals',
+            title: 'Decide what the color signals',
             detail:
-              'Product line, order type, season or market. If a colour has no job, it is stock you will write off.',
+              'Product line, order type, season or market. If a color has no job, it is stock you will write off.',
           },
           {
             title: 'Start with two',
@@ -541,56 +541,56 @@ export const colorProducts: ProductPage[] = [
           {
             title: 'Match sizes across tones',
             detail:
-              'One size in three colours is far simpler to run than three sizes in three colours.',
+              'One size in three colors is far simpler to run than three sizes in three colors.',
           },
           {
-            title: 'Order colours together',
+            title: 'Order colors together',
             detail:
               'Shared setup on a single order is cheaper than staggered separate orders, and the batches will match each other.',
           },
           {
             title: 'Review after one full cycle',
             detail:
-              'Look at which colour ran out first and which did not move, then reweight the next order.',
+              'Look at which color ran out first and which did not move, then reweight the next order.',
           },
         ],
       },
       {
         kind: 'linked-prose',
-        heading: 'Colour on cushioned formats',
+        heading: 'Color on cushioned formats',
         before:
-          'Coloured film is not limited to plain mailers. Bubble-lined formats carry colour too, which lets a range stay visually consistent even when some products need protection and others do not. The construction differences, and what each one protects against, are set out on the ',
+          'Colored film is not limited to plain mailers. Bubble-lined formats carry color too, which lets a range stay visually consistent even when some products need protection and others do not. The construction differences, and what each one protects against, are set out on the ',
         link: { href: '/poly-bubble-mailers/', anchor: 'bubble-lined mailer page' },
-        after: '. Matching a tone across two constructions needs a check at proof stage, because the surfaces take colour differently.',
+        after: '. Matching a tone across two constructions needs a check at proof stage, because the surfaces take color differently.',
       },
     ],
     faqs: [
       {
-        q: 'What colours are available for poly mailers?',
-        a: 'Stock tones typically span white, black, grey, blue, green, red, yellow, purple and the pink range, and matched colours are quoted against a reference you supply. Availability varies by film and by market, so we confirm what is achievable before you order.',
+        q: 'What colors are available for poly mailers?',
+        a: 'Stock tones typically span white, black, gray, blue, green, red, yellow, purple and the pink range, and matched colors are quoted against a reference you supply. Availability varies by film and by market, so we confirm what is achievable before you order.',
       },
       {
-        q: 'How many colours can I order at once?',
-        a: 'There is no fixed limit. The practical constraint is your own operation — every colour is another line to store, track and reorder. Most brands find two or three tones is where the benefit stops growing.',
+        q: 'How many colors can I order at once?',
+        a: 'There is no fixed limit. The practical constraint is your own operation — every color is another line to store, track and reorder. Most brands find two or three tones is where the benefit stops growing.',
       },
       {
-        q: 'Is a coloured mailer more expensive than white?',
-        a: 'Coloured film generally carries a small premium over plain white, and a matched colour carries more than a stock one. It is still substantially cheaper than printing, which is why colour is often the first branding step a business takes.',
+        q: 'Is a colored mailer more expensive than white?',
+        a: 'Colored film generally carries a small premium over plain white, and a matched color carries more than a stock one. It is still substantially cheaper than printing, which is why color is often the first branding step a business takes.',
       },
       {
-        q: 'Will two orders of the same colour match each other?',
+        q: 'Will two orders of the same color match each other?',
         a: 'Batches can drift slightly, and it shows more on saturated tones. If a reorder has to sit alongside existing stock, say so at quotation stage so the new batch can be checked against your previous one.',
       },
       {
-        q: 'Can I get a colour that is not in the standard range?',
-        a: 'Usually, as a matched colour against a reference. We confirm what the film can reach before you commit, and where a tone is not achievable we say so rather than delivering an approximation.',
+        q: 'Can I get a color that is not in the standard range?',
+        a: 'Usually, as a matched color against a reference. We confirm what the film can reach before you commit, and where a tone is not achievable we say so rather than delivering an approximation.',
       },
     ],
     related: [
       {
         href: '/black-poly-mailers/',
         label: 'Black Poly Mailers',
-        reason: 'The single colour with the most specific handling and print considerations.',
+        reason: 'The single color with the most specific handling and print considerations.',
       },
       {
         href: '/white-poly-mailers/',
@@ -599,14 +599,14 @@ export const colorProducts: ProductPage[] = [
       },
       {
         href: '/poly-mailer-colors/',
-        label: 'Colour collection',
-        reason: 'Compare every colour page from one place.',
+        label: 'Color collection',
+        reason: 'Compare every color page from one place.',
       },
     ],
     cta: {
-      heading: 'Quote a colour range',
+      heading: 'Quote a color range',
       body: 'Tell us which tones you want and what each one is for. We will quote them together so the setup is shared and the batches match.',
-      buttonLabel: 'Price a colour range',
+      buttonLabel: 'Price a color range',
     },
     whatsapp:
       'Hi, I would like a quotation for colored poly mailers. I am interested in more than one tone.',
@@ -622,27 +622,27 @@ export const colorProducts: ProductPage[] = [
     h1: 'White Poly Mailers',
     title: 'White Poly Mailers | Standard & Custom Printed',
     description:
-      'White poly mailers are the print baseline. Why white gives the widest ink options, where it shows marks, and when a coloured base serves better.',
+      'White poly mailers are the print baseline. Why white gives the widest ink options, where it shows marks, and when a colored base serves better.',
     summary:
-      'The baseline colour — widest print latitude, lowest cost, and the one that shows handling marks most.',
+      'The baseline color — widest print latitude, lowest cost, and the one that shows handling marks most.',
     intro: [
-      'White is the default for a reason that has nothing to do with looks. It is the base that accepts every ink colour, so a design that works on white will work; a design built for a coloured base has to be checked.',
-      'That latitude is what makes white the sensible choice for a first printed run, for a brand whose palette uses several colours, or for any design that includes photography or gradients. It is the least opinionated surface available.',
+      'White is the default for a reason that has nothing to do with looks. It is the base that accepts every ink color, so a design that works on white will work; a design built for a colored base has to be checked.',
+      'That latitude is what makes white the sensible choice for a first printed run, for a brand whose palette uses several colors, or for any design that includes photography or gradients. It is the least opinionated surface available.',
       'It also shows every scuff a sorting network can inflict. This page covers both sides of that trade honestly, because for some ranges white is the wrong answer.',
     ],
     plan: {
       intent: 'Buy white poly mailers, plain or printed.',
       audience:
-        'Brands printing multi-colour artwork, and buyers who want the lowest-cost standard option.',
+        'Brands printing multi-color artwork, and buyers who want the lowest-cost standard option.',
       problem:
         'Deciding whether the print latitude of white outweighs how visibly it marks in transit.',
       angle:
-        'Treats white as a print-substrate decision rather than a colour preference, and is candid about scuffing.',
+        'Treats white as a print-substrate decision rather than a color preference, and is candid about scuffing.',
       primaryKeyword: 'white poly mailers',
       supportingKeywords: ['poly mailers white', 'white shipping bags', 'white mailer bags'],
       nearestPage: '/blank-poly-mailers/',
       boundary:
-        'This page is about the colour white as a print substrate. The blank page is about not printing at all, across every colour.',
+        'This page is about the color white as a print substrate. The blank page is about not printing at all, across every color.',
     },
     images: [
       {
@@ -661,28 +661,28 @@ export const colorProducts: ProductPage[] = [
     blocks: [
       {
         kind: 'compare',
-        heading: 'White against a coloured base',
+        heading: 'White against a colored base',
         intro:
           'This is the decision the page exists to settle. Neither answer is right for everyone.',
-        caption: 'Choosing between a white base and a coloured base film.',
-        columns: ['', 'White base', 'Coloured base'],
+        caption: 'Choosing between a white base and a colored base film.',
+        columns: ['', 'White base', 'Colored base'],
         rows: [
-          ['Ink colours available', 'All of them', 'Limited by contrast against the base'],
+          ['Ink colors available', 'All of them', 'Limited by contrast against the base'],
           ['Photography and gradients', 'Reproduce properly', 'Rarely work'],
           ['Doorstep recognition without print', 'None', 'Immediate'],
           ['Shows scuffs and handling marks', 'Clearly', 'Much less, especially on dark tones'],
           ['Cost of the film itself', 'Lowest', 'Small premium'],
-          ['Suits a multi-colour identity', 'Yes', 'Only if the palette works on that base'],
+          ['Suits a multi-color identity', 'Yes', 'Only if the palette works on that base'],
         ],
         outro:
-          'A useful rule: if your identity is a single mark in one colour, a coloured base gives you more for less. If it is photographic or multi-colour, white is the only base that will carry it.',
+          'A useful rule: if your identity is a single mark in one color, a colored base gives you more for less. If it is photographic or multi-color, white is the only base that will carry it.',
       },
       {
         kind: 'prose',
         heading: 'What white does to a printed design',
         paragraphs: [
           'On white film the ink you specify is close to the ink you get, because nothing is showing through from underneath. Gradients hold, photographic images reproduce, and pale tones in your palette stay pale rather than disappearing.',
-          'The one thing to watch is coverage. A large solid area of ink on white shows any inconsistency in lay-down more than the same solid does on a tinted base, because the eye has a clean reference sitting next to it. Where a design is mostly solid colour, a coloured film often produces a more even result for less money.',
+          'The one thing to watch is coverage. A large solid area of ink on white shows any inconsistency in lay-down more than the same solid does on a tinted base, because the eye has a clean reference sitting next to it. Where a design is mostly solid color, a colored film often produces a more even result for less money.',
         ],
       },
       {
@@ -695,13 +695,13 @@ export const colorProducts: ProductPage[] = [
               'No contrast problems to solve, so artwork moves from file to proof without a redesign.',
           },
           {
-            term: 'Multi-colour or photographic artwork',
+            term: 'Multi-color or photographic artwork',
             detail: 'The only base that reproduces a full palette or an image reliably.',
           },
           {
             term: 'Ranges with several sub-brands',
             detail:
-              'One film, different artwork per line, rather than a colour to manage for each.',
+              'One film, different artwork per line, rather than a color to manage for each.',
           },
           {
             term: 'Cost-led volume orders',
@@ -721,7 +721,7 @@ export const colorProducts: ProductPage[] = [
           {
             label: 'Film weight',
             options: ['Standard', 'Heavier duty'],
-            note: 'Heavier film also raises opacity, which stops dark contents greying the panel.',
+            note: 'Heavier film also raises opacity, which stops dark contents graying the panel.',
           },
           {
             label: 'Opacity',
@@ -736,12 +736,12 @@ export const colorProducts: ProductPage[] = [
           {
             label: 'Print coverage',
             options: ['Unprinted', 'Logo only', 'Partial coverage', 'Full coverage'],
-            note: 'Full coverage on white is where photographic and multi-colour designs belong.',
+            note: 'Full coverage on white is where photographic and multi-color designs belong.',
           },
           {
             label: 'Closure',
             options: ['Self-adhesive peel strip', 'Double strip for returns'],
-            note: 'Unchanged by colour choice, but worth setting at the same time.',
+            note: 'Unchanged by color choice, but worth setting at the same time.',
           },
         ],
       },
@@ -749,7 +749,7 @@ export const colorProducts: ProductPage[] = [
         kind: 'linked-prose',
         heading: 'Handling marks, and how to live with them',
         before:
-          'White shows what happens to a parcel on its way to a doorstep — conveyor marks, ink transfer from other labels, a grey line where it was gripped. None of it affects the contents, but customers photograph parcels now, and a scuffed white bag reads as carelessness. A matte finish helps materially. So does a design that carries visual interest across the panel rather than leaving large clean areas. If handling marks are a recurring complaint, the ',
+          'White shows what happens to a parcel on its way to a doorstep — conveyor marks, ink transfer from other labels, a gray line where it was gripped. None of it affects the contents, but customers photograph parcels now, and a scuffed white bag reads as carelessness. A matte finish helps materially. So does a design that carries visual interest across the panel rather than leaving large clean areas. If handling marks are a recurring complaint, the ',
         link: { href: '/black-poly-mailers/', anchor: 'case for a dark base film' },
         after: ' is worth reading before you reorder.',
       },
@@ -757,7 +757,7 @@ export const colorProducts: ProductPage[] = [
         kind: 'prose',
         heading: 'Quality control on a white run',
         paragraphs: [
-          'White film is the least forgiving substrate for a print check, which makes it the easiest to inspect properly. Registration drift, colour variation between the start and end of a run, and any speckling in a solid area all show clearly.',
+          'White film is the least forgiving substrate for a print check, which makes it the easiest to inspect properly. Registration drift, color variation between the start and end of a run, and any speckling in a solid area all show clearly.',
           'We check proofs against approved artwork at intervals through the run rather than only at the beginning, and hold samples against your approved proof rather than against a screen.',
         ],
       },
@@ -765,19 +765,19 @@ export const colorProducts: ProductPage[] = [
     faqs: [
       {
         q: 'Why are most poly mailers white?',
-        a: 'Because white film is the lowest-cost base and the only one that accepts every ink colour. That combination makes it the default for both plain stock and first printed runs.',
+        a: 'Because white film is the lowest-cost base and the only one that accepts every ink color. That combination makes it the default for both plain stock and first printed runs.',
       },
       {
         q: 'Do white poly mailers show dirt in transit?',
-        a: 'More than any other colour. Marks are cosmetic rather than structural, but they are visible. A matte finish reduces how much they show, and a design that covers more of the panel hides more of them.',
+        a: 'More than any other color. Marks are cosmetic rather than structural, but they are visible. A matte finish reduces how much they show, and a design that covers more of the panel hides more of them.',
       },
       {
         q: 'Will dark clothing show through a white mailer?',
-        a: 'On standard-opacity film it can appear as a faint grey shadow. If you ship dark garments regularly, specify higher opacity or a heavier film weight when requesting a quote.',
+        a: 'On standard-opacity film it can appear as a faint gray shadow. If you ship dark garments regularly, specify higher opacity or a heavier film weight when requesting a quote.',
       },
       {
-        q: 'Is white cheaper than coloured film?',
-        a: 'Generally yes, by a small margin, and matched colours cost more again. At high monthly volumes that margin is worth quantifying rather than assuming.',
+        q: 'Is white cheaper than colored film?',
+        a: 'Generally yes, by a small margin, and matched colors cost more again. At high monthly volumes that margin is worth quantifying rather than assuming.',
       },
     ],
     related: [
@@ -794,7 +794,7 @@ export const colorProducts: ProductPage[] = [
       {
         href: '/custom-poly-mailers/',
         label: 'Custom Poly Mailers',
-        reason: 'What a printed run involves once the base colour is settled.',
+        reason: 'What a printed run involves once the base color is settled.',
       },
     ],
     cta: {
@@ -816,12 +816,12 @@ export const colorProducts: ProductPage[] = [
     h1: 'Black Poly Mailers',
     title: 'Black Poly Mailers | Matte & Gloss Options',
     description:
-      'Black poly mailers hide handling marks and give full opacity. Matte against gloss, what prints on black, and where the colour has drawbacks.',
+      'Black poly mailers hide handling marks and give full opacity. Matte against gloss, what prints on black, and where the color has drawbacks.',
     summary:
       'Full opacity, marks that do not show, and a surface that only a narrow set of inks will read on.',
     intro: [
-      'Black solves two problems that no other colour solves as completely. Nothing shows through it, and nothing shows on it. A dark garment inside is invisible, and the scuffs a parcel picks up in a sorting network disappear against the base.',
-      'The trade is print. Black gives you the narrowest ink options of any base film, and a design that relies on a dark wordmark simply will not work. This page covers both, along with the matte-against-gloss decision that matters more on black than on any other colour.',
+      'Black solves two problems that no other color solves as completely. Nothing shows through it, and nothing shows on it. A dark garment inside is invisible, and the scuffs a parcel picks up in a sorting network disappear against the base.',
+      'The trade is print. Black gives you the narrowest ink options of any base film, and a design that relies on a dark wordmark simply will not work. This page covers both, along with the matte-against-gloss decision that matters more on black than on any other color.',
     ],
     plan: {
       intent: 'Buy black poly mailers, usually matte, often printed.',
@@ -840,7 +840,7 @@ export const colorProducts: ProductPage[] = [
       ],
       nearestPage: '/colored-poly-mailers/',
       boundary:
-        'Single-colour depth on the properties unique to black. The colored page covers running several tones and general matching.',
+        'Single-color depth on the properties unique to black. The colored page covers running several tones and general matching.',
     },
     images: [
       {
@@ -849,7 +849,7 @@ export const colorProducts: ProductPage[] = [
       },
       {
         file: 'black-poly-mailers-pair-on-split-grey-backdrop.png',
-        alt: 'Two black poly mailers overlapping on a split grey and white background',
+        alt: 'Two black poly mailers overlapping on a split gray and white background',
       },
       {
         file: 'black-poly-mailers-printed-logo-flat-lay.png',
@@ -861,7 +861,7 @@ export const colorProducts: ProductPage[] = [
         kind: 'compare',
         heading: 'Matte or gloss, on black',
         intro:
-          'On most colours this is a preference. On black it changes the whole character of the parcel.',
+          'On most colors this is a preference. On black it changes the whole character of the parcel.',
         caption: 'How finish changes a black mailer in practice.',
         columns: ['', 'Matte black', 'Gloss black'],
         rows: [
@@ -882,12 +882,12 @@ export const colorProducts: ProductPage[] = [
           {
             term: 'Complete opacity',
             detail:
-              'Contents are invisible from outside regardless of colour, which matters for discreet categories.',
+              'Contents are invisible from outside regardless of color, which matters for discreet categories.',
           },
           {
             term: 'Hides transit marks',
             detail:
-              'The scuffs and grey lines that make a white parcel look mistreated do not register on black.',
+              'The scuffs and gray lines that make a white parcel look mistreated do not register on black.',
           },
           {
             term: 'Makes white print sing',
@@ -914,12 +914,12 @@ export const colorProducts: ProductPage[] = [
       {
         kind: 'specs',
         heading: 'Choices on a black base',
-        intro: 'All confirmed in writing on the quotation.',
+        intro: 'All confirmed on the quotation.',
         rows: [
           {
             label: 'Finish',
             options: ['Matte', 'Gloss'],
-            note: 'The most consequential choice on this colour — see the comparison above.',
+            note: 'The most consequential choice on this color — see the comparison above.',
           },
           {
             label: 'Film weight',
@@ -927,9 +927,9 @@ export const colorProducts: ProductPage[] = [
             note: 'Black is already fully opaque, so weight is about strength here rather than show-through.',
           },
           {
-            label: 'Print colour',
+            label: 'Print color',
             options: ['White', 'Metallic silver or gold', 'No print'],
-            note: 'Other colours can be quoted but should be proofed on the actual film first.',
+            note: 'Other colors can be quoted but should be proofed on the actual film first.',
           },
           {
             label: 'Print coverage',
@@ -961,7 +961,7 @@ export const colorProducts: ProductPage[] = [
               'Matte and gloss change how a mark reads, so approving artwork before the finish is decided means approving it twice.',
           },
           {
-            title: 'Supply artwork as a single-colour file',
+            title: 'Supply artwork as a single-color file',
             detail:
               'A white mark on a transparent background gives us exactly what we need without interpretation.',
           },
@@ -989,7 +989,7 @@ export const colorProducts: ProductPage[] = [
         a: 'Matte is the more common choice because it photographs evenly and hides scuffs better. Gloss gives a higher-contrast, more reflective parcel, which suits promotional ranges more than premium ones.',
       },
       {
-        q: 'What colour can be printed on black mailers?',
+        q: 'What color can be printed on black mailers?',
         a: 'White reads reliably at any size. Metallic silver and gold work at larger sizes and should be proofed. Anything mid-tone or dark will not hold against the base and is not worth the setup.',
       },
       {
@@ -1037,18 +1037,18 @@ export const colorProducts: ProductPage[] = [
     h1: 'Blank Poly Mailers',
     title: 'Blank Poly Mailers | Unprinted Stock Bags',
     description:
-      'Unprinted poly mailers in stock colours and sizes. When blank stock is the right call, how to brand without printing, and when to switch.',
+      'Unprinted poly mailers in stock colors and sizes. When blank stock is the right call, how to brand without printing, and when to switch.',
     summary:
-      'Unprinted stock across the colour range, and the argument for staying unprinted longer than you think.',
+      'Unprinted stock across the color range, and the argument for staying unprinted longer than you think.',
     intro: [
       'Blank mailers are not a lesser product. For a lot of businesses they are the correct one, and staying on them longer is a better decision than printing early with artwork that is not settled.',
-      'Printing commits you. It commits your artwork, your size, your colour and your volume, and it commits them all at once. Blank stock commits none of that, which is why it suits businesses whose range is still moving, whose volumes are unpredictable, or who ship on behalf of several brands.',
+      'Printing commits you. It commits your artwork, your size, your color and your volume, and it commits them all at once. Blank stock commits none of that, which is why it suits businesses whose range is still moving, whose volumes are unpredictable, or who ship on behalf of several brands.',
       'This page is about that decision — when blank is right, how to brand a blank parcel without a print run, and the signals that tell you it is time to switch.',
     ],
     plan: {
       intent: 'Buy unprinted poly mailers in bulk.',
       audience:
-        'Early-stage sellers, third-party fulfilment operations, and businesses whose artwork is not settled.',
+        'Early-stage sellers, third-party fulfillment operations, and businesses whose artwork is not settled.',
       problem:
         'Wanting branded-looking parcels without committing to a printed run.',
       angle:
@@ -1057,7 +1057,7 @@ export const colorProducts: ProductPage[] = [
       supportingKeywords: ['unprinted poly mailers', 'plain poly mailers', 'stock poly mailers'],
       nearestPage: '/white-poly-mailers/',
       boundary:
-        'This page is about print status across all colours. The white page is about one colour as a print substrate.',
+        'This page is about print status across all colors. The white page is about one color as a print substrate.',
     },
     images: [
       {
@@ -1091,7 +1091,7 @@ export const colorProducts: ProductPage[] = [
           {
             term: 'You ship for several brands',
             detail:
-              'Third-party fulfilment and multi-brand sellers cannot put one logo on every parcel.',
+              'Third-party fulfillment and multi-brand sellers cannot put one logo on every parcel.',
           },
           {
             term: 'You are testing a size',
@@ -1112,9 +1112,9 @@ export const colorProducts: ProductPage[] = [
           'A plain mailer does not have to arrive anonymous. These methods carry no print setup and can change tomorrow.',
         steps: [
           {
-            title: 'Choose a coloured film',
+            title: 'Choose a colored film',
             detail:
-              'A coloured blank mailer is recognisable on a doorstep and costs a fraction of a printed run.',
+              'A colored blank mailer is recognizable on a doorstep and costs a fraction of a printed run.',
           },
           {
             title: 'Use a printed sticker or seal',
@@ -1127,7 +1127,7 @@ export const colorProducts: ProductPage[] = [
               'A printed card, tissue or wrap is what the customer actually sees first when the bag opens.',
           },
           {
-            title: 'Standardise your label placement',
+            title: 'Standardize your label placement',
             detail:
               'Consistent label position across every parcel reads as care, and costs nothing.',
           },
@@ -1150,7 +1150,7 @@ export const colorProducts: ProductPage[] = [
           ['Cost per unit', 'Lowest', 'Higher, falling with volume'],
           ['Commitment', 'Buy to demand', 'Committed to a quantity and a design'],
           ['Time to first order', 'Short', 'Longer — proofing comes first'],
-          ['Brand recognition', 'From colour and inserts only', 'From the parcel itself'],
+          ['Brand recognition', 'From color and inserts only', 'From the parcel itself'],
           ['Changing your mind', 'Free', 'Costs a run'],
         ],
       },
@@ -1160,7 +1160,7 @@ export const colorProducts: ProductPage[] = [
         paragraphs: [
           'Three things usually happen together when a business is ready. Volume becomes predictable enough to forecast a run. The artwork stops changing. And customers start photographing parcels, which means the outside of the bag has become part of the product.',
           'When all three are true, printing pays for itself quickly. When only one is, blank stock plus a good sticker is almost always the better use of the money.',
-          'There is no need to jump straight to full coverage either. A single printed mark on a coloured film is a cheap first printed run, and it teaches you what your customers actually respond to before you commit to something more elaborate.',
+          'There is no need to jump straight to full coverage either. A single printed mark on a colored film is a cheap first printed run, and it teaches you what your customers actually respond to before you commit to something more elaborate.',
         ],
       },
       {
@@ -1170,9 +1170,9 @@ export const colorProducts: ProductPage[] = [
           'Unprinted does not mean unspecified. Everything below is selectable on a blank order.',
         rows: [
           {
-            label: 'Colour',
-            options: ['White', 'Black', 'Grey', 'Stock colour range'],
-            note: 'Colour is the cheapest way to make a blank parcel recognisable.',
+            label: 'Color',
+            options: ['White', 'Black', 'Gray', 'Stock color range'],
+            note: 'Color is the cheapest way to make a blank parcel recognizable.',
           },
           {
             label: 'Film weight',
@@ -1187,7 +1187,7 @@ export const colorProducts: ProductPage[] = [
           {
             label: 'Closure',
             options: ['Self-adhesive peel strip', 'Double strip for returns'],
-            note: 'A resealable blank mailer is a common choice for fulfilment operations.',
+            note: 'A resealable blank mailer is a common choice for fulfillment operations.',
           },
           {
             label: 'Sizes per order',
@@ -1211,8 +1211,8 @@ export const colorProducts: ProductPage[] = [
         a: 'Per unit, yes, and there is no setup cost. The gap narrows as volume rises, which is why printing becomes worthwhile once your monthly rate is predictable.',
       },
       {
-        q: 'What colours do blank mailers come in?',
-        a: 'The stock range typically spans white, black, grey and a set of colours, with availability varying by film and market. Colour is the most cost-effective way to make an unprinted parcel recognisable.',
+        q: 'What colors do blank mailers come in?',
+        a: 'The stock range typically spans white, black, gray and a set of colors, with availability varying by film and market. Color is the most cost-effective way to make an unprinted parcel recognizable.',
       },
       {
         q: 'Can I add my logo to blank mailers myself?',
@@ -1242,7 +1242,7 @@ export const colorProducts: ProductPage[] = [
     ],
     cta: {
       heading: 'Order blank mailers',
-      body: 'Tell us the sizes, colours and quantities you want. Blank orders are straightforward to quote and need no artwork from you.',
+      body: 'Tell us the sizes, colors and quantities you want. Blank orders are straightforward to quote and need no artwork from you.',
       buttonLabel: 'Get blank stock pricing',
     },
     whatsapp:

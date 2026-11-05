@@ -4,7 +4,7 @@
  * Any character that a mail transfer agent would treat as ending a header line
  * must never survive into a From, Reply-To or Subject value. That includes the
  * two obvious ones (CR, LF) and the two Unicode line terminators that some
- * parsers also honour (U+2028, U+2029).
+ * parsers also honor (U+2028, U+2029).
  *
  * Built with RegExp and explicit escapes rather than a literal so the pattern
  * cannot be broken by the very characters it is meant to catch.

@@ -13,7 +13,7 @@ reviewed: 2026-08-15
 author: The Poly Mailers editorial team
 reviewer: Production and specification desk
 heroImage: ../../assets/products/colored-printed-bubble-lined-mailers-arranged-fan.png
-heroAlt: A spread of printed cushioned mailers in six colours, showing how bold artwork survives the texture
+heroAlt: A spread of printed cushioned mailers in six colors, showing how bold artwork survives the texture
 related:
   - href: /poly-bubble-mailers/
     label: The construction in detail
@@ -55,12 +55,12 @@ The second is that bubble size is a trade rather than an upgrade. Larger bubbles
 
 ## The cases where it genuinely pays
 
-Cushioning earns its cost in a recognisable set of situations.
+Cushioning earns its cost in a recognizable set of situations.
 
 - **A boxed item where the carton is part of the product.** Cosmetics, small electronics, anything sold in retail packaging the customer sees. The lining protects the box, and a crushed box is a complaint even when the contents are fine.
 - **Fragile items, boxed first.** A cushioned mailer protects a boxed ceramic well and an unboxed one poorly, because cushioning works across a face and a mug presents an edge.
 - **Hard corners inside a mixed parcel.** A box corner concentrates the whole weight of a parcel at one point. The lining is what stops that point becoming a puncture.
-- **Contents where a failure is expensive.** Where a damaged order costs a replacement, a second shipment, a support conversation and a proportion of that customer's future spend, the arithmetic turns favourable quickly.
+- **Contents where a failure is expensive.** Where a damaged order costs a replacement, a second shipment, a support conversation and a proportion of that customer's future spend, the arithmetic turns favorable quickly.
 - **Parcels that will be handled repeatedly.** Consolidation, transfer and long multi-leg routes each add impact opportunities that a single-leg local delivery does not have.
 
 Boxed cosmetics and small electronics account for most of these in practice, which the [beauty and cosmetics page](/industries/beauty-and-cosmetics/) goes through.
@@ -103,9 +103,9 @@ And print behaves differently on the dimpled surface. Fine lines break up, small
 
 ## Poly outer or paper outer
 
-If you decide cushioning is right, one more choice follows: what the outer face is made of. Same lining, different behaviour.
+If you decide cushioning is right, one more choice follows: what the outer face is made of. Same lining, different behavior.
 
-A poly outer resists rain and splashing, weighs less, and stretches before it tears. It takes solid colour well and is the right answer where parcels sit on doorsteps in weather.
+A poly outer resists rain and splashing, weighs less, and stretches before it tears. It takes solid color well and is the right answer where parcels sit on doorsteps in weather.
 
 A paper outer feels more traditional and takes fine print more crisply, which suits books and print. It also absorbs water, and paper contents inside a wet paper bag is the worst combination available.
 

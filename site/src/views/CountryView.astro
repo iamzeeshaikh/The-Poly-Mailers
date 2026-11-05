@@ -13,7 +13,7 @@ import { breadcrumbs, faqPage, graph, itemList, webPage, type Crumb } from '~/li
  * they are market pages rather than a subsection of anything.
  *
  * No hreflang is emitted anywhere on this site. These four are different pages
- * about different markets, not localised equivalents of a single page, and
+ * about different markets, not localized equivalents of a single page, and
  * declaring them as alternates would be a misrepresentation.
  */
 import type { CountryHub } from '~/data/locations';
@@ -83,7 +83,7 @@ const groupByRegion = (list: readonly (typeof places)[number][]) => {
         compact
         id={`quote-${country.slug}`}
         heading={`Quote an order for ${country.name}`}
-        intro="Tell us what you ship and where it goes. Currency, documentation and schedule are all confirmed in writing."
+        intro="Tell us what you ship and where it goes. Currency, documentation and schedule are all confirmed by email."
       />
     </div>
 

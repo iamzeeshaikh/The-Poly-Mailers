@@ -50,7 +50,7 @@ export const usStatesB: readonly LocationPage[] = [
           'When the brand is not yours, the requirements arrive as a document rather than as a preference.',
         items: [
           { term: 'Individual bagging requirements', detail: 'Many brand customers require each garment bagged before it is cased. That is a second packaging line, priced and stocked separately.' },
-          { term: 'Prescribed labelling', detail: 'Where labels go, what they carry and how they are affixed is frequently specified, and it can rule out artwork on a panel.' },
+          { term: 'Prescribed labeling', detail: 'Where labels go, what they carry and how they are affixed is frequently specified, and it can rule out artwork on a panel.' },
           { term: 'Vent holes and warnings', detail: 'Consumer-goods bagging often requires specific perforation or printed warnings. These are compliance items, not options.' },
           { term: 'Case counts and marking', detail: 'How many per bag, per case and per pallet, marked in a prescribed way.' },
           { term: 'No visible supplier branding', detail: 'Your name on the packaging is usually not wanted. Plain stock is the norm rather than a compromise.' },
@@ -86,7 +86,7 @@ export const usStatesB: readonly LocationPage[] = [
     faqs: [
       {
         q: 'Can you supply garment bags that meet a brand customer’s specification?',
-        a: 'Yes. Send us their packaging document rather than a summary — including any vent, labelling or printed warning requirements — and we will quote against it so a shipment is not rejected on arrival.',
+        a: 'Yes. Send us their packaging document rather than a summary — including any vent, labeling or printed warning requirements — and we will quote against it so a shipment is not rejected on arrival.',
       },
       {
         q: 'Do you supply unbranded packaging for contract manufacturing?',
@@ -99,8 +99,8 @@ export const usStatesB: readonly LocationPage[] = [
     ],
     related: [
       { href: '/usa/', label: 'US ordering and delivery', reason: 'How ordering, artwork and delivery work nationally.' },
-      { href: '/locations/charlotte/', label: 'Charlotte', reason: 'The commercial centre of the state’s apparel trade.' },
-      { href: '/industries/clothing-and-apparel/', label: 'Clothing and apparel', reason: 'The garment fulfilment picture end to end.' },
+      { href: '/locations/charlotte/', label: 'Charlotte', reason: 'The commercial center of the state’s apparel trade.' },
+      { href: '/industries/clothing-and-apparel/', label: 'Clothing and apparel', reason: 'The garment fulfillment picture end to end.' },
     ],
     cta: {
       heading: 'Quote against a customer specification',
@@ -123,7 +123,7 @@ export const usStatesB: readonly LocationPage[] = [
       'Poly mailers for New Jersey businesses — import consolidation, repacking imported goods and preparing shipments for onward distribution.',
     summary: 'Import consolidation and repacking, where goods arrive one way and leave another.',
     intro: [
-      'New Jersey’s port and warehousing concentration produces a particular kind of packaging enquiry: goods arriving in one format and needing to leave in another. Bulk imports broken down into retail units, cases split into individual shipments, product repacked to meet a domestic requirement.',
+      'New Jersey’s port and warehousing concentration produces a particular kind of packaging inquiry: goods arriving in one format and needing to leave in another. Bulk imports broken down into retail units, cases split into individual shipments, product repacked to meet a domestic requirement.',
       'That work has its own constraints. The packaging is bought against an inbound reality you did not choose and an outbound requirement someone else set, and the interesting decisions all sit in the gap between them.',
     ],
     angle:
@@ -134,7 +134,7 @@ export const usStatesB: readonly LocationPage[] = [
       { name: 'Import and distribution', note: 'A dense port-adjacent warehousing base handling goods arriving in bulk.' },
       { name: 'Repack and kitting operations', note: 'Businesses whose product is the repackaging itself rather than the goods.' },
       { name: 'Personal care and pharmaceutical distribution', note: 'A long-established regional presence, with the documentation habits that follow.' },
-      { name: 'Ecommerce fulfilment', note: 'Operations positioned for fast delivery into the northeast corridor.' },
+      { name: 'Ecommerce fulfillment', note: 'Operations positioned for fast delivery into the northeast corridor.' },
     ],
     recommended: [
       { slug: 'blank-poly-mailers', why: 'Repack operations rarely put their own name on anything.' },
@@ -152,7 +152,7 @@ export const usStatesB: readonly LocationPage[] = [
           { title: 'Start from the outbound requirement', detail: 'What the receiving party needs is fixed. Work backwards from it rather than forwards from what arrived.' },
           { title: 'Count the touches', detail: 'Every additional handling is cost. A packaging choice that removes a step is worth more than one that saves a cent per unit.' },
           { title: 'Choose a closure for speed', detail: 'On a repack line, seconds per unit are the economics. A self-seal strip removes a tape dispenser from every station.' },
-          { title: 'Standardise ruthlessly', detail: 'A repack line runs on repetition. Every additional size is a decision, and decisions are where throughput goes.' },
+          { title: 'Standardize ruthlessly', detail: 'A repack line runs on repetition. Every additional size is a decision, and decisions are where throughput goes.' },
           { title: 'Check the printed requirements early', detail: 'Warnings, barcodes and country-of-origin marking often have to be on the bag rather than on a label.' },
         ],
       },
@@ -162,7 +162,7 @@ export const usStatesB: readonly LocationPage[] = [
         items: [
           { term: 'You did not choose the inbound format', detail: 'The packaging has to work with whatever arrives, including sizes and shapes you would not have picked.' },
           { term: 'Margins are thin and volumes are large', detail: 'A small per-unit difference matters more here than almost anywhere else.' },
-          { term: 'Requirements come from the receiving party', detail: 'Format, labelling and marking are typically specified by whoever the goods go to.' },
+          { term: 'Requirements come from the receiving party', detail: 'Format, labeling and marking are typically specified by whoever the goods go to.' },
           { term: 'Throughput beats presentation', detail: 'A bag that seals in one motion is worth more than one that looks better.' },
         ],
       },
@@ -191,7 +191,7 @@ export const usStatesB: readonly LocationPage[] = [
     ],
     related: [
       { href: '/usa/', label: 'Poly mailer supply across the US', reason: 'How ordering, artwork and delivery work nationally.' },
-      { href: '/locations/new-york-city/', label: 'New York City', reason: 'The demand centre most northeast repack volume serves.' },
+      { href: '/locations/new-york-city/', label: 'New York City', reason: 'The demand center most northeast repack volume serves.' },
       { href: '/economy-poly-mailers/', label: 'Economy specification', reason: 'Where per-unit cost is the deciding factor.' },
     ],
     cta: {
@@ -213,7 +213,7 @@ export const usStatesB: readonly LocationPage[] = [
     title: 'Poly Mailers Virginia | Returns & Reverse Logistics',
     description:
       'Poly mailers for Virginia businesses — returns processing and reverse logistics, where packaging has to work in both directions.',
-    summary: 'Returns processing, where the packaging has to work travelling back as well as out.',
+    summary: 'Returns processing, where the packaging has to work traveling back as well as out.',
     intro: [
       'Returns processing is a genuine industry, and it has a packaging problem almost nobody designs for. Most packaging is specified for the journey out. The journey back is handled by whatever the customer can find in a cupboard, which is why returns arrive damaged, unidentifiable and expensive to process.',
       'For an operation that handles returns at volume, packaging decisions made at the outbound stage determine how much the inbound stage costs. That relationship is what this page is about.',
@@ -224,13 +224,13 @@ export const usStatesB: readonly LocationPage[] = [
     supportingKeywords: ['returns packaging', 'reverse logistics mailers', 'shipping bags VA'],
     sectors: [
       { name: 'Returns processing and refurbishment', note: 'Operations whose entire input arrives in packaging chosen by somebody else.' },
-      { name: 'Ecommerce fulfilment', note: 'Distribution positioned for the eastern seaboard, with the return volumes that follow.' },
+      { name: 'Ecommerce fulfillment', note: 'Distribution positioned for the eastern seaboard, with the return volumes that follow.' },
       { name: 'Apparel and footwear', note: 'The categories with the highest return rates in retail.' },
       { name: 'Consumer electronics resale', note: 'Where an item’s condition on return is the whole value proposition.' },
     ],
     recommended: [
       { slug: 'self-seal-poly-mailers', why: 'The double-strip closure is the single change that most improves a returns process.' },
-      { slug: '10x13-poly-mailers', why: 'Standardising the outbound size makes the inbound process predictable.' },
+      { slug: '10x13-poly-mailers', why: 'Standardizing the outbound size makes the inbound process predictable.' },
       { slug: 'padded-poly-mailers', why: 'Returns arrive packed by amateurs; cushioning absorbs the difference.' },
       { slug: 'blank-poly-mailers', why: 'Returns bags supplied to customers rarely need branding.' },
     ],
@@ -318,7 +318,7 @@ export const usStatesB: readonly LocationPage[] = [
     h1: 'Poly Mailers for Washington Businesses',
     title: 'Poly Mailers Washington | Evidence-Led Sustainability',
     description:
-      'Poly mailers for Washington businesses — where sustainability claims get scrutinised, and what documentation is actually available to support them.',
+      'Poly mailers for Washington businesses — where sustainability claims get scrutinized, and what documentation is actually available to support them.',
     summary: 'Where sustainability claims get checked, and what can actually be evidenced.',
     intro: [
       'Washington buyers ask harder questions about environmental claims than almost anywhere else we supply. Not vaguer questions — harder ones. What feedstock, what proportion, evidenced by what document, and does it hold on reorder.',
@@ -370,7 +370,7 @@ export const usStatesB: readonly LocationPage[] = [
         kind: 'prose',
         heading: 'On recyclability specifically',
         paragraphs: [
-          'Flexible film is generally not accepted in household kerbside collections in the markets we serve, and is instead collected at store drop-off points where those exist. Availability varies by area, and in some places it does not exist at all.',
+          'Flexible film is generally not accepted in household curbside collections in the markets we serve, and is instead collected at store drop-off points where those exist. Availability varies by area, and in some places it does not exist at all.',
           'That makes a blanket recyclability claim on a mailer difficult to defend, however the film was made. The honest alternative is to say where it can be taken and to be specific about it, which is more useful to a customer than a symbol implying a collection they cannot reach.',
           'It also means recycled content and recyclability are separate claims requiring separate evidence, and conflating them is the most common error we see in packaging copy.',
         ],
@@ -379,7 +379,7 @@ export const usStatesB: readonly LocationPage[] = [
         kind: 'linked-prose',
         heading: 'What we will not publish',
         before:
-          'You will not find a recycled percentage, a certification mark or a decomposition timescale anywhere on this site. Not because the information is commercially sensitive, but because none was supplied to us with evidence behind it, and a figure we could not honour for your specific order would be worse than none. The full position, including what we do instead, is set out on the ',
+          'You will not find a recycled percentage, a certification mark or a decomposition timescale anywhere on this site. Not because the information is commercially sensitive, but because none was supplied to us with evidence behind it, and a figure we could not honor for your specific order would be worse than none. The full position, including what we do instead, is set out on the ',
         link: { href: '/sustainability/', anchor: 'sustainability policy page' },
         after: '.',
       },
@@ -391,7 +391,7 @@ export const usStatesB: readonly LocationPage[] = [
       },
       {
         q: 'Are poly mailers recyclable in Washington?',
-        a: 'Flexible film is generally not accepted kerbside, and is instead collected at store drop-off points where those exist. Availability varies by area, so check what applies where your customers are before printing any disposal instruction.',
+        a: 'Flexible film is generally not accepted curbside, and is instead collected at store drop-off points where those exist. Availability varies by area, so check what applies where your customers are before printing any disposal instruction.',
       },
       {
         q: 'What is the most defensible sustainability claim we can make?',
@@ -469,7 +469,7 @@ export const usStatesB: readonly LocationPage[] = [
           ['Stock held through quiet periods', 'Substantial', 'Minimal'],
           ['Exposure to a specification change', 'Higher', 'Lower'],
           ['Admin', 'Less', 'More'],
-          ['Risk of ageing adhesive', 'Real', 'Low'],
+          ['Risk of aging adhesive', 'Real', 'Low'],
         ],
         outro:
           'If you store in a controlled space and your specification is settled, two orders usually wins. If either is not true, four costs less in practice than it appears to on the quotation.',
@@ -534,7 +534,7 @@ export const usStatesB: readonly LocationPage[] = [
       { name: 'Direct-to-consumer brands', note: 'A fast-growing base, much of it shipping across the southwest in summer.' },
       { name: 'Beauty and personal care', note: 'The category most affected by heat in transit, because so much of it is formulated to soften.' },
       { name: 'Outdoor and recreation', note: 'Products designed for heat, shipped in it, which is one of the easier combinations.' },
-      { name: 'Fulfilment and distribution', note: 'Warehousing positioned to serve the southwest, with the storage discipline that requires.' },
+      { name: 'Fulfillment and distribution', note: 'Warehousing positioned to serve the southwest, with the storage discipline that requires.' },
     ],
     recommended: [
       { slug: 'white-poly-mailers', why: 'A pale film absorbs less radiant heat than a dark one on a doorstep in sun.' },
@@ -569,7 +569,7 @@ export const usStatesB: readonly LocationPage[] = [
         kind: 'linked-prose',
         heading: 'Storage in the same climate',
         before:
-          'The other half of the heat problem is your own stock. Closure adhesive degrades faster at high temperature, and a pallet held through a desert summer in an uncooled space seals noticeably worse than fresh stock. Order to a rate you will actually use, keep cartons sealed and away from external walls, and test a bag from anything that has been sitting. The material behaviour behind that is set out on the ',
+          'The other half of the heat problem is your own stock. Closure adhesive degrades faster at high temperature, and a pallet held through a desert summer in an uncooled space seals noticeably worse than fresh stock. Order to a rate you will actually use, keep cartons sealed and away from external walls, and test a bag from anything that has been sitting. The material behavior behind that is set out on the ',
         link: { href: '/materials/', anchor: 'materials page' },
         after: '.',
       },
@@ -628,7 +628,7 @@ export const usStatesB: readonly LocationPage[] = [
       { name: 'Direct-to-consumer brands', note: 'A growing own-channel base, much of it apparel.' },
     ],
     recommended: [
-      { slug: '10x13-poly-mailers', why: 'Merchandise is mostly apparel, and this is the size apparel standardises on.' },
+      { slug: '10x13-poly-mailers', why: 'Merchandise is mostly apparel, and this is the size apparel standardizes on.' },
       { slug: 'blank-poly-mailers', why: 'The uncommitted layer that covers an uncertain quantity without waste.' },
       { slug: 'custom-poly-mailers', why: 'For the portion of the run you are confident about.' },
       { slug: 'black-poly-mailers', why: 'A merchandise parcel that reads as part of the release rather than as shipping.' },
@@ -642,7 +642,7 @@ export const usStatesB: readonly LocationPage[] = [
         steps: [
           { title: 'Work backwards from the date', detail: 'Stock on the bench, then production, then proof approval, then artwork. Fix each date rather than each duration.' },
           { title: 'Order printed stock to your confident number', detail: 'The quantity you would be comfortable with if the release underperforms.' },
-          { title: 'Cover the upside with plain stock', detail: 'Coloured plain mailers with a sticker cost a fraction of a printed run and can be bought later.' },
+          { title: 'Cover the upside with plain stock', detail: 'Colored plain mailers with a sticker cost a fraction of a printed run and can be bought later.' },
           { title: 'Settle artwork earlier than feels necessary', detail: 'Proof approval is where fixed-date projects run late, far more often than production is.' },
           { title: 'Decide what leftovers are for', detail: 'Undated artwork can run again. Artwork naming a specific tour or date cannot.' },
         ],
@@ -671,11 +671,11 @@ export const usStatesB: readonly LocationPage[] = [
     faqs: [
       {
         q: 'How do I order packaging when I do not know how much I will sell?',
-        a: 'Split it. Order printed stock to the quantity you are confident about, and cover the upside with plain coloured mailers and a sticker. That way a strong release does not leave you short and a weak one does not leave you with a printed write-off.',
+        a: 'Split it. Order printed stock to the quantity you are confident about, and cover the upside with plain colored mailers and a sticker. That way a strong release does not leave you short and a weak one does not leave you with a printed write-off.',
       },
       {
         q: 'What is the most common cause of a missed merchandise deadline?',
-        a: 'Artwork approval, not production. Designs that are still being finalised close to the date, licensed elements not yet cleared, and approvers who are unavailable account for most of it.',
+        a: 'Artwork approval, not production. Designs that are still being finalized close to the date, licensed elements not yet cleared, and approvers who are unavailable account for most of it.',
       },
       {
         q: 'Should merchandise packaging name the event?',
@@ -814,7 +814,7 @@ export const usStatesB: readonly LocationPage[] = [
     summary: 'Industrial and B2B shipping, where packaging is a controlled specification.',
     intro: [
       'Michigan’s manufacturing base produces a kind of packaging buyer we do not meet often elsewhere: one for whom packaging is a specification under change control, not a purchasing decision made on a Tuesday.',
-      'The questions are different in a useful way. Not "which is cheapest" but "will this be identical next year", "what changes if you switch film", and "can I have that in writing for our records".',
+      'The questions are different in a useful way. Not "which is cheapest" but "will this be identical next year", "what changes if you switch film", and "can I have that documented for our records".',
     ],
     angle:
       'Packaging as a controlled specification — consistency, change notice and documentation.',
@@ -837,7 +837,7 @@ export const usStatesB: readonly LocationPage[] = [
         kind: 'bullets',
         heading: 'What a controlled specification needs from a supplier',
         intro:
-          'Five things that matter more than price in this context, and that we will put in writing.',
+          'Five things that matter more than price in this context, and that we will confirm for your order.',
         items: [
           { term: 'The specification stated, not implied', detail: 'Film, weight, closure, dimensions and tolerance, written on the quotation rather than described in conversation.' },
           { term: 'Notice of a material change', detail: 'If the film available for your order changes, you should hear about it before it ships, not after.' },
@@ -885,8 +885,8 @@ export const usStatesB: readonly LocationPage[] = [
     ],
     cta: {
       heading: 'Specify under change control',
-      body: 'Send your requirement, including any consistency or documentation needs. We will quote against it and state everything in writing.',
-      buttonLabel: 'Request a written specification',
+      body: 'Send your requirement, including any consistency or documentation needs. We will quote against it and set everything out on the quotation.',
+      buttonLabel: 'Request a specification',
     },
     whatsapp: 'Hi, I need a controlled packaging specification for a Michigan industrial operation.',
   },
@@ -898,13 +898,13 @@ export const usStatesB: readonly LocationPage[] = [
     market: 'usa',
     kind: 'state',
     region: 'Northeast',
-    h1: 'Poly Mailers for Maryland Organisations',
+    h1: 'Poly Mailers for Maryland Organizations',
     title: 'Poly Mailers Maryland | Institutional Purchasing',
     description:
-      'Poly mailers for Maryland organisations — buying through a purchase order process, quotation validity, budget cycles and approval trails.',
+      'Poly mailers for Maryland organizations — buying through a purchase order process, quotation validity, budget cycles and approval trails.',
     summary: 'Buying through a procurement process rather than a card payment.',
     intro: [
-      'A meaningful share of enquiries from Maryland come from organisations rather than businesses — institutions, nonprofits, membership bodies, research groups. They buy the same product and they buy it in a completely different way.',
+      'A meaningful share of inquiries from Maryland come from organizations rather than businesses — institutions, nonprofits, membership bodies, research groups. They buy the same product and they buy it in a completely different way.',
       'There is a purchase order rather than a card. A quotation has to stay valid long enough to be approved. A budget cycle decides when an order can be placed, regardless of when the packaging runs out. This page is about making that process work rather than about the mailers.',
     ],
     angle:
@@ -913,7 +913,7 @@ export const usStatesB: readonly LocationPage[] = [
     supportingKeywords: ['institutional packaging purchase', 'shipping bags MD', 'purchase order packaging'],
     sectors: [
       { name: 'Institutions and membership bodies', note: 'Mailings, member packs and publication distribution, bought through a formal process.' },
-      { name: 'Research and laboratory organisations', note: 'Sample and document shipping with documentation expectations attached.' },
+      { name: 'Research and laboratory organizations', note: 'Sample and document shipping with documentation expectations attached.' },
       { name: 'Nonprofit and advocacy', note: 'Campaign and supporter mailings, often with a fixed budget and a fixed date.' },
       { name: 'Small business and retail', note: 'A conventional commercial base alongside all of the above.' },
     ],
@@ -961,7 +961,7 @@ export const usStatesB: readonly LocationPage[] = [
     faqs: [
       {
         q: 'Can you invoice against a purchase order?',
-        a: 'Yes. Tell us at enquiry stage so the quotation is issued with the reference information your process needs, rather than having to be reissued once a purchase order is raised.',
+        a: 'Yes. Tell us at inquiry stage so the quotation is issued with the reference information your process needs, rather than having to be reissued once a purchase order is raised.',
       },
       {
         q: 'How long is a quotation valid for?',
@@ -998,11 +998,11 @@ export const usStatesB: readonly LocationPage[] = [
       'Poly mailers for Minnesota businesses — supplying into retail, meeting own-brand packaging requirements and keeping a specification consistent.',
     summary: 'Supplying into retail, where the packaging requirement comes from the buyer.',
     intro: [
-      'Minnesota has a concentration of large retail organisations, and that produces a specific packaging conversation: businesses supplying into retail, where the packaging specification arrives from the buyer rather than being chosen by the supplier.',
-      'It is a different exercise from specifying your own packaging. The requirement is fixed, the room for judgement is narrow, and the value we add is in satisfying it exactly rather than in recommending something better.',
+      'Minnesota has a concentration of large retail organizations, and that produces a specific packaging conversation: businesses supplying into retail, where the packaging specification arrives from the buyer rather than being chosen by the supplier.',
+      'It is a different exercise from specifying your own packaging. The requirement is fixed, the room for judgment is narrow, and the value we add is in satisfying it exactly rather than in recommending something better.',
     ],
     angle:
-      'Supplying into retail, where the specification is set by the buying organisation.',
+      'Supplying into retail, where the specification is set by the buying organization.',
     primaryKeyword: 'poly mailers minnesota',
     supportingKeywords: ['retail supplier packaging', 'shipping bags MN', 'own brand packaging'],
     sectors: [
@@ -1026,7 +1026,7 @@ export const usStatesB: readonly LocationPage[] = [
         items: [
           { term: 'Permitted formats', detail: 'Whether a poly bag is acceptable at all for the product category, which is not universal.' },
           { term: 'Required printed information', detail: 'Warnings, barcodes, origin marking. These have to be printed rather than applied as a sticker in most specifications.' },
-          { term: 'Labelling position and size', detail: 'Frequently prescribed, and it can rule out artwork on a whole panel.' },
+          { term: 'Labeling position and size', detail: 'Frequently prescribed, and it can rule out artwork on a whole panel.' },
           { term: 'Bag and case quantities', detail: 'How many per bag, per case and per pallet, often with prescribed marking.' },
           { term: 'Perforation requirements', detail: 'Vent or suffocation-warning requirements for bags containing consumer goods.' },
         ],
@@ -1036,7 +1036,7 @@ export const usStatesB: readonly LocationPage[] = [
         heading: 'Two channels, two specifications',
         paragraphs: [
           'Most businesses in this position sell both into retail and directly to consumers, and the temptation is to run one bag for both. It rarely works.',
-          'The retail bag is built to satisfy a document: plain, prescribed, carrying required wording, with no room for brand expression. The direct bag is built to be seen by a customer: coloured, printed, designed around an unboxing rather than around an inbound goods check.',
+          'The retail bag is built to satisfy a document: plain, prescribed, carrying required wording, with no room for brand expression. The direct bag is built to be seen by a customer: colored, printed, designed around an unboxing rather than around an inbound goods check.',
           'Trying to satisfy both with one specification generally produces a bag that satisfies the retailer and disappoints the customer, because the retail requirements are non-negotiable and the brand ones are not. Two lines, quoted together to share setup where the film matches, is usually both better and cheaper than the compromise.',
         ],
       },
@@ -1052,7 +1052,7 @@ export const usStatesB: readonly LocationPage[] = [
     faqs: [
       {
         q: 'Can you quote against a retailer’s packaging specification?',
-        a: 'Yes, and sending us the actual document rather than a summary is the fastest route. Printed warnings, labelling positions and case marking all affect what can be quoted, and they are easier to satisfy than to retrofit.',
+        a: 'Yes, and sending us the actual document rather than a summary is the fastest route. Printed warnings, labeling positions and case marking all affect what can be quoted, and they are easier to satisfy than to retrofit.',
       },
       {
         q: 'Should retail and direct-to-consumer orders use the same bag?',
@@ -1116,7 +1116,7 @@ export const usStatesB: readonly LocationPage[] = [
           'Four commitments. They are not unusual, but they are worth stating because not every supplier makes them.',
         items: [
           { term: 'You hear before it ships', detail: 'If the film available for a repeat order differs from the one previously supplied, that is a conversation rather than a substitution.' },
-          { term: 'The difference is described, not minimised', detail: 'What changed, and what it affects — strength, seal behaviour, print, or nothing at all.' },
+          { term: 'The difference is described, not minimized', detail: 'What changed, and what it affects — strength, seal behavior, print, or nothing at all.' },
           { term: 'A sample is available first', detail: 'Where a change is material, you can test it against your own contents before committing to a run.' },
           { term: 'The quotation reflects it', detail: 'The specification stated on the quotation matches what will actually be produced.' },
         ],
@@ -1125,7 +1125,7 @@ export const usStatesB: readonly LocationPage[] = [
         kind: 'steps',
         heading: 'Reducing your exposure to change',
         intro:
-          'Five practical steps for a buyer who needs consistency more than optimisation.',
+          'Five practical steps for a buyer who needs consistency more than optimization.',
         steps: [
           { title: 'Specify fewer variables', detail: 'Every option you specify is something that can become unavailable. A plain bag in a common size has the fewest failure points.' },
           { title: 'Choose widely available formats', detail: 'A common size in a standard film is far less likely to force a substitution than a bespoke one.' },
@@ -1138,7 +1138,7 @@ export const usStatesB: readonly LocationPage[] = [
         kind: 'linked-prose',
         heading: 'Consistency and quantity tolerance',
         before:
-          'The other variable buyers in controlled processes need stated rather than assumed is quantity. Manufactured runs do not stop at an exact unit, and a tolerance applies either side of the ordered figure. Where an exact count matters to your process, say so at enquiry stage so it can be specified rather than discovered on delivery. How tolerance is stated and charged is set out on the ',
+          'The other variable buyers in controlled processes need stated rather than assumed is quantity. Manufactured runs do not stop at an exact unit, and a tolerance applies either side of the ordered figure. Where an exact count matters to your process, say so at inquiry stage so it can be specified rather than discovered on delivery. How tolerance is stated and charged is set out on the ',
         link: { href: '/custom-order-policy/', anchor: 'custom order policy' },
         after: '.',
       },
@@ -1159,7 +1159,7 @@ export const usStatesB: readonly LocationPage[] = [
     ],
     related: [
       { href: '/usa/', label: 'How we supply the US market', reason: 'The national picture behind this regional page.' },
-      { href: '/locations/indianapolis/', label: 'Indianapolis', reason: 'The distribution centre of the state.' },
+      { href: '/locations/indianapolis/', label: 'Indianapolis', reason: 'The distribution center of the state.' },
       { href: '/materials/', label: 'Materials', reason: 'What each variable does, and therefore what a change would affect.' },
     ],
     cta: {

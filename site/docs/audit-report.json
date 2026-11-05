@@ -1,5 +1,246 @@
 {
   "generated": "build-time",
-  "pages": 150,
-  "findings": []
+  "pages": 152,
+  "findings": [
+    {
+      "level": "warn",
+      "check": "metadata",
+      "page": "/checkout/",
+      "detail": "Description is 198 characters."
+    },
+    {
+      "level": "error",
+      "check": "robots",
+      "page": "/checkout/",
+      "detail": "Indexable page carries noindex."
+    },
+    {
+      "level": "error",
+      "check": "robots",
+      "page": "/order-confirmed/",
+      "detail": "Indexable page carries noindex."
+    },
+    {
+      "level": "warn",
+      "check": "thin-page",
+      "page": "/checkout/",
+      "detail": "404 words of body text."
+    },
+    {
+      "level": "error",
+      "check": "thin-page",
+      "page": "/order-confirmed/",
+      "detail": "184 words of body text."
+    },
+    {
+      "level": "warn",
+      "check": "duplicate-alt",
+      "page": "/10x13-poly-mailers/, /12x15-poly-mailers/, /14-5x19-poly-mailers/, /19x24-poly-mailers/, /24x24-poly-mailers/, /404/, /6x9-poly-mailers/, /9x12-poly-mailers/, /about/, /accessibility-statement/, /apparel-shipping-bags/, /artwork-guidelines/, /australia/, /bee-poly-mailers/, /biodegradable-poly-mailers/, /black-poly-mailers/, /blank-poly-mailers/, /blog/choosing-colors-for-branded-shipping-mailers/, /blog/how-custom-printed-poly-mailers-support-brand-recognition/, /blog/how-to-choose-the-right-poly-mailer-size/, /blog/how-to-prepare-artwork-for-custom-poly-mailer-printing/, /blog/, /blog/packaging-ideas-for-small-ecommerce-businesses/, /blog/poly-mailer-thickness-and-durability-explained/, /blog/poly-mailers-for-clothing-and-apparel-shipping/, /blog/poly-mailers-vs-padded-mailers/, /blog/recycled-vs-compostable-vs-biodegradable-mailers/, /blog/when-to-use-bubble-lined-poly-mailers/, /canada/, /checkout/, /christmas-poly-mailers/, /colored-poly-mailers/, /compostable-poly-mailers/, /contact/, /custom-frosted-poly-bags/, /custom-order-policy/, /custom-poly-mailers/, /custom-printed-poly-mailers/, /design-your-poly-mailer/, /economy-poly-mailers/, /faq/, /halloween-poly-mailers/, /how-it-works/, /, /industries/accessories/, /industries/beauty-and-cosmetics/, /industries/books-and-stationery/, /industries/clothing-and-apparel/, /industries/ecommerce/, /industries/electronics-accessories/, /industries/fashion-boutiques/, /industries/gift-retail/, /industries/, /industries/small-businesses/, /industries/subscription-businesses/, /large-poly-mailers/, /light-pink-poly-mailers/, /locations/adelaide/, /locations/arizona/, /locations/atlanta/, /locations/austin/, /locations/birmingham/, /locations/boston/, /locations/brisbane/, /locations/calgary/, /locations/california/, /locations/charlotte/, /locations/chicago/, /locations/colorado/, /locations/columbus/, /locations/dallas/, /locations/denver/, /locations/florida/, /locations/fort-worth/, /locations/georgia/, /locations/glasgow/, /locations/houston/, /locations/illinois/, /locations/, /locations/indiana/, /locations/indianapolis/, /locations/jacksonville/, /locations/leeds/, /locations/london/, /locations/los-angeles/, /locations/manchester/, /locations/maryland/, /locations/massachusetts/, /locations/melbourne/, /locations/michigan/, /locations/minnesota/, /locations/montreal/, /locations/nashville/, /locations/new-jersey/, /locations/new-york/, /locations/new-york-city/, /locations/north-carolina/, /locations/ohio/, /locations/ottawa/, /locations/pennsylvania/, /locations/perth/, /locations/philadelphia/, /locations/phoenix/, /locations/san-antonio/, /locations/san-diego/, /locations/seattle/, /locations/sydney/, /locations/tennessee/, /locations/texas/, /locations/toronto/, /locations/vancouver/, /locations/virginia/, /locations/washington/, /materials/, /order-confirmed/, /padded-poly-mailers/, /personalized-bubble-mailers/, /pink-poly-mailers/, /poly-bubble-mailers/, /poly-mailer-colors/, /poly-mailer-sizes/, /poly-mailers/, /printing-options/, /privacy-policy/, /protective-mailers/, /recycled-poly-mailers/, /request-a-quote/, /resources/closure-and-self-seal-guide/, /resources/color-selection-guide/, /resources/custom-mailer-ordering-checklist/, /resources/, /resources/international-ordering-guide/, /resources/mailer-measurement-guide/, /resources/poly-mailer-material-guide/, /resources/poly-mailer-size-guide/, /resources/printing-and-artwork-guide/, /resources/protective-mailer-comparison/, /resources/sustainable-mailer-terminology-guide/, /samples/, /seasonal-poly-mailers/, /self-seal-poly-mailers/, /shipping-and-delivery/, /sitemap/, /size-guide/, /small-poly-mailers/, /sustainability/, /sustainable-poly-mailers/, /terms-and-conditions/, /thank-you/, /uk/, /usa/, /white-poly-mailers/",
+      "detail": "Same alt on 152 pages for visa.svg: \"Visa\""
+    },
+    {
+      "level": "warn",
+      "check": "duplicate-alt",
+      "page": "/10x13-poly-mailers/, /12x15-poly-mailers/, /14-5x19-poly-mailers/, /19x24-poly-mailers/, /24x24-poly-mailers/, /404/, /6x9-poly-mailers/, /9x12-poly-mailers/, /about/, /accessibility-statement/, /apparel-shipping-bags/, /artwork-guidelines/, /australia/, /bee-poly-mailers/, /biodegradable-poly-mailers/, /black-poly-mailers/, /blank-poly-mailers/, /blog/choosing-colors-for-branded-shipping-mailers/, /blog/how-custom-printed-poly-mailers-support-brand-recognition/, /blog/how-to-choose-the-right-poly-mailer-size/, /blog/how-to-prepare-artwork-for-custom-poly-mailer-printing/, /blog/, /blog/packaging-ideas-for-small-ecommerce-businesses/, /blog/poly-mailer-thickness-and-durability-explained/, /blog/poly-mailers-for-clothing-and-apparel-shipping/, /blog/poly-mailers-vs-padded-mailers/, /blog/recycled-vs-compostable-vs-biodegradable-mailers/, /blog/when-to-use-bubble-lined-poly-mailers/, /canada/, /checkout/, /christmas-poly-mailers/, /colored-poly-mailers/, /compostable-poly-mailers/, /contact/, /custom-frosted-poly-bags/, /custom-order-policy/, /custom-poly-mailers/, /custom-printed-poly-mailers/, /design-your-poly-mailer/, /economy-poly-mailers/, /faq/, /halloween-poly-mailers/, /how-it-works/, /, /industries/accessories/, /industries/beauty-and-cosmetics/, /industries/books-and-stationery/, /industries/clothing-and-apparel/, /industries/ecommerce/, /industries/electronics-accessories/, /industries/fashion-boutiques/, /industries/gift-retail/, /industries/, /industries/small-businesses/, /industries/subscription-businesses/, /large-poly-mailers/, /light-pink-poly-mailers/, /locations/adelaide/, /locations/arizona/, /locations/atlanta/, /locations/austin/, /locations/birmingham/, /locations/boston/, /locations/brisbane/, /locations/calgary/, /locations/california/, /locations/charlotte/, /locations/chicago/, /locations/colorado/, /locations/columbus/, /locations/dallas/, /locations/denver/, /locations/florida/, /locations/fort-worth/, /locations/georgia/, /locations/glasgow/, /locations/houston/, /locations/illinois/, /locations/, /locations/indiana/, /locations/indianapolis/, /locations/jacksonville/, /locations/leeds/, /locations/london/, /locations/los-angeles/, /locations/manchester/, /locations/maryland/, /locations/massachusetts/, /locations/melbourne/, /locations/michigan/, /locations/minnesota/, /locations/montreal/, /locations/nashville/, /locations/new-jersey/, /locations/new-york/, /locations/new-york-city/, /locations/north-carolina/, /locations/ohio/, /locations/ottawa/, /locations/pennsylvania/, /locations/perth/, /locations/philadelphia/, /locations/phoenix/, /locations/san-antonio/, /locations/san-diego/, /locations/seattle/, /locations/sydney/, /locations/tennessee/, /locations/texas/, /locations/toronto/, /locations/vancouver/, /locations/virginia/, /locations/washington/, /materials/, /order-confirmed/, /padded-poly-mailers/, /personalized-bubble-mailers/, /pink-poly-mailers/, /poly-bubble-mailers/, /poly-mailer-colors/, /poly-mailer-sizes/, /poly-mailers/, /printing-options/, /privacy-policy/, /protective-mailers/, /recycled-poly-mailers/, /request-a-quote/, /resources/closure-and-self-seal-guide/, /resources/color-selection-guide/, /resources/custom-mailer-ordering-checklist/, /resources/, /resources/international-ordering-guide/, /resources/mailer-measurement-guide/, /resources/poly-mailer-material-guide/, /resources/poly-mailer-size-guide/, /resources/printing-and-artwork-guide/, /resources/protective-mailer-comparison/, /resources/sustainable-mailer-terminology-guide/, /samples/, /seasonal-poly-mailers/, /self-seal-poly-mailers/, /shipping-and-delivery/, /sitemap/, /size-guide/, /small-poly-mailers/, /sustainability/, /sustainable-poly-mailers/, /terms-and-conditions/, /thank-you/, /uk/, /usa/, /white-poly-mailers/",
+      "detail": "Same alt on 152 pages for mastercard.svg: \"Mastercard\""
+    },
+    {
+      "level": "warn",
+      "check": "duplicate-alt",
+      "page": "/10x13-poly-mailers/, /12x15-poly-mailers/, /14-5x19-poly-mailers/, /19x24-poly-mailers/, /24x24-poly-mailers/, /404/, /6x9-poly-mailers/, /9x12-poly-mailers/, /about/, /accessibility-statement/, /apparel-shipping-bags/, /artwork-guidelines/, /australia/, /bee-poly-mailers/, /biodegradable-poly-mailers/, /black-poly-mailers/, /blank-poly-mailers/, /blog/choosing-colors-for-branded-shipping-mailers/, /blog/how-custom-printed-poly-mailers-support-brand-recognition/, /blog/how-to-choose-the-right-poly-mailer-size/, /blog/how-to-prepare-artwork-for-custom-poly-mailer-printing/, /blog/, /blog/packaging-ideas-for-small-ecommerce-businesses/, /blog/poly-mailer-thickness-and-durability-explained/, /blog/poly-mailers-for-clothing-and-apparel-shipping/, /blog/poly-mailers-vs-padded-mailers/, /blog/recycled-vs-compostable-vs-biodegradable-mailers/, /blog/when-to-use-bubble-lined-poly-mailers/, /canada/, /checkout/, /christmas-poly-mailers/, /colored-poly-mailers/, /compostable-poly-mailers/, /contact/, /custom-frosted-poly-bags/, /custom-order-policy/, /custom-poly-mailers/, /custom-printed-poly-mailers/, /design-your-poly-mailer/, /economy-poly-mailers/, /faq/, /halloween-poly-mailers/, /how-it-works/, /, /industries/accessories/, /industries/beauty-and-cosmetics/, /industries/books-and-stationery/, /industries/clothing-and-apparel/, /industries/ecommerce/, /industries/electronics-accessories/, /industries/fashion-boutiques/, /industries/gift-retail/, /industries/, /industries/small-businesses/, /industries/subscription-businesses/, /large-poly-mailers/, /light-pink-poly-mailers/, /locations/adelaide/, /locations/arizona/, /locations/atlanta/, /locations/austin/, /locations/birmingham/, /locations/boston/, /locations/brisbane/, /locations/calgary/, /locations/california/, /locations/charlotte/, /locations/chicago/, /locations/colorado/, /locations/columbus/, /locations/dallas/, /locations/denver/, /locations/florida/, /locations/fort-worth/, /locations/georgia/, /locations/glasgow/, /locations/houston/, /locations/illinois/, /locations/, /locations/indiana/, /locations/indianapolis/, /locations/jacksonville/, /locations/leeds/, /locations/london/, /locations/los-angeles/, /locations/manchester/, /locations/maryland/, /locations/massachusetts/, /locations/melbourne/, /locations/michigan/, /locations/minnesota/, /locations/montreal/, /locations/nashville/, /locations/new-jersey/, /locations/new-york/, /locations/new-york-city/, /locations/north-carolina/, /locations/ohio/, /locations/ottawa/, /locations/pennsylvania/, /locations/perth/, /locations/philadelphia/, /locations/phoenix/, /locations/san-antonio/, /locations/san-diego/, /locations/seattle/, /locations/sydney/, /locations/tennessee/, /locations/texas/, /locations/toronto/, /locations/vancouver/, /locations/virginia/, /locations/washington/, /materials/, /order-confirmed/, /padded-poly-mailers/, /personalized-bubble-mailers/, /pink-poly-mailers/, /poly-bubble-mailers/, /poly-mailer-colors/, /poly-mailer-sizes/, /poly-mailers/, /printing-options/, /privacy-policy/, /protective-mailers/, /recycled-poly-mailers/, /request-a-quote/, /resources/closure-and-self-seal-guide/, /resources/color-selection-guide/, /resources/custom-mailer-ordering-checklist/, /resources/, /resources/international-ordering-guide/, /resources/mailer-measurement-guide/, /resources/poly-mailer-material-guide/, /resources/poly-mailer-size-guide/, /resources/printing-and-artwork-guide/, /resources/protective-mailer-comparison/, /resources/sustainable-mailer-terminology-guide/, /samples/, /seasonal-poly-mailers/, /self-seal-poly-mailers/, /shipping-and-delivery/, /sitemap/, /size-guide/, /small-poly-mailers/, /sustainability/, /sustainable-poly-mailers/, /terms-and-conditions/, /thank-you/, /uk/, /usa/, /white-poly-mailers/",
+      "detail": "Same alt on 152 pages for amex.svg: \"American Express\""
+    },
+    {
+      "level": "warn",
+      "check": "duplicate-alt",
+      "page": "/10x13-poly-mailers/, /12x15-poly-mailers/, /14-5x19-poly-mailers/, /19x24-poly-mailers/, /24x24-poly-mailers/, /404/, /6x9-poly-mailers/, /9x12-poly-mailers/, /about/, /accessibility-statement/, /apparel-shipping-bags/, /artwork-guidelines/, /australia/, /bee-poly-mailers/, /biodegradable-poly-mailers/, /black-poly-mailers/, /blank-poly-mailers/, /blog/choosing-colors-for-branded-shipping-mailers/, /blog/how-custom-printed-poly-mailers-support-brand-recognition/, /blog/how-to-choose-the-right-poly-mailer-size/, /blog/how-to-prepare-artwork-for-custom-poly-mailer-printing/, /blog/, /blog/packaging-ideas-for-small-ecommerce-businesses/, /blog/poly-mailer-thickness-and-durability-explained/, /blog/poly-mailers-for-clothing-and-apparel-shipping/, /blog/poly-mailers-vs-padded-mailers/, /blog/recycled-vs-compostable-vs-biodegradable-mailers/, /blog/when-to-use-bubble-lined-poly-mailers/, /canada/, /checkout/, /christmas-poly-mailers/, /colored-poly-mailers/, /compostable-poly-mailers/, /contact/, /custom-frosted-poly-bags/, /custom-order-policy/, /custom-poly-mailers/, /custom-printed-poly-mailers/, /design-your-poly-mailer/, /economy-poly-mailers/, /faq/, /halloween-poly-mailers/, /how-it-works/, /, /industries/accessories/, /industries/beauty-and-cosmetics/, /industries/books-and-stationery/, /industries/clothing-and-apparel/, /industries/ecommerce/, /industries/electronics-accessories/, /industries/fashion-boutiques/, /industries/gift-retail/, /industries/, /industries/small-businesses/, /industries/subscription-businesses/, /large-poly-mailers/, /light-pink-poly-mailers/, /locations/adelaide/, /locations/arizona/, /locations/atlanta/, /locations/austin/, /locations/birmingham/, /locations/boston/, /locations/brisbane/, /locations/calgary/, /locations/california/, /locations/charlotte/, /locations/chicago/, /locations/colorado/, /locations/columbus/, /locations/dallas/, /locations/denver/, /locations/florida/, /locations/fort-worth/, /locations/georgia/, /locations/glasgow/, /locations/houston/, /locations/illinois/, /locations/, /locations/indiana/, /locations/indianapolis/, /locations/jacksonville/, /locations/leeds/, /locations/london/, /locations/los-angeles/, /locations/manchester/, /locations/maryland/, /locations/massachusetts/, /locations/melbourne/, /locations/michigan/, /locations/minnesota/, /locations/montreal/, /locations/nashville/, /locations/new-jersey/, /locations/new-york/, /locations/new-york-city/, /locations/north-carolina/, /locations/ohio/, /locations/ottawa/, /locations/pennsylvania/, /locations/perth/, /locations/philadelphia/, /locations/phoenix/, /locations/san-antonio/, /locations/san-diego/, /locations/seattle/, /locations/sydney/, /locations/tennessee/, /locations/texas/, /locations/toronto/, /locations/vancouver/, /locations/virginia/, /locations/washington/, /materials/, /order-confirmed/, /padded-poly-mailers/, /personalized-bubble-mailers/, /pink-poly-mailers/, /poly-bubble-mailers/, /poly-mailer-colors/, /poly-mailer-sizes/, /poly-mailers/, /printing-options/, /privacy-policy/, /protective-mailers/, /recycled-poly-mailers/, /request-a-quote/, /resources/closure-and-self-seal-guide/, /resources/color-selection-guide/, /resources/custom-mailer-ordering-checklist/, /resources/, /resources/international-ordering-guide/, /resources/mailer-measurement-guide/, /resources/poly-mailer-material-guide/, /resources/poly-mailer-size-guide/, /resources/printing-and-artwork-guide/, /resources/protective-mailer-comparison/, /resources/sustainable-mailer-terminology-guide/, /samples/, /seasonal-poly-mailers/, /self-seal-poly-mailers/, /shipping-and-delivery/, /sitemap/, /size-guide/, /small-poly-mailers/, /sustainability/, /sustainable-poly-mailers/, /terms-and-conditions/, /thank-you/, /uk/, /usa/, /white-poly-mailers/",
+      "detail": "Same alt on 152 pages for discover.svg: \"Discover\""
+    },
+    {
+      "level": "warn",
+      "check": "duplicate-alt",
+      "page": "/10x13-poly-mailers/, /12x15-poly-mailers/, /14-5x19-poly-mailers/, /19x24-poly-mailers/, /24x24-poly-mailers/, /404/, /6x9-poly-mailers/, /9x12-poly-mailers/, /about/, /accessibility-statement/, /apparel-shipping-bags/, /artwork-guidelines/, /australia/, /bee-poly-mailers/, /biodegradable-poly-mailers/, /black-poly-mailers/, /blank-poly-mailers/, /blog/choosing-colors-for-branded-shipping-mailers/, /blog/how-custom-printed-poly-mailers-support-brand-recognition/, /blog/how-to-choose-the-right-poly-mailer-size/, /blog/how-to-prepare-artwork-for-custom-poly-mailer-printing/, /blog/, /blog/packaging-ideas-for-small-ecommerce-businesses/, /blog/poly-mailer-thickness-and-durability-explained/, /blog/poly-mailers-for-clothing-and-apparel-shipping/, /blog/poly-mailers-vs-padded-mailers/, /blog/recycled-vs-compostable-vs-biodegradable-mailers/, /blog/when-to-use-bubble-lined-poly-mailers/, /canada/, /checkout/, /christmas-poly-mailers/, /colored-poly-mailers/, /compostable-poly-mailers/, /contact/, /custom-frosted-poly-bags/, /custom-order-policy/, /custom-poly-mailers/, /custom-printed-poly-mailers/, /design-your-poly-mailer/, /economy-poly-mailers/, /faq/, /halloween-poly-mailers/, /how-it-works/, /, /industries/accessories/, /industries/beauty-and-cosmetics/, /industries/books-and-stationery/, /industries/clothing-and-apparel/, /industries/ecommerce/, /industries/electronics-accessories/, /industries/fashion-boutiques/, /industries/gift-retail/, /industries/, /industries/small-businesses/, /industries/subscription-businesses/, /large-poly-mailers/, /light-pink-poly-mailers/, /locations/adelaide/, /locations/arizona/, /locations/atlanta/, /locations/austin/, /locations/birmingham/, /locations/boston/, /locations/brisbane/, /locations/calgary/, /locations/california/, /locations/charlotte/, /locations/chicago/, /locations/colorado/, /locations/columbus/, /locations/dallas/, /locations/denver/, /locations/florida/, /locations/fort-worth/, /locations/georgia/, /locations/glasgow/, /locations/houston/, /locations/illinois/, /locations/, /locations/indiana/, /locations/indianapolis/, /locations/jacksonville/, /locations/leeds/, /locations/london/, /locations/los-angeles/, /locations/manchester/, /locations/maryland/, /locations/massachusetts/, /locations/melbourne/, /locations/michigan/, /locations/minnesota/, /locations/montreal/, /locations/nashville/, /locations/new-jersey/, /locations/new-york/, /locations/new-york-city/, /locations/north-carolina/, /locations/ohio/, /locations/ottawa/, /locations/pennsylvania/, /locations/perth/, /locations/philadelphia/, /locations/phoenix/, /locations/san-antonio/, /locations/san-diego/, /locations/seattle/, /locations/sydney/, /locations/tennessee/, /locations/texas/, /locations/toronto/, /locations/vancouver/, /locations/virginia/, /locations/washington/, /materials/, /order-confirmed/, /padded-poly-mailers/, /personalized-bubble-mailers/, /pink-poly-mailers/, /poly-bubble-mailers/, /poly-mailer-colors/, /poly-mailer-sizes/, /poly-mailers/, /printing-options/, /privacy-policy/, /protective-mailers/, /recycled-poly-mailers/, /request-a-quote/, /resources/closure-and-self-seal-guide/, /resources/color-selection-guide/, /resources/custom-mailer-ordering-checklist/, /resources/, /resources/international-ordering-guide/, /resources/mailer-measurement-guide/, /resources/poly-mailer-material-guide/, /resources/poly-mailer-size-guide/, /resources/printing-and-artwork-guide/, /resources/protective-mailer-comparison/, /resources/sustainable-mailer-terminology-guide/, /samples/, /seasonal-poly-mailers/, /self-seal-poly-mailers/, /shipping-and-delivery/, /sitemap/, /size-guide/, /small-poly-mailers/, /sustainability/, /sustainable-poly-mailers/, /terms-and-conditions/, /thank-you/, /uk/, /usa/, /white-poly-mailers/",
+      "detail": "Same alt on 152 pages for apple-pay.svg: \"Apple Pay\""
+    },
+    {
+      "level": "warn",
+      "check": "duplicate-alt",
+      "page": "/10x13-poly-mailers/, /12x15-poly-mailers/, /14-5x19-poly-mailers/, /19x24-poly-mailers/, /24x24-poly-mailers/, /404/, /6x9-poly-mailers/, /9x12-poly-mailers/, /about/, /accessibility-statement/, /apparel-shipping-bags/, /artwork-guidelines/, /australia/, /bee-poly-mailers/, /biodegradable-poly-mailers/, /black-poly-mailers/, /blank-poly-mailers/, /blog/choosing-colors-for-branded-shipping-mailers/, /blog/how-custom-printed-poly-mailers-support-brand-recognition/, /blog/how-to-choose-the-right-poly-mailer-size/, /blog/how-to-prepare-artwork-for-custom-poly-mailer-printing/, /blog/, /blog/packaging-ideas-for-small-ecommerce-businesses/, /blog/poly-mailer-thickness-and-durability-explained/, /blog/poly-mailers-for-clothing-and-apparel-shipping/, /blog/poly-mailers-vs-padded-mailers/, /blog/recycled-vs-compostable-vs-biodegradable-mailers/, /blog/when-to-use-bubble-lined-poly-mailers/, /canada/, /checkout/, /christmas-poly-mailers/, /colored-poly-mailers/, /compostable-poly-mailers/, /contact/, /custom-frosted-poly-bags/, /custom-order-policy/, /custom-poly-mailers/, /custom-printed-poly-mailers/, /design-your-poly-mailer/, /economy-poly-mailers/, /faq/, /halloween-poly-mailers/, /how-it-works/, /, /industries/accessories/, /industries/beauty-and-cosmetics/, /industries/books-and-stationery/, /industries/clothing-and-apparel/, /industries/ecommerce/, /industries/electronics-accessories/, /industries/fashion-boutiques/, /industries/gift-retail/, /industries/, /industries/small-businesses/, /industries/subscription-businesses/, /large-poly-mailers/, /light-pink-poly-mailers/, /locations/adelaide/, /locations/arizona/, /locations/atlanta/, /locations/austin/, /locations/birmingham/, /locations/boston/, /locations/brisbane/, /locations/calgary/, /locations/california/, /locations/charlotte/, /locations/chicago/, /locations/colorado/, /locations/columbus/, /locations/dallas/, /locations/denver/, /locations/florida/, /locations/fort-worth/, /locations/georgia/, /locations/glasgow/, /locations/houston/, /locations/illinois/, /locations/, /locations/indiana/, /locations/indianapolis/, /locations/jacksonville/, /locations/leeds/, /locations/london/, /locations/los-angeles/, /locations/manchester/, /locations/maryland/, /locations/massachusetts/, /locations/melbourne/, /locations/michigan/, /locations/minnesota/, /locations/montreal/, /locations/nashville/, /locations/new-jersey/, /locations/new-york/, /locations/new-york-city/, /locations/north-carolina/, /locations/ohio/, /locations/ottawa/, /locations/pennsylvania/, /locations/perth/, /locations/philadelphia/, /locations/phoenix/, /locations/san-antonio/, /locations/san-diego/, /locations/seattle/, /locations/sydney/, /locations/tennessee/, /locations/texas/, /locations/toronto/, /locations/vancouver/, /locations/virginia/, /locations/washington/, /materials/, /order-confirmed/, /padded-poly-mailers/, /personalized-bubble-mailers/, /pink-poly-mailers/, /poly-bubble-mailers/, /poly-mailer-colors/, /poly-mailer-sizes/, /poly-mailers/, /printing-options/, /privacy-policy/, /protective-mailers/, /recycled-poly-mailers/, /request-a-quote/, /resources/closure-and-self-seal-guide/, /resources/color-selection-guide/, /resources/custom-mailer-ordering-checklist/, /resources/, /resources/international-ordering-guide/, /resources/mailer-measurement-guide/, /resources/poly-mailer-material-guide/, /resources/poly-mailer-size-guide/, /resources/printing-and-artwork-guide/, /resources/protective-mailer-comparison/, /resources/sustainable-mailer-terminology-guide/, /samples/, /seasonal-poly-mailers/, /self-seal-poly-mailers/, /shipping-and-delivery/, /sitemap/, /size-guide/, /small-poly-mailers/, /sustainability/, /sustainable-poly-mailers/, /terms-and-conditions/, /thank-you/, /uk/, /usa/, /white-poly-mailers/",
+      "detail": "Same alt on 152 pages for google-pay.svg: \"Google Pay\""
+    },
+    {
+      "level": "error",
+      "check": "orphan",
+      "page": "/checkout/",
+      "detail": "No contextual inbound links from any page."
+    },
+    {
+      "level": "error",
+      "check": "orphan",
+      "page": "/order-confirmed/",
+      "detail": "No contextual inbound links from any page."
+    },
+    {
+      "level": "warn",
+      "check": "overused-anchor",
+      "page": "custom order policy → /custom-order-policy/",
+      "detail": "Used 14 times across the site."
+    },
+    {
+      "level": "error",
+      "check": "banned-word",
+      "page": "/10x13-poly-mailers/",
+      "detail": "Contains \"best\"."
+    },
+    {
+      "level": "error",
+      "check": "banned-word",
+      "page": "/blog/how-custom-printed-poly-mailers-support-brand-recognition/",
+      "detail": "Contains \"best\"."
+    },
+    {
+      "level": "error",
+      "check": "unsupported-claim",
+      "page": "/checkout/",
+      "detail": "states a price other than the published unit price: \"Shipping Confirmed with your proof Total $0.00 Prices in US dollars, before shipping.\""
+    },
+    {
+      "level": "error",
+      "check": "banned-word",
+      "page": "/contact/",
+      "detail": "Contains \"best\"."
+    },
+    {
+      "level": "error",
+      "check": "banned-word",
+      "page": "/custom-frosted-poly-bags/",
+      "detail": "Contains \"best\"."
+    },
+    {
+      "level": "error",
+      "check": "banned-word",
+      "page": "/industries/fashion-boutiques/",
+      "detail": "Contains \"best\"."
+    },
+    {
+      "level": "error",
+      "check": "banned-word",
+      "page": "/industries/small-businesses/",
+      "detail": "Contains \"distinctive\"."
+    },
+    {
+      "level": "error",
+      "check": "banned-word",
+      "page": "/locations/birmingham/",
+      "detail": "Contains \"robust\"."
+    },
+    {
+      "level": "error",
+      "check": "banned-word",
+      "page": "/locations/fort-worth/",
+      "detail": "Contains \"best\"."
+    },
+    {
+      "level": "error",
+      "check": "banned-word",
+      "page": "/locations/leeds/",
+      "detail": "Contains \"distinctive\"."
+    },
+    {
+      "level": "error",
+      "check": "banned-word",
+      "page": "/locations/melbourne/",
+      "detail": "Contains \"best\"."
+    },
+    {
+      "level": "error",
+      "check": "banned-word",
+      "page": "/personalized-bubble-mailers/",
+      "detail": "Contains \"best\"."
+    },
+    {
+      "level": "error",
+      "check": "banned-word",
+      "page": "/poly-mailer-sizes/",
+      "detail": "Contains \"best\"."
+    },
+    {
+      "level": "error",
+      "check": "banned-word",
+      "page": "/protective-mailers/",
+      "detail": "Contains \"best\"."
+    },
+    {
+      "level": "error",
+      "check": "banned-word",
+      "page": "/white-poly-mailers/",
+      "detail": "Contains \"best\"."
+    },
+    {
+      "level": "error",
+      "check": "schema",
+      "page": "/blog/",
+      "detail": "2 JSON-LD blocks; expected one graph."
+    },
+    {
+      "level": "error",
+      "check": "schema",
+      "page": "/checkout/",
+      "detail": "No JSON-LD."
+    },
+    {
+      "level": "error",
+      "check": "schema",
+      "page": "/contact/",
+      "detail": "2 JSON-LD blocks; expected one graph."
+    },
+    {
+      "level": "error",
+      "check": "schema",
+      "page": "/industries/",
+      "detail": "2 JSON-LD blocks; expected one graph."
+    },
+    {
+      "level": "error",
+      "check": "schema",
+      "page": "/locations/",
+      "detail": "2 JSON-LD blocks; expected one graph."
+    },
+    {
+      "level": "error",
+      "check": "schema",
+      "page": "/order-confirmed/",
+      "detail": "No JSON-LD."
+    },
+    {
+      "level": "error",
+      "check": "schema",
+      "page": "/poly-mailers/",
+      "detail": "2 JSON-LD blocks; expected one graph."
+    },
+    {
+      "level": "error",
+      "check": "schema",
+      "page": "/request-a-quote/",
+      "detail": "2 JSON-LD blocks; expected one graph."
+    },
+    {
+      "level": "error",
+      "check": "schema",
+      "page": "/resources/",
+      "detail": "2 JSON-LD blocks; expected one graph."
+    },
+    {
+      "level": "error",
+      "check": "sitemap",
+      "page": "/checkout/",
+      "detail": "Indexable page missing from the XML sitemap."
+    },
+    {
+      "level": "error",
+      "check": "sitemap",
+      "page": "/order-confirmed/",
+      "detail": "Indexable page missing from the XML sitemap."
+    }
+  ]
 }

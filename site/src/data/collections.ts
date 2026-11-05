@@ -9,7 +9,7 @@ import type { Block, Faq, PagePlan, RelatedLink } from './types';
  * the product page underneath it would have nothing left to do.
  *
  * URL note: `/colored-poly-mailers/` is the product page (it is on the approved
- * list of 29), so the colour collection lives at `/poly-mailer-colors/`.
+ * list of 29), so the color collection lives at `/poly-mailer-colors/`.
  * See docs/01-audit-and-architecture.md section 3.
  */
 
@@ -169,27 +169,27 @@ export const collections: readonly Collection[] = [
   /* ===================================================================== */
   {
     slug: 'poly-mailer-colors',
-    name: 'Colours',
-    eyebrow: 'Colour range',
-    h1: 'Poly Mailer Colours',
-    title: 'Poly Mailer Colours | Choosing a Base Film',
-    summary: 'Colours compared by print latitude, opacity and how visibly they mark.',
+    name: 'Colors',
+    eyebrow: 'Color range',
+    h1: 'Poly Mailer Colors',
+    title: 'Poly Mailer Colors | Choosing a Base Film',
+    summary: 'Colors compared by print latitude, opacity and how visibly they mark.',
     description:
-      'Compare mailer colours by what they do — print latitude, opacity, how they hide handling marks — rather than by how they look in a swatch.',
+      'Compare mailer colors by what they do — print latitude, opacity, how they hide handling marks — rather than by how they look in a swatch.',
     intro: [
-      'Colour is the cheapest branding available on a mailer. A coloured film costs a fraction of a printed run and makes a parcel recognisable on a doorstep before anyone reads the label.',
-      'It is also a technical decision. The base colour decides which inks will read, how much shows through the film, and how obvious a scuff will be after a week in a sorting network. This page compares the range on those grounds rather than on how the swatches look.',
+      'Color is the cheapest branding available on a mailer. A colored film costs a fraction of a printed run and makes a parcel recognizable on a doorstep before anyone reads the label.',
+      'It is also a technical decision. The base color decides which inks will read, how much shows through the film, and how obvious a scuff will be after a week in a sorting network. This page compares the range on those grounds rather than on how the swatches look.',
     ],
     plan: {
-      intent: 'Choose a poly mailer colour.',
+      intent: 'Choose a poly mailer color.',
       audience: 'Brand and packaging leads selecting a base film for a printed or plain run.',
-      problem: 'Colour is chosen visually, then causes print and opacity problems later.',
-      angle: 'Compares colours by technical behaviour — print contrast, opacity, mark visibility.',
+      problem: 'Color is chosen visually, then causes print and opacity problems later.',
+      angle: 'Compares colors by technical behavior — print contrast, opacity, mark visibility.',
       primaryKeyword: 'poly mailer colors',
-      supportingKeywords: ['colored mailer options', 'mailer color chart', 'branded mailer colours'],
+      supportingKeywords: ['colored mailer options', 'mailer color chart', 'branded mailer colors'],
       nearestPage: '/colored-poly-mailers/',
       boundary:
-        'This page is the chooser across colours. The colored mailers product page is where you order a mixed-colour or non-standard tone.',
+        'This page is the chooser across colors. The colored mailers product page is where you order a mixed-color or non-standard tone.',
     },
     productSlugs: [
       'white-poly-mailers',
@@ -200,41 +200,41 @@ export const collections: readonly Collection[] = [
       'blank-poly-mailers',
     ],
     picks: {
-      'white-poly-mailers': 'Every ink colour available. Shows marks the most.',
+      'white-poly-mailers': 'Every ink color available. Shows marks the most.',
       'black-poly-mailers': 'Hides everything. White ink only, in practice.',
       'pink-poly-mailers': 'Saturated tones for retail and promotional visibility.',
       'light-pink-poly-mailers': 'Blush and pastel, for softer brand palettes.',
       'colored-poly-mailers': 'Blue, green, purple, red and matched tones.',
-      'blank-poly-mailers': 'Any colour, unprinted — the lowest-commitment route.',
+      'blank-poly-mailers': 'Any color, unprinted — the lowest-commitment route.',
     },
     blocks: [
       {
         kind: 'compare',
         heading: 'What each base does',
         intro:
-          'Four properties decide whether a colour will work for you. None of them is visible in a swatch.',
-        caption: 'Base film colours compared on the properties that affect a real order.',
+          'Four properties decide whether a color will work for you. None of them is visible in a swatch.',
+        caption: 'Base film colors compared on the properties that affect a real order.',
         columns: ['Base', 'Print latitude', 'Hides marks', 'Show-through risk'],
         rows: [
           ['White', 'Every ink, including photographic', 'Poorly', 'Moderate on dark contents'],
           ['Black', 'White and pale metallics only', 'Very well', 'None'],
-          ['Grey or silver', 'Dark inks and white solids', 'Well', 'Low'],
-          ['Saturated colour', 'White and black', 'Moderately', 'Low'],
+          ['Gray or silver', 'Dark inks and white solids', 'Well', 'Low'],
+          ['Saturated color', 'White and black', 'Moderately', 'Low'],
           ['Pastel or blush', 'Dark inks only', 'Poorly', 'High on dark contents'],
         ],
         outro:
-          'If your identity depends on a photographic image or a multi-colour palette, white is the only base that will carry it. Everything else is a trade you are choosing deliberately.',
+          'If your identity depends on a photographic image or a multi-color palette, white is the only base that will carry it. Everything else is a trade you are choosing deliberately.',
       },
       {
         kind: 'steps',
-        heading: 'Settling a colour without a reprint',
+        heading: 'Settling a color without a reprint',
         intro:
-          'Colour is the specification that causes the most disputes, and the sequence below removes most of them.',
+          'Color is the specification that causes the most disputes, and the sequence below removes most of them.',
         steps: [
           {
-            title: 'Decide whether colour or print carries the identity',
+            title: 'Decide whether color or print carries the identity',
             detail:
-              'If the colour is doing the work, a plain coloured bag may be all you need.',
+              'If the color is doing the work, a plain colored bag may be all you need.',
           },
           {
             title: 'Check your ink against the base',
@@ -249,27 +249,27 @@ export const collections: readonly Collection[] = [
           {
             title: 'Supply a physical reference',
             detail:
-              'A screen colour is not a reference. Send a swatch, a previous sample or a defined value.',
+              'A screen color is not a reference. Send a swatch, a previous sample or a defined value.',
           },
           {
             title: 'Approve a proof on the actual film and finish',
             detail:
-              'Colour reads differently on matte than on gloss, and differently again on a coloured base.',
+              'Color reads differently on matte than on gloss, and differently again on a colored base.',
           },
         ],
       },
     ],
     faqs: [
       {
-        q: 'Which mailer colour hides dirt and handling marks most effectively?',
-        a: 'Black, followed by grey and mid-tone colours. White shows the most. A matte finish helps on any base, and a design that covers more of the panel hides more of the surface.',
+        q: 'Which mailer color hides dirt and handling marks most effectively?',
+        a: 'Black, followed by gray and mid-tone colors. White shows the most. A matte finish helps on any base, and a design that covers more of the panel hides more of the surface.',
       },
       {
-        q: 'Does a coloured mailer cost more than white?',
-        a: 'A stock colour carries a small premium over white; a matched colour carries more, because it needs a reference and a proof round. Both are still far cheaper than printing.',
+        q: 'Does a colored mailer cost more than white?',
+        a: 'A stock color carries a small premium over white; a matched color carries more, because it needs a reference and a proof round. Both are still far cheaper than printing.',
       },
       {
-        q: 'Can the same colour run across plain and bubble-lined mailers?',
+        q: 'Can the same color run across plain and bubble-lined mailers?',
         a: 'Yes, though the two surfaces reflect light differently so the match should be checked at proof stage rather than assumed.',
       },
     ],
@@ -277,7 +277,7 @@ export const collections: readonly Collection[] = [
       {
         href: '/custom-poly-mailers/',
         label: 'Printing on a chosen base',
-        reason: 'What happens after the colour is settled and artwork enters the picture.',
+        reason: 'What happens after the color is settled and artwork enters the picture.',
       },
       {
         href: '/printing-options/',
@@ -286,16 +286,16 @@ export const collections: readonly Collection[] = [
       },
       {
         href: '/blog/choosing-colors-for-branded-shipping-mailers/',
-        label: 'Colour strategy',
-        reason: 'A longer read on choosing a colour that survives contact with a supply chain.',
+        label: 'Color strategy',
+        reason: 'A longer read on choosing a color that survives contact with a supply chain.',
       },
     ],
     cta: {
-      heading: 'Match a colour',
-      body: 'Send a swatch or a colour value and tell us what you ship. We will confirm what the film can reach and quote it.',
-      buttonLabel: 'Ask about colour matching',
+      heading: 'Match a color',
+      body: 'Send a swatch or a color value and tell us what you ship. We will confirm what the film can reach and quote it.',
+      buttonLabel: 'Ask about color matching',
     },
-    whatsapp: 'Hi, I would like to discuss poly mailer colours and colour matching.',
+    whatsapp: 'Hi, I would like to discuss poly mailer colors and color matching.',
   },
 
   /* ===================================================================== */
@@ -409,11 +409,11 @@ export const collections: readonly Collection[] = [
       },
       {
         q: 'Why do you not publish recycled percentages or certifications?',
-        a: 'Because none were supplied to us, and a figure on a web page is not a figure we could stand behind for your specific order. We confirm what the film available for your order can support, in writing, with the documentation behind it.',
+        a: 'Because none were supplied to us, and a figure on a web page is not a figure we could stand behind for your specific order. We confirm what the film available for your order can support, by email, with the documentation behind it.',
       },
       {
         q: 'Are poly mailers recyclable?',
-        a: 'Flexible film is generally not accepted in household kerbside collections across the markets we serve, and is instead collected at store drop-off points where those exist. Availability varies by area, so check what applies where your customers live before printing any instruction.',
+        a: 'Flexible film is generally not accepted in household curbside collections across the markets we serve, and is instead collected at store drop-off points where those exist. Availability varies by area, so check what applies where your customers live before printing any instruction.',
       },
     ],
     related: [
@@ -460,7 +460,7 @@ export const collections: readonly Collection[] = [
       intent: 'Find the right protective mailer for fragile contents.',
       audience: 'Sellers with a damage problem to solve, not a product to browse.',
       problem: 'Cushioning is bought generically without diagnosing the failure mode.',
-      angle: 'Organised by failure mode rather than by product, and says when to use a carton instead.',
+      angle: 'Organized by failure mode rather than by product, and says when to use a carton instead.',
       primaryKeyword: 'protective mailers',
       supportingKeywords: [
         'cushioned mailers',
@@ -639,7 +639,7 @@ export const collections: readonly Collection[] = [
     faqs: [
       {
         q: 'Which mailer format reproduces artwork most cleanly?',
-        a: 'Flat film, by a clear margin. It reproduces fine detail, photographic images and multi-colour palettes. Cushioned and frosted surfaces both work but need artwork designed for them rather than adapted to them.',
+        a: 'Flat film, by a clear margin. It reproduces fine detail, photographic images and multi-color palettes. Cushioned and frosted surfaces both work but need artwork designed for them rather than adapted to them.',
       },
       {
         q: 'Can I use the same artwork across several formats?',
@@ -658,7 +658,7 @@ export const collections: readonly Collection[] = [
       },
       {
         href: '/design-your-poly-mailer/',
-        label: 'Design tool',
+        label: 'Design Your Poly Mailers',
         reason: 'Try a layout and see approximate placement before you commission anything.',
       },
       {
@@ -693,7 +693,7 @@ export const collections: readonly Collection[] = [
       intent: 'Plan or order seasonal and patterned mailers.',
       audience: 'Marketing and operations leads planning campaign packaging across a year.',
       problem: 'Seasonal packaging becomes dead stock when the window closes.',
-      angle: 'Annual planning and quantity risk rather than a catalogue of designs.',
+      angle: 'Annual planning and quantity risk rather than a catalog of designs.',
       primaryKeyword: 'seasonal poly mailers',
       supportingKeywords: ['cute poly mailers', 'holiday mailers', 'patterned shipping bags'],
       nearestPage: '/christmas-poly-mailers/',
@@ -735,7 +735,7 @@ export const collections: readonly Collection[] = [
           {
             title: 'Fix the date stock must be on the bench',
             detail:
-              'Work backwards from there through approval and production, and confirm the schedule with us in writing.',
+              'Work backwards from there through approval and production, and confirm the schedule with us by email.',
           },
           {
             title: 'Keep standard stock running underneath',

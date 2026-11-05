@@ -42,7 +42,7 @@ export const BRAND = {
   phoneHref: 'tel:+15034614788',
   /**
    * Second published line. Listed alongside the primary number, never instead
-   * of it, and never labelled as local to any market — no premises, branch or
+   * of it, and never labeled as local to any market — no premises, branch or
    * local presence is implied anywhere on the site.
    */
   phoneAltDisplay: '+44 7458 651107',

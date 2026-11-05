@@ -3,7 +3,7 @@ import type { ProductPage } from '../types';
 /**
  * Specialty family.
  *
- *   Apparel      → the garment fulfilment operation, not a dimension
+ *   Apparel      → the garment fulfillment operation, not a dimension
  *   Bee          → patterned print as a year-round identity, not a season
  *   Halloween    → a short, unforgiving selling window
  *   Christmas    → peak volume, and the risk of over-ordering seasonal stock
@@ -20,22 +20,22 @@ export const specialtyProducts: ProductPage[] = [
     h1: 'Apparel Shipping Bags',
     title: 'Apparel Shipping Bags | Garment Mailers in Bulk',
     description:
-      'Shipping bags built around garment fulfilment. Sizing by garment type, folding, returns handling, label placement and wholesale considerations.',
+      'Shipping bags built around garment fulfillment. Sizing by garment type, folding, returns handling, label placement and wholesale considerations.',
     summary:
       'Mailers specified around a garment operation — sizing by what you sell, not by the dimension list.',
     intro: [
-      'Clothing is the single largest use of poly mailers, and garment fulfilment has its own problems. Products vary enormously in bulk within one range. Return rates are higher than any other category. The parcel is often the first physical thing a customer touches from a brand they bought online.',
+      'Clothing is the single largest use of poly mailers, and garment fulfillment has its own problems. Products vary enormously in bulk within one range. Return rates are higher than any other category. The parcel is often the first physical thing a customer touches from a brand they bought online.',
       'None of that is solved by picking a size off a list. It is solved by working out which sizes your range actually needs, how your team folds under pressure, and what happens when a fifth of what you send comes back.',
       'This page works through that. If you already know the dimension you want, the individual size pages will get you there faster.',
     ],
     plan: {
       intent: 'Source shipping bags for clothing and apparel.',
       audience:
-        'Apparel brands and garment fulfilment operations at any scale.',
+        'Apparel brands and garment fulfillment operations at any scale.',
       problem:
         'Specifying packaging for a range whose items vary widely in bulk, with high return rates.',
       angle:
-        'Operational — sizing across a range, folding, returns and label behaviour on soft parcels.',
+        'Operational — sizing across a range, folding, returns and label behavior on soft parcels.',
       primaryKeyword: 'apparel shipping bags',
       supportingKeywords: [
         'poly mailers for clothes',
@@ -47,7 +47,7 @@ export const specialtyProducts: ProductPage[] = [
       ],
       nearestPage: '/industries/clothing-and-apparel/',
       boundary:
-        'This is the product page: which bag to buy for garments. The industry page covers the wider fulfilment operation around it.',
+        'This is the product page: which bag to buy for garments. The industry page covers the wider fulfillment operation around it.',
     },
     images: [
       {
@@ -56,7 +56,7 @@ export const specialtyProducts: ProductPage[] = [
       },
       {
         file: 'colored-apparel-mailers-fanned-with-polo-shirt.png',
-        alt: 'Coloured garment mailers fanned out with a red polo shirt emerging from the front bag',
+        alt: 'Colored garment mailers fanned out with a red polo shirt emerging from the front bag',
       },
       {
         file: 'white-apparel-mailer-with-placeholder-logo-artwork.png',
@@ -80,7 +80,7 @@ export const specialtyProducts: ProductPage[] = [
           ['Jacket, coat, multi-garment order', '19x24', 'You consolidate several items to one address'],
         ],
         outro:
-          'Most apparel operations settle on two or three sizes rather than one. The exception is a range with genuinely uniform bulk, where standardising on a single size is worth the small waste on the lighter items.',
+          'Most apparel operations settle on two or three sizes rather than one. The exception is a range with genuinely uniform bulk, where standardizing on a single size is worth the small waste on the lighter items.',
       },
       {
         kind: 'prose',
@@ -118,14 +118,14 @@ export const specialtyProducts: ProductPage[] = [
           {
             term: 'Size and style identification',
             detail:
-              'Warehouses handling many similar bagged garments need to identify contents without opening. Colour coding or a printed panel solves it cheaply.',
+              'Warehouses handling many similar bagged garments need to identify contents without opening. Color coding or a printed panel solves it cheaply.',
           },
         ],
       },
       {
         kind: 'specs',
         heading: 'Specification for a garment operation',
-        intro: 'Confirmed in writing on your quotation.',
+        intro: 'Confirmed on your quotation.',
         rows: [
           {
             label: 'Sizes',
@@ -153,9 +153,9 @@ export const specialtyProducts: ProductPage[] = [
             note: 'The reverse is where returns instructions belong on this category.',
           },
           {
-            label: 'Colour',
-            options: ['Stock colour', 'Matched to your brand colour'],
-            note: 'Colour is the cheapest recognition available before any printing.',
+            label: 'Color',
+            options: ['Stock color', 'Matched to your brand color'],
+            note: 'Color is the cheapest recognition available before any printing.',
           },
         ],
       },
@@ -166,7 +166,7 @@ export const specialtyProducts: ProductPage[] = [
           {
             title: 'Take your five most-shipped items',
             detail:
-              'Not your whole catalogue. Five products usually cover the majority of your order volume.',
+              'Not your whole catalog. Five products usually cover the majority of your order volume.',
           },
           {
             title: 'Pack each as a real order',
@@ -219,7 +219,7 @@ export const specialtyProducts: ProductPage[] = [
       },
       {
         q: 'Will dark clothing show through a shipping bag?',
-        a: 'Through standard-opacity pale film, often as a grey shadow. If your range is predominantly dark, specify higher opacity or a heavier film weight when requesting a quote.',
+        a: 'Through standard-opacity pale film, often as a gray shadow. If your range is predominantly dark, specify higher opacity or a heavier film weight when requesting a quote.',
       },
       {
         q: 'Can I use the same bags for wholesale and direct orders?',
@@ -235,7 +235,7 @@ export const specialtyProducts: ProductPage[] = [
       {
         href: '/industries/clothing-and-apparel/',
         label: 'Clothing and apparel',
-        reason: 'The wider fulfilment picture around the packaging decision.',
+        reason: 'The wider fulfillment picture around the packaging decision.',
       },
       {
         href: '/blog/poly-mailers-for-clothing-and-apparel-shipping/',
@@ -309,7 +309,7 @@ export const specialtyProducts: ProductPage[] = [
         heading: 'How a repeat pattern behaves on a mailer',
         standfirst: 'A pattern is the one artwork type that survives being packed.',
         paragraphs: [
-          'A logo has a right place on a bag, and if the bag is folded, sealed and labelled the logo can end up in the wrong one. A repeat pattern has no wrong place. It works whatever the parcel is doing, which is why patterns tolerate the realities of packing better than any other design.',
+          'A logo has a right place on a bag, and if the bag is folded, sealed and labeled the logo can end up in the wrong one. A repeat pattern has no wrong place. It works whatever the parcel is doing, which is why patterns tolerate the realities of packing better than any other design.',
           'What matters instead is the repeat itself. A pattern with a visible grid looks mechanical; one with elements placed at varying angles and spacings reads as designed. And the scale needs to be chosen for the bag rather than inherited from paper — a pattern drawn for wrapping paper is usually too small, and disappears into texture at parcel size.',
           'Coverage is the other decision. A full-bleed pattern makes a striking parcel and leaves nowhere clean for a shipping label. Leaving a plain panel keeps the label legible and gives the design somewhere to breathe.',
         ],
@@ -374,14 +374,14 @@ export const specialtyProducts: ProductPage[] = [
             note: 'A clear panel keeps the shipping label legible and adhering properly.',
           },
           {
-            label: 'Base colour',
-            options: ['White', 'Coloured base'],
+            label: 'Base color',
+            options: ['White', 'Colored base'],
             note: 'A tinted base under a pattern reads warmer and hides handling marks better than white.',
           },
           {
-            label: 'Colours in the pattern',
-            options: ['Two colours', 'Three or more'],
-            note: 'Colour count affects setup, so a simpler pattern is cheaper at low volumes.',
+            label: 'Colors in the pattern',
+            options: ['Two colors', 'Three or more'],
+            note: 'Color count affects setup, so a simpler pattern is cheaper at low volumes.',
           },
           {
             label: 'Size',
@@ -394,7 +394,7 @@ export const specialtyProducts: ProductPage[] = [
         kind: 'linked-prose',
         heading: 'Rights and reusing artwork',
         before:
-          'If you are supplying a pattern, make sure you actually hold the rights to reproduce it commercially. Illustration bought under a personal licence, a pattern found online and a design a freelancer was paid to draw are three different legal positions, and only one of them is safe to print at volume. The file requirements and the rights confirmation we ask for are set out in the ',
+          'If you are supplying a pattern, make sure you actually hold the rights to reproduce it commercially. Illustration bought under a personal license, a pattern found online and a design a freelancer was paid to draw are three different legal positions, and only one of them is safe to print at volume. The file requirements and the rights confirmation we ask for are set out in the ',
         link: { href: '/artwork-guidelines/', anchor: 'artwork and file guidelines' },
         after: ', which is worth reading before you brief anyone.',
       },
@@ -478,7 +478,7 @@ export const specialtyProducts: ProductPage[] = [
     images: [
       {
         file: 'purple-halloween-mailer-printed-haunted-house-scene.png',
-        alt: 'Purple mailer printed with a full-colour haunted house scene, ghosts and pumpkins',
+        alt: 'Purple mailer printed with a full-color haunted house scene, ghosts and pumpkins',
       },
       {
         file: 'blush-halloween-mailer-printed-pumpkin-and-bat-pattern.png',
@@ -511,12 +511,12 @@ export const specialtyProducts: ProductPage[] = [
           {
             title: 'Fix the date you need stock in hand',
             detail:
-              'Not the campaign start — a working buffer before it, so a delay does not become a cancelled campaign.',
+              'Not the campaign start — a working buffer before it, so a delay does not become a canceled campaign.',
           },
           {
             title: 'Confirm the production schedule with us',
             detail:
-              'We confirm timing for your specific order and market in writing, so you are planning against a real date rather than an assumption.',
+              'We confirm timing for your specific order and market by email, so you are planning against a real date rather than an assumption.',
           },
           {
             title: 'Settle artwork well ahead of that',
@@ -584,9 +584,9 @@ export const specialtyProducts: ProductPage[] = [
             note: 'Dense seasonal artwork is where label placement problems show up most.',
           },
           {
-            label: 'Base colour',
-            options: ['White', 'Coloured base'],
-            note: 'A coloured base under seasonal artwork adds depth without adding a print colour.',
+            label: 'Base color',
+            options: ['White', 'Colored base'],
+            note: 'A colored base under seasonal artwork adds depth without adding a print color.',
           },
           {
             label: 'Size',
@@ -612,7 +612,7 @@ export const specialtyProducts: ProductPage[] = [
     faqs: [
       {
         q: 'When should I order Halloween mailers?',
-        a: 'Work backwards from the date you need stock on the packing bench, allow a working buffer before your campaign starts, and settle artwork well ahead of that. We confirm the production schedule for your specific order in writing so you are planning against a real date.',
+        a: 'Work backwards from the date you need stock on the packing bench, allow a working buffer before your campaign starts, and settle artwork well ahead of that. We confirm the production schedule for your specific order by email so you are planning against a real date.',
       },
       {
         q: 'How many seasonal mailers should I order?',
@@ -722,7 +722,7 @@ export const specialtyProducts: ProductPage[] = [
           {
             term: 'One obvious size decision',
             detail:
-              'Temporary staff pack more slowly and make more errors. Fewer sizes with clearer rules costs less than a perfectly optimised range nobody can apply.',
+              'Temporary staff pack more slowly and make more errors. Fewer sizes with clearer rules costs less than a perfectly optimized range nobody can apply.',
           },
           {
             term: 'A designed label position',
@@ -747,7 +747,7 @@ export const specialtyProducts: ProductPage[] = [
         paragraphs: [
           'Two risks pull in opposite directions at peak. Order too little and you run out at the worst possible moment. Order too much and you carry festive stock into a year where it cannot be used.',
           'The way through is to split the decision. Order themed mailers against a realistic forecast of gift-heavy parcels, and keep standard stock covering the rest of your volume throughout. That way a shortfall in themed packaging slows nothing down, and the quantity at risk is small.',
-          'Timing is the other half. Work backwards from when you need stock on the bench, allow a buffer before your volume starts to climb, and settle artwork well ahead of that. We confirm the schedule for your specific order in writing so you are planning against a real date rather than a hopeful one.',
+          'Timing is the other half. Work backwards from when you need stock on the bench, allow a buffer before your volume starts to climb, and settle artwork well ahead of that. We confirm the schedule for your specific order by email so you are planning against a real date rather than a hopeful one.',
         ],
       },
       {
@@ -816,7 +816,7 @@ export const specialtyProducts: ProductPage[] = [
           {
             title: 'Fix the date stock must be on the bench',
             detail:
-              'Then work backwards through approval and production, and confirm the schedule with us in writing.',
+              'Then work backwards through approval and production, and confirm the schedule with us by email.',
           },
           {
             title: 'Write the packing rules down',

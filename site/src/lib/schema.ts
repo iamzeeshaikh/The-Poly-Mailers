@@ -9,7 +9,7 @@ import { withExtras } from './page-faqs';
  *    AggregateOffer range. The same figure is rendered on the page, because
  *    marked-up content that is not visible is a structured-data violation.
  *  - Product still carries no rating and no review. There is no review
- *    programme, and fabricated ratings are the fastest way to lose a merchant
+ *    program, and fabricated ratings are the fastest way to lose a merchant
  *    listing.
  *  - FAQPage is only ever built from the same array that renders the visible
  *    FAQ block, so schema and page content cannot drift apart.
@@ -39,7 +39,7 @@ export function organization(): Json {
     email: BRAND.email,
     telephone: [BRAND.phoneDisplay, BRAND.phoneAltDisplay],
     description:
-      'Custom poly mailer manufacturing and supply for businesses in the United States, United Kingdom, Canada and Australia. Printed, stock, coloured, padded and size-specific mailers, quoted to order.',
+      'Custom poly mailer manufacturing and supply for businesses in the United States, United Kingdom, Canada and Australia. Printed, stock, colored, padded and size-specific mailers, quoted to order.',
     areaServed: [
       { '@type': 'Country', name: 'United States' },
       { '@type': 'Country', name: 'United Kingdom' },

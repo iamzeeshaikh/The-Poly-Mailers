@@ -16,10 +16,10 @@ const crumbs: Crumb[] = [
 const faqs = [
   {
     q: 'Is the preview an accurate representation of the finished product?',
-    a: 'It is an approximate visual guide, not a production proof. Proportions, colour and placement are indicative. The binding version is the proof produced against your artwork on your chosen film, which you approve before anything is printed.',
+    a: 'It is an approximate visual guide, not a production proof. Proportions, color and placement are indicative. The binding version is the proof produced against your artwork on your chosen film, which you approve before anything is printed.',
   },
   {
-    q: 'Does my artwork get uploaded when I use the tool?',
+    q: 'Does my artwork get uploaded when I design my mailer here?',
     a: 'No. The image you add is read by your own browser to draw the preview and stays on your device. It is only sent to us if you attach it to the quote form and submit it.',
   },
   {
@@ -27,12 +27,12 @@ const faqs = [
     a: 'It is held in your browser for the current session, so a reload does not lose your work. Closing the tab clears it. If you want to keep it, submit it with a quote request.',
   },
   {
-    q: 'Can I use the tool with a keyboard?',
-    a: 'Yes. Every control is a native form element, including artwork scale and position, which are range inputs rather than a drag-only canvas. Colour swatches behave as a radio group with arrow-key navigation.',
+    q: 'Can I design my poly mailer with a keyboard?',
+    a: 'Yes. Every control is a native form element, including artwork scale and position, which are range inputs rather than a drag-only canvas. Color swatches behave as a radio group with arrow-key navigation.',
   },
   {
     q: 'What if I cannot see the preview?',
-    a: 'Everything the tool captures can be described in the message field of the quote form instead, and we will apply it exactly the same way. The preview is a convenience rather than a requirement.',
+    a: 'Everything you choose here can be described in the message field of the quote form instead, and we will apply it exactly the same way. The preview is a convenience rather than a requirement.',
   },
 ];
 
@@ -41,7 +41,7 @@ const schema = graph([
     path,
     name: 'Design your poly mailer',
     description:
-      'Configure a mailer — size, colour, finish, closure, material and print coverage — position your artwork, and send the configuration with a quote request.',
+      'Configure a mailer — size, color, finish, closure, material and print coverage — position your artwork, and send the configuration with a quote request.',
     hasBreadcrumb: true,
   }),
   breadcrumbs(crumbs),
@@ -50,19 +50,19 @@ const schema = graph([
 ---
 
 <BaseLayout
-  title="Design Your Poly Mailer | Configuration Tool"
-  description="Configure a mailer visually — size, colour, finish, closure, material, print coverage and artwork placement — then send the specification with a quote request."
+  title="Design Your Custom Poly Mailers | Preview Size, Color and Print"
+  description="Configure a mailer visually — size, color, finish, closure, material, print coverage and artwork placement — then send the specification with a quote request."
   path={path}
   schema={schema}
   crumbs={crumbs}
 >
   <article>
     <header class="wrap tool-head">
-      <p class="eyebrow">Design tool</p>
+      <p class="eyebrow">Preview before you quote</p>
       <h1>Design your poly mailer</h1>
       <p class="lede">
         Build the specification visually rather than describing it. Choose the
-        format, colour, finish and closure, position your artwork, and send the
+        format, color, finish and closure, position your artwork, and send the
         result with a quote request so we are pricing the thing you actually
         built.
       </p>
@@ -78,14 +78,14 @@ const schema = graph([
         <div class="how-copy">
           <h2>How to get the most out of it</h2>
           <p>
-            The tool is quickest when you already know the size. If you do not,
+            Designing here is quickest when you already know the size. If you do not,
             settle that first with a physical sample — a preview cannot tell you
             whether your product fits.
           </p>
         </div>
         <ol class="how-steps">
           <li>
-            <strong>Pick the format before the colour</strong>
+            <strong>Pick the format before the color</strong>
             <span>Type and size constrain everything after them.</span>
           </li>
           <li>
@@ -102,7 +102,7 @@ const schema = graph([
           </li>
           <li>
             <strong>Send it with a quote request</strong>
-            <span>The configuration travels with the enquiry as written specification.</span>
+            <span>The configuration travels with the inquiry as a ready-made specification.</span>
           </li>
         </ol>
       </div>
@@ -110,7 +110,7 @@ const schema = graph([
 
     <section class="wrap section-tight">
       <div class="limits panel">
-        <h2>What the tool does not do</h2>
+        <h2>What the preview does not do</h2>
         <ul role="list">
           <li>
             <strong>It does not produce manufacturing artwork.</strong>
@@ -119,8 +119,8 @@ const schema = graph([
             and confirmed on a proof.
           </li>
           <li>
-            <strong>It does not show accurate colour.</strong>
-            A screen is backlit and film is not. Where a colour matters
+            <strong>It does not show accurate color.</strong>
+            A screen is backlit and film is not. Where a color matters
             commercially, ask for a physical check rather than approving from a
             preview or a digital proof.
           </li>
@@ -138,7 +138,7 @@ const schema = graph([
     </section>
 
     <div class="wrap section-tight">
-      <FaqList faqs={faqs} heading="Questions about the design tool" id="faq-design-tool" />
+      <FaqList faqs={faqs} heading="Questions about designing your poly mailer" id="faq-design-tool" />
     </div>
 
     <div class="wrap section-tight">
@@ -147,7 +147,7 @@ const schema = graph([
         withDesign
         id="quote-design"
         heading="Send your configuration"
-        intro="Your choices above are attached to this enquiry automatically. Add anything the tool could not capture in the message field."
+        intro="Your choices above are attached to this inquiry automatically. Add anything your design could not capture in the message field."
       />
     </div>
   </article>

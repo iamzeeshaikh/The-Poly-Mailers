@@ -597,7 +597,7 @@ export const policyPages: readonly ContentPage[] = [
           {
             term: 'Keyboard operation throughout',
             detail:
-              'Navigation, dropdown panels, the image gallery, the FAQ accordions, the forms and the design tool are all operable without a mouse, with visible focus at every step and no keyboard traps.',
+              'Navigation, dropdown panels, the image gallery, the FAQ accordions, the forms and the Design Your Poly Mailers page are all operable without a mouse, with visible focus at every step and no keyboard traps.',
           },
           {
             term: 'A skip link',
@@ -610,9 +610,9 @@ export const policyPages: readonly ContentPage[] = [
               'One h1 per page, headings in order, lists marked up as lists, tables with proper header cells, and landmarks so a screen reader can move by region.',
           },
           {
-            term: 'Labelled form fields',
+            term: 'Labeled form fields',
             detail:
-              'Every input has a visible associated label. Errors are announced, described in words rather than colour alone, and focus moves to the first field that needs attention.',
+              'Every input has a visible associated label. Errors are announced, described in words rather than color alone, and focus moves to the first field that needs attention.',
           },
           {
             term: 'Reduced motion support',
@@ -622,7 +622,7 @@ export const policyPages: readonly ContentPage[] = [
           {
             term: 'Contrast and target size',
             detail:
-              'Text and interface colours were chosen against contrast requirements, and interactive controls are sized for touch.',
+              'Text and interface colors were chosen against contrast requirements, and interactive controls are sized for touch.',
           },
           {
             term: 'Descriptive alt text',
@@ -632,7 +632,7 @@ export const policyPages: readonly ContentPage[] = [
           {
             term: 'Content that works without JavaScript',
             detail:
-              'Text, images and navigation are present in the HTML. Scripting adds the gallery, the menu panels and the design tool rather than being required to read the page.',
+              'Text, images and navigation are present in the HTML. Scripting adds the gallery, the menu panels and the Design Your Poly Mailers preview rather than being required to read the page.',
           },
         ],
       },
@@ -640,9 +640,9 @@ export const policyPages: readonly ContentPage[] = [
         kind: 'prose',
         heading: 'What has been tested, and what has not',
         paragraphs: [
-          'Structure, landmarks, heading order, form labelling, focus order, contrast and reduced-motion behaviour have been checked during development, along with keyboard operation of every interactive component.',
+          'Structure, landmarks, heading order, form labeling, focus order, contrast and reduced-motion behavior have been checked during development, along with keyboard operation of every interactive component.',
           'What has not happened is a full audit by an independent accessibility specialist, or testing with people who use assistive technology daily. Those are the things that find the problems development testing misses, and we would rather say so than imply a level of assurance we have not earned.',
-          'The design tool is the component most likely to have gaps. It is keyboard operable and every control is labelled, but a visual canvas is inherently harder to use without sight. Anything the tool can do can also be described in the quote form message field, and we will apply it exactly the same way.',
+          'The Design Your Poly Mailers page is the component most likely to have gaps. It is keyboard operable and every control is labeled, but a visual canvas is inherently harder to use without sight. Anything you can set there can also be described in the quote form message field, and we will apply it exactly the same way.',
         ],
       },
       {

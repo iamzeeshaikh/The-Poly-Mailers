@@ -37,7 +37,7 @@ export const industries: readonly IndustryPage[] = [
     h1: 'Poly Mailers for Clothing and Apparel',
     title: 'Poly Mailers for Clothing Brands | Apparel Packaging',
     description:
-      'Packaging for garment fulfilment — sizing across a range that varies in bulk, returns handling, and keeping presentation consistent at volume.',
+      'Packaging for garment fulfillment — sizing across a range that varies in bulk, returns handling, and keeping presentation consistent at volume.',
     summary: 'Sizing across a varied range, and building returns into the packaging decision.',
     intro: [
       'Apparel is the largest single use of poly mailers, and it has a problem no other category has to the same degree: the same brand ships a pair of socks and a padded coat, and both have to arrive looking like they came from the same place.',
@@ -45,7 +45,7 @@ export const industries: readonly IndustryPage[] = [
     ],
     plan: {
       intent: 'Find packaging suited to a clothing brand’s operation.',
-      audience: 'Apparel brand operations and fulfilment leads.',
+      audience: 'Apparel brand operations and fulfillment leads.',
       problem: 'One range spans hugely different garment bulks, with high return rates on top.',
       angle: 'Treats packaging as a two-way flow rather than an outbound-only decision.',
       primaryKeyword: 'poly mailers for clothing',
@@ -59,7 +59,7 @@ export const industries: readonly IndustryPage[] = [
         'The product page specifies the bag. This page covers the operation the bag sits inside.',
     },
     recommended: [
-      { slug: 'apparel-shipping-bags', why: 'Built around garment fulfilment rather than a dimension.' },
+      { slug: 'apparel-shipping-bags', why: 'Built around garment fulfillment rather than a dimension.' },
       { slug: '10x13-poly-mailers', why: 'The size most apparel operations build their standard around.' },
       { slug: '14-5x19-poly-mailers', why: 'Where hoodies and outerwear go without straining a seal.' },
       { slug: 'self-seal-poly-mailers', why: 'The double-strip closure that turns a return into one bag instead of two.' },
@@ -100,7 +100,7 @@ export const industries: readonly IndustryPage[] = [
           {
             term: 'Artwork with no label plan',
             detail:
-              'A centred front design gets covered on a large share of parcels unless a clear zone is designed in.',
+              'A centered front design gets covered on a large share of parcels unless a clear zone is designed in.',
           },
           {
             term: 'Treating wholesale and direct the same',
@@ -144,7 +144,7 @@ export const industries: readonly IndustryPage[] = [
       },
       {
         q: 'How do I stop dark clothing showing through the bag?',
-        a: 'Specify higher opacity or a heavier film weight, or move to a darker base colour. Black film is fully opaque whatever is inside, which is one reason so many apparel brands use it.',
+        a: 'Specify higher opacity or a heavier film weight, or move to a darker base color. Black film is fully opaque whatever is inside, which is one reason so many apparel brands use it.',
       },
       {
         q: 'Do I need different packaging for wholesale orders?',
@@ -183,31 +183,31 @@ export const industries: readonly IndustryPage[] = [
     h1: 'Poly Mailers for Ecommerce Operations',
     title: 'Poly Mailers for Ecommerce | Packaging at Volume',
     description:
-      'Packaging decisions that scale — standardisation, forecasting, bench design and the shipping-band arithmetic that decides real cost per parcel.',
-    summary: 'Standardisation, forecasting and the cost per parcel that only shows up at volume.',
+      'Packaging decisions that scale — standardization, forecasting, bench design and the shipping-band arithmetic that decides real cost per parcel.',
+    summary: 'Standardization, forecasting and the cost per parcel that only shows up at volume.',
     intro: [
-      'At low volume, packaging is a purchase. At scale it is an operating system: every decision multiplies by thousands of parcels a month, and the costs that matter stop being the unit price and start being the ones nobody itemises.',
+      'At low volume, packaging is a purchase. At scale it is an operating system: every decision multiplies by thousands of parcels a month, and the costs that matter stop being the unit price and start being the ones nobody itemizes.',
       'Packer decision time. Reorder admin. The proportion of parcels that cross a shipping threshold. Damage rates. Support contacts about returns. All of them are affected by a specification chosen months earlier, and none of them appears on a quotation.',
     ],
     plan: {
-      intent: 'Optimise packaging for a high-volume ecommerce operation.',
-      audience: 'Operations and supply chain leads running fulfilment at scale.',
+      intent: 'Optimize packaging for a high-volume ecommerce operation.',
+      audience: 'Operations and supply chain leads running fulfillment at scale.',
       problem: 'Unit price is the visible cost; the expensive ones are invisible until volume rises.',
       angle: 'Total cost per parcel, including the operational costs a quotation never shows.',
       primaryKeyword: 'poly mailers for ecommerce',
       supportingKeywords: [
         'ecommerce packaging',
         'bulk shipping bags',
-        'fulfilment packaging',
+        'fulfillment packaging',
       ],
       nearestPage: '/economy-poly-mailers/',
       boundary:
         'The economy page is a specification decision. This page is about the operation those specifications run inside.',
     },
     recommended: [
-      { slug: '10x13-poly-mailers', why: 'The size to standardise on if your order profile allows it.' },
+      { slug: '10x13-poly-mailers', why: 'The size to standardize on if your order profile allows it.' },
       { slug: 'economy-poly-mailers', why: 'Where volume justifies a cost-led specification, with the trade-offs named.' },
-      { slug: 'blank-poly-mailers', why: 'For multi-brand fulfilment where one logo will not do.' },
+      { slug: 'blank-poly-mailers', why: 'For multi-brand fulfillment where one logo will not do.' },
       { slug: '19x24-poly-mailers', why: 'Consolidating multi-item orders into one parcel instead of several.' },
       { slug: 'self-seal-poly-mailers', why: 'Seconds saved per parcel at the bench, multiplied by your volume.' },
     ],
@@ -216,7 +216,7 @@ export const industries: readonly IndustryPage[] = [
         kind: 'compare',
         heading: 'The costs a quotation does not show',
         intro:
-          'Run these numbers against your own volume before optimising the unit price any further.',
+          'Run these numbers against your own volume before optimizing the unit price any further.',
         caption: 'Hidden costs in a packaging specification, and what drives each one.',
         columns: ['Cost', 'Driven by', 'How to reduce it'],
         rows: [
@@ -287,7 +287,7 @@ export const industries: readonly IndustryPage[] = [
       },
       {
         kind: 'prose',
-        heading: 'Standardising, and when not to',
+        heading: 'Standardizing, and when not to',
         paragraphs: [
           'One size on the bench removes an entire class of error, and for a range with consistent bulk it is the right answer even though it wastes a little film on the lightest orders.',
           'It stops being the right answer when a meaningful share of orders sits badly in it. If more than roughly a fifth of your parcels are either lost inside the standard size or straining it, the waste and the damage together cost more than the second size would.',
@@ -298,7 +298,7 @@ export const industries: readonly IndustryPage[] = [
         kind: 'linked-prose',
         heading: 'Consolidation as a lever',
         before:
-          'Multi-item orders shipped as separate parcels are one of the largest avoidable costs in high-volume fulfilment. Consolidating into a single large mailer removes a whole shipment, but it is not automatically cheaper — a consolidated parcel can cross a weight band that two smaller ones stayed below. Weigh a realistically packed sample before switching a flow, and check it against your own rate card. The formats that make consolidation practical are covered on the ',
+          'Multi-item orders shipped as separate parcels are one of the largest avoidable costs in high-volume fulfillment. Consolidating into a single large mailer removes a whole shipment, but it is not automatically cheaper — a consolidated parcel can cross a weight band that two smaller ones stayed below. Weigh a realistically packed sample before switching a flow, and check it against your own rate card. The formats that make consolidation practical are covered on the ',
         link: { href: '/19x24-poly-mailers/', anchor: 'large consolidation format page' },
         after: '.',
       },
@@ -314,11 +314,11 @@ export const industries: readonly IndustryPage[] = [
       },
       {
         q: 'What is the biggest packaging saving available at scale?',
-        a: 'Almost always right-sizing, because it affects the shipping cost on every parcel rather than the packaging cost. Weigh and measure packed samples against your rate card before optimising anything else.',
+        a: 'Almost always right-sizing, because it affects the shipping cost on every parcel rather than the packaging cost. Weigh and measure packed samples against your rate card before optimizing anything else.',
       },
       {
-        q: 'Can you supply unbranded mailers for multi-brand fulfilment?',
-        a: 'Yes. Plain stock in several sizes and colours is a common requirement for third-party fulfilment, where one logo on every parcel is not an option.',
+        q: 'Can you supply unbranded mailers for multi-brand fulfillment?',
+        a: 'Yes. Plain stock in several sizes and colors is a common requirement for third-party fulfillment, where one logo on every parcel is not an option.',
       },
     ],
     related: [
@@ -343,7 +343,7 @@ export const industries: readonly IndustryPage[] = [
       body: 'Send your order profile and current specification and we will tell you where the cost actually is. Often it is not the unit price.',
       buttonLabel: 'Request a packaging review',
     },
-    whatsapp: 'Hi, I run ecommerce fulfilment at volume and want to review our mailer setup.',
+    whatsapp: 'Hi, I run ecommerce fulfillment at volume and want to review our mailer setup.',
   },
 
   /* ===================================================================== */
@@ -377,7 +377,7 @@ export const industries: readonly IndustryPage[] = [
     recommended: [
       { slug: 'light-pink-poly-mailers', why: 'Blush tones that read considered rather than promotional.' },
       { slug: 'black-poly-mailers', why: 'A premium signal with no print cost at all.' },
-      { slug: 'blank-poly-mailers', why: 'Coloured stock plus a printed sticker — the low-volume answer.' },
+      { slug: 'blank-poly-mailers', why: 'Colored stock plus a printed sticker — the low-volume answer.' },
       { slug: '10x13-poly-mailers', why: 'The single size that covers most boutique order profiles.' },
       { slug: 'custom-frosted-poly-bags', why: 'A presentation layer that costs less than printing the outer bag.' },
     ],
@@ -390,7 +390,7 @@ export const industries: readonly IndustryPage[] = [
         caption: 'Presentation spending options ranked for a low-volume operation.',
         columns: ['Option', 'Cost at low volume', 'Presentation gained'],
         rows: [
-          ['Coloured film instead of white', 'Very small premium', 'Large — recognisable before it is opened'],
+          ['Colored film instead of white', 'Very small premium', 'Large — recognizable before it is opened'],
           ['Printed sticker or seal', 'Low, and reorderable in small runs', 'Large — carries the mark without a print run'],
           ['Printed tissue or card inside', 'Low', 'Large — it is the first thing seen when the bag opens'],
           ['Matte instead of gloss finish', 'Small premium', 'Moderate — reads as considered, hides marks'],
@@ -413,7 +413,7 @@ export const industries: readonly IndustryPage[] = [
           {
             term: 'Photograph well',
             detail:
-              'Independent fashion lives on customer content. Matte finishes and coloured film photograph without hotspots; gloss white does not.',
+              'Independent fashion lives on customer content. Matte finishes and colored film photograph without hotspots; gloss white does not.',
           },
           {
             term: 'Protect a garment that may be the only one',
@@ -444,9 +444,9 @@ export const industries: readonly IndustryPage[] = [
               'Your most common order. Cover the outliers with a plain larger bag rather than a second branded one.',
           },
           {
-            title: 'Choose a colour, not a print',
+            title: 'Choose a color, not a print',
             detail:
-              'A coloured film is the cheapest recognition available and needs no artwork approval.',
+              'A colored film is the cheapest recognition available and needs no artwork approval.',
           },
           {
             title: 'Put the money inside',
@@ -468,7 +468,7 @@ export const industries: readonly IndustryPage[] = [
         kind: 'linked-prose',
         heading: 'When to move to printed packaging',
         before:
-          'Three things usually become true together: your monthly volume stops swinging, your artwork stops changing, and customers start photographing the parcel rather than just the garment. At that point a printed run pays back quickly, and the sensible first version is a single mark on a coloured base rather than full coverage. What that first run involves is set out on the ',
+          'Three things usually become true together: your monthly volume stops swinging, your artwork stops changing, and customers start photographing the parcel rather than just the garment. At that point a printed run pays back quickly, and the sensible first version is a single mark on a colored base rather than full coverage. What that first run involves is set out on the ',
         link: { href: '/custom-poly-mailers/', anchor: 'custom printed mailer page' },
         after: '.',
       },
@@ -476,14 +476,14 @@ export const industries: readonly IndustryPage[] = [
     faqs: [
       {
         q: 'Can a small boutique order custom printed mailers?',
-        a: 'Yes, though the per-unit price is higher because setup spreads across fewer units. Many boutiques get most of the effect for far less by using coloured stock with a printed sticker until volume justifies a printed run.',
+        a: 'Yes, though the per-unit price is higher because setup spreads across fewer units. Many boutiques get most of the effect for far less by using colored stock with a printed sticker until volume justifies a printed run.',
       },
       {
         q: 'What is the cheapest way to make a parcel look considered?',
-        a: 'A coloured film rather than white, a printed seal sticker, and something printed inside the bag. Together they cost a fraction of a printed run and account for most of what a customer notices.',
+        a: 'A colored film rather than white, a printed seal sticker, and something printed inside the bag. Together they cost a fraction of a printed run and account for most of what a customer notices.',
       },
       {
-        q: 'Which colour suits a boutique brand?',
+        q: 'Which color suits a boutique brand?',
         a: 'Blush and black are the two most requested, for opposite reasons — one reads soft and considered, the other reads premium and hides handling marks completely. Both work without any printing at all.',
       },
       {
@@ -523,7 +523,7 @@ export const industries: readonly IndustryPage[] = [
     h1: 'Poly Mailers for Beauty and Cosmetics',
     title: 'Poly Mailers for Beauty Brands | Cosmetics Shipping',
     description:
-      'Packaging for beauty fulfilment — protecting glass and pumps, keeping secondary cartons unmarked, and shipping liquids without leak damage spreading.',
+      'Packaging for beauty fulfillment — protecting glass and pumps, keeping secondary cartons unmarked, and shipping liquids without leak damage spreading.',
     summary: 'Protecting glass, pumps and printed cartons — where the packaging inside matters most.',
     intro: [
       'Beauty ships two fragile things at once. There is the product — glass, pumps, powders — and there is the carton it sits in, which is often the most expensive part of the presentation and the part a customer photographs.',
@@ -608,7 +608,7 @@ export const industries: readonly IndustryPage[] = [
         kind: 'linked-prose',
         heading: 'Sample and gift-with-purchase sends',
         before:
-          'Marketing sends are a different problem from order fulfilment. They are small, they go out in bursts, they carry a low-value product and their whole job is to make an impression. A small coloured mailer with something printed inside will outperform a larger protective one, and it costs less. The size that suits these is covered on the ',
+          'Marketing sends are a different problem from order fulfillment. They are small, they go out in bursts, they carry a low-value product and their whole job is to make an impression. A small colored mailer with something printed inside will outperform a larger protective one, and it costs less. The size that suits these is covered on the ',
         link: { href: '/6x9-poly-mailers/', anchor: 'small-format mailer page' },
         after: ', which deals with what actually fits in a compact parcel.',
       },
@@ -627,7 +627,7 @@ export const industries: readonly IndustryPage[] = [
         a: 'Bag liquids individually inside the mailer. It will not stop a leak, but it contains it to one item instead of ruining the whole order, which turns a total replacement into a single one.',
       },
       {
-        q: 'Which mailer colour suits a beauty brand?',
+        q: 'Which mailer color suits a beauty brand?',
         a: 'Blush and pale tones dominate the category, and they need an opacity check if your cartons are dark. Black is the alternative where you want the parcel to read premium and hide handling marks completely.',
       },
     ],
@@ -794,7 +794,7 @@ export const industries: readonly IndustryPage[] = [
       {
         href: '/9x12-poly-mailers/',
         label: '9x12 Poly Mailers',
-        reason: 'The size most book and print sellers standardise on.',
+        reason: 'The size most book and print sellers standardize on.',
       },
       {
         href: '/padded-poly-mailers/',
@@ -804,7 +804,7 @@ export const industries: readonly IndustryPage[] = [
       {
         href: '/industries/accessories/',
         label: 'Accessories',
-        reason: 'A neighbouring category with small, mixed-shape contents.',
+        reason: 'A neighboring category with small, mixed-shape contents.',
       },
     ],
     cta: {
@@ -826,7 +826,7 @@ export const industries: readonly IndustryPage[] = [
     summary: 'Recurring, forecastable and repetitive — packaging where the same customer sees it monthly.',
     intro: [
       'Subscription is the only model where the same customer receives your packaging over and over. That changes what the parcel has to do. The first one has to make an impression; the twelfth has to still feel deliberate rather than routine.',
-      'It also changes the buying problem. You know your subscriber count, so you can forecast packaging almost exactly — which makes standardising easier and over-ordering harder to justify.',
+      'It also changes the buying problem. You know your subscriber count, so you can forecast packaging almost exactly — which makes standardizing easier and over-ordering harder to justify.',
     ],
     plan: {
       intent: 'Find packaging for a subscription or recurring delivery service.',
@@ -856,7 +856,7 @@ export const industries: readonly IndustryPage[] = [
         heading: 'The twelfth parcel problem',
         standfirst: 'Novelty wears off; care does not.',
         paragraphs: [
-          'A subscriber who has received the same parcel eleven times is not going to be surprised by the twelfth. What keeps the experience feeling deliberate is consistency of care rather than novelty: the same colour, the same fold, the same label position, the same clean seal, every month.',
+          'A subscriber who has received the same parcel eleven times is not going to be surprised by the twelfth. What keeps the experience feeling deliberate is consistency of care rather than novelty: the same color, the same fold, the same label position, the same clean seal, every month.',
           'That argues for investing in a specification that holds rather than in variety. A printed mailer that arrives identical every month reads as a brand with standards. Three different bags depending on what was in the warehouse reads as improvisation.',
           'Where variety helps is in the layer inside — a card, a tissue, a seasonal insert. Those change cheaply, monthly, without touching the packaging specification.',
         ],
@@ -875,7 +875,7 @@ export const industries: readonly IndustryPage[] = [
           {
             term: 'A fixed contents profile',
             detail:
-              'The box is designed before it is packed, so one size genuinely fits — the argument for standardising is stronger here than anywhere.',
+              'The box is designed before it is packed, so one size genuinely fits — the argument for standardizing is stronger here than anywhere.',
           },
           {
             term: 'Forecastable volume for printing',
@@ -929,7 +929,7 @@ export const industries: readonly IndustryPage[] = [
     faqs: [
       {
         q: 'Should a subscription box use printed mailers?',
-        a: 'It is one of the strongest cases for it. Printed runs need predictable volume to be economical, and a known subscriber count is exactly that. A single mark on a coloured base is a sensible first printed run.',
+        a: 'It is one of the strongest cases for it. Printed runs need predictable volume to be economical, and a known subscriber count is exactly that. A single mark on a colored base is a sensible first printed run.',
       },
       {
         q: 'How much packaging should I order per cycle?',
@@ -979,7 +979,7 @@ export const industries: readonly IndustryPage[] = [
       'Packaging for jewelry, bags, belts and small accessories — a category where the items vary wildly in shape and the parcel is often the gift wrap.',
     summary: 'Wildly varied shapes, small parcels, and packaging that often doubles as gift wrap.',
     intro: [
-      'Accessories are the hardest category to standardise. A pair of earrings, a leather belt, a scarf and a canvas tote have nothing in common in shape, weight or fragility, and a business selling all four cannot cover them with one bag.',
+      'Accessories are the hardest category to standardize. A pair of earrings, a leather belt, a scarf and a canvas tote have nothing in common in shape, weight or fragility, and a business selling all four cannot cover them with one bag.',
       'The second complication is that accessories are bought as gifts more often than most categories, which means the parcel is sometimes the wrapping and needs to look like it.',
     ],
     plan: {
@@ -1001,7 +1001,7 @@ export const industries: readonly IndustryPage[] = [
       { slug: '6x9-poly-mailers', why: 'Jewelry, small leather goods and anything boxed and light.' },
       { slug: 'poly-bubble-mailers', why: 'Where a boxed item needs protecting from a single knock.' },
       { slug: '9x12-poly-mailers', why: 'Scarves, belts and folded soft accessories.' },
-      { slug: 'colored-poly-mailers', why: 'Colour-coding product lines so a busy bench picks correctly.' },
+      { slug: 'colored-poly-mailers', why: 'Color-coding product lines so a busy bench picks correctly.' },
       { slug: 'padded-poly-mailers', why: 'Foam lining for anything with a polished or plated surface.' },
     ],
     blocks: [
@@ -1056,12 +1056,12 @@ export const industries: readonly IndustryPage[] = [
           {
             term: 'Gift orders',
             detail:
-              'A meaningful share of accessory purchases are gifts, and the parcel is sometimes the wrapping. Colour and a tear tab matter more here than in most categories.',
+              'A meaningful share of accessory purchases are gifts, and the parcel is sometimes the wrapping. Color and a tear tab matter more here than in most categories.',
           },
           {
             term: 'Very small items in very large bags',
             detail:
-              'A common error when a business standardises on one size. A small item in a large mailer moves, and movement is what causes damage.',
+              'A common error when a business standardizes on one size. A small item in a large mailer moves, and movement is what causes damage.',
           },
         ],
       },
@@ -1069,16 +1069,16 @@ export const industries: readonly IndustryPage[] = [
         kind: 'prose',
         heading: 'When the parcel is the gift wrap',
         paragraphs: [
-          'For accessories bought as gifts, the mailer sometimes goes under a tree or onto a desk without being repackaged. That changes what it needs to be: a colour that looks intentional, a clean seal, a tear tab so it opens without scissors, and no shipping wording printed across the front.',
-          'It is worth deciding whether that is a flow you want to support. If it is, a coloured bag with a seal sticker costs very little and covers it. If not, keep the mailer purely practical and put the gift presentation inside, where it can be added selectively for the orders that need it.',
+          'For accessories bought as gifts, the mailer sometimes goes under a tree or onto a desk without being repackaged. That changes what it needs to be: a color that looks intentional, a clean seal, a tear tab so it opens without scissors, and no shipping wording printed across the front.',
+          'It is worth deciding whether that is a flow you want to support. If it is, a colored bag with a seal sticker costs very little and covers it. If not, keep the mailer purely practical and put the gift presentation inside, where it can be added selectively for the orders that need it.',
         ],
       },
       {
         kind: 'linked-prose',
-        heading: 'Colour as an operational tool',
+        heading: 'Color as an operational tool',
         before:
-          'Accessory operations pick from a wider spread of product types than most, and colour-coding the mailer by product line is a cheap way to reduce picking errors at the bench. It costs a small premium over plain white film and needs no printing at all, which makes it one of the few packaging decisions that improves both branding and accuracy at once. The full range and how each base behaves is set out on the ',
-        link: { href: '/poly-mailer-colors/', anchor: 'colour selection page' },
+          'Accessory operations pick from a wider spread of product types than most, and color-coding the mailer by product line is a cheap way to reduce picking errors at the bench. It costs a small premium over plain white film and needs no printing at all, which makes it one of the few packaging decisions that improves both branding and accuracy at once. The full range and how each base behaves is set out on the ',
+        link: { href: '/poly-mailer-colors/', anchor: 'color selection page' },
         after: '.',
       },
     ],
@@ -1097,7 +1097,7 @@ export const industries: readonly IndustryPage[] = [
       },
       {
         q: 'Should accessory mailers be gift-ready?',
-        a: 'It depends whether you want to support parcels going straight under a tree. If you do, a coloured bag with a tear tab and a seal sticker covers it for very little. If not, keep the mailer plain and add gift presentation inside for the orders that need it.',
+        a: 'It depends whether you want to support parcels going straight under a tree. If you do, a colored bag with a tear tab and a seal sticker covers it for very little. If not, keep the mailer plain and add gift presentation inside for the orders that need it.',
       },
     ],
     related: [
@@ -1173,9 +1173,9 @@ export const industries: readonly IndustryPage[] = [
               'Two candidate sizes. Pack a real order into each. This single step prevents most first-order mistakes.',
           },
           {
-            title: 'Buy one size, plain, in a colour',
+            title: 'Buy one size, plain, in a color',
             detail:
-              'A coloured film is the cheapest recognition available and needs no artwork, no proof and no commitment.',
+              'A colored film is the cheapest recognition available and needs no artwork, no proof and no commitment.',
           },
           {
             title: 'Put the branding on a sticker',
@@ -1208,7 +1208,7 @@ export const industries: readonly IndustryPage[] = [
           {
             term: 'A printed run',
             detail:
-              'Printing commits your artwork, size, colour and quantity at once, at the point when all four are least settled.',
+              'Printing commits your artwork, size, color and quantity at once, at the point when all four are least settled.',
           },
           {
             term: 'A year of stock',
@@ -1221,9 +1221,9 @@ export const industries: readonly IndustryPage[] = [
               'Start with one and add a second when a real pattern of orders shows you need it.',
           },
           {
-            term: 'A custom colour match',
+            term: 'A custom color match',
             detail:
-              'A stock colour close to your brand costs far less and looks the same to a customer who has never seen your swatch.',
+              'A stock color close to your brand costs far less and looks the same to a customer who has never seen your swatch.',
           },
         ],
       },
@@ -1231,9 +1231,9 @@ export const industries: readonly IndustryPage[] = [
         kind: 'prose',
         heading: 'Looking considered without spending much',
         paragraphs: [
-          'What customers actually register in the first few seconds is colour, cleanliness and care. A coloured bag, sealed neatly, with a label placed the same way every time, reads better than a printed bag sealed carelessly.',
+          'What customers actually register in the first few seconds is color, cleanliness and care. A colored bag, sealed neatly, with a label placed the same way every time, reads better than a printed bag sealed carelessly.',
           'After that, the inside is where small budgets go furthest. A printed card, tissue in a matching tone, or a hand-written line all cost very little and are what gets photographed. The outer bag is what gets the parcel to the door; the inside is what gets remembered.',
-          'This is not a compromise position. Plenty of established brands run coloured stock with a sticker permanently, because it lets them change seasonally without touching their packaging supply.',
+          'This is not a compromise position. Plenty of established brands run colored stock with a sticker permanently, because it lets them change seasonally without touching their packaging supply.',
         ],
       },
       {
@@ -1248,11 +1248,11 @@ export const industries: readonly IndustryPage[] = [
     faqs: [
       {
         q: 'What should a small business order first?',
-        a: 'Samples, then one size of plain coloured stock in a season-sized quantity, with the branding on a sticker. Nothing in that list commits you to anything you might change in three months.',
+        a: 'Samples, then one size of plain colored stock in a season-sized quantity, with the branding on a sticker. Nothing in that list commits you to anything you might change in three months.',
       },
       {
         q: 'When is it worth printing my own mailers?',
-        a: 'When your monthly volume has stopped swinging, your artwork has stopped changing, and customers have started photographing the parcel. Until all three are true, coloured stock with a sticker gets you most of the benefit for a fraction of the cost.',
+        a: 'When your monthly volume has stopped swinging, your artwork has stopped changing, and customers have started photographing the parcel. Until all three are true, colored stock with a sticker gets you most of the benefit for a fraction of the cost.',
       },
       {
         q: 'Is there a minimum order?',
@@ -1321,7 +1321,7 @@ export const industries: readonly IndustryPage[] = [
       { slug: 'personalized-bubble-mailers', why: 'Cushioning plus a printed message on the same parcel.' },
       { slug: 'self-seal-poly-mailers', why: 'A tear tab so the parcel opens without scissors.' },
       { slug: 'light-pink-poly-mailers', why: 'A tone that reads as a gift before anything is opened.' },
-      { slug: 'colored-poly-mailers', why: 'Colour-coding gift orders so they are packed differently at the bench.' },
+      { slug: 'colored-poly-mailers', why: 'Color-coding gift orders so they are packed differently at the bench.' },
     ],
     blocks: [
       {
@@ -1343,7 +1343,7 @@ export const industries: readonly IndustryPage[] = [
           {
             term: 'Look like a return',
             detail:
-              'A plain grey bag with a large courier label reads as a returns shipment rather than a present.',
+              'A plain gray bag with a large courier label reads as a returns shipment rather than a present.',
           },
           {
             term: 'Need scissors',
@@ -1364,9 +1364,9 @@ export const industries: readonly IndustryPage[] = [
               'The bench cannot pack a gift differently if it does not know which orders are gifts.',
           },
           {
-            title: 'Use a different mailer colour for them',
+            title: 'Use a different mailer color for them',
             detail:
-              'Colour-coding is the cheapest way to make a different pack instruction visible at a busy bench.',
+              'Color-coding is the cheapest way to make a different pack instruction visible at a busy bench.',
           },
           {
             title: 'Keep documents out or opaque',
@@ -1376,7 +1376,7 @@ export const industries: readonly IndustryPage[] = [
           {
             title: 'Add the message inside',
             detail:
-              'A card is where personalisation belongs. It costs little and it is what the recipient keeps.',
+              'A card is where personalization belongs. It costs little and it is what the recipient keeps.',
           },
           {
             title: 'Choose a closure that opens cleanly',
@@ -1398,7 +1398,7 @@ export const industries: readonly IndustryPage[] = [
         kind: 'linked-prose',
         heading: 'Planning around a peak',
         before:
-          'The weeks when gift volume concentrates are also the weeks when your team is at capacity and temporary staff are packing. Packaging decisions that are elegant in June become expensive in December if they need judgement at the bench, so simplify: fewer sizes, clearer rules, written instructions. The operational detail of getting through that period is set out on the ',
+          'The weeks when gift volume concentrates are also the weeks when your team is at capacity and temporary staff are packing. Packaging decisions that are elegant in June become expensive in December if they need judgment at the bench, so simplify: fewer sizes, clearer rules, written instructions. The operational detail of getting through that period is set out on the ',
         link: { href: '/christmas-poly-mailers/', anchor: 'peak season packaging page' },
         after: '.',
       },
@@ -1410,7 +1410,7 @@ export const industries: readonly IndustryPage[] = [
       },
       {
         q: 'Should gift orders use different packaging?',
-        a: 'A different colour is usually enough, and it doubles as a signal at the bench that this order is packed differently. The personalised element belongs on a card inside rather than on the bag.',
+        a: 'A different color is usually enough, and it doubles as a signal at the bench that this order is packed differently. The personalized element belongs on a card inside rather than on the bag.',
       },
       {
         q: 'What closure suits gift parcels?',
@@ -1501,7 +1501,7 @@ export const industries: readonly IndustryPage[] = [
           {
             term: 'Static-sensitive components',
             detail:
-              'Some products require anti-static handling. Standard polyethylene is not an anti-static material, so if this applies to you, say so at enquiry stage — it changes the specification.',
+              'Some products require anti-static handling. Standard polyethylene is not an anti-static material, so if this applies to you, say so at inquiry stage — it changes the specification.',
           },
           {
             term: 'Discretion on the doorstep',
@@ -1546,7 +1546,7 @@ export const industries: readonly IndustryPage[] = [
     faqs: [
       {
         q: 'Are poly mailers safe for electronics?',
-        a: 'For most accessories, yes — the film keeps moisture out and a cushioned version handles impact. Standard polyethylene is not an anti-static material, so anything with static-sensitive components needs a specification that addresses that, and you should raise it at enquiry stage.',
+        a: 'For most accessories, yes — the film keeps moisture out and a cushioned version handles impact. Standard polyethylene is not an anti-static material, so anything with static-sensitive components needs a specification that addresses that, and you should raise it at inquiry stage.',
       },
       {
         q: 'How do I stop retail boxes arriving crushed at the corners?',
@@ -1575,7 +1575,7 @@ export const industries: readonly IndustryPage[] = [
       {
         href: '/industries/accessories/',
         label: 'Accessories',
-        reason: 'A neighbouring category with the same mixed-shape problem.',
+        reason: 'A neighboring category with the same mixed-shape problem.',
       },
     ],
     cta: {

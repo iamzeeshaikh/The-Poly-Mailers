@@ -40,7 +40,7 @@ const blog = defineCollection({
        * The closing call to action, written for this article's subject. A
        * shared band with one anchor across ten articles is ten identical
        * in-content links to the same URL, which is both weaker for the reader
-       * and an over-optimisation signal.
+       * and an over-optimization signal.
        */
       cta: z.object({
         heading: z.string(),

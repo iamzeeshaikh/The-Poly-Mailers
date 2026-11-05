@@ -106,7 +106,7 @@ export interface PagePlan {
   audience: string;
   /** The problem they are trying to solve. */
   problem: string;
-  /** What this page knows that its neighbours do not. */
+  /** What this page knows that its neighbors do not. */
   angle: string;
   primaryKeyword: string;
   supportingKeywords: readonly string[];

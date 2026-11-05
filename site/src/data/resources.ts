@@ -9,7 +9,7 @@ import type { ContentPage } from './types';
  * of these are written to be usable against a competitor's quotation.
  *
  * Boundary against the blog: resources are reference material you return to,
- * organised as tables and checklists. Blog articles are arguments, read once.
+ * organized as tables and checklists. Blog articles are arguments, read once.
  */
 
 export const resources: readonly ContentPage[] = [
@@ -30,7 +30,7 @@ export const resources: readonly ContentPage[] = [
       intent: 'Look up which mailer size fits a specific item.',
       audience: 'Anyone who wants an answer rather than a process.',
       problem: 'Size charts list dimensions without saying what goes in them.',
-      angle: 'A pure lookup table, organised by item rather than by dimension.',
+      angle: 'A pure lookup table, organized by item rather than by dimension.',
       primaryKeyword: 'poly mailer size chart',
       supportingKeywords: ['mailer size reference', 'what fits in a poly mailer'],
       nearestPage: '/size-guide/',
@@ -106,7 +106,7 @@ export const resources: readonly ContentPage[] = [
     faqs: [
       {
         q: 'What is the most common poly mailer size?',
-        a: 'Ten by thirteen, because it takes a folded garment, a two-item order or a garment plus inserts without a packer having to decide. That tolerance is why so many apparel operations standardise on it.',
+        a: 'Ten by thirteen, because it takes a folded garment, a two-item order or a garment plus inserts without a packer having to decide. That tolerance is why so many apparel operations standardize on it.',
       },
       {
         q: 'What size mailer fits a hoodie?',
@@ -243,7 +243,7 @@ export const resources: readonly ContentPage[] = [
         rows: [
           ['Film weight', 'Puncture and tear from concentrated force', 'Crushing, surface scratching'],
           ['Opacity', 'Contents showing through', 'Anything structural'],
-          ['Finish', 'How marks and print colour read', 'Strength'],
+          ['Finish', 'How marks and print color read', 'Strength'],
           ['Bubble lining', 'Impact', 'Crushing, abrasion'],
           ['Foam lining', 'Surface abrasion', 'Impact from a drop'],
           ['Gusset', 'Lofty contents deforming the parcel', 'Protection'],
@@ -298,7 +298,7 @@ export const resources: readonly ContentPage[] = [
     summary: 'A start-to-finish walkthrough for someone preparing packaging artwork for the first time.',
     intro: [
       'This is the walkthrough. It assumes you have not produced packaging artwork before and takes the whole thing in order, from the decisions that come before anyone opens a design application to the moment a proof is approved.',
-      'If you already know the process and just need the file specification — formats, bleed, resolution, colour mode — that is a separate page and it is shorter.',
+      'If you already know the process and just need the file specification — formats, bleed, resolution, color mode — that is a separate page and it is shorter.',
     ],
     plan: {
       intent: 'Learn how to prepare artwork for packaging printing.',
@@ -324,7 +324,7 @@ export const resources: readonly ContentPage[] = [
               'Artwork is laid out for a specific panel. A size change after approval is a redraw, not an adjustment.',
           },
           {
-            title: 'Choose the base colour',
+            title: 'Choose the base color',
             detail:
               'The base decides which inks will read. A dark mark cannot go on a dark film, and finding that out at proof stage wastes a week.',
           },
@@ -367,9 +367,9 @@ export const resources: readonly ContentPage[] = [
               'At least 3 mm. Without it, part of the run comes out with an uneven white edge.',
           },
           {
-            title: 'Set colour deliberately',
+            title: 'Set color deliberately',
             detail:
-              'CMYK or a named spot colour, not RGB. An RGB file will be converted, and the conversion is where surprises come from.',
+              'CMYK or a named spot color, not RGB. An RGB file will be converted, and the conversion is where surprises come from.',
           },
           {
             title: 'Outline the fonts',
@@ -382,7 +382,7 @@ export const resources: readonly ContentPage[] = [
         kind: 'bullets',
         heading: 'Design decisions that survive a supply chain',
         intro:
-          'A mailer is packed, folded, sealed, labelled, stacked and carried before anyone sees your design. These choices survive that.',
+          'A mailer is packed, folded, sealed, labeled, stacked and carried before anyone sees your design. These choices survive that.',
         items: [
           {
             term: 'Fewer elements, larger',
@@ -400,9 +400,9 @@ export const resources: readonly ContentPage[] = [
               'Fine lines close up on flexible film. If it looks slightly heavy flat, it is probably right printed.',
           },
           {
-            term: 'A centred composition with breathing room',
+            term: 'A centered composition with breathing room',
             detail:
-              'Edge-to-edge designs distort once there is something in the bag. Centred ones survive packing.',
+              'Edge-to-edge designs distort once there is something in the bag. Centered ones survive packing.',
           },
           {
             term: 'The brand mark somewhere it will not be covered',
@@ -418,7 +418,7 @@ export const resources: readonly ContentPage[] = [
           'A proof is not a formality to click through. It is the last point at which anything can change without cost, and the document the finished run will be checked against.',
           'Check the things only you can check: spelling, your web address, your social handles, whether the mark is the current version rather than the one from two years ago. We cannot know any of those are wrong.',
           'Then check placement against a packed bag rather than a flat one in your head. Ask where the label will go. Ask what happens to the design when the flap folds over. Ask for as many rounds as you need — a proof round costs a fraction of a reprint.',
-          'What a proof will not tell you reliably is colour. A screen is backlit and film is not. Where a colour is commercially important, ask for a physical check rather than approving on a monitor.',
+          'What a proof will not tell you reliably is color. A screen is backlit and film is not. Where a color is commercially important, ask for a physical check rather than approving on a monitor.',
         ],
       },
       {
@@ -433,7 +433,7 @@ export const resources: readonly ContentPage[] = [
     faqs: [
       {
         q: 'What should I decide before designing packaging artwork?',
-        a: 'Size, base colour, finish and coverage — in that order. Each one constrains the design, and settling them afterwards means redrawing the file rather than adjusting it.',
+        a: 'Size, base color, finish and coverage — in that order. Each one constrains the design, and settling them afterwards means redrawing the file rather than adjusting it.',
       },
       {
         q: 'How do I know if my logo will print well on a mailer?',
@@ -441,11 +441,11 @@ export const resources: readonly ContentPage[] = [
       },
       {
         q: 'How many proof rounds should I expect?',
-        a: 'As many as you need. A proof round is inexpensive; a reprint is not. Suppliers who discourage additional rounds are optimising their own process rather than your outcome.',
+        a: 'As many as you need. A proof round is inexpensive; a reprint is not. Suppliers who discourage additional rounds are optimizing their own process rather than your outcome.',
       },
       {
-        q: 'Can I approve colour from a digital proof?',
-        a: 'For placement and scale, yes. For colour, only approximately — a screen is backlit and film is not. If a colour is commercially important, ask for a physical check instead.',
+        q: 'Can I approve color from a digital proof?',
+        a: 'For placement and scale, yes. For color, only approximately — a screen is backlit and film is not. If a color is commercially important, ask for a physical check instead.',
       },
     ],
     related: [
@@ -456,7 +456,7 @@ export const resources: readonly ContentPage[] = [
       },
       {
         href: '/design-your-poly-mailer/',
-        label: 'Design tool',
+        label: 'Design Your Poly Mailers',
         reason: 'Try placement and coverage before briefing a designer.',
       },
     ],
@@ -465,38 +465,38 @@ export const resources: readonly ContentPage[] = [
   /* ===================================================================== */
   {
     slug: 'color-selection-guide',
-    name: 'the colour guide',
-    h1: 'Selecting a Mailer Colour',
-    title: 'Colour Selection Guide | Choosing a Base Film',
+    name: 'the color guide',
+    h1: 'Selecting a Mailer Color',
+    title: 'Color Selection Guide | Choosing a Base Film',
     description:
-      'How to choose a mailer colour that survives contact with a supply chain — contrast, opacity, batch variation and the questions to settle before ordering.',
-    summary: 'Choosing a colour that still looks right after a supply chain has handled it.',
+      'How to choose a mailer color that survives contact with a supply chain — contrast, opacity, batch variation and the questions to settle before ordering.',
+    summary: 'Choosing a color that still looks right after a supply chain has handled it.',
     intro: [
-      'Colour gets chosen from a swatch in good light and then spends its life in a warehouse, a van and a doorway. A colour that photographs beautifully on a desk can look grubby after a week in a sorting network, and a tone that reads as considered in daylight can read as cheap under fluorescent strip lighting.',
-      'This guide is about choosing a colour that survives that. It covers contrast, opacity, batch variation and the three questions that decide whether a colour will work before you commit to a run.',
+      'Color gets chosen from a swatch in good light and then spends its life in a warehouse, a van and a doorway. A color that photographs beautifully on a desk can look grubby after a week in a sorting network, and a tone that reads as considered in daylight can read as cheap under fluorescent strip lighting.',
+      'This guide is about choosing a color that survives that. It covers contrast, opacity, batch variation and the three questions that decide whether a color will work before you commit to a run.',
     ],
     plan: {
-      intent: 'Choose a mailer colour that works in practice.',
-      audience: 'Brand and packaging leads specifying a base film colour.',
-      problem: 'Colour is chosen visually and then behaves differently in a real supply chain.',
-      angle: 'How colour behaves after handling — a lens neither the colour collection nor the product pages take.',
-      primaryKeyword: 'mailer colour selection',
-      supportingKeywords: ['choosing packaging colour', 'poly mailer colour guide'],
+      intent: 'Choose a mailer color that works in practice.',
+      audience: 'Brand and packaging leads specifying a base film color.',
+      problem: 'Color is chosen visually and then behaves differently in a real supply chain.',
+      angle: 'How color behaves after handling — a lens neither the color collection nor the product pages take.',
+      primaryKeyword: 'mailer color selection',
+      supportingKeywords: ['choosing packaging color', 'poly mailer color guide'],
       nearestPage: '/poly-mailer-colors/',
       boundary:
-        'The colour collection routes you to a product. This guide is about the decision itself and how colour ages.',
+        'The color collection routes you to a product. This guide is about the decision itself and how color ages.',
     },
     blocks: [
       {
         kind: 'steps',
-        heading: 'Three questions that decide the colour',
+        heading: 'Three questions that decide the color',
         intro:
           'Answer these before looking at a single swatch and the shortlist usually narrows to two.',
         steps: [
           {
-            title: 'Is the colour or the print carrying the identity?',
+            title: 'Is the color or the print carrying the identity?',
             detail:
-              'If the colour is doing the work, choose for recognition. If print is, choose for contrast against the ink instead.',
+              'If the color is doing the work, choose for recognition. If print is, choose for contrast against the ink instead.',
           },
           {
             title: 'How dark are your contents?',
@@ -506,7 +506,7 @@ export const resources: readonly ContentPage[] = [
           {
             title: 'Will customers photograph the parcel?',
             detail:
-              'If yes, finish matters as much as colour. Matte photographs evenly; gloss produces hotspots that need lighting to control.',
+              'If yes, finish matters as much as color. Matte photographs evenly; gloss produces hotspots that need lighting to control.',
           },
         ],
       },
@@ -515,14 +515,14 @@ export const resources: readonly ContentPage[] = [
         heading: 'How each family behaves in the real world',
         intro:
           'Assessed after handling rather than as a swatch.',
-        caption: 'Colour families and how they hold up through a supply chain.',
+        caption: 'Color families and how they hold up through a supply chain.',
         columns: ['Family', 'Shows handling marks', 'Print contrast', 'Photographs'],
         rows: [
           ['White and bone', 'Badly — every scuff shows', 'Every ink available', 'Blows out under bright light'],
           ['Black and charcoal', 'Barely', 'White and pale metallics only', 'Evenly, especially matte'],
-          ['Grey and silver', 'Well', 'Dark inks, white as a solid', 'Neutrally'],
-          ['Saturated brights', 'Moderately', 'White and black', 'Strongly — the colour is the subject'],
-          ['Blush and pastels', 'Poorly', 'Dark inks only', 'Beautifully, but picks up surrounding colour'],
+          ['Gray and silver', 'Well', 'Dark inks, white as a solid', 'Neutrally'],
+          ['Saturated brights', 'Moderately', 'White and black', 'Strongly — the color is the subject'],
+          ['Blush and pastels', 'Poorly', 'Dark inks only', 'Beautifully, but picks up surrounding color'],
           ['Deep jewel tones', 'Well', 'White, pale metallics', 'Richly, and reads premium'],
         ],
       },
@@ -530,68 +530,68 @@ export const resources: readonly ContentPage[] = [
         kind: 'bullets',
         heading: 'Things that catch people out',
         intro:
-          'Five colour problems that only appear after an order arrives.',
+          'Five color problems that only appear after an order arrives.',
         items: [
           {
             term: 'Batch variation on saturated tones',
             detail:
-              'Strong colours drift more visibly between production batches than pale ones. If a reorder must sit beside existing stock, say so when quoting.',
+              'Strong colors drift more visibly between production batches than pale ones. If a reorder must sit beside existing stock, say so when quoting.',
           },
           {
             term: 'Pale film over dark contents',
             detail:
-              'A grey shadow through a blush mailer is the single most common colour complaint. Specify opacity, not just tone.',
+              'A gray shadow through a blush mailer is the single most common color complaint. Specify opacity, not just tone.',
           },
           {
-            term: 'Screen colour as a reference',
+            term: 'Screen color as a reference',
             detail:
               'A monitor is backlit and film is not. Send a physical swatch or a defined value, never a screenshot.',
           },
           {
             term: 'Finish changing the read',
             detail:
-              'The same pigment on matte and gloss looks like two different colours. Decide finish and tone together.',
+              'The same pigment on matte and gloss looks like two different colors. Decide finish and tone together.',
           },
           {
             term: 'Sunlight in storage',
             detail:
-              'Colour on film is affected by prolonged light exposure. A pallet by a window will not match the one at the back.',
+              'Color on film is affected by prolonged light exposure. A pallet by a window will not match the one at the back.',
           },
         ],
       },
       {
         kind: 'linked-prose',
-        heading: 'Colour as more than branding',
+        heading: 'Color as more than branding',
         before:
-          'Colour does operational work as well as brand work. Coding order types, product lines or markets by mailer colour reduces picking errors at a busy bench without any printing at all, and it is one of the few packaging decisions that improves accuracy and recognition at the same time. Where several tones run together, ordering them on a single run keeps the batches matched, which is covered on the ',
+          'Color does operational work as well as brand work. Coding order types, product lines or markets by mailer color reduces picking errors at a busy bench without any printing at all, and it is one of the few packaging decisions that improves accuracy and recognition at the same time. Where several tones run together, ordering them on a single run keeps the batches matched, which is covered on the ',
         link: { href: '/colored-poly-mailers/', anchor: 'colored mailer page' },
         after: '.',
       },
     ],
     faqs: [
       {
-        q: 'What colour mailer hides dirt most effectively?',
-        a: 'Black, then grey and mid-tone colours. White shows the most by a wide margin. A matte finish helps on any base, and artwork that covers more of the panel hides more of the surface.',
+        q: 'What color mailer hides dirt most effectively?',
+        a: 'Black, then gray and mid-tone colors. White shows the most by a wide margin. A matte finish helps on any base, and artwork that covers more of the panel hides more of the surface.',
       },
       {
         q: 'How do I make sure a reorder matches my existing stock?',
         a: 'Say so at quotation stage and supply a sample from the previous run. Batch drift is more visible on saturated tones than on pale ones, and it can be checked against your reference before production.',
       },
       {
-        q: 'Can I match my exact brand colour?',
-        a: 'We quote a match against a physical swatch or a defined colour value. Some tones cannot be reached on some films, and where that is the case we say so before you order rather than delivering an approximation.',
+        q: 'Can I match my exact brand color?',
+        a: 'We quote a match against a physical swatch or a defined color value. Some tones cannot be reached on some films, and where that is the case we say so before you order rather than delivering an approximation.',
       },
     ],
     related: [
       {
         href: '/poly-mailer-colors/',
-        label: 'Colour range',
-        reason: 'The colour products, once the decision is made.',
+        label: 'Color range',
+        reason: 'The color products, once the decision is made.',
       },
       {
         href: '/blog/choosing-colors-for-branded-shipping-mailers/',
-        label: 'Colour strategy',
-        reason: 'A longer read on colour as a brand asset.',
+        label: 'Color strategy',
+        reason: 'A longer read on color as a brand asset.',
       },
     ],
   },
@@ -676,10 +676,10 @@ export const resources: readonly ContentPage[] = [
       },
       {
         kind: 'prose',
-        heading: 'Storage and ageing',
+        heading: 'Storage and aging',
         paragraphs: [
           'Polyethylene film is stable for a long time. The adhesive is not, and it is the component that decides how long a carton of mailers stays usable.',
-          'Heat accelerates ageing, humidity affects tack, and prolonged light exposure does both. A carton stored in a cool dark room performs consistently; the same carton in a garage through a summer will seal noticeably worse.',
+          'Heat accelerates aging, humidity affects tack, and prolonged light exposure does both. A carton stored in a cool dark room performs consistently; the same carton in a garage through a summer will seal noticeably worse.',
           'The practical response is to order to a rate you will use, keep cartons sealed until needed, store them flat and off the floor, and rotate so the oldest goes first. If you are using stock that has been sitting for a long time, test a bag before relying on it — peel, seal, and pull firmly.',
         ],
       },
@@ -900,7 +900,7 @@ export const resources: readonly ContentPage[] = [
           {
             term: 'Recyclable',
             detail:
-              'A statement that the material can be collected and reprocessed. It depends on infrastructure available to your customer, not on the material alone. Flexible film is generally not accepted kerbside in the markets we serve.',
+              'A statement that the material can be collected and reprocessed. It depends on infrastructure available to your customer, not on the material alone. Flexible film is generally not accepted curbside in the markets we serve.',
           },
           {
             term: 'Compostable',
@@ -970,7 +970,7 @@ export const resources: readonly ContentPage[] = [
           {
             title: 'What is the number, and is it a minimum or a target?',
             detail:
-              'A proportion tied to my order, in writing on the quotation.',
+              'A proportion tied to my order, on the quotation.',
           },
           {
             title: 'Which document supports it?',
@@ -1049,7 +1049,7 @@ export const resources: readonly ContentPage[] = [
       'What changes when a packaging order ships to the US, UK, Canada or Australia — currency, documentation, availability and the questions to settle first.',
     summary: 'What actually differs between the four markets, and what to settle before ordering.',
     intro: [
-      'The product does not change between markets. Almost everything around it does: the currency you are quoted in, the documentation a shipment needs, which films and colours are available, and how a delivery reaches a business address in one country versus another.',
+      'The product does not change between markets. Almost everything around it does: the currency you are quoted in, the documentation a shipment needs, which films and colors are available, and how a delivery reaches a business address in one country versus another.',
       'This guide sets out what varies and what to confirm before placing an order into a market you have not ordered into before.',
     ],
     plan: {
@@ -1078,17 +1078,17 @@ export const resources: readonly ContentPage[] = [
           {
             term: 'Import documentation and charges',
             detail:
-              'Requirements differ by destination and by shipping arrangement. This is confirmed per order rather than generalised.',
+              'Requirements differ by destination and by shipping arrangement. This is confirmed per order rather than generalized.',
           },
           {
-            term: 'Film and colour availability',
+            term: 'Film and color availability',
             detail:
-              'Not every film, finish, colour or material is available for every market. This is checked before you order, not after.',
+              'Not every film, finish, color or material is available for every market. This is checked before you order, not after.',
           },
           {
             term: 'Delivery arrangements',
             detail:
-              'Reaching a fulfilment centre in one market and a small business address in another are different logistics problems with different requirements.',
+              'Reaching a fulfillment center in one market and a small business address in another are different logistics problems with different requirements.',
           },
           {
             term: 'What you can print',
@@ -1106,17 +1106,17 @@ export const resources: readonly ContentPage[] = [
           {
             title: 'Confirm the exact delivery address and its type',
             detail:
-              'Business premises, residential address or fulfilment centre. Fulfilment centres often have booking, labelling and palletisation requirements that must be built into the order.',
+              'Business premises, residential address or fulfillment center. Fulfillment centers often have booking, labeling and palletization requirements that must be built into the order.',
           },
           {
             title: 'Check material availability for that market',
             detail:
-              'Ask before you design anything, because a colour or film that is unavailable changes the specification.',
+              'Ask before you design anything, because a color or film that is unavailable changes the specification.',
           },
           {
             title: 'Settle documentation and who handles it',
             detail:
-              'Including who is responsible for any charges on arrival. Get this in writing rather than assuming.',
+              'Including who is responsible for any charges on arrival. Get this confirmed by email rather than assuming.',
           },
           {
             title: 'Review printed wording against local rules',
@@ -1124,7 +1124,7 @@ export const resources: readonly ContentPage[] = [
               'Particularly any environmental claim. What is acceptable in one market may not be in another.',
           },
           {
-            title: 'Agree the schedule in writing',
+            title: 'Agree the schedule by email',
             detail:
               'Work backwards from the date stock must be on the bench, not forwards from the order date.',
           },
@@ -1150,13 +1150,13 @@ export const resources: readonly ContentPage[] = [
           ['Unit cost', 'Better through shared setup', 'Higher, unless volumes are large'],
         ],
         outro:
-          'A single specification usually wins for a business shipping similar volumes everywhere. Where one market dominates, it is often cheaper to optimise for that one and treat the others separately.',
+          'A single specification usually wins for a business shipping similar volumes everywhere. Where one market dominates, it is often cheaper to optimize for that one and treat the others separately.',
       },
       {
         kind: 'linked-prose',
         heading: 'A note on language and spelling',
         before:
-          'If one printed design ships to several markets, spelling is a small thing that customers notice. Colour and color, personalised and personalized, and the way sizes are expressed all differ between the markets we serve. Decide deliberately which convention the printed bag uses rather than letting a designer choose by default. Sizes are the more consequential version of the same problem, and how they are quoted is covered on the ',
+          'If one printed design ships to several markets, spelling is a small thing that customers notice. Color and color, personalized and personalized, and the way sizes are expressed all differ between the markets we serve. Decide deliberately which convention the printed bag uses rather than letting a designer choose by default. Sizes are the more consequential version of the same problem, and how they are quoted is covered on the ',
         link: { href: '/resources/mailer-measurement-guide/', anchor: 'measurement guide' },
         after: '.',
       },
@@ -1175,8 +1175,8 @@ export const resources: readonly ContentPage[] = [
         a: 'This is set out on your quotation rather than assumed, because it depends on the destination and the shipping arrangement agreed. Ask before ordering if it affects your budgeting.',
       },
       {
-        q: 'Will the same colour match across markets?',
-        a: 'Not automatically, because the available film can differ. If a colour has to match across markets, say so at quotation stage so it can be checked rather than discovered on delivery.',
+        q: 'Will the same color match across markets?',
+        a: 'Not automatically, because the available film can differ. If a color has to match across markets, say so at quotation stage so it can be checked rather than discovered on delivery.',
       },
     ],
     related: [
@@ -1203,7 +1203,7 @@ export const resources: readonly ContentPage[] = [
       'Eleven decisions to settle before requesting a quotation for custom mailers, so the first price you receive is the one you can actually act on.',
     summary: 'Eleven decisions to settle before you ask anyone for a price.',
     intro: [
-      'A vague enquiry produces a vague quotation, and a vague quotation produces three more emails before anyone can act on anything. Working through this list first means the first price you receive is a real one.',
+      'A vague inquiry produces a vague quotation, and a vague quotation produces three more emails before anyone can act on anything. Working through this list first means the first price you receive is a real one.',
       'It is also useful as a comparison tool: send the same eleven answers to several suppliers and you get quotations you can actually put side by side.',
     ],
     plan: {
@@ -1250,13 +1250,13 @@ export const resources: readonly ContentPage[] = [
               'And if printed, whether logo, partial or full coverage, and one side or two.',
           },
           {
-            title: 'Base colour',
+            title: 'Base color',
             detail:
-              'Stock colour or a match to a reference. If matched, have the reference ready.',
+              'Stock color or a match to a reference. If matched, have the reference ready.',
           },
           {
             title: 'Finish',
-            detail: 'Matte or gloss. It changes how printed colour reads, so decide it with the colour.',
+            detail: 'Matte or gloss. It changes how printed color reads, so decide it with the color.',
           },
           {
             title: 'Closure',
@@ -1271,7 +1271,7 @@ export const resources: readonly ContentPage[] = [
           {
             title: 'Which market it ships to',
             detail:
-              'And the delivery address type, because a fulfilment centre has requirements a business address does not.',
+              'And the delivery address type, because a fulfillment center has requirements a business address does not.',
           },
           {
             title: 'When it must be on the bench',
@@ -1282,7 +1282,7 @@ export const resources: readonly ContentPage[] = [
       },
       {
         kind: 'bullets',
-        heading: 'What to have ready before you send the enquiry',
+        heading: 'What to have ready before you send the inquiry',
         intro:
           'Four attachments that remove a round of correspondence.',
         items: [
@@ -1297,14 +1297,14 @@ export const resources: readonly ContentPage[] = [
               'Even a rough version. It lets a supplier flag problems before you commission the final file.',
           },
           {
-            term: 'A colour reference',
+            term: 'A color reference',
             detail:
               'A physical swatch, a previous sample or a defined value. Not a screenshot.',
           },
           {
             term: 'Your delivery address and its type',
             detail:
-              'Business, residential or fulfilment centre. The last one changes the shipping requirement.',
+              'Business, residential or fulfillment center. The last one changes the shipping requirement.',
           },
         ],
       },
@@ -1344,7 +1344,7 @@ export const resources: readonly ContentPage[] = [
       {
         href: '/how-it-works/',
         label: 'Our ordering process',
-        reason: 'What happens after you send the enquiry.',
+        reason: 'What happens after you send the inquiry.',
       },
       {
         href: '/request-a-quote/',

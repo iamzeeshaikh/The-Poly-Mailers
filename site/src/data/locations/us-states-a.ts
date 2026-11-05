@@ -35,13 +35,13 @@ export const usStatesA: readonly LocationPage[] = [
       { name: 'Apparel and streetwear', note: 'Los Angeles has a long-established garment and wholesale trade, and a dense cluster of independent labels selling direct.' },
       { name: 'Beauty and skincare', note: 'Both the established brands and a constant stream of new ones, all shipping fragile cartons that must arrive unmarked.' },
       { name: 'Direct-to-consumer', note: 'A concentration of brands built entirely on owned channels, where the unboxing is a marketing asset.' },
-      { name: 'Wellness and supplements', note: 'Subscription-heavy, which makes packaging a recurring cost worth optimising properly.' },
+      { name: 'Wellness and supplements', note: 'Subscription-heavy, which makes packaging a recurring cost worth optimizing properly.' },
     ],
     recommended: [
       { slug: 'black-poly-mailers', why: 'Matte black photographs evenly under any lighting and hides transit marks completely.' },
       { slug: 'custom-poly-mailers', why: 'Where the parcel is content, printing it is a media spend rather than a packaging one.' },
       { slug: 'light-pink-poly-mailers', why: 'The tone the beauty category has largely settled on, with the opacity caveat that comes with it.' },
-      { slug: 'apparel-shipping-bags', why: 'Garment fulfilment at the volumes California labels tend to reach quickly.' },
+      { slug: 'apparel-shipping-bags', why: 'Garment fulfillment at the volumes California labels tend to reach quickly.' },
     ],
     blocks: [
       {
@@ -49,15 +49,15 @@ export const usStatesA: readonly LocationPage[] = [
         heading: 'Designing for a parcel that will be filmed',
         standfirst: 'A camera is less forgiving than a customer.',
         paragraphs: [
-          'A parcel photographed under a ring light shows everything a hand does not notice. Gloss film produces hotspots that flatten a colour. Scuffs that read as normal wear on a doorstep read as damage on camera. Fine print that is legible in the hand disappears at video resolution.',
-          'The three specification choices that follow from this are all cheap: a matte finish rather than gloss, a base colour dark or saturated enough to hide handling marks, and artwork built from fewer, larger elements. None of them costs meaningfully more than the alternative.',
+          'A parcel photographed under a ring light shows everything a hand does not notice. Gloss film produces hotspots that flatten a color. Scuffs that read as normal wear on a doorstep read as damage on camera. Fine print that is legible in the hand disappears at video resolution.',
+          'The three specification choices that follow from this are all cheap: a matte finish rather than gloss, a base color dark or saturated enough to hide handling marks, and artwork built from fewer, larger elements. None of them costs meaningfully more than the alternative.',
         ],
       },
       {
         kind: 'bullets',
         heading: 'What California buyers ask us about most',
         items: [
-          { term: 'Colour matching to an existing identity', detail: 'Brands here tend to arrive with a settled palette and want the packaging inside it rather than approximating it.' },
+          { term: 'Color matching to an existing identity', detail: 'Brands here tend to arrive with a settled palette and want the packaging inside it rather than approximating it.' },
           { term: 'Recycled content documentation', detail: 'Retail partners and customers both ask, and a claim without evidence behind it is a liability rather than an asset.' },
           { term: 'Interior printing', detail: 'Because the moment the bag opens on camera is the moment worth designing for.' },
           { term: 'Scaling from hundreds to thousands', detail: 'Growth here is fast, and a specification chosen at low volume often needs revisiting.' },
@@ -69,21 +69,21 @@ export const usStatesA: readonly LocationPage[] = [
         before:
           'We produce to order and ship to your address, so there is no local depot and no counter to collect from. In practice that changes one thing: you order to a schedule rather than to a same-week top-up, which makes forecasting more important than it would be with a local distributor. Working out the right quantity to hold is covered in the ',
         link: { href: '/resources/custom-mailer-ordering-checklist/', anchor: 'ordering checklist' },
-        after: ', and we confirm a schedule in writing with every quotation.',
+        after: ', and we confirm a schedule by email with every quotation.',
       },
     ],
     faqs: [
       {
         q: 'Do you have a warehouse in California?',
-        a: 'No. Every order is manufactured to your specification and shipped to the address you give us. There is no local stock, no depot and no collection point, which is why we confirm a production and delivery schedule in writing rather than implying next-day availability.',
+        a: 'No. Every order is manufactured to your specification and shipped to the address you give us. There is no local stock, no depot and no collection point, which is why we confirm a production and delivery schedule by email rather than implying next-day availability.',
       },
       {
         q: 'Which finish photographs most reliably for content?',
         a: 'Matte, consistently. Gloss film produces reflections that need controlled lighting to manage, while matte reads evenly under a ring light, in daylight and on a phone camera without any setup.',
       },
       {
-        q: 'Can you match a brand colour used across our other packaging?',
-        a: 'We quote a match against a physical swatch or a defined colour value and proof it before the run. Where the film available cannot reach a tone, we say so before you order rather than delivering something close.',
+        q: 'Can you match a brand color used across our other packaging?',
+        a: 'We quote a match against a physical swatch or a defined color value and proof it before the run. Where the film available cannot reach a tone, we say so before you order rather than delivering something close.',
       },
     ],
     related: [
@@ -109,27 +109,27 @@ export const usStatesA: readonly LocationPage[] = [
     h1: 'Poly Mailers for Texas Businesses',
     title: 'Poly Mailers Texas | Bulk & Custom Supply for TX',
     description:
-      'Poly mailers for Texas operations — distribution-scale volumes, heat in storage, and specifications built for fulfilment rather than presentation.',
+      'Poly mailers for Texas operations — distribution-scale volumes, heat in storage, and specifications built for fulfillment rather than presentation.',
     summary: 'Distribution-scale volumes, and the storage problem that comes with Texas heat.',
     intro: [
       'Texas buyers tend to arrive with a different question from coastal ones. Less often "how do we make this look considered", more often "how do we run this at volume without it becoming a problem".',
-      'The state’s logistics and distribution weight means a lot of enquiries here are for high-volume plain stock rather than short branded runs, and the operational questions — storage, reorder points, bench standardisation — matter more than the design ones.',
+      'The state’s logistics and distribution weight means a lot of inquiries here are for high-volume plain stock rather than short branded runs, and the operational questions — storage, reorder points, bench standardization — matter more than the design ones.',
     ],
     angle:
       'Volume operations and the specific problem of storing adhesive-closure packaging in a hot climate.',
     primaryKeyword: 'poly mailers texas',
     supportingKeywords: ['bulk mailers texas', 'shipping bags TX', 'wholesale poly mailers texas'],
     sectors: [
-      { name: 'Distribution and third-party fulfilment', note: 'A large logistics sector, much of it shipping on behalf of brands that cannot have one logo on every parcel.' },
+      { name: 'Distribution and third-party fulfillment', note: 'A large logistics sector, much of it shipping on behalf of brands that cannot have one logo on every parcel.' },
       { name: 'Ecommerce at scale', note: 'Operations where packaging is a line item measured in truckloads rather than cartons.' },
       { name: 'Western wear and apparel', note: 'An established regional apparel trade with its own retail and direct channels.' },
       { name: 'Energy-sector suppliers', note: 'Parts and component shipping where containment matters more than presentation.' },
     ],
     recommended: [
       { slug: 'economy-poly-mailers', why: 'Where volume is the defining feature, the cost-led specification is the honest starting point.' },
-      { slug: 'blank-poly-mailers', why: 'Third-party fulfilment cannot brand a parcel it did not sell.' },
+      { slug: 'blank-poly-mailers', why: 'Third-party fulfillment cannot brand a parcel it did not sell.' },
       { slug: '19x24-poly-mailers', why: 'Consolidation formats for distribution-scale shipping.' },
-      { slug: '10x13-poly-mailers', why: 'The size most high-volume operations standardise their bench around.' },
+      { slug: '10x13-poly-mailers', why: 'The size most high-volume operations standardize their bench around.' },
     ],
     blocks: [
       {
@@ -137,7 +137,7 @@ export const usStatesA: readonly LocationPage[] = [
         heading: 'Heat is a storage problem, not a product problem',
         paragraphs: [
           'Polyethylene film is stable across a wide temperature range. The adhesive on the closure is not, and a Texas warehouse without climate control in August is one of the harder environments to store it in.',
-          'The failure this produces is specific and recognisable: bags from the bottom of a pallet that has been sitting through a summer seal noticeably worse than fresh stock, and the seals that do form open more readily in transit. It gets blamed on the product; it is almost always the storage.',
+          'The failure this produces is specific and recognizable: bags from the bottom of a pallet that has been sitting through a summer seal noticeably worse than fresh stock, and the seals that do form open more readily in transit. It gets blamed on the product; it is almost always the storage.',
           'The practical response is to order to a rate you will actually use rather than to the largest quantity that gets a discount, keep cartons sealed until needed, store away from external walls and direct sun, and rotate so the oldest goes first. If you are working through stock that has been held a long time, test a bag before relying on it.',
         ],
       },
@@ -160,9 +160,9 @@ export const usStatesA: readonly LocationPage[] = [
       },
       {
         kind: 'linked-prose',
-        heading: 'Standardising a high-volume bench',
+        heading: 'Standardizing a high-volume bench',
         before:
-          'At distribution volumes the cost that matters is rarely the unit price. It is the seconds a packer spends choosing between sizes, multiplied across a shift, and the errors that choice produces when the bench is busy. Fewer sizes with written rules beats an optimised range nobody can apply consistently. How to work that out from your own order data is set out on the ',
+          'At distribution volumes the cost that matters is rarely the unit price. It is the seconds a packer spends choosing between sizes, multiplied across a shift, and the errors that choice produces when the bench is busy. Fewer sizes with written rules beats an optimized range nobody can apply consistently. How to work that out from your own order data is set out on the ',
         link: { href: '/industries/ecommerce/', anchor: 'ecommerce operations page' },
         after: '.',
       },
@@ -173,8 +173,8 @@ export const usStatesA: readonly LocationPage[] = [
         a: 'Sealed, flat, off the floor, away from external walls and out of direct sunlight, with stock rotated so the oldest is used first. Heat degrades the closure adhesive rather than the film, so the seal is where the damage shows.',
       },
       {
-        q: 'Do you supply unbranded mailers for third-party fulfilment?',
-        a: 'Yes. Plain stock across several sizes and colours is a common requirement where you ship for brands that each want something different, and it is the simplest line to keep on a shared bench.',
+        q: 'Do you supply unbranded mailers for third-party fulfillment?',
+        a: 'Yes. Plain stock across several sizes and colors is a common requirement where you ship for brands that each want something different, and it is the simplest line to keep on a shared bench.',
       },
       {
         q: 'Can you quote truckload quantities?',
@@ -235,7 +235,7 @@ export const usStatesA: readonly LocationPage[] = [
         items: [
           { term: 'To stored packaging', detail: 'Humidity affects the tack of closure adhesive. Cartons stored in an uncontrolled space through a wet season seal less reliably than fresh stock.' },
           { term: 'To parcels in transit', detail: 'A film outer resists rain and condensation; a paper-faced mailer absorbs both and passes them to the contents.' },
-          { term: 'To paper contents', detail: 'Anything printed, boxed or labelled inside a parcel is the part that shows moisture damage first, and it does not recover.' },
+          { term: 'To paper contents', detail: 'Anything printed, boxed or labeled inside a parcel is the part that shows moisture damage first, and it does not recover.' },
           { term: 'To adhesive labels', detail: 'A label applied to a damp film surface lifts at the edges, which is a scanning problem as well as a cosmetic one.' },
         ],
         outro:
@@ -314,7 +314,7 @@ export const usStatesA: readonly LocationPage[] = [
       { name: 'Fashion and accessories', note: 'A concentration of both established houses and independent labels, with the presentation standards that follow.' },
       { name: 'Publishing and print', note: 'Books, magazines and art prints, where creasing and corner damage are the failures that matter.' },
       { name: 'Jewelry and small luxury', note: 'Small, high-value parcels where discretion on a doorstep is a genuine consideration.' },
-      { name: 'Studio and creative services', note: 'Sample sends, lookbooks and press packs, which are marketing rather than fulfilment.' },
+      { name: 'Studio and creative services', note: 'Sample sends, lookbooks and press packs, which are marketing rather than fulfillment.' },
     ],
     recommended: [
       { slug: '9x12-poly-mailers', why: 'A close fit for books and mounted prints, which is what stops them creasing.' },
@@ -348,7 +348,7 @@ export const usStatesA: readonly LocationPage[] = [
         items: [
           { term: 'Discretion matters more', detail: 'A parcel sitting in a shared lobby is a different risk from one on a private porch. Opaque film, and nothing on the outside naming the contents.' },
           { term: 'Handling is heavier', detail: 'More touches, more stacking, more time in a bag on a cart. A close fit does more here than a heavier film.' },
-          { term: 'Mailroom sorting favours legibility', detail: 'A label that is easy to read and a parcel that stacks flat both get handled faster and go astray less.' },
+          { term: 'Mailroom sorting favors legibility', detail: 'A label that is easy to read and a parcel that stacks flat both get handled faster and go astray less.' },
           { term: 'Weather exposure is brief but real', detail: 'Parcels are rarely outdoors for long, but the trip from a van to a lobby in a downpour is enough.' },
         ],
       },
@@ -356,7 +356,7 @@ export const usStatesA: readonly LocationPage[] = [
         kind: 'prose',
         heading: 'Two sectors, two different bags',
         paragraphs: [
-          'A fashion label wants a parcel that reads as considered — colour, finish, a clean seal, ideally something printed. A publisher wants a parcel that arrives flat, with the corners intact and no crease across the cover.',
+          'A fashion label wants a parcel that reads as considered — color, finish, a clean seal, ideally something printed. A publisher wants a parcel that arrives flat, with the corners intact and no crease across the cover.',
           'These are not the same specification, and a business doing both will do better with two rather than a compromise. The fashion bag is chosen for how it looks and feels; the print bag is chosen for fit and rigidity, usually with a board stiffener doing more work than any lining would.',
           'Where they overlap is the closure. Both benefit from a clean tear line, because a parcel opened with scissors is a parcel where the contents can be cut.',
         ],
@@ -397,20 +397,20 @@ export const usStatesA: readonly LocationPage[] = [
     kind: 'state',
     region: 'Northeast',
     h1: 'Poly Mailers for Pennsylvania Businesses',
-    title: 'Poly Mailers Pennsylvania | Fulfilment & Trade Supply',
+    title: 'Poly Mailers Pennsylvania | Fulfillment & Trade Supply',
     description:
-      'Poly mailers for Pennsylvania businesses — fulfilment operations, trade and wholesale shipping, and the mixed-format packaging that comes with both.',
-    summary: 'Fulfilment operations and trade supply, where one bench handles very mixed formats.',
+      'Poly mailers for Pennsylvania businesses — fulfillment operations, trade and wholesale shipping, and the mixed-format packaging that comes with both.',
+    summary: 'Fulfillment operations and trade supply, where one bench handles very mixed formats.',
     intro: [
-      'Pennsylvania enquiries tend to come from operations that ship a genuinely mixed set of things. A fulfilment business handling several clients, a trade supplier sending both single items and case quantities, a manufacturer shipping parts alongside literature.',
+      'Pennsylvania inquiries tend to come from operations that ship a genuinely mixed set of things. A fulfillment business handling several clients, a trade supplier sending both single items and case quantities, a manufacturer shipping parts alongside literature.',
       'The recurring problem is not which bag to choose. It is how few different bags a mixed operation can get away with, and where the boundaries sit between them.',
     ],
     angle:
-      'Minimising the number of packaging lines in an operation that ships genuinely varied formats.',
+      'Minimizing the number of packaging lines in an operation that ships genuinely varied formats.',
     primaryKeyword: 'poly mailers pennsylvania',
-    supportingKeywords: ['shipping bags PA', 'fulfilment mailers pennsylvania', 'wholesale mailers PA'],
+    supportingKeywords: ['shipping bags PA', 'fulfillment mailers pennsylvania', 'wholesale mailers PA'],
     sectors: [
-      { name: 'Third-party fulfilment', note: 'Operations shipping for multiple clients, where unbranded stock is a requirement rather than a compromise.' },
+      { name: 'Third-party fulfillment', note: 'Operations shipping for multiple clients, where unbranded stock is a requirement rather than a compromise.' },
       { name: 'Trade and wholesale supply', note: 'Mixed order sizes from a single item to a case, on the same bench.' },
       { name: 'Industrial and parts distribution', note: 'Containment and durability rather than presentation.' },
       { name: 'Independent retail and craft', note: 'A dense small-business base shipping modest volumes with a presentation requirement.' },
@@ -439,9 +439,9 @@ export const usStatesA: readonly LocationPage[] = [
         kind: 'bullets',
         heading: 'Shipping for other people',
         intro:
-          'Third-party fulfilment has constraints an own-brand operation does not.',
+          'Third-party fulfillment has constraints an own-brand operation does not.',
         items: [
-          { term: 'You cannot brand the parcel', detail: 'Plain stock is the requirement. Colour can still differentiate clients internally at the bench.' },
+          { term: 'You cannot brand the parcel', detail: 'Plain stock is the requirement. Color can still differentiate clients internally at the bench.' },
           { term: 'Your clients have different standards', detail: 'One wants presentation, another wants the cheapest thing that works. Two specifications, not an average.' },
           { term: 'Damage claims land on you first', detail: 'Which makes fit and film weight your problem even when the product choice was not.' },
           { term: 'Onboarding a new client should not need a new line', detail: 'A size set chosen well absorbs most new clients without a purchase order.' },
@@ -458,12 +458,12 @@ export const usStatesA: readonly LocationPage[] = [
     ],
     faqs: [
       {
-        q: 'How many mailer sizes should a fulfilment operation stock?',
+        q: 'How many mailer sizes should a fulfillment operation stock?',
         a: 'Usually three, with genuine outliers handled by a plain oversized bag. Sorting a real month of orders by packed shape rather than by client almost always collapses the range further than expected.',
       },
       {
-        q: 'Can you supply plain mailers for multi-client fulfilment?',
-        a: 'Yes, and it is one of the most common requirements we quote. Plain stock in several sizes, optionally colour-coded so the bench can tell client lines apart without any printing.',
+        q: 'Can you supply plain mailers for multi-client fulfillment?',
+        a: 'Yes, and it is one of the most common requirements we quote. Plain stock in several sizes, optionally color-coded so the bench can tell client lines apart without any printing.',
       },
       {
         q: 'Can two clients with different standards share one order?',
@@ -473,14 +473,14 @@ export const usStatesA: readonly LocationPage[] = [
     related: [
       { href: '/usa/', label: 'Working with US shippers', reason: 'Ordering and delivery across the US market.' },
       { href: '/locations/philadelphia/', label: 'Philadelphia', reason: 'The state’s largest concentration of independent retail.' },
-      { href: '/blank-poly-mailers/', label: 'Blank stock', reason: 'The unbranded option third-party fulfilment runs on.' },
+      { href: '/blank-poly-mailers/', label: 'Blank stock', reason: 'The unbranded option third-party fulfillment runs on.' },
     ],
     cta: {
       heading: 'Consolidate a mixed range',
       body: 'Send a month of order data or just a description of what you ship. We will propose the smallest size set that genuinely covers it.',
-      buttonLabel: 'Rationalise a size range',
+      buttonLabel: 'Rationalize a size range',
     },
-    whatsapp: 'Hi, I run fulfilment in Pennsylvania and want to reduce the number of mailer sizes we stock.',
+    whatsapp: 'Hi, I run fulfillment in Pennsylvania and want to reduce the number of mailer sizes we stock.',
   },
 
   /* ===================================================================== */
@@ -496,29 +496,29 @@ export const usStatesA: readonly LocationPage[] = [
       'Poly mailers for Illinois businesses — central distribution, cold-weather handling, and packaging specified for onward shipping across the country.',
     summary: 'Central distribution and the cold-weather handling that affects film and adhesive.',
     intro: [
-      'Illinois sits at the centre of a lot of national distribution, which means a meaningful share of packaging bought here is not for a final delivery at all. It is for shipments that will be consolidated, broken down and re-shipped somewhere else entirely.',
+      'Illinois sits at the center of a lot of national distribution, which means a meaningful share of packaging bought here is not for a final delivery at all. It is for shipments that will be consolidated, broken down and re-shipped somewhere else entirely.',
       'That changes the specification. A parcel that will be handled several more times before reaching a customer needs to survive more handling than one going straight out for local delivery, and it needs to stack and label cleanly at every stage.',
     ],
     angle:
-      'Packaging for parcels that will be handled repeatedly before reaching a customer, plus cold-weather behaviour.',
+      'Packaging for parcels that will be handled repeatedly before reaching a customer, plus cold-weather behavior.',
     primaryKeyword: 'poly mailers illinois',
     supportingKeywords: ['shipping bags IL', 'distribution mailers illinois', 'chicago area mailers'],
     sectors: [
       { name: 'Distribution and consolidation', note: 'A central logistics position means a lot of freight passes through rather than terminates here.' },
-      { name: 'Ecommerce fulfilment', note: 'National operations locating centrally to reduce average transit distance.' },
+      { name: 'Ecommerce fulfillment', note: 'National operations locating centrally to reduce average transit distance.' },
       { name: 'Print and promotional supply', note: 'Trade printing with a strong regional presence, shipping flat and rigid goods.' },
       { name: 'Food and speciality retail', note: 'Direct-selling producers with contents that are heavier than they look.' },
     ],
     recommended: [
       { slug: '19x24-poly-mailers', why: 'Consolidation formats for shipments that travel between facilities.' },
-      { slug: '10x13-poly-mailers', why: 'The size most national fulfilment operations standardise on.' },
+      { slug: '10x13-poly-mailers', why: 'The size most national fulfillment operations standardize on.' },
       { slug: 'self-seal-poly-mailers', why: 'Repeated handling makes closure quality more consequential than usual.' },
       { slug: 'padded-poly-mailers', why: 'Where a parcel will be sorted several times before it reaches anyone.' },
     ],
     blocks: [
       {
         kind: 'prose',
-        heading: 'Cold weather and packaging behaviour',
+        heading: 'Cold weather and packaging behavior',
         standfirst: 'Both the film and the adhesive change in the cold.',
         paragraphs: [
           'Polyethylene becomes less flexible as temperature drops. A film that stretches and absorbs a knock at room temperature is more inclined to split at it in an unheated warehouse in February, particularly at a fold or a weld.',
@@ -582,22 +582,22 @@ export const usStatesA: readonly LocationPage[] = [
     kind: 'state',
     region: 'Midwest',
     h1: 'Poly Mailers for Ohio Businesses',
-    title: 'Poly Mailers Ohio | Fulfilment Centre Supply',
+    title: 'Poly Mailers Ohio | Fulfillment Center Supply',
     description:
-      'Poly mailers for Ohio businesses — supplying into fulfilment centres, meeting inbound requirements, and specifying packaging for automated handling.',
-    summary: 'Supplying into fulfilment centres, and meeting requirements written by someone else.',
+      'Poly mailers for Ohio businesses — supplying into fulfillment centers, meeting inbound requirements, and specifying packaging for automated handling.',
+    summary: 'Supplying into fulfillment centers, and meeting requirements written by someone else.',
     intro: [
-      'Ohio has a concentration of large fulfilment operations, and that creates a packaging question you do not get elsewhere: a substantial share of enquiries here are about meeting requirements written by somebody else.',
-      'A fulfilment centre or a retail partner specifies how goods must arrive — labelling, palletisation, carton counts, sometimes the packaging format itself — and the buyer’s job is to satisfy that specification rather than to design one.',
+      'Ohio has a concentration of large fulfillment operations, and that creates a packaging question you do not get elsewhere: a substantial share of inquiries here are about meeting requirements written by somebody else.',
+      'A fulfillment center or a retail partner specifies how goods must arrive — labeling, palletization, carton counts, sometimes the packaging format itself — and the buyer’s job is to satisfy that specification rather than to design one.',
     ],
     angle:
-      'Meeting an inbound specification written by a fulfilment centre or retail partner.',
+      'Meeting an inbound specification written by a fulfillment center or retail partner.',
     primaryKeyword: 'poly mailers ohio',
-    supportingKeywords: ['shipping bags OH', 'fulfilment centre packaging', 'mailers ohio bulk'],
+    supportingKeywords: ['shipping bags OH', 'fulfillment center packaging', 'mailers ohio bulk'],
     sectors: [
-      { name: 'Fulfilment and 3PL', note: 'A dense cluster of large facilities, each with its own inbound requirements.' },
+      { name: 'Fulfillment and 3PL', note: 'A dense cluster of large facilities, each with its own inbound requirements.' },
       { name: 'Consumer goods manufacturing', note: 'Producers shipping into retail and marketplace channels with prescribed formats.' },
-      { name: 'Automotive aftermarket', note: 'Parts and accessory shipping where containment and labelling matter more than presentation.' },
+      { name: 'Automotive aftermarket', note: 'Parts and accessory shipping where containment and labeling matter more than presentation.' },
       { name: 'Direct selling and ecommerce', note: 'Own-channel brands, often shipping from the same facilities that handle marketplace volume.' },
     ],
     recommended: [
@@ -614,7 +614,7 @@ export const usStatesA: readonly LocationPage[] = [
           'When someone else sets the requirements, these are the ones that change the specification.',
         items: [
           { term: 'Is a poly bag permitted at all?', detail: 'Some inbound specifications require cartons for certain categories. Confirm before designing anything.' },
-          { term: 'What labelling is required, and where?', detail: 'Label size and placement can rule out artwork on the front panel entirely.' },
+          { term: 'What labeling is required, and where?', detail: 'Label size and placement can rule out artwork on the front panel entirely.' },
           { term: 'Must contents be individually bagged?', detail: 'Some partners require it, which is a second packaging line rather than a variation on the first.' },
           { term: 'Are there carton and pallet requirements?', detail: 'How your packaging arrives to you may itself be specified if you ship it onward unopened.' },
           { term: 'Is there a barcode or polybag suffocation warning requirement?', detail: 'Several partners require specific printed warnings on bags containing consumer goods.' },
@@ -642,11 +642,11 @@ export const usStatesA: readonly LocationPage[] = [
     ],
     faqs: [
       {
-        q: 'Can you print the warning text a fulfilment partner requires?',
+        q: 'Can you print the warning text a fulfillment partner requires?',
         a: 'Yes. Send us the exact wording and any placement or size requirement from their specification, and we will build it into the artwork rather than leaving it to be applied as a sticker afterwards.',
       },
       {
-        q: 'What packaging do fulfilment centres accept?',
+        q: 'What packaging do fulfillment centers accept?',
         a: 'It varies by facility and by product category, and some require cartons where others accept poly bags. The reliable route is to send us the inbound specification document rather than a summary, and we will quote against it.',
       },
       {
@@ -656,15 +656,15 @@ export const usStatesA: readonly LocationPage[] = [
     ],
     related: [
       { href: '/usa/', label: 'Supplying the United States', reason: 'How ordering, artwork and delivery work nationally.' },
-      { href: '/locations/columbus/', label: 'Columbus', reason: 'The largest fulfilment concentration in the state.' },
+      { href: '/locations/columbus/', label: 'Columbus', reason: 'The largest fulfillment concentration in the state.' },
       { href: '/artwork-guidelines/', label: 'Artwork specification', reason: 'How to supply required wording correctly.' },
     ],
     cta: {
       heading: 'Meet an inbound specification',
-      body: 'Send us the requirements document from your fulfilment or retail partner and we will quote packaging that satisfies it.',
+      body: 'Send us the requirements document from your fulfillment or retail partner and we will quote packaging that satisfies it.',
       buttonLabel: 'Quote against a specification',
     },
-    whatsapp: 'Hi, I need mailers that meet a fulfilment centre inbound specification in Ohio.',
+    whatsapp: 'Hi, I need mailers that meet a fulfillment center inbound specification in Ohio.',
   },
 
   /* ===================================================================== */
@@ -680,7 +680,7 @@ export const usStatesA: readonly LocationPage[] = [
       'Poly mailers for Georgia businesses — the specification changes that come with rapid growth, and moving from small orders to production runs.',
     summary: 'Businesses outgrowing their first packaging decision, and what to change first.',
     intro: [
-      'A lot of enquiries from Georgia come from businesses at an awkward moment: shipping enough that their original packaging setup is straining, but not yet at a volume where every decision is obvious.',
+      'A lot of inquiries from Georgia come from businesses at an awkward moment: shipping enough that their original packaging setup is straining, but not yet at a volume where every decision is obvious.',
       'That transition has a shape. The same three things break in the same order, and knowing which one you are hitting saves a lot of trial and error.',
     ],
     angle:
@@ -695,7 +695,7 @@ export const usStatesA: readonly LocationPage[] = [
     ],
     recommended: [
       { slug: 'blank-poly-mailers', why: 'The right answer while the range is still moving, which it usually is at this stage.' },
-      { slug: '10x13-poly-mailers', why: 'The standard most growing brands settle on once order patterns stabilise.' },
+      { slug: '10x13-poly-mailers', why: 'The standard most growing brands settle on once order patterns stabilize.' },
       { slug: 'custom-poly-mailers', why: 'The step to take once volume is predictable and artwork has stopped changing.' },
       { slug: 'colored-poly-mailers', why: 'Recognition without the commitment of a printed run.' },
     ],
@@ -709,7 +709,7 @@ export const usStatesA: readonly LocationPage[] = [
           { title: 'First: the size stops fitting', detail: 'A range that started narrow widens, and one size no longer covers it. This is the point to add a second size, not to change anything else.' },
           { title: 'Then: the bench slows down', detail: 'More sizes means decisions, and decisions under time pressure produce errors. This is when written rules and a simplified size set start paying for themselves.' },
           { title: 'Then: the packaging stops matching the brand', detail: 'A plain bag that was fine at fifty orders a month reads as under-invested at a thousand. This is the moment a printed run makes sense — not before.' },
-          { title: 'Only then: cost per unit becomes the lever', detail: 'Once the specification is right and the bench is stable, volume pricing is worth optimising. Chasing it earlier locks in the wrong specification.' },
+          { title: 'Only then: cost per unit becomes the lever', detail: 'Once the specification is right and the bench is stable, volume pricing is worth optimizing. Chasing it earlier locks in the wrong specification.' },
         ],
       },
       {
@@ -718,8 +718,8 @@ export const usStatesA: readonly LocationPage[] = [
         intro:
           'Growth-stage businesses tend to commit too early. These four can wait.',
         items: [
-          { term: 'A custom colour match', detail: 'A stock colour close to your brand looks the same to a customer who has never seen your swatch, at a fraction of the cost.' },
-          { term: 'Full-coverage printing', detail: 'A single mark on a coloured base is a cheaper first printed run and teaches you what customers actually respond to.' },
+          { term: 'A custom color match', detail: 'A stock color close to your brand looks the same to a customer who has never seen your swatch, at a fraction of the cost.' },
+          { term: 'Full-coverage printing', detail: 'A single mark on a colored base is a cheaper first printed run and teaches you what customers actually respond to.' },
           { term: 'A year of stock', detail: 'The discount is real; so is the risk of it becoming the wrong specification halfway through.' },
           { term: 'A fourth size', detail: 'Most ranges that think they need four need three and a plain oversized bag for outliers.' },
         ],
@@ -728,7 +728,7 @@ export const usStatesA: readonly LocationPage[] = [
         kind: 'linked-prose',
         heading: 'Knowing when to print',
         before:
-          'Three conditions usually become true at around the same time: monthly volume stops swinging, the artwork stops changing, and customers start photographing the parcel rather than just the product. When all three hold, a printed run pays back quickly. When only one or two do, coloured stock with a printed sticker gets most of the benefit for a fraction of the commitment. The case for waiting is set out on the ',
+          'Three conditions usually become true at around the same time: monthly volume stops swinging, the artwork stops changing, and customers start photographing the parcel rather than just the product. When all three hold, a printed run pays back quickly. When only one or two do, colored stock with a printed sticker gets most of the benefit for a fraction of the commitment. The case for waiting is set out on the ',
         link: { href: '/blank-poly-mailers/', anchor: 'blank stock page' },
         after: '.',
       },

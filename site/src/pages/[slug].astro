@@ -8,7 +8,7 @@
  * patterns, and the duplicate check below turns a URL collision into a build
  * failure rather than a silently overwritten page.
  *
- * Pages with a bespoke layout — the quote page, contact, the design tool, the
+ * Pages with a bespoke layout — the quote page, contact, the Design Your Poly Mailer page, the
  * blog index, the HTML sitemap — have their own files. Astro resolves a static
  * route ahead of this one, so they win automatically.
  */
@@ -137,7 +137,7 @@ const capabilityEyebrows: Record<string, string> = {
       quoteForm={{
         heading: 'Turn this into a specification',
         intro:
-          'Tell us what you ship and we will apply everything on this page to your order, in writing.',
+          'Tell us what you ship and we will apply everything on this page to your order, then confirm it by email.',
       }}
     />
   )

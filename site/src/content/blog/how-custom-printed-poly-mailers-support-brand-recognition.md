@@ -26,11 +26,11 @@ related:
     reason: What each printing decision does to the price.
 faqs:
   - q: At what volume does printing become worthwhile?
-    a: There is no universal threshold, because setup spreads differently across specifications. The more useful test is whether three things are true at once — volume has stopped swinging, artwork has stopped changing, and customers are photographing parcels. Until all three hold, coloured stock with a sticker usually delivers more per pound spent.
+    a: There is no universal threshold, because setup spreads differently across specifications. The more useful test is whether three things are true at once — volume has stopped swinging, artwork has stopped changing, and customers are photographing parcels. Until all three hold, colored stock with a sticker usually delivers more per pound spent.
   - q: Is full coverage better than a single printed mark?
-    a: Not usually, and it costs considerably more. A well-placed mark on a coloured base reads clearly at a distance and photographs well, while full coverage leaves nowhere clean for a shipping label unless a panel is designed in.
+    a: Not usually, and it costs considerably more. A well-placed mark on a colored base reads clearly at a distance and photographs well, while full coverage leaves nowhere clean for a shipping label unless a panel is designed in.
   - q: Does printed packaging actually increase repeat orders?
-    a: We have not run a controlled study and will not claim a figure. What is observable is that recognisable packaging is identified before it is opened and is photographed more often, and both are inputs to repeat purchase rather than proof of it.
+    a: We have not run a controlled study and will not claim a figure. What is observable is that recognizable packaging is identified before it is opened and is photographed more often, and both are inputs to repeat purchase rather than proof of it.
 cta:
   heading: "Work out whether print pays at your volume"
   body: "Tell us your monthly shipping numbers and what you would want printed. We will put a figure against printed and plain so the comparison is a real one."
@@ -47,17 +47,17 @@ Bought as packaging, the question is what it costs per unit. Bought as a marketi
 
 Three things, and only one of them is obvious.
 
-**It is identified before it is opened.** A customer who recognises the parcel on their doorstep has a different experience from one who reads a label to find out who sent it. For a business with repeat customers, that recognition compounds — it is the same mechanism that makes a familiar shopfront work.
+**It is identified before it is opened.** A customer who recognizes the parcel on their doorstep has a different experience from one who reads a label to find out who sent it. For a business with repeat customers, that recognition compounds — it is the same mechanism that makes a familiar shopfront work.
 
 **It is photographed.** This is the effect that changed the economics. Customers post what arrives, and a designed parcel gives them something worth posting. A plain bag has to be styled to be worth filming; a printed one is the content.
 
 **It signals care before the product is seen.** Whatever is inside, a considered parcel says the business thought about the whole transaction. That is a claim about competence, made without words, at the moment a customer is most attentive.
 
-None of those is unique to printing. A strong colour achieves the first, and something considered inside the bag achieves the third. Printing does all three at once and does the second most reliably, which is the case the [printed mailer page](/custom-printed-poly-mailers/) is built around.
+None of those is unique to printing. A strong color achieves the first, and something considered inside the bag achieves the third. Printing does all three at once and does the second most reliably, which is the case the [printed mailer page](/custom-printed-poly-mailers/) is built around.
 
 ## When it is too early
 
-Printing commits four things simultaneously: your artwork, your size, your colour and your quantity. It commits them at the point when a young business has the least certainty about any of them.
+Printing commits four things simultaneously: your artwork, your size, your color and your quantity. It commits them at the point when a young business has the least certainty about any of them.
 
 The result is a familiar one — cartons of packaging in a corner that the business has outgrown, still being used reluctantly because throwing them away feels worse.
 
@@ -67,15 +67,15 @@ The three conditions that mean it is no longer too early tend to arrive together
 - **Artwork has stopped changing.** The mark has been stable for a year and nobody is arguing about it.
 - **Customers are photographing the parcel.** Which means the outside of the bag has already become part of the product, and you are simply catching up.
 
-Until all three hold, [coloured stock](/colored-poly-mailers/) with a printed seal sticker delivers most of the recognition benefit for a fraction of the commitment, and the sticker can change whenever you do.
+Until all three hold, [colored stock](/colored-poly-mailers/) with a printed seal sticker delivers most of the recognition benefit for a fraction of the commitment, and the sticker can change whenever you do.
 
 ## What actually makes printed packaging work
 
 The design decisions matter more than the printing decisions, and they are almost all about restraint.
 
-A mailer is seen packed, folded, sealed, labelled and often in a stack. It is not seen flat, which is how it is designed. Artwork that fills a flat template distorts once there is something inside, and artwork with a lot of small detail becomes texture at the distance a parcel is actually looked at.
+A mailer is seen packed, folded, sealed, labeled and often in a stack. It is not seen flat, which is how it is designed. Artwork that fills a flat template distorts once there is something inside, and artwork with a lot of small detail becomes texture at the distance a parcel is actually looked at.
 
-What survives is fewer elements, larger. One idea, sized generously, with space around it. A wordmark that reads across a room. A single strong colour rather than a subtle palette.
+What survives is fewer elements, larger. One idea, sized generously, with space around it. A wordmark that reads across a room. A single strong color rather than a subtle palette.
 
 What does not survive is fine line work, small type, tonal gradients and anything positioned where the flap folds over or the shipping label lands.
 
@@ -86,9 +86,9 @@ That last point is the one most often missed. A four-by-six label covers a subst
 Printing is not one decision, and the choices within it move the price by very different amounts.
 
 1. **Print one side, not two.** The reverse is worth printing when it carries returns or disposal information a customer will read. For decoration alone, it rarely pays.
-2. **Choose a mark over full coverage.** Coverage — the area of ink — moves the price more than the number of colours does. A single well-placed mark on a coloured base often looks more considered than heavy coverage anyway.
-3. **Use a coloured base film instead of printing a background.** A tinted film costs a small premium; printing the same area as solid ink costs considerably more and shows every inconsistency.
-4. **Keep to one or two ink colours with real contrast.** Two strong colours outperform a subtle multi-colour palette on this substrate, and each additional colour is a setup.
+2. **Choose a mark over full coverage.** Coverage — the area of ink — moves the price more than the number of colors does. A single well-placed mark on a colored base often looks more considered than heavy coverage anyway.
+3. **Use a colored base film instead of printing a background.** A tinted film costs a small premium; printing the same area as solid ink costs considerably more and shows every inconsistency.
+4. **Keep to one or two ink colors with real contrast.** Two strong colors outperform a subtle multi-color palette on this substrate, and each additional color is a setup.
 5. **Order to a run you will actually use.** The per-unit price falls with volume, and packaging that outlives its artwork is not a saving at any price.
 
 Following those five, a first printed run costs a fraction of what brands often assume, and the visible result is frequently better than the elaborate version. What each of the five does to a price is covered on the [printing options page](/printing-options/).
@@ -105,12 +105,12 @@ For a business that is not yet ready to print the bag, that layer delivers most 
 
 You will find figures elsewhere about how much branded packaging increases repeat purchase, and we are not going to repeat them. We have not run that study, the published ones vary enormously in method, and a number we cannot stand behind is worth less than an honest description of the mechanism.
 
-What can be said without a study is this. Recognisable packaging is recognised. Photographed packaging reaches people who did not buy anything. A parcel that looks considered says something about the business that sent it. Whether those effects justify the cost in your specific case depends on your margin, your repeat rate and how much of your growth comes through customers showing other people what they bought.
+What can be said without a study is this. Recognizable packaging is recognized. Photographed packaging reaches people who did not buy anything. A parcel that looks considered says something about the business that sent it. Whether those effects justify the cost in your specific case depends on your margin, your repeat rate and how much of your growth comes through customers showing other people what they bought.
 
-That is a judgement rather than a calculation, and it is yours to make. If you want it costed rather than argued, [tell us what you ship and we will price it](/request-a-quote/).
+That is a judgment rather than a calculation, and it is yours to make. If you want it costed rather than argued, [tell us what you ship and we will price it](/request-a-quote/).
 
 ## Where to start
 
-If the three conditions hold, start smaller than you think. A single mark on a coloured base, one side, in one strong colour, ordered to a run you will use within a season.
+If the three conditions hold, start smaller than you think. A single mark on a colored base, one side, in one strong color, ordered to a run you will use within a season.
 
 That version teaches you what customers respond to, costs little, and leaves you free to do something more elaborate on the second run with actual evidence behind it. The sequence for getting a first printed order right, and the decisions to settle before artwork is commissioned, are set out on the [custom printed mailer page](/custom-poly-mailers/).

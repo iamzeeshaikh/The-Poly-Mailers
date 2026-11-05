@@ -49,7 +49,7 @@ export const usCitiesA: readonly LocationPage[] = [
           'Four things that do not happen to a parcel delivered to a house.',
         items: [
           { term: 'It gets stacked', detail: 'Under other parcels, sometimes for a day. Flat, square parcels survive this; bulging ones deform and flat contents crease.' },
-          { term: 'It gets handled by people who are not the recipient', detail: 'A doorman, a super, a neighbour. Discretion about the contents matters more than it does at a private address.' },
+          { term: 'It gets handled by people who are not the recipient', detail: 'A doorman, a super, a neighbor. Discretion about the contents matters more than it does at a private address.' },
           { term: 'It sits unattended', detail: 'Which makes an opaque bag with nothing identifying on it a practical choice rather than a stylistic one.' },
           { term: 'It has to be identified quickly', detail: 'A clearly readable label on a flat surface is the difference between being handed over and being lost in a pile.' },
         ],
@@ -79,7 +79,7 @@ export const usCitiesA: readonly LocationPage[] = [
       },
       {
         q: 'Can you deliver a packaging order without a loading dock?',
-        a: 'Tell us your constraints when you enquire — no dock, no lift, restricted street access — and the order can be structured around them. A standard pallet delivery is not the only option.',
+        a: 'Tell us your constraints when you inquire — no dock, no lift, restricted street access — and the order can be structured around them. A standard pallet delivery is not the only option.',
       },
       {
         q: 'Do parcels need tamper-evident closures in shared buildings?',
@@ -125,7 +125,7 @@ export const usCitiesA: readonly LocationPage[] = [
     ],
     recommended: [
       { slug: 'blank-poly-mailers', why: 'The layer that never goes out of date, whatever the range does.' },
-      { slug: 'colored-poly-mailers', why: 'A colour per drop is far cheaper than a print per drop.' },
+      { slug: 'colored-poly-mailers', why: 'A color per drop is far cheaper than a print per drop.' },
       { slug: 'black-poly-mailers', why: 'A permanent base that any sticker or insert can sit against.' },
       { slug: 'custom-poly-mailers', why: 'For the part of the range that is genuinely permanent.' },
     ],
@@ -138,7 +138,7 @@ export const usCitiesA: readonly LocationPage[] = [
         caption: 'Which branding layer to commit to when the range changes frequently.',
         columns: ['Layer', 'Changes how often', 'Commit to it when'],
         rows: [
-          ['Bag colour', 'Rarely, if chosen as a brand asset', 'Your identity is settled even when the range is not'],
+          ['Bag color', 'Rarely, if chosen as a brand asset', 'Your identity is settled even when the range is not'],
           ['Printed bag', 'Should be permanent', 'The mark has not changed in a year'],
           ['Seal sticker', 'Every drop, cheaply', 'Always — this is the layer built to change'],
           ['Printed card inside', 'Every drop', 'Always — it is the cheapest thing to reprint'],
@@ -153,7 +153,7 @@ export const usCitiesA: readonly LocationPage[] = [
         items: [
           { term: 'Never order past your next range change', detail: 'Whatever the discount, packaging that outlives its range is a write-off.' },
           { term: 'Keep the outer generic and the inner specific', detail: 'A permanent bag with drop-specific inserts changes nothing about your supply and everything about the experience.' },
-          { term: 'Order the base colour deeper', detail: 'It is the layer that does not date, so it is the one where a volume commitment is safe.' },
+          { term: 'Order the base color deeper', detail: 'It is the layer that does not date, so it is the one where a volume commitment is safe.' },
           { term: 'Settle the size before anything else', detail: 'A drop model that changes size mid-year loses the ability to reuse anything.' },
         ],
       },
@@ -161,7 +161,7 @@ export const usCitiesA: readonly LocationPage[] = [
         kind: 'linked-prose',
         heading: 'When printing does make sense',
         before:
-          'Even in a fast-cycle business there is usually something permanent: the mark, the wordmark, a house colour. Printing that rather than a range-specific design gives you a branded parcel that never dates, and it can carry the drop-specific work on a sticker. What a printed run involves, and what to settle before commissioning one, is set out on the ',
+          'Even in a fast-cycle business there is usually something permanent: the mark, the wordmark, a house color. Printing that rather than a range-specific design gives you a branded parcel that never dates, and it can carry the drop-specific work on a sticker. What a printed run involves, and what to settle before commissioning one, is set out on the ',
         link: { href: '/custom-poly-mailers/', anchor: 'custom printed mailer page' },
         after: '.',
       },
@@ -169,7 +169,7 @@ export const usCitiesA: readonly LocationPage[] = [
     faqs: [
       {
         q: 'How do I brand packaging when my range changes constantly?',
-        a: 'Commit at the layer that does not change. A permanent coloured or printed bag carrying only your mark, with drop-specific work on a sticker and a card inside, gives you a fresh parcel each release without a new print run.',
+        a: 'Commit at the layer that does not change. A permanent colored or printed bag carrying only your mark, with drop-specific work on a sticker and a card inside, gives you a fresh parcel each release without a new print run.',
       },
       {
         q: 'How much should I order for a drop?',
@@ -214,13 +214,13 @@ export const usCitiesA: readonly LocationPage[] = [
     supportingKeywords: ['trade show shipping bags', 'event packaging chicago', 'mailers chicago'],
     sectors: [
       { name: 'Trade show exhibitors', note: 'Businesses shipping samples, literature and giveaways into a venue rather than to a customer.' },
-      { name: 'Distribution and fulfilment', note: 'A central logistics position, with the volumes that follow.' },
+      { name: 'Distribution and fulfillment', note: 'A central logistics position, with the volumes that follow.' },
       { name: 'Print and promotional supply', note: 'A strong regional trade printing base producing exactly the goods that travel to shows.' },
     ],
     recommended: [
       { slug: 'blank-poly-mailers', why: 'Show shipments rarely need branding on the outer; they need to arrive.' },
       { slug: 'padded-poly-mailers', why: 'Handling at a venue is rougher and less careful than a parcel network.' },
-      { slug: '19x24-poly-mailers', why: 'Consolidating a stand’s worth of soft goods into fewer, clearly labelled parcels.' },
+      { slug: '19x24-poly-mailers', why: 'Consolidating a stand’s worth of soft goods into fewer, clearly labeled parcels.' },
       { slug: '9x12-poly-mailers', why: 'Literature and printed matter, which is what most often arrives creased.' },
     ],
     blocks: [
@@ -242,7 +242,7 @@ export const usCitiesA: readonly LocationPage[] = [
         intro:
           'Five things worth doing that would be overkill for a normal shipment.',
         steps: [
-          { title: 'Label every parcel on more than one face', detail: 'A parcel stacked label-down in a marshalling area is an unlabelled parcel.' },
+          { title: 'Label every parcel on more than one face', detail: 'A parcel stacked label-down in a marshalling area is an unlabeled parcel.' },
           { title: 'Include the stand number, not just the company', detail: 'Contractors deliver to stand numbers. A company name alone slows everything down.' },
           { title: 'Number the parcels', detail: 'One of four, two of four. It is the only way to know something is missing before the show opens.' },
           { title: 'Consolidate into fewer, larger parcels', detail: 'Fewer parcels means fewer chances for one to go astray, and consolidation is cheap for soft goods.' },
@@ -261,11 +261,11 @@ export const usCitiesA: readonly LocationPage[] = [
     faqs: [
       {
         q: 'What packaging survives trade show handling?',
-        a: 'Parcels that are clearly labelled on several faces, numbered as part of a set, and consolidated into fewer larger units. Handling at a venue is manual and quick rather than careful, so identification matters as much as protection.',
+        a: 'Parcels that are clearly labeled on several faces, numbered as part of a set, and consolidated into fewer larger units. Handling at a venue is manual and quick rather than careful, so identification matters as much as protection.',
       },
       {
-        q: 'How should show shipments be labelled?',
-        a: 'With the stand number as well as the company name, on more than one face, and numbered — one of four, two of four. Contractors deliver to stand numbers, and a parcel stacked label-down is effectively unlabelled.',
+        q: 'How should show shipments be labeled?',
+        a: 'With the stand number as well as the company name, on more than one face, and numbered — one of four, two of four. Contractors deliver to stand numbers, and a parcel stacked label-down is effectively unlabeled.',
       },
       {
         q: 'Should I consolidate or send separate parcels?',
@@ -332,7 +332,7 @@ export const usCitiesA: readonly LocationPage[] = [
         kind: 'prose',
         heading: 'Documentation on a flexible parcel',
         paragraphs: [
-          'Paperwork travelling with an export shipment has to stay attached and legible through the whole journey, and a flexible bag is a harder surface for that than a carton.',
+          'Paperwork traveling with an export shipment has to stay attached and legible through the whole journey, and a flexible bag is a harder surface for that than a carton.',
           'Two things help. Applying documentation to a flat, taut area rather than across a fold or a bulge, which means designing the packed shape rather than accepting whatever it becomes. And using a heavier film, which flexes less and therefore lifts label edges less.',
           'Where a shipment genuinely requires a documents-enclosed pouch, tell us at specification stage. It changes the recommended format, and it is easier to plan for than to add.',
         ],
@@ -341,7 +341,7 @@ export const usCitiesA: readonly LocationPage[] = [
         kind: 'linked-prose',
         heading: 'What we confirm for an international order',
         before:
-          'Ordering packaging into or out of a market involves the same considerations as shipping any other goods, and we confirm the documentation, arrangements and cost in writing on your quotation rather than assuming them. If you are placing an order that will itself cross a border, the points to settle before ordering are set out in the ',
+          'Ordering packaging into or out of a market involves the same considerations as shipping any other goods, and we confirm the documentation, arrangements and cost on your quotation rather than assuming them. If you are placing an order that will itself cross a border, the points to settle before ordering are set out in the ',
         link: { href: '/resources/international-ordering-guide/', anchor: 'international ordering guide' },
         after: '.',
       },
@@ -408,7 +408,7 @@ export const usCitiesA: readonly LocationPage[] = [
         kind: 'prose',
         heading: 'Vibration is a different failure from impact',
         paragraphs: [
-          'A parcel dropped once experiences a single large force. A parcel travelling for hours on a road experiences millions of small ones, and the two damage things differently.',
+          'A parcel dropped once experiences a single large force. A parcel traveling for hours on a road experiences millions of small ones, and the two damage things differently.',
           'Vibration works contents loose. It abrades surfaces that are touching. It walks items into corners. And it tests a seal continuously rather than occasionally, which is why a partial bond that would survive a short urban delivery can open on a long leg.',
           'The responses are unglamorous and effective: a close fit so nothing can move, a fully pressed seal along its whole length, and cushioning where surfaces would otherwise rub against each other.',
         ],
@@ -442,7 +442,7 @@ export const usCitiesA: readonly LocationPage[] = [
         a: 'On a long, low-touch route, usually yes. Impact damage is rarer; movement damage is constant. Something that cannot move inside the bag survives better than something in a stronger bag with room to travel.',
       },
       {
-        q: 'Should summer shipments use a different packaging colour?',
+        q: 'Should summer shipments use a different packaging color?',
         a: 'A pale outer absorbs measurably less radiant heat than a dark one in direct sun, which matters over a long leg. It is a marginal effect, but it is free.',
       },
     ],
@@ -473,14 +473,14 @@ export const usCitiesA: readonly LocationPage[] = [
     summary: 'Small volumes, independent makers, and packaging that still looks deliberate.',
     intro: [
       'Philadelphia has a dense independent maker and retail economy, and a lot of it ships in quantities that most packaging suppliers are not set up for. Tens of parcels a week rather than thousands a month.',
-      'The question at that scale is not how to optimise a specification. It is how to get packaging that looks considered without ordering more than a small business can store, use or pay for.',
+      'The question at that scale is not how to optimize a specification. It is how to get packaging that looks considered without ordering more than a small business can store, use or pay for.',
     ],
     angle: 'Genuinely small volumes — packaging for a business shipping tens of parcels a week.',
     primaryKeyword: 'poly mailers philadelphia',
     supportingKeywords: ['small batch mailers', 'maker packaging philadelphia', 'shipping bags philly'],
     sectors: [
       { name: 'Independent makers and craft', note: 'Handmade goods sold direct, in quantities measured in tens rather than thousands.' },
-      { name: 'Independent retail', note: 'Neighbourhood shops adding an online channel alongside a physical one.' },
+      { name: 'Independent retail', note: 'Neighborhood shops adding an online channel alongside a physical one.' },
       { name: 'Art, print and design', note: 'A strong creative base shipping flat goods that need protecting from creasing.' },
     ],
     recommended: [
@@ -496,7 +496,7 @@ export const usCitiesA: readonly LocationPage[] = [
         intro:
           'Five things that cost very little and change how a parcel reads.',
         steps: [
-          { title: 'Choose a colour rather than a print', detail: 'A coloured bag is the cheapest recognition available and requires no artwork, no proof and no commitment.' },
+          { title: 'Choose a color rather than a print', detail: 'A colored bag is the cheapest recognition available and requires no artwork, no proof and no commitment.' },
           { title: 'Put the design on a sticker', detail: 'Stickers reorder in tiny quantities, cost almost nothing and can change whenever you want them to.' },
           { title: 'Make the inside the moment', detail: 'A printed card, tissue in a matching tone, or a hand-written line. This is what gets photographed.' },
           { title: 'Be consistent about the label', detail: 'Same position, straight, every time. It costs nothing and it is the clearest signal of care a parcel carries.' },
@@ -508,7 +508,7 @@ export const usCitiesA: readonly LocationPage[] = [
         heading: 'What small operations get wrong',
         items: [
           { term: 'Printing too early', detail: 'A printed run commits your artwork, size and volume at once, at the point when all three are least settled.' },
-          { term: 'Buying the biggest quantity offered', detail: 'The discount is real; so is a year of stock in a spare room, ageing.' },
+          { term: 'Buying the biggest quantity offered', detail: 'The discount is real; so is a year of stock in a spare room, aging.' },
           { term: 'Using one size for everything', detail: 'A small item in a large bag looks careless and costs more to ship than the right size would.' },
           { term: 'Spending on the outside first', detail: 'The inside of the parcel is what gets photographed. Budget accordingly.' },
         ],
@@ -529,7 +529,7 @@ export const usCitiesA: readonly LocationPage[] = [
       },
       {
         q: 'How do I make a plain bag look intentional?',
-        a: 'A colour rather than white, a printed sticker as a seal, something printed inside, and a consistently placed label. Together those cost a fraction of a printed run and account for most of what a customer notices.',
+        a: 'A color rather than white, a printed sticker as a seal, something printed inside, and a consistently placed label. Together those cost a fraction of a printed run and account for most of what a customer notices.',
       },
       {
         q: 'How much packaging should a small business hold?',
@@ -585,7 +585,7 @@ export const usCitiesA: readonly LocationPage[] = [
         heading: 'Translation is not the same as voice',
         standfirst: 'A translated slogan and a slogan that works are different things.',
         paragraphs: [
-          'The instinct is to write the copy, translate it, and print both. What comes back is grammatically correct and frequently flat, because humour, rhythm and idiom rarely survive being converted rather than rewritten.',
+          'The instinct is to write the copy, translate it, and print both. What comes back is grammatically correct and frequently flat, because humor, rhythm and idiom rarely survive being converted rather than rewritten.',
           'Packaging copy is short, which makes this worse rather than better. A thank-you line has almost no room to recover from an awkward phrase, and a customer reading in their first language notices immediately.',
           'The businesses that do this well write twice rather than translating once. Same intent, same warmth, different words — and often different lengths, which is a layout consequence of a decision that started as an editorial one.',
         ],
@@ -609,7 +609,7 @@ export const usCitiesA: readonly LocationPage[] = [
         kind: 'linked-prose',
         heading: 'Who signs it off',
         before:
-          'The single biggest risk in bilingual packaging is not a design problem. It is an approval problem: copy approved by someone reading it in their second language, printed at volume, and read by thousands of people in their first. Name a native reader of each language as an approver before artwork starts, and treat their sign-off as a gate rather than a courtesy. We print exactly what is on the approved proof, which makes that approval the last line of defence, as set out on the ',
+          'The single biggest risk in bilingual packaging is not a design problem. It is an approval problem: copy approved by someone reading it in their second language, printed at volume, and read by thousands of people in their first. Name a native reader of each language as an approver before artwork starts, and treat their sign-off as a gate rather than a courtesy. We print exactly what is on the approved proof, which makes that approval the last line of defense, as set out on the ',
         link: { href: '/how-it-works/', anchor: 'ordering process page' },
         after: '.',
       },
@@ -617,7 +617,7 @@ export const usCitiesA: readonly LocationPage[] = [
     faqs: [
       {
         q: 'Should I translate my packaging copy or rewrite it?',
-        a: 'Rewrite it. Packaging lines are short, and humour, warmth and rhythm rarely survive translation intact. Writing the same intent twice produces something that reads naturally in both languages, which a converted sentence usually does not.',
+        a: 'Rewrite it. Packaging lines are short, and humor, warmth and rhythm rarely survive translation intact. Writing the same intent twice produces something that reads naturally in both languages, which a converted sentence usually does not.',
       },
       {
         q: 'Does everything on the bag need to appear in both languages?',
@@ -661,15 +661,15 @@ export const usCitiesA: readonly LocationPage[] = [
     primaryKeyword: 'poly mailers san diego',
     supportingKeywords: ['shipping bags san diego', 'packaging coordination', 'production packaging timing'],
     sectors: [
-      { name: 'Apparel and action sports', note: 'Brands designing locally and manufacturing offshore, with a fulfilment step in between.' },
-      { name: 'Consumer products and accessories', note: 'Own-channel brands importing finished goods for domestic fulfilment.' },
+      { name: 'Apparel and action sports', note: 'Brands designing locally and manufacturing offshore, with a fulfillment step in between.' },
+      { name: 'Consumer products and accessories', note: 'Own-channel brands importing finished goods for domestic fulfillment.' },
       { name: 'Direct-to-consumer', note: 'Businesses running the whole cycle from design to doorstep across several locations.' },
     ],
     recommended: [
       { slug: 'blank-poly-mailers', why: 'No artwork approval in the chain means one fewer thing that can delay a delivery date.' },
       { slug: '10x13-poly-mailers', why: 'A widely available format is easier to schedule reliably than a bespoke one.' },
       { slug: 'apparel-shipping-bags', why: 'The category most affected by this coordination problem.' },
-      { slug: 'custom-frosted-poly-bags', why: 'Where garments are individually bagged at the point of manufacture rather than at fulfilment.' },
+      { slug: 'custom-frosted-poly-bags', why: 'Where garments are individually bagged at the point of manufacture rather than at fulfillment.' },
     ],
     blocks: [
       {
@@ -680,24 +680,24 @@ export const usCitiesA: readonly LocationPage[] = [
         steps: [
           { title: 'Fix the date goods land, not the date they ship', detail: 'Production schedules move. The date that matters is when finished goods reach the place they will be packed.' },
           { title: 'Work packaging back from that date', detail: 'Including a buffer, because being early costs storage and being late costs a launch.' },
-          { title: 'Decide where bagging happens', detail: 'At the factory or at fulfilment. It changes what packaging is needed and where it has to be delivered.' },
+          { title: 'Decide where bagging happens', detail: 'At the factory or at fulfillment. It changes what packaging is needed and where it has to be delivered.' },
           { title: 'Settle artwork long before either', detail: 'Proof approval is the step that most often delays a packaging delivery, and it is entirely within your control.' },
           { title: 'Split delivery if the dates are uncertain', detail: 'A partial delivery to start with and the balance later costs a little more and removes most of the risk.' },
         ],
       },
       {
         kind: 'compare',
-        heading: 'Bagging at the factory or at fulfilment',
+        heading: 'Bagging at the factory or at fulfillment',
         intro:
           'This decision determines where packaging is delivered and what kind you need.',
-        caption: 'Bagging at the point of manufacture compared with bagging at fulfilment.',
-        columns: ['', 'At the factory', 'At fulfilment'],
+        caption: 'Bagging at the point of manufacture compared with bagging at fulfillment.',
+        columns: ['', 'At the factory', 'At fulfillment'],
         rows: [
-          ['Packaging ships to', 'The manufacturer', 'Your fulfilment location'],
+          ['Packaging ships to', 'The manufacturer', 'Your fulfillment location'],
           ['Suits', 'Individual garment bagging, retail-ready goods', 'Order-level mailers'],
           ['Lead time exposure', 'Longer — it must arrive before production ends', 'Shorter and more controllable'],
           ['Flexibility to change', 'Low once shipped', 'High'],
-          ['Extra handling at fulfilment', 'Less', 'More'],
+          ['Extra handling at fulfillment', 'Less', 'More'],
         ],
       },
       {
@@ -719,8 +719,8 @@ export const usCitiesA: readonly LocationPage[] = [
         a: 'More than feels necessary. Between packaging arriving early and arriving late, early costs storage and late costs a launch. Choosing a widely available format rather than a bespoke one also reduces schedule risk substantially.',
       },
       {
-        q: 'Should garments be bagged at the factory or at fulfilment?',
-        a: 'It depends on whether they need to arrive retail-ready. Factory bagging means the packaging must reach the manufacturer before production finishes; fulfilment bagging is more controllable but adds a handling step.',
+        q: 'Should garments be bagged at the factory or at fulfillment?',
+        a: 'It depends on whether they need to arrive retail-ready. Factory bagging means the packaging must reach the manufacturer before production finishes; fulfillment bagging is more controllable but adds a handling step.',
       },
     ],
     related: [
@@ -744,17 +744,17 @@ export const usCitiesA: readonly LocationPage[] = [
     kind: 'city',
     region: 'South',
     h1: 'Poly Mailers for Dallas Businesses',
-    title: 'Poly Mailers Dallas | Wholesale Order Fulfilment',
+    title: 'Poly Mailers Dallas | Wholesale Order Fulfillment',
     description:
       'Poly mailers for Dallas businesses — fulfilling wholesale orders to retail buyers, where the packaging serves a shop rather than a shopper.',
-    summary: 'Wholesale fulfilment, where the parcel is opened by a shop rather than a shopper.',
+    summary: 'Wholesale fulfillment, where the parcel is opened by a shop rather than a shopper.',
     intro: [
-      'Dallas has a substantial wholesale trade, and wholesale fulfilment is a different packaging problem from direct-to-consumer. The parcel is opened by a buyer or a shop assistant who is checking a delivery against a purchase order, not by a customer having an experience.',
+      'Dallas has a substantial wholesale trade, and wholesale fulfillment is a different packaging problem from direct-to-consumer. The parcel is opened by a buyer or a shop assistant who is checking a delivery against a purchase order, not by a customer having an experience.',
       'That changes almost every decision: what matters is identification, count accuracy and goods arriving shelf-ready, not how the bag looks.',
     ],
-    angle: 'Wholesale fulfilment — packaging judged by a receiving shop, not by a customer.',
+    angle: 'Wholesale fulfillment — packaging judged by a receiving shop, not by a customer.',
     primaryKeyword: 'poly mailers dallas',
-    supportingKeywords: ['wholesale packaging dallas', 'shipping bags dallas', 'retail order fulfilment'],
+    supportingKeywords: ['wholesale packaging dallas', 'shipping bags dallas', 'retail order fulfillment'],
     sectors: [
       { name: 'Wholesale apparel and accessories', note: 'A long-established trade selling into independent retail across the region.' },
       { name: 'Gift and homeware wholesale', note: 'Mixed-item orders where identification on arrival matters more than presentation.' },
@@ -791,7 +791,7 @@ export const usCitiesA: readonly LocationPage[] = [
           ['Judged on', 'Accuracy and speed of check-in', 'How it looks and feels'],
           ['Branding value', 'Minimal', 'High'],
           ['Parcel size', 'Large, consolidated', 'Small, one order'],
-          ['Ideal specification', 'Plain, marked, economical', 'Coloured or printed, sized close'],
+          ['Ideal specification', 'Plain, marked, economical', 'Colored or printed, sized close'],
         ],
         outro:
           'Two lines, quoted together where the film matches, usually costs less than the compromise bag and works better in both channels.',
@@ -829,7 +829,7 @@ export const usCitiesA: readonly LocationPage[] = [
       body: 'Tell us what a typical wholesale order contains and how your buyers check goods in. We will specify for the receiving end.',
       buttonLabel: 'Quote wholesale packaging',
     },
-    whatsapp: 'Hi, I fulfil wholesale orders from Dallas and need appropriate packaging.',
+    whatsapp: 'Hi, I fulfill wholesale orders from Dallas and need appropriate packaging.',
   },
 
   /* ===================================================================== */
@@ -860,7 +860,7 @@ export const usCitiesA: readonly LocationPage[] = [
       { slug: 'blank-poly-mailers', why: 'Small volumes rarely justify a printed run, and blank stock covers every release.' },
       { slug: '10x13-poly-mailers', why: 'Merchandise is mostly apparel, and this is the size apparel needs.' },
       { slug: 'black-poly-mailers', why: 'A permanent base that any release-specific sticker can sit against.' },
-      { slug: 'colored-poly-mailers', why: 'A colour per release, at a fraction of the cost of printing per release.' },
+      { slug: 'colored-poly-mailers', why: 'A color per release, at a fraction of the cost of printing per release.' },
     ],
     blocks: [
       {
@@ -869,7 +869,7 @@ export const usCitiesA: readonly LocationPage[] = [
         standfirst: 'It changes what packaging has to do.',
         paragraphs: [
           'A retailer’s packaging works partly to introduce a brand to someone who bought on price or convenience. A creator’s audience already knows exactly who they bought from, which removes the introduction job entirely.',
-          'What remains is confirmation. The parcel should feel like it came from the person they follow rather than from a fulfilment operation, and that is achieved far more cheaply than brand introduction is. A colour, a sticker, a hand-written line, a card that sounds like them.',
+          'What remains is confirmation. The parcel should feel like it came from the person they follow rather than from a fulfillment operation, and that is achieved far more cheaply than brand introduction is. A color, a sticker, a hand-written line, a card that sounds like them.',
           'It is also why printing the bag is usually the wrong first investment here. Nobody needs to be told whose parcel this is. They need it to feel like the thing they bought into.',
         ],
       },
@@ -895,7 +895,7 @@ export const usCitiesA: readonly LocationPage[] = [
     faqs: [
       {
         q: 'Should a creator print their own mailers?',
-        a: 'Usually not at first. Your audience already knows who sent the parcel, so the introduction job that printing does is not needed. A coloured bag with a sticker and a card achieves the confirmation job for a fraction of the cost.',
+        a: 'Usually not at first. Your audience already knows who sent the parcel, so the introduction job that printing does is not needed. A colored bag with a sticker and a card achieves the confirmation job for a fraction of the cost.',
       },
       {
         q: 'How much packaging should I keep in stock?',
@@ -903,7 +903,7 @@ export const usCitiesA: readonly LocationPage[] = [
       },
       {
         q: 'Can I order packaging quickly for a launch?',
-        a: 'Timing is confirmed in writing per order, and it depends on the specification and whether it is printed. The reliable approach for unpredictable launches is to hold plain stock permanently and change only the sticker and the card.',
+        a: 'Timing is confirmed by email per order, and it depends on the specification and whether it is printed. The reliable approach for unpredictable launches is to hold plain stock permanently and change only the sticker and the card.',
       },
     ],
     related: [

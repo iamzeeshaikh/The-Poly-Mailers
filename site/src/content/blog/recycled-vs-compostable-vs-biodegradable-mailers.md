@@ -13,7 +13,7 @@ reviewed: 2026-08-15
 author: The Poly Mailers editorial team
 reviewer: Production and specification desk
 heroImage: ../../assets/products/grey-mailer-printed-with-recycled-content-artwork.jpg
-heroAlt: A printed recycled-content line running down the edge of a sealed grey mailer
+heroAlt: A printed recycled-content line running down the edge of a sealed gray mailer
 heroCaption: The printed wording is artwork supplied by the business that ordered those samples, not a claim by The Poly Mailers.
 related:
   - href: /sustainable-poly-mailers/
@@ -31,10 +31,10 @@ faqs:
   - q: Does recycled content mean the mailer is recyclable?
     a: No, and conflating them is the most common error in this area. Recycled content describes what the film was made from. Recyclability describes whether your customer can get it collected, which depends on local infrastructure rather than on the material.
   - q: Why will you not publish a recycled percentage?
-    a: Because content varies by film, by batch and by market, and a figure on a web page could not be honoured for every order. We confirm the feedstock type and proportion in writing on your quotation for the film actually being supplied.
+    a: Because content varies by film, by batch and by market, and a figure on a web page could not be honored for every order. We confirm the feedstock type and proportion on your quotation for the film actually being supplied.
 cta:
   heading: "Choose a route without guessing at the claims"
-  body: "Tell us what you need to be able to say to your customers. We will explain what each film supports, confirm composition in writing, and quote it."
+  body: "Tell us what you need to be able to say to your customers. We will explain what each film supports, confirm composition by email, and quote it."
   label: "Discuss a sustainable option"
   whatsapp: "Hi, I would like to discuss recycled or compostable mailer options."
 references:
@@ -66,7 +66,7 @@ This is the easiest of the three to substantiate, because the evidence exists at
 
 Compostable describes an end-of-life route. It is a claim that the material will break down in a managed biological process — one with sustained temperature, moisture, oxygen and time held within defined ranges.
 
-That process has to exist and your customer has to be able to reach it. This is where most compostable packaging programmes come apart: a brand buys the material, prints the word, and the bag goes into general waste because the customer had nowhere else to put it. The environmental benefit does not happen, and a claim has been made that the outcome does not support.
+That process has to exist and your customer has to be able to reach it. This is where most compostable packaging programs come apart: a brand buys the material, prints the word, and the bag goes into general waste because the customer had nowhere else to put it. The environmental benefit does not happen, and a claim has been made that the outcome does not support.
 
 There is a second distinction inside the term. Industrial composting happens at a facility built to hold those conditions; home composting happens in a domestic heap at much lower temperatures. A material can be assessed for one and not the other, and they are not interchangeable. A supplier who says "compostable" without saying which has not answered the question.
 
@@ -102,7 +102,7 @@ The pattern is consistent. The route that is easiest to evidence is also the one
 
 There is no recycled percentage, certification mark or decomposition timescale anywhere on this website. That is deliberate.
 
-Content varies by film, by production batch and by market. A single figure published here would be a figure we could not honour for every order, in a category where regulators in every market we serve treat unsupported environmental claims seriously.
+Content varies by film, by production batch and by market. A single figure published here would be a figure we could not honor for every order, in a category where regulators in every market we serve treat unsupported environmental claims seriously.
 
 What we do instead is go to the supplier of the specific film for your order, ask what is documented, and show you the answer before you commit — including when the answer is that nothing is. That reasoning is set out in full on the [sustainability page](/sustainability/). It is a less appealing page than one covered in green symbols, and it is the only version that leaves you able to defend what you print.
 
@@ -110,7 +110,7 @@ What we do instead is go to the supplier of the specific film for your order, as
 
 Worth separating out, because it gets conflated with recycled content constantly.
 
-Recyclability is about whether your customer can get the material collected and reprocessed where they live. Flexible plastic film is generally not accepted in household kerbside collections across the markets we serve, and is instead collected at supermarket or retail drop-off points where those exist — with availability varying by area.
+Recyclability is about whether your customer can get the material collected and reprocessed where they live. Flexible plastic film is generally not accepted in household curbside collections across the markets we serve, and is instead collected at supermarket or retail drop-off points where those exist — with availability varying by area.
 
 So a mailer can have high recycled content and still be difficult for a household to recycle. Both statements can be true at once, and printing one while implying the other is where a lot of packaging copy goes wrong.
 

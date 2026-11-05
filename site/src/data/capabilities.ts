@@ -43,7 +43,7 @@ export const capabilityPages: readonly ContentPage[] = [
         standfirst: 'A number without a method is not a specification.',
         paragraphs: [
           'Film thickness gets quoted in microns or mils, and the figures are not comparable between suppliers. Some measure the film flat, some measure the finished bag; some quote a target, some quote a minimum; and a film described identically can behave differently depending on how it was produced.',
-          'Publishing a figure here would give you something that looks precise and cannot be used to compare anything. Instead we describe films by what they do, and confirm the actual specification for your order in writing on the quotation.',
+          'Publishing a figure here would give you something that looks precise and cannot be used to compare anything. Instead we describe films by what they do, and confirm the actual specification for your order on the quotation.',
           'If you need a numeric specification for an internal document or a tender, ask and we will provide what the supplier of your film can evidence for that run.',
         ],
       },
@@ -65,7 +65,7 @@ export const capabilityPages: readonly ContentPage[] = [
           {
             label: 'Finish',
             options: ['Gloss', 'Matte'],
-            note: 'Changes how printed colour reads and how visibly the bag shows handling marks.',
+            note: 'Changes how printed color reads and how visibly the bag shows handling marks.',
           },
           {
             label: 'Lining',
@@ -140,7 +140,7 @@ export const capabilityPages: readonly ContentPage[] = [
         a: 'The film resists rain and splashing, which is enough for a parcel left on a doorstep. It is not a sealed barrier — water can enter at the closure — so it should not be relied on for immersion or prolonged exposure.',
       },
       {
-        q: 'Can I have the material specification in writing?',
+        q: 'Can I have the material specification confirmed by email?',
         a: 'Yes. Every quotation states the specification we are quoting, and where you need supplier documentation for an internal record or a tender, ask and we will provide what exists for that film.',
       },
     ],
@@ -163,7 +163,7 @@ export const capabilityPages: readonly ContentPage[] = [
     ],
     cta: {
       heading: 'Specify a material',
-      body: 'Describe what you ship — weight, shape, whether anything is boxed — and we will specify a film and put it in writing.',
+      body: 'Describe what you ship — weight, shape, whether anything is boxed — and we will specify a film and confirm it by email.',
       buttonLabel: 'Get a material specification',
     },
     whatsapp: 'Hi, I need help specifying the right poly mailer material for my products.',
@@ -179,7 +179,7 @@ export const capabilityPages: readonly ContentPage[] = [
       'How poly mailers are printed, what each coverage level costs you, and which decisions to make before a designer starts work.',
     summary: 'Print methods, coverage levels and what actually moves the price.',
     intro: [
-      'Most buyers assume the number of colours drives the price of a printed mailer. It contributes, but three other decisions move it further: how many you order, how much of the bag the ink covers, and whether you print one side or two.',
+      'Most buyers assume the number of colors drives the price of a printed mailer. It contributes, but three other decisions move it further: how many you order, how much of the bag the ink covers, and whether you print one side or two.',
       'This page sets out the choices in the order they should be made, so you brief a designer once against a specification rather than twice against a guess.',
     ],
     plan: {
@@ -198,7 +198,7 @@ export const capabilityPages: readonly ContentPage[] = [
         kind: 'compare',
         heading: 'What moves the price, in order',
         intro:
-          'If you need to bring a printed run inside a budget, work down this list rather than cutting colours first.',
+          'If you need to bring a printed run inside a budget, work down this list rather than cutting colors first.',
         caption: 'Printing decisions ranked by their effect on the price per unit.',
         columns: ['Decision', 'Effect on price', 'Worth doing when'],
         rows: [
@@ -209,7 +209,7 @@ export const capabilityPages: readonly ContentPage[] = [
           ],
           [
             'Coverage',
-            'Substantial — ink area, not colour count',
+            'Substantial — ink area, not color count',
             'A logo will do the job a full-bleed design was going to do',
           ],
           [
@@ -218,14 +218,14 @@ export const capabilityPages: readonly ContentPage[] = [
             'The reverse carries returns or disposal information',
           ],
           [
-            'Colour count',
-            'Moderate — each colour is a setup',
-            'Two strong colours can replace a subtle palette',
+            'Color count',
+            'Moderate — each color is a setup',
+            'Two strong colors can replace a subtle palette',
           ],
           [
-            'Colour matching',
+            'Color matching',
             'Modest, plus a proof round',
-            'The brand colour has to be exact rather than close',
+            'The brand color has to be exact rather than close',
           ],
           [
             'Interior printing',
@@ -243,7 +243,7 @@ export const capabilityPages: readonly ContentPage[] = [
           {
             term: 'Logo only',
             detail:
-              'A single mark, placed deliberately. Cheapest print available, and on a coloured base it often looks more considered than heavy coverage does.',
+              'A single mark, placed deliberately. Cheapest print available, and on a colored base it often looks more considered than heavy coverage does.',
           },
           {
             term: 'Partial coverage',
@@ -273,7 +273,7 @@ export const capabilityPages: readonly ContentPage[] = [
             detail: 'Artwork is laid out for a panel. Changing the panel means redrawing the file.',
           },
           {
-            title: 'Base colour and finish',
+            title: 'Base color and finish',
             detail:
               'The base decides which inks will read. Finish changes how those inks look once printed.',
           },
@@ -289,17 +289,17 @@ export const capabilityPages: readonly ContentPage[] = [
           {
             title: 'Artwork to specification',
             detail:
-              'Vector where possible, bleed allowance included, fonts outlined, colour mode correct.',
+              'Vector where possible, bleed allowance included, fonts outlined, color mode correct.',
           },
           {
             title: 'Proof, then production',
-            detail: 'Nothing is scheduled until you approve the proof in writing.',
+            detail: 'Nothing is scheduled until you approve the proof by email.',
           },
         ],
       },
       {
         kind: 'linked-prose',
-        heading: 'Print behaviour differs by surface',
+        heading: 'Print behavior differs by surface',
         before:
           'The same file behaves differently on flat film, on a cushioned surface and on translucent frosted film. Fine lines that hold on one break up on another, and white ink that reads crisply on a dark base disappears on a pale one. Before commissioning artwork it is worth checking which surface you are printing on, because a design adapted after the fact rarely looks as considered as one drawn for the format. The surfaces are compared on the ',
         link: { href: '/custom-printed-poly-mailers/', anchor: 'printed format comparison' },
@@ -310,27 +310,27 @@ export const capabilityPages: readonly ContentPage[] = [
         heading: 'Proofing, and what a proof does not tell you',
         paragraphs: [
           'A digital proof shows placement, scale and the relationship between elements accurately. It is the right way to check that your mark is where you want it and that nothing important falls on the flap or under the label.',
-          'It shows colour approximately. A screen is backlit and film is not, and a colour that looks correct on a calibrated monitor can arrive materially different. Where colour is commercially important — a brand colour customers recognise — ask for a physical check rather than approving on screen.',
-          'Once a proof is approved it becomes the reference the run is checked against, which is why we ask for approval in writing rather than by implication.',
+          'It shows color approximately. A screen is backlit and film is not, and a color that looks correct on a calibrated monitor can arrive materially different. Where color is commercially important — a brand color customers recognize — ask for a physical check rather than approving on screen.',
+          'Once a proof is approved it becomes the reference the run is checked against, which is why we ask for approval by email rather than by implication.',
         ],
       },
     ],
     faqs: [
       {
         q: 'How are poly mailers printed?',
-        a: 'Ink is applied to the film before the bag is formed, which is why print decisions have to be made before production rather than added afterwards. It is also why coverage affects cost more than colour count does.',
+        a: 'Ink is applied to the film before the bag is formed, which is why print decisions have to be made before production rather than added afterwards. It is also why coverage affects cost more than color count does.',
       },
       {
         q: 'Is full-coverage printing worth the extra cost?',
-        a: 'It depends on what the parcel is doing. For brands whose customers photograph deliveries, often yes. For most operations a well-placed mark on a coloured base achieves most of the recognition at a fraction of the cost.',
+        a: 'It depends on what the parcel is doing. For brands whose customers photograph deliveries, often yes. For most operations a well-placed mark on a colored base achieves most of the recognition at a fraction of the cost.',
       },
       {
         q: 'Can I print on the inside of a poly mailer?',
         a: 'Yes, as a separate operation with its own cost. It creates a strong unboxing moment and is most commonly specified by gift, subscription and premium ranges rather than general ecommerce.',
       },
       {
-        q: 'How many colours can be printed?',
-        a: 'More than most designs need. The practical constraint is contrast against the base film rather than the number of inks, and two strong colours usually outperform a subtle multi-colour palette on this substrate.',
+        q: 'How many colors can be printed?',
+        a: 'More than most designs need. The practical constraint is contrast against the base film rather than the number of inks, and two strong colors usually outperform a subtle multi-color palette on this substrate.',
       },
     ],
     related: [
@@ -346,7 +346,7 @@ export const capabilityPages: readonly ContentPage[] = [
       },
       {
         href: '/design-your-poly-mailer/',
-        label: 'Design tool',
+        label: 'Design Your Poly Mailers',
         reason: 'Try coverage and placement options before committing to a brief.',
       },
     ],
@@ -365,7 +365,7 @@ export const capabilityPages: readonly ContentPage[] = [
     h1: 'Artwork Guidelines',
     title: 'Artwork Guidelines | File Specification for Print',
     description:
-      'The file specification for custom poly mailer printing — formats, bleed, resolution, colour mode, fonts and the checks we run before proofing.',
+      'The file specification for custom poly mailer printing — formats, bleed, resolution, color mode, fonts and the checks we run before proofing.',
     summary: 'The exact file requirements, and the checks a file goes through before it is proofed.',
     intro: [
       'This is the specification sheet. Hand it to whoever is producing your artwork and most of the back-and-forth disappears.',
@@ -374,7 +374,7 @@ export const capabilityPages: readonly ContentPage[] = [
     plan: {
       intent: 'Find the file specification for supplying print artwork.',
       audience: 'Designers and studios producing packaging artwork for a client.',
-      problem: 'Files arrive without bleed, in the wrong colour mode, or with live fonts.',
+      problem: 'Files arrive without bleed, in the wrong color mode, or with live fonts.',
       angle: 'A specification sheet, written to be handed to a production designer.',
       primaryKeyword: 'poly mailer artwork guidelines',
       supportingKeywords: ['mailer print file setup', 'packaging artwork specification', 'print ready artwork'],
@@ -404,9 +404,9 @@ export const capabilityPages: readonly ContentPage[] = [
             note: 'Resolution at final printed size, not at the size the file happens to be.',
           },
           {
-            label: 'Colour mode',
-            options: ['CMYK', 'Named spot colours'],
-            note: 'RGB files have to be converted, and the conversion is where colour surprises come from.',
+            label: 'Color mode',
+            options: ['CMYK', 'Named spot colors'],
+            note: 'RGB files have to be converted, and the conversion is where color surprises come from.',
           },
           {
             label: 'Bleed',
@@ -454,12 +454,12 @@ export const capabilityPages: readonly ContentPage[] = [
           {
             term: 'Design for the packed shape',
             detail:
-              'A composition that fills a flat template stretches once there is something inside. Centred marks with breathing room survive; edge-to-edge compositions do not.',
+              'A composition that fills a flat template stretches once there is something inside. Centered marks with breathing room survive; edge-to-edge compositions do not.',
           },
           {
             term: 'Check contrast against the base',
             detail:
-              'A dark mark cannot go on a dark film. Settle the base colour before the artwork, not after.',
+              'A dark mark cannot go on a dark film. Settle the base color before the artwork, not after.',
           },
         ],
       },
@@ -472,7 +472,7 @@ export const capabilityPages: readonly ContentPage[] = [
           {
             title: 'Technical check',
             detail:
-              'Format, resolution at final size, colour mode, bleed, outlined fonts, minimum line weights.',
+              'Format, resolution at final size, color mode, bleed, outlined fonts, minimum line weights.',
           },
           {
             title: 'Layout check against the format',
@@ -482,15 +482,15 @@ export const capabilityPages: readonly ContentPage[] = [
           {
             title: 'Contrast check against the base',
             detail:
-              'Every element assessed against the film colour and finish you have selected.',
+              'Every element assessed against the film color and finish you have selected.',
           },
           {
             title: 'Proof produced',
             detail:
-              'Placement, scale and colour shown on your chosen specification, returned to you for approval.',
+              'Placement, scale and color shown on your chosen specification, returned to you for approval.',
           },
           {
-            title: 'Written approval, then scheduling',
+            title: 'Your approval, then scheduling',
             detail:
               'Production is booked against the approved proof. Changes after this point mean a new proof.',
           },
@@ -500,14 +500,14 @@ export const capabilityPages: readonly ContentPage[] = [
         kind: 'linked-prose',
         heading: 'Rights and permissions',
         before:
-          'Before you send artwork, confirm you hold the commercial reproduction rights to everything in it. Stock illustration bought on a personal licence, an image found online and a design a freelancer was paid to produce are three different legal positions, and only one of them is safe to print at volume. Fonts carry licences too, and some restrict use in a logo or in packaging. Where a design incorporates a pattern rather than a mark, the additional considerations are covered on the ',
+          'Before you send artwork, confirm you hold the commercial reproduction rights to everything in it. Stock illustration bought on a personal license, an image found online and a design a freelancer was paid to produce are three different legal positions, and only one of them is safe to print at volume. Fonts carry licenses too, and some restrict use in a logo or in packaging. Where a design incorporates a pattern rather than a mark, the additional considerations are covered on the ',
         link: { href: '/bee-poly-mailers/', anchor: 'patterned mailer page' },
         after: '.',
       },
       {
         kind: 'callout',
-        heading: 'Sending artwork with your enquiry',
-        body: 'The quote form accepts PDF, AI, EPS, PSD, SVG, PNG and JPG. Files are checked on upload and are attached to the enquiry rather than stored on a public path. If your file is larger than the upload limit, send a link and we will collect it.',
+        heading: 'Sending artwork with your inquiry',
+        body: 'The quote form accepts PDF, AI, EPS, PSD, SVG, PNG and JPG. Files are checked on upload and are attached to the inquiry rather than stored on a public path. If your file is larger than the upload limit, send a link and we will collect it.',
       },
     ],
     faqs: [
@@ -521,7 +521,7 @@ export const capabilityPages: readonly ContentPage[] = [
       },
       {
         q: 'Do I need to convert my artwork to CMYK?',
-        a: 'It helps. RGB files have to be converted before printing, and the conversion is where unexpected colour shifts come from. Supplying CMYK or a named spot colour means you have seen the conversion rather than us making it for you.',
+        a: 'It helps. RGB files have to be converted before printing, and the conversion is where unexpected color shifts come from. Supplying CMYK or a named spot color means you have seen the conversion rather than us making it for you.',
       },
       {
         q: 'What if my logo has very fine lines?',
@@ -545,7 +545,7 @@ export const capabilityPages: readonly ContentPage[] = [
       },
       {
         href: '/design-your-poly-mailer/',
-        label: 'Design tool',
+        label: 'Design Your Poly Mailers',
         reason: 'Position artwork on a mailer and see approximate placement.',
       },
     ],
@@ -591,7 +591,7 @@ export const capabilityPages: readonly ContentPage[] = [
           {
             title: 'Pick your five most-shipped products',
             detail:
-              'Not your whole catalogue. Five usually covers the large majority of your order volume, and they will cluster into two or three sizes.',
+              'Not your whole catalog. Five usually covers the large majority of your order volume, and they will cluster into two or three sizes.',
           },
           {
             title: 'Build a real order for each',
@@ -676,7 +676,7 @@ export const capabilityPages: readonly ContentPage[] = [
             'Choose the smallest that seals without strain',
           ],
           [
-            'Standardising on one size across a varied range',
+            'Standardizing on one size across a varied range',
             'Waste on light orders, failures on heavy ones',
             'Two or three sizes, chosen from real order data',
           ],
@@ -774,7 +774,7 @@ export const capabilityPages: readonly ContentPage[] = [
           {
             term: 'Recycled content percentages',
             detail:
-              'Content varies by film, by production batch and by market. A single figure on a web page could not be honoured for every order.',
+              'Content varies by film, by production batch and by market. A single figure on a web page could not be honored for every order.',
           },
           {
             term: 'Certification marks',
@@ -861,7 +861,7 @@ export const capabilityPages: readonly ContentPage[] = [
       },
       {
         q: 'Why will you not just say your mailers are recyclable?',
-        a: 'Because recyclability depends on what collection your customers can access, not on the material alone. Flexible film is generally not accepted in household kerbside collections in the markets we serve. Telling customers to recycle something they cannot recycle is worse than saying nothing.',
+        a: 'Because recyclability depends on what collection your customers can access, not on the material alone. Flexible film is generally not accepted in household curbside collections in the markets we serve. Telling customers to recycle something they cannot recycle is worse than saying nothing.',
       },
       {
         q: 'Can you provide documentation for a tender or an audit?',

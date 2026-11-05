@@ -1,7 +1,7 @@
 ---
 title: Poly Mailers for Clothing and Apparel Shipping
-description: How garment fulfilment differs from general shipping, covering folding, opacity, returns handling and the size mix that suits a range with varied bulk.
-intent: Set up packaging for a clothing brand's fulfilment operation.
+description: How garment fulfillment differs from general shipping, covering folding, opacity, returns handling and the size mix that suits a range with varied bulk.
+intent: Set up packaging for a clothing brand's fulfillment operation.
 primaryKeyword: poly mailers for clothing
 supportingKeywords:
   - shipping clothes in poly mailers
@@ -13,14 +13,14 @@ reviewed: 2026-08-15
 author: The Poly Mailers editorial team
 reviewer: Production and specification desk
 heroImage: ../../assets/products/colored-apparel-mailers-fanned-with-polo-shirt.png
-heroAlt: A folded polo shirt part way out of a blue garment mailer, with four other colours fanned behind it
+heroAlt: A folded polo shirt part way out of a blue garment mailer, with four other colors fanned behind it
 related:
   - href: /apparel-shipping-bags/
     label: Apparel shipping bags
     reason: The product page, with starting sizes by garment type.
   - href: /industries/clothing-and-apparel/
     label: Clothing and apparel operations
-    reason: The sector page, covering the wider fulfilment setup.
+    reason: The sector page, covering the wider fulfillment setup.
   - href: /self-seal-poly-mailers/
     label: Closure options
     reason: The specification decision that most affects returns cost.
@@ -28,7 +28,7 @@ faqs:
   - q: What size mailer fits a folded t-shirt?
     a: A 9x12 takes a folded cotton tee on its own. Once a card, tissue and returns slip go in with it, most brands find they need a 10x13. Test with your own fold at working pace rather than a careful desk fold.
   - q: Will dark garments show through a pale mailer?
-    a: Through standard-opacity film, often as a grey shadow. If your range is predominantly dark, specify higher opacity or a heavier film weight, or move to a darker base colour where the question does not arise.
+    a: Through standard-opacity film, often as a gray shadow. If your range is predominantly dark, specify higher opacity or a heavier film weight, or move to a darker base color where the question does not arise.
   - q: Do apparel mailers need a returns strip?
     a: For most clothing brands it pays for itself quickly. Fashion return rates are the highest in retail, and a second adhesive strip means the customer repacks in the original bag rather than finding their own packaging.
 cta:
@@ -53,7 +53,7 @@ That gap is where sizing goes wrong. A garment folded carefully into a 10x13 fit
 
 Two things follow. Test with your own packers, at working pace, on a normal day. And write the fold down — a consistent fold across a team makes parcel size predictable, which makes shipping cost predictable and makes packed parcels stack instead of sprawl.
 
-It is one of the cheapest process improvements available in a fulfilment operation, and almost nobody does it. The [method for sizing against a packed order](/size-guide/) is written to be run this way, with your own packers rather than at a desk.
+It is one of the cheapest process improvements available in a fulfillment operation, and almost nobody does it. The [method for sizing against a packed order](/size-guide/) is written to be run this way, with your own packers rather than at a desk.
 
 ## Sizing across a range that varies
 
@@ -66,15 +66,15 @@ Garment bulk varies more within a single range than most buyers expect. These ar
 - **Hoodies and sweatshirts.** A 14.5x19 for anything heavyweight, fleece-lined or oversized. A thin unlined hoodie will go into a 12x15, but it fills it.
 - **Jackets and multi-garment orders.** A 19x24, which is also the size that makes consolidation practical.
 
-Most apparel operations settle on two or three of these rather than one. The exception is a range with genuinely uniform bulk, where standardising is worth the small waste on the lightest orders.
+Most apparel operations settle on two or three of these rather than one. The exception is a range with genuinely uniform bulk, where standardizing is worth the small waste on the lightest orders.
 
 The size to make sure you have is the largest one. It handles a small share of orders and it is the one that generates damage claims when it is missing, because the alternative is forcing a coat into a bag built for a tee — which is what the [larger formats](/large-poly-mailers/) exist for.
 
 ## Opacity is a specification, not an assumption
 
-A dark garment inside a pale mailer will read as a grey shadow through the front panel unless the film is specified to prevent it. Customers notice, and what they notice is that the packaging looks cheap.
+A dark garment inside a pale mailer will read as a gray shadow through the front panel unless the film is specified to prevent it. Customers notice, and what they notice is that the packaging looks cheap.
 
-This is entirely a specification question. Higher-opacity film and heavier film weights both address it, and either can be quoted against your actual range, as the [materials page](/materials/) explains. Alternatively a darker base colour removes the question completely, which is one reason so many apparel brands run black.
+This is entirely a specification question. Higher-opacity film and heavier film weights both address it, and either can be quoted against your actual range, as the [materials page](/materials/) explains. Alternatively a darker base color removes the question completely, which is one reason so many apparel brands run black.
 
 Deciding this before ordering costs nothing. Discovering it after a run has arrived costs a run.
 
@@ -102,7 +102,7 @@ Where wholesale buyers want goods shelf-ready, that adds a third layer — indiv
 
 If you are starting from nothing, this sequence gets you to a working setup without committing to anything you will regret.
 
-1. **Take your five most-shipped products.** Not the catalogue. Five will cover most of your volume.
+1. **Take your five most-shipped products.** Not the catalog. Five will cover most of your volume.
 2. **Pack each as a complete order.** With the insert, the tissue and the returns slip, folded by the people who actually pack.
 3. **Group them into two or three sizes.** They will cluster naturally. Resist covering every edge case.
 4. **Decide the returns route before ordering.** Double strip, separate returns bag, or customer-supplied. Each has a different cost, and the choice belongs here rather than later.
@@ -115,8 +115,8 @@ The wider picture for a garment operation, including wholesale alongside direct,
 
 Apparel customers photograph and post what arrives more than any other category, which means the outside of the bag is doing brand work whether you designed it to or not.
 
-That does not require an expensive answer. A coloured film rather than white, a matte finish rather than gloss, a consistently placed label and something considered inside the bag will read better than an elaborate printed design applied carelessly.
+That does not require an expensive answer. A colored film rather than white, a matte finish rather than gloss, a consistently placed label and something considered inside the bag will read better than an elaborate printed design applied carelessly.
 
 What reads badly is a scuffed white bag with a dark garment shadowing through it and a label applied at an angle. Every one of those is a specification or process decision, and all three are cheap to fix.
 
-If you are weighing whether to print at all, the case for staying on plain coloured stock longer than you think is set out on the [blank mailer page](/blank-poly-mailers/), which is worth reading before committing artwork to a run.
+If you are weighing whether to print at all, the case for staying on plain colored stock longer than you think is set out on the [blank mailer page](/blank-poly-mailers/), which is worth reading before committing artwork to a run.

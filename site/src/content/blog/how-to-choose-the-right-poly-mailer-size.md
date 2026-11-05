@@ -56,7 +56,7 @@ A folded t-shirt is not what you ship. What you ship is a folded t-shirt, a than
 
 So the first step is to build a real order. Not a representative one, not a typical one — a complete one, including everything that goes in the parcel on a normal day. If your inserts vary by order type, build the heaviest version.
 
-Do this for your five most-shipped products rather than your whole catalogue. Five will usually account for the large majority of your volume, and they will cluster into two or three sizes without you having to force them — usually into two or three of the [sizes we run as standard](/poly-mailer-sizes/).
+Do this for your five most-shipped products rather than your whole catalog. Five will usually account for the large majority of your volume, and they will cluster into two or three sizes without you having to force them — usually into two or three of the [sizes we run as standard](/poly-mailer-sizes/).
 
 ## The three measurements that matter
 
@@ -102,9 +102,9 @@ A smaller bag costs less per unit and can produce a thicker parcel. A slightly l
 
 This is why weighing and measuring a packed sample matters more than the unit price comparison. The difference between two mailer sizes might be fractions of a cent; the difference between two pricing bands is not.
 
-If you ship internationally, run this check per market rather than once. Format thresholds differ, and a parcel optimised for one market can sit awkwardly in another. The considerations that change across markets are set out in the [guide to ordering across markets](/resources/international-ordering-guide/).
+If you ship internationally, run this check per market rather than once. Format thresholds differ, and a parcel optimized for one market can sit awkwardly in another. The considerations that change across markets are set out in the [guide to ordering across markets](/resources/international-ordering-guide/).
 
-## When to standardise on one size
+## When to standardize on one size
 
 Running a single size removes an entire class of error. Packers never choose wrongly, there is one line to reorder, one artwork file, one carton on the bench.
 
@@ -114,7 +114,7 @@ It stops being worth it when a meaningful proportion of your orders sit badly in
 
 The way to know is your own order data. Pull a month of shipments, group them by packed size, and look at the distribution before deciding. An impression of what you ship is wrong more often than it is right.
 
-Standardising also makes [unprinted stock in a single size](/blank-poly-mailers/) a reasonable first order, because there is no artwork to redo when the size changes.
+Standardizing also makes [unprinted stock in a single size](/blank-poly-mailers/) a reasonable first order, because there is no artwork to redo when the size changes.
 
 ## The mistakes that cost the most
 
@@ -123,7 +123,7 @@ Four errors account for most of the sizing decisions that get reversed within a 
 - **Sizing against the product rather than the order.** Produces a run that stops fitting the moment inserts are added.
 - **Choosing a tight size to save on film.** The film saving is pennies; the shipping cost of a thicker parcel is not.
 - **Buying one size larger for safety.** Higher unit cost, less stable parcels, more damage rather than less.
-- **Standardising on one size across a genuinely varied range.** Waste on the light orders, failures on the heavy ones, and a damage rate concentrated in your most valuable shipments.
+- **Standardizing on one size across a genuinely varied range.** Waste on the light orders, failures on the heavy ones, and a damage rate concentrated in your most valuable shipments.
 
 All four are avoided by the same thing: packing a real order into a physical sample before committing to a run. The [decisions worth settling before you ask for a price](/resources/custom-mailer-ordering-checklist/) cover the rest of them.
 

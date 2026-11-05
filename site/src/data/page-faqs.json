@@ -66,7 +66,7 @@
    },
    {
     "q": "Which film weight suits 12x15 poly mailers for heavier contents?",
-    "a": "Heavier film is the usual choice at 12x15 because the contents tend to be heavier too: knitwear, denim and multi-garment bundles. The exact film weight for your order is confirmed in writing on the quotation."
+    "a": "Heavier film is the usual choice at 12x15 because the contents tend to be heavier too: knitwear, denim and multi-garment bundles. The exact film weight for your order is confirmed on the quotation."
    },
    {
     "q": "How do I decide between 10x13 and 12x15 when between sizes?",
@@ -108,7 +108,7 @@
   "faqs": [
    {
     "q": "Can 19x24 poly mailers handle wholesale drops to a stockist?",
-    "a": "Yes. A small soft-goods assortment going to one retail account is a typical 19x24 use, travelling without the cost or weight of a carton and void fill. Anything that needs packaging to hold a shape should still go in a box."
+    "a": "Yes. A small soft-goods assortment going to one retail account is a typical 19x24 use, traveling without the cost or weight of a carton and void fill. Anything that needs packaging to hold a shape should still go in a box."
    },
    {
     "q": "How should weight be spread inside a 19x24 poly mailer?",
@@ -157,7 +157,7 @@
    },
    {
     "q": "Does matte or gloss suit a printed 24x24 mailer better?",
-    "a": "Matte is usually the better choice on a 24x24, because it reduces the visible creasing that lofty contents cause across a large face. The finish for your order is confirmed in writing on your quotation."
+    "a": "Matte is usually the better choice on a 24x24, because it reduces the visible creasing that lofty contents cause across a large face. The finish for your order is confirmed on your quotation."
    }
   ]
  },
@@ -228,7 +228,7 @@
    },
    {
     "q": "Why does The Poly Mailers not publish fixed delivery times?",
-    "a": "Timing depends on the specification, the quantity, the print and how quickly a proof is approved, so one published figure would be wrong for most orders. Instead we confirm a schedule for your specific order in writing."
+    "a": "Timing depends on the specification, the quantity, the print and how quickly a proof is approved, so one published figure would be wrong for most orders. Instead we confirm a schedule for your specific order by email."
    },
    {
     "q": "Can The Poly Mailers quote custom dimensions outside standard sizes?",
@@ -286,7 +286,7 @@
    },
    {
     "q": "Which checks are run when poly mailer artwork arrives?",
-    "a": "Five: a technical check of format, resolution, color mode, bleed and line weights; a layout check for flap, welds and label zone; a contrast check against the film; then a proof; then written approval before scheduling."
+    "a": "Five: a technical check of format, resolution, color mode, bleed and line weights; a layout check for flap, welds and label zone; a contrast check against the film; then a proof; then your approval before scheduling."
    },
    {
     "q": "Which artwork file types does the poly mailer quote form accept?",
@@ -303,7 +303,7 @@
   "faqs": [
    {
     "q": "How should an Australian business plan a poly mailer order date?",
-    "a": "Work from a date, not a duration. Fix when stock must be on your bench in Australia, then work backwards through production and proof approval. We confirm the schedule in writing with the critical path identified."
+    "a": "Work from a date, not a duration. Fix when stock must be on your bench in Australia, then work backwards through production and proof approval. We confirm the schedule by email with the critical path identified."
    },
    {
     "q": "Why keep plain poly mailer stock as a fallback in Australia?",
@@ -315,7 +315,7 @@
    },
    {
     "q": "Are import charges shown on Australian poly mailer quotations?",
-    "a": "Documentation and charges for an Australian order are stated on the quotation, before you commit. Quotations for Australian customers are issued in Australian dollars, alongside the written schedule for your order."
+    "a": "Documentation and charges for an Australian order are stated on the quotation, before you commit. Quotations for Australian customers are issued in Australian dollars, alongside the confirmed schedule for your order."
    },
    {
     "q": "When should an Australian business reorder custom poly mailers?",
@@ -835,7 +835,7 @@
    },
    {
     "q": "What should a Canadian business include in a poly mailer brief?",
-    "a": "Tell us what you ship, where it goes and whether the packaging needs to carry French wording. We quote against that and confirm currency, documentation and the schedule for your Canadian order in writing."
+    "a": "Tell us what you ship, where it goes and whether the packaging needs to carry French wording. We quote against that and confirm currency, documentation and the schedule for your Canadian order by email."
    },
    {
     "q": "Can you supply documentation for a Canadian business's own adviser?",
@@ -934,8 +934,8 @@
     "a": "When you are not sure what you need and a conversation will get there faster than an exchange of emails. Either phone line reaches the same team, so use whichever is cheaper to call from where you are."
    },
    {
-    "q": "Are poly mailer details agreed by phone confirmed in writing?",
-    "a": "Yes. Anything agreed by phone is confirmed back to you in writing afterwards, so the specification, quantities and any other decisions about your poly mailer order are recorded clearly for both sides."
+    "q": "Are poly mailer details agreed by phone confirmed by email?",
+    "a": "Yes. Anything agreed by phone is confirmed back to you by email afterwards, so the specification, quantities and any other decisions about your poly mailer order are recorded clearly for both sides."
    },
    {
     "q": "What is WhatsApp best for when contacting The Poly Mailers?",
@@ -951,15 +951,15 @@
    },
    {
     "q": "Which markets can contact The Poly Mailers for supply?",
-    "a": "Businesses in the United States, United Kingdom, Canada and Australia. Each market is supplied the same way, with currency, documentation and delivery arrangements confirmed in writing for your country."
+    "a": "Businesses in the United States, United Kingdom, Canada and Australia. Each market is supplied the same way, with currency, documentation and delivery arrangements confirmed by email for your country."
    },
    {
     "q": "Should I attach artwork when contacting The Poly Mailers?",
-    "a": "Yes, if you have it. When your inquiry has detail attached, sending it in writing with your artwork is the fastest route to a useful answer, because we can check the file against the specification straight away."
+    "a": "Yes, if you have it. When your inquiry has detail attached, emailing it with your artwork is the fastest route to a useful answer, because we can check the file against the specification straight away."
    },
    {
     "q": "Can I send a poly mailer brief through a form instead?",
-    "a": "Yes. If you would rather send your brief in writing, the <a href=\"/request-a-quote/\">poly mailer quote request form</a> takes what you ship, roughly how many and which market, and accepts artwork files with the inquiry."
+    "a": "Yes. If you would rather type out your brief, the <a href=\"/request-a-quote/\">poly mailer quote request form</a> takes what you ship, roughly how many and which market, and accepts artwork files with the inquiry."
    }
   ]
  },
@@ -1017,7 +1017,7 @@
    },
    {
     "q": "Does the custom order policy cover damage in transit?",
-    "a": "Where we arranged the shipping, damage in transit is ours to resolve. Report it promptly with photographs of the packaging as it arrived, and we will confirm next steps in writing so both sides keep a record."
+    "a": "Where we arranged the shipping, damage in transit is ours to resolve. Report it promptly with photographs of the packaging as it arrived, and we will confirm next steps by email so both sides keep a record."
    }
   ]
  },
@@ -1042,7 +1042,7 @@
    },
    {
     "q": "Can I preview custom poly mailers before requesting a quote?",
-    "a": "Yes. Our <a href=\"/design-your-poly-mailer/\">poly mailer design tool</a> lets you choose size, color and finish and position your logo. It is an approximate guide, and final artwork is confirmed on a proof you approve before anything runs."
+    "a": "Yes. Our <a href=\"/design-your-poly-mailer/\">Design Your Poly Mailers page</a> lets you choose size, color and finish and position your logo. It is an approximate guide, and final artwork is confirmed on a proof you approve before anything runs."
    }
   ]
  },
@@ -1080,27 +1080,27 @@
   ]
  },
  "/design-your-poly-mailer/": {
-  "h2": "More questions about the poly mailer design tool",
+  "h2": "More questions about designing your poly mailer",
   "faqs": [
    {
-    "q": "Should I choose my size before using the poly mailer design tool?",
-    "a": "Yes. The design tool is quickest when you already know the size, and a preview cannot tell you whether your product fits. Settle the size with a physical sample packed with a real order first."
+    "q": "Should I choose my size before designing my poly mailer online?",
+    "a": "Yes. Designing online is quickest when you already know the size, and a preview cannot tell you whether your product fits. Settle the size with a physical sample packed with a real order first."
    },
    {
-    "q": "Does the poly mailer design tool produce print-ready artwork?",
+    "q": "Does designing my poly mailer online produce print-ready artwork?",
     "a": "No. The preview is a visual guide, not manufacturing artwork. Print-ready files are prepared to the artwork guidelines and confirmed on a proof that you approve before anything is printed."
    },
    {
-    "q": "Does the poly mailer design tool calculate a price?",
+    "q": "Does designing my poly mailer online calculate a price?",
     "a": "No. Quantity, market and specification interact, so a price comes back from a person rather than a calculator that would be wrong. Your configuration is attached to the quote request so we price exactly what you built."
    },
    {
-    "q": "How large should my logo be in the poly mailer design tool?",
-    "a": "Add artwork at a generous size. Marks read smaller on a packed, folded and labeled bag than they do on a flat preview, so a logo that looks large in the design tool is often about right in use."
+    "q": "How large should my logo be when I design my poly mailer online?",
+    "a": "Add artwork at a generous size. Marks read smaller on a packed, folded and labeled bag than they do on a flat preview, so a logo that looks large in the online preview is often about right in use."
    },
    {
-    "q": "Can I rely on colors shown in the poly mailer design tool?",
-    "a": "Not for accurate color. A screen is backlit and film is not. Where a color matters commercially, ask for a physical check rather than approving from the design tool preview or a digital proof."
+    "q": "Can I rely on colors shown when I design my poly mailer online?",
+    "a": "Not for accurate color. A screen is backlit and film is not. Where a color matters commercially, ask for a physical check rather than approving from the on-screen preview or a digital proof."
    }
   ]
  },
@@ -1167,7 +1167,7 @@
   "faqs": [
    {
     "q": "What are the five stages of a poly mailer order?",
-    "a": "Brief, specification, proof, production and dispatch. You tell us what you ship, we agree the specification in writing, you approve a proof, the run is produced and checked against it, then cartons are counted and shipped to your address."
+    "a": "Brief, specification, proof, production and dispatch. You tell us what you ship, we agree the specification by email, you approve a proof, the run is produced and checked against it, then cartons are counted and shipped to your address."
    },
    {
     "q": "At which points do poly mailer order changes stop being free?",
@@ -1228,7 +1228,7 @@
    },
    {
     "q": "How should I brief you about my industry's poly mailer needs?",
-    "a": "Send your order profile and the failures you are currently seeing, such as split seals or scuffed cartons. We will recommend a specification for your industry and explain the reasoning behind it, along with a written price."
+    "a": "Send your order profile and the failures you are currently seeing, such as split seals or scuffed cartons. We will recommend a specification for your industry and explain the reasoning behind it, along with a firm price."
    }
   ]
  },
@@ -1597,7 +1597,7 @@
    },
    {
     "q": "Can you supply poly mailers to a city without its own guide?",
-    "a": "Yes. The location guides are where we have something specific to say, not the limits of where we ship. Anywhere in the four markets, the supply model is identical: produced to order, shipped to your address, schedule confirmed in writing."
+    "a": "Yes. The location guides are where we have something specific to say, not the limits of where we ship. Anywhere in the four markets, the supply model is identical: produced to order, shipped to your address, schedule confirmed by email."
    },
    {
     "q": "Why not publish a poly mailer guide for every town?",
@@ -1621,7 +1621,7 @@
    },
    {
     "q": "What should I send to get a poly mailer quote for my location?",
-    "a": "Tell us what you ship and where it goes. We will confirm a specification, a schedule and a price in writing, with currency and documentation set for your market."
+    "a": "Tell us what you ship and where it goes. We will confirm a specification, a schedule and a price by email, with currency and documentation set for your market."
    }
   ]
  },
@@ -1832,7 +1832,7 @@
    },
    {
     "q": "Why do northern supplier calendars cause Brisbane ordering problems?",
-    "a": "Suppliers running on a northern year are busiest when Brisbane businesses need them least, and the reverse. Planning from your own calendar, with a written schedule, avoids depending on someone else's seasons."
+    "a": "Suppliers running on a northern year are busiest when Brisbane businesses need them least, and the reverse. Planning from your own calendar, with a confirmed schedule, avoids depending on someone else's seasons."
    },
    {
     "q": "Why should Brisbane seasonal mailer quantities stay tight?",
@@ -1927,7 +1927,7 @@
   "faqs": [
    {
     "q": "Why must Charlotte corporate sends arrive on a specific date?",
-    "a": "Corporate parcels are tied to a start date, an event or an announcement. Unlike a retail order, arriving early or late defeats the purpose, so tell us the date a Charlotte send must arrive and we confirm a schedule in writing."
+    "a": "Corporate parcels are tied to a start date, an event or an announcement. Unlike a retail order, arriving early or late defeats the purpose, so tell us the date a Charlotte send must arrive and we confirm a schedule by email."
    },
    {
     "q": "Is paying more per unit sensible for Charlotte corporate gifts?",
@@ -1947,7 +1947,7 @@
    },
    {
     "q": "What should Charlotte businesses send to quote a corporate mailing?",
-    "a": "Tell us the headcount, the date the parcels must arrive and what goes inside. We will specify the Charlotte send for the occasion rather than for unit cost, and confirm the price in writing."
+    "a": "Tell us the headcount, the date the parcels must arrive and what goes inside. We will specify the Charlotte send for the occasion rather than for unit cost, and confirm the price by email."
    },
    {
     "q": "Which mailer size suits Charlotte onboarding and gift packs?",
@@ -1980,7 +1980,7 @@
    },
    {
     "q": "Can my mailer order arrive in Chicago before a fixed show date?",
-    "a": "Tell us the show date when you ask for a quote. Production and transit depend on specification, quantity and proof approval, so we confirm a written schedule for your order and give you the date to work backwards from rather than a general lead time."
+    "a": "Tell us the show date when you ask for a quote. Production and transit depend on specification, quantity and proof approval, so we confirm a schedule for your order and give you the date to work backwards from rather than a general lead time."
    },
    {
     "q": "What should go inside each parcel shipped to a Chicago trade show?",
@@ -2017,7 +2017,7 @@
    },
    {
     "q": "How do I get a mailer recommendation for a lofty Colorado product?",
-    "a": "Send the packed dimensions of your loftiest product and what else ships with it. We will tell you whether a gusset or a larger format is the right answer, confirm the specification in writing and quote it. You can <a href=\"/large-poly-mailers/\">compare the large mailer formats</a> first."
+    "a": "Send the packed dimensions of your loftiest product and what else ships with it. We will tell you whether a gusset or a larger format is the right answer, confirm the specification by email and quote it. You can <a href=\"/large-poly-mailers/\">compare the large mailer formats</a> first."
    }
   ]
  },
@@ -2050,7 +2050,7 @@
    },
    {
     "q": "Can Columbus brands order sample mailers alongside their production mailers?",
-    "a": "Yes. Tell us what your samples are and how far they travel, along with your production needs, and we will specify both and quote them together. Everything is confirmed in writing before anything is scheduled, and printed runs wait for your proof approval."
+    "a": "Yes. Tell us what your samples are and how far they travel, along with your production needs, and we will specify both and quote them together. Everything is confirmed by email before anything is scheduled, and printed runs wait for your proof approval."
    }
   ]
  },
@@ -2145,7 +2145,7 @@
    },
    {
     "q": "When should Florida seasonal retailers place their mailer orders?",
-    "a": "Plan around the ramp, not the peak. Stock must be in place before volume climbs, which is earlier than the busiest weeks. Map parcels shipped by month across a year, then tell us your dates so we can confirm a written schedule at quotation."
+    "a": "Plan around the ramp, not the peak. Stock must be in place before volume climbs, which is earlier than the busiest weeks. Map parcels shipped by month across a year, then tell us your dates so we can confirm a schedule at quotation."
    },
    {
     "q": "Do Florida beauty brands need padding as well as a film outer?",
@@ -2178,7 +2178,7 @@
    },
    {
     "q": "Can Fort Worth businesses order several film weights on one quote?",
-    "a": "Yes. Many operations ship belts and garments alongside heavier hardware-laden goods. Tell us what you ship, including anything with hardware, and we will specify a film weight and format for each and quote them together in writing."
+    "a": "Yes. Many operations ship belts and garments alongside heavier hardware-laden goods. Tell us what you ship, including anything with hardware, and we will specify a film weight and format for each and quote them together by email."
    },
    {
     "q": "How do I compare film weights for Fort Worth leather and hardware goods?",
@@ -2207,7 +2207,7 @@
    },
    {
     "q": "Are mailer orders to Glasgow quoted in pounds sterling?",
-    "a": "Yes. Quotations are issued in the currency of the destination market, so an order delivered to a Glasgow address is quoted for the UK. Any documentation and the shipping arrangement for your order are also confirmed in writing before you commit."
+    "a": "Yes. Quotations are issued in the currency of the destination market, so an order delivered to a Glasgow address is quoted for the UK. Any documentation and the shipping arrangement for your order are also confirmed by email before you commit."
    },
    {
     "q": "How should Glasgow sellers check the seal before a long Scottish route?",
@@ -2240,7 +2240,7 @@
    },
    {
     "q": "Can Houston businesses order mailers with a documents-enclosed pouch?",
-    "a": "Tell us at specification stage if a shipment genuinely needs a documents-enclosed pouch, because it changes the recommended format. It is far easier to plan into the order than to add afterward, and we confirm the final specification in writing."
+    "a": "Tell us at specification stage if a shipment genuinely needs a documents-enclosed pouch, because it changes the recommended format. It is far easier to plan into the order than to add afterward, and we confirm the final specification by email."
    },
    {
     "q": "Should Houston ecommerce brands brand mailers going to international customers?",
@@ -2323,7 +2323,7 @@
   "faqs": [
    {
     "q": "When should Massachusetts businesses order mailers ahead of the fall semester rush?",
-    "a": "Order before the ramp, not the peak. Stock needs to be on the bench while late-summer volume is climbing, which is earlier than the busiest week. Tell us your dates at quotation and we confirm a written schedule to work backwards from."
+    "a": "Order before the ramp, not the peak. Stock needs to be on the bench while late-summer volume is climbing, which is earlier than the busiest week. Tell us your dates at quotation and we confirm a schedule to work backwards from."
    },
    {
     "q": "Which mailer sizes cover Massachusetts education retail during seasonal spikes?",
@@ -2339,7 +2339,7 @@
    },
    {
     "q": "How do Massachusetts life sciences shippers keep mailer supply consistent?",
-    "a": "For B2B shipping where documentation and consistency matter, settle one written specification and reorder against it. Every order is confirmed in writing, so repeat runs match the agreed size, film, closure and color rather than drifting between suppliers."
+    "a": "For B2B shipping where documentation and consistency matter, settle one agreed specification and reorder against it. Every order is confirmed by email, so repeat runs match the agreed size, film, closure and color rather than drifting between suppliers."
    },
    {
     "q": "Does storage space decide how often Massachusetts businesses reorder mailers?",
@@ -2578,7 +2578,7 @@
    },
    {
     "q": "What should a Pennsylvania business send to plan a mailer size set?",
-    "a": "Send a month of order data or a description of what you ship. We will propose the smallest size set that genuinely covers it, confirmed in writing. The <a href=\"/resources/mailer-measurement-guide/\">mailer measurement guide</a> shows how to measure packed items."
+    "a": "Send a month of order data or a description of what you ship. We will propose the smallest size set that genuinely covers it, confirmed by email. The <a href=\"/resources/mailer-measurement-guide/\">mailer measurement guide</a> shows how to measure packed items."
    }
   ]
  },
@@ -2587,7 +2587,7 @@
   "faqs": [
    {
     "q": "Why should Perth businesses reorder mailers on a stock trigger?",
-    "a": "Because a top-up takes real time to reach Perth, a calendar reorder can leave you short. Set a stock level high enough that delivery arrives before you reach the bottom, and confirm the schedule in writing so you plan against a real date."
+    "a": "Because a top-up takes real time to reach Perth, a calendar reorder can leave you short. Set a stock level high enough that delivery arrives before you reach the bottom, and confirm the schedule by email so you plan against a real date."
    },
    {
     "q": "Do Perth parcels need a closer mailer fit for long road legs?",
@@ -2611,7 +2611,7 @@
    },
    {
     "q": "Are Perth mailer orders quoted in Australian dollars?",
-    "a": "Yes. Quotations are issued in the currency of the destination market, so a Perth delivery is quoted for Australia, with documentation and the shipping arrangement confirmed in writing. See how <a href=\"/australia/\">ordering for Australian customers works</a>."
+    "a": "Yes. Quotations are issued in the currency of the destination market, so a Perth delivery is quoted for Australia, with documentation and the shipping arrangement confirmed by email. See how <a href=\"/australia/\">ordering for Australian customers works</a>."
    }
   ]
  },
@@ -2686,7 +2686,7 @@
   "faqs": [
    {
     "q": "How should San Diego brands time mailer orders against offshore production?",
-    "a": "Fix the date finished goods land where they will be packed, not the date they ship, then work packaging back from it with a genuine buffer. Production schedules move, so plan around arrival and confirm the mailer schedule in writing at quotation."
+    "a": "Fix the date finished goods land where they will be packed, not the date they ship, then work packaging back from it with a genuine buffer. Production schedules move, so plan around arrival and confirm the mailer schedule at quotation."
    },
    {
     "q": "Why do blank mailers reduce schedule risk for San Diego apparel brands?",
@@ -2694,7 +2694,7 @@
    },
    {
     "q": "Can San Diego brands split a mailer delivery when product dates are uncertain?",
-    "a": "Yes. A partial delivery first and the balance later costs a little more but removes most of the risk of packaging arriving too early or too late. Tell us the likely date range and we will confirm a split schedule in writing."
+    "a": "Yes. A partial delivery first and the balance later costs a little more but removes most of the risk of packaging arriving too early or too late. Tell us the likely date range and we will confirm a split schedule by email."
    },
    {
     "q": "Do San Diego action sports brands need frosted bags at the factory?",
@@ -2756,7 +2756,7 @@
    },
    {
     "q": "Which step usually delays printed mailer orders for Sydney brands?",
-    "a": "For most printed orders the critical path is proof approval, not production. Settle artwork well before you need it and name who approves the proof. We confirm a schedule in writing and tell you which step is critical for your order."
+    "a": "For most printed orders the critical path is proof approval, not production. Settle artwork well before you need it and name who approves the proof. We confirm a schedule by email and tell you which step is critical for your order."
    },
    {
     "q": "Should Sydney ecommerce brands standardize on one mailer size?",
@@ -2776,7 +2776,7 @@
    },
    {
     "q": "Which currency are Sydney poly mailer quotations issued in?",
-    "a": "Yes. Quotations are issued in the currency of the destination market, and the schedule, shipping arrangement and any documentation are confirmed in writing for your order. Read how <a href=\"/australia/\">Australian ordering and delivery work</a>."
+    "a": "Yes. Quotations are issued in the currency of the destination market, and the schedule, shipping arrangement and any documentation are confirmed by email for your order. Read how <a href=\"/australia/\">Australian ordering and delivery work</a>."
    }
   ]
  },
@@ -2809,7 +2809,7 @@
    },
    {
     "q": "When should Tennessee artists fix dates for a merch mailer order?",
-    "a": "Work backwards from when stock must be on the bench, through production, proof approval and artwork, and fix each date. Tell us that date at quotation and we will confirm a written schedule. Read how a <a href=\"/custom-printed-poly-mailers/\">printed mailer run is timed</a>."
+    "a": "Work backwards from when stock must be on the bench, through production, proof approval and artwork, and fix each date. Tell us that date at quotation and we will confirm a schedule. Read how a <a href=\"/custom-printed-poly-mailers/\">printed mailer run is timed</a>."
    }
   ]
  },
@@ -2867,11 +2867,11 @@
    },
    {
     "q": "Should Toronto cross-border mailers include a pouch for customs documents?",
-    "a": "Tell us at specification stage if a shipment needs a documents-enclosed pouch. It changes the recommended format, and it is much easier to plan for at the start than to retrofit. The final specification is confirmed in writing before production."
+    "a": "Tell us at specification stage if a shipment needs a documents-enclosed pouch. It changes the recommended format, and it is much easier to plan for at the start than to retrofit. The final specification is confirmed by email before production."
    },
    {
     "q": "Are Toronto mailer orders quoted in Canadian dollars?",
-    "a": "Yes. Quotations are issued in the currency of the destination market, and documentation, charges and delivery arrangements for the order are confirmed in writing rather than assumed. They differ by destination and by shipping arrangement."
+    "a": "Yes. Quotations are issued in the currency of the destination market, and documentation, charges and delivery arrangements for the order are confirmed by email rather than assumed. They differ by destination and by shipping arrangement."
    },
    {
     "q": "What should Toronto fulfillment operations serving both markets ask for?",
@@ -2983,7 +2983,7 @@
   "faqs": [
    {
     "q": "Why are poly mailer film thicknesses not listed in microns or mils?",
-    "a": "Suppliers measure differently, flat film against a finished bag, target against minimum, so figures are not comparable. The film also varies by market and production run. We describe films by what they do and confirm the specification for your order in writing."
+    "a": "Suppliers measure differently, flat film against a finished bag, target against minimum, so figures are not comparable. The film also varies by market and production run. We describe films by what they do and confirm the specification for your order by email."
    },
    {
     "q": "Can I get a numeric poly mailer film specification for a tender?",
@@ -3132,7 +3132,7 @@
    },
    {
     "q": "How do I stop dark products shadowing through light poly mailer colors?",
-    "a": "Match opacity to your contents. Dark products under pale film need a higher opacity specification, or they show through. Tell us what you ship and we will confirm an opacity level for your chosen color in writing on the quotation."
+    "a": "Match opacity to your contents. Dark products under pale film need a higher opacity specification, or they show through. Tell us what you ship and we will confirm an opacity level for your chosen color on the quotation."
    },
    {
     "q": "Is a screen color good enough to order poly mailer colors from?",
@@ -3226,7 +3226,7 @@
    },
    {
     "q": "Can I mix several products from the poly mailer range on one quote?",
-    "a": "Yes. Many orders combine sizes, colors or constructions, and each is confirmed in writing before scheduling, so tell us what you ship and we will recommend what fits. Start with the <a href=\"/poly-mailer-sizes/\">poly mailer size comparison</a> if size is the open question."
+    "a": "Yes. Many orders combine sizes, colors or constructions, and each is confirmed by email before scheduling, so tell us what you ship and we will recommend what fits. Start with the <a href=\"/poly-mailer-sizes/\">poly mailer size comparison</a> if size is the open question."
    }
   ]
  },
@@ -3309,7 +3309,7 @@
    },
    {
     "q": "Does recycled content in poly mailers stay the same on reorder?",
-    "a": "Not necessarily, because content can move between batches with available feedstock. Ask whether the figure is guaranteed on repeat orders or quoted per run. We confirm what the film for each order supports, in writing, with the supplier's documentation."
+    "a": "Not necessarily, because content can move between batches with available feedstock. Ask whether the figure is guaranteed on repeat orders or quoted per run. We confirm what the film for each order supports, by email, with the supplier's documentation."
    },
    {
     "q": "What documents back up a recycled poly mailer claim?",
@@ -3330,7 +3330,7 @@
    },
    {
     "q": "How will I receive my poly mailer quote?",
-    "a": "We read your request and reply by email to the address you give us. The reply confirms the specification in writing, covering size, film, closure, color, coverage and quantity, along with a price and a schedule."
+    "a": "We read your request and reply by email to the address you give us. The reply confirms the specification, covering size, film, closure, color, coverage and quantity, along with a price and a schedule."
    },
    {
     "q": "How long is a poly mailer quote valid?",
@@ -3350,11 +3350,11 @@
    },
    {
     "q": "Can I phone instead of sending a poly mailer quote request?",
-    "a": "Yes. A phone call is faster when you are still deciding what to order, and anything agreed that way is written back to you before it goes near production. For detailed specifications or artwork, email leaves a clearer record."
+    "a": "Yes. A phone call is faster when you are still deciding what to order, and anything agreed that way is confirmed back to you by email before it goes near production. For detailed specifications or artwork, email leaves a clearer record."
    },
    {
     "q": "Does a poly mailer quote include shipping costs?",
-    "a": "Yes. Shipping cost is quoted rather than absorbed into the unit price, so you can see it. The delivery address, schedule, shipping arrangement and any documentation for your market are also confirmed in writing on the quotation."
+    "a": "Yes. Shipping cost is quoted rather than absorbed into the unit price, so you can see it. The delivery address, schedule, shipping arrangement and any documentation for your market are also confirmed on the quotation."
    },
    {
     "q": "How can I make my poly mailer quote accurate first time?",
@@ -3379,7 +3379,7 @@
    },
    {
     "q": "Why do the poly mailer reference guides contain no gauge figures or percentages?",
-    "a": "Because we will not publish numbers we cannot stand behind for your order. Film gauge varies by market and run, recycled content varies by batch, and delivery time depends on the order, so each is confirmed in writing on your quotation instead."
+    "a": "Because we will not publish numbers we cannot stand behind for your order. Film gauge varies by market and run, recycled content varies by batch, and delivery time depends on the order, so each is confirmed on your quotation instead."
    },
    {
     "q": "Which poly mailer reference guide helps with first-time artwork?",
@@ -3490,7 +3490,7 @@
    },
    {
     "q": "Why does the mailer ordering checklist ask for a delivery date?",
-    "a": "A date, not a duration, is what everything else works backwards from, including proof approval and production. Give the date stock must be on the bench, and the schedule on your quotation can be built around it in writing."
+    "a": "A date, not a duration, is what everything else works backwards from, including proof approval and production. Give the date stock must be on the bench, and the schedule on your quotation can be built around it."
    },
    {
     "q": "How does the mailer ordering checklist handle closure choice?",
@@ -3771,7 +3771,7 @@
    },
    {
     "q": "Why are Christmas poly mailers riskier to schedule than other seasonal runs?",
-    "a": "Christmas is the highest-volume window and the one with capacity risk, so late orders compete with everyone else's peak. Fix the date stock must be on the bench and work backwards through proof approval and production, then confirm the schedule in writing."
+    "a": "Christmas is the highest-volume window and the one with capacity risk, so late orders compete with everyone else's peak. Fix the date stock must be on the bench and work backwards through proof approval and production, then confirm the schedule by email."
    },
    {
     "q": "How tightly should Halloween poly mailers be ordered?",
@@ -3817,7 +3817,7 @@
   "faqs": [
    {
     "q": "Why is no standard delivery time published for poly mailer orders?",
-    "a": "Production depends on specification, quantity, printing and how quickly a proof is approved, and transit depends on destination, weight and service. One figure would be wrong for most orders, so we confirm a written schedule for yours at quotation."
+    "a": "Production depends on specification, quantity, printing and how quickly a proof is approved, and transit depends on destination, weight and service. One figure would be wrong for most orders, so we confirm a schedule for yours at quotation."
    },
    {
     "q": "Is shipping cost included in the poly mailer unit price?",
@@ -3953,7 +3953,7 @@
    },
    {
     "q": "Why does the sustainable poly mailer comparison publish no percentages?",
-    "a": "None were supplied with evidence. Recycled content varies by film, batch and market, so a single figure could not be honored for every order. We confirm what the film for your order supports, in writing, with the documentation behind it."
+    "a": "None were supplied with evidence. Recycled content varies by film, batch and market, so a single figure could not be honored for every order. We confirm what the film for your order supports, by email, with the documentation behind it."
    },
    {
     "q": "What should I send to compare sustainable poly mailer options?",
@@ -3974,11 +3974,11 @@
    },
    {
     "q": "Is there UK stock available for a fast top-up of mailers?",
-    "a": "No. There are no UK premises, trade counter or local stock, so every order is made to the specification you approve and shipped to your address. Plan against the schedule confirmed in writing on your quotation rather than a quick restock."
+    "a": "No. There are no UK premises, trade counter or local stock, so every order is made to the specification you approve and shipped to your address. Plan against the schedule confirmed on your quotation rather than a quick restock."
    },
    {
     "q": "How is a delivery schedule set for a UK poly mailer order?",
-    "a": "It is confirmed in writing for your specific order rather than published as a general figure, because production and transit depend on specification, quantity and proof approval. Tell us any fixed date at the start so the schedule is built around it."
+    "a": "It is confirmed by email for your specific order rather than published as a general figure, because production and transit depend on specification, quantity and proof approval. Tell us any fixed date at the start so the schedule is built around it."
    },
    {
     "q": "Do UK delivery access limits affect a poly mailer order?",
@@ -3999,11 +3999,11 @@
    },
    {
     "q": "Can US buyers get a next-day poly mailer delivery?",
-    "a": "No. Orders are made to the specification you approve and shipped to your address, so there is no shelf stock for same-week or next-day top-ups. A schedule is confirmed in writing for your order, so you plan against a real date."
+    "a": "No. Orders are made to the specification you approve and shipped to your address, so there is no shelf stock for same-week or next-day top-ups. A schedule is confirmed by email for your order, so you plan against a real date."
    },
    {
     "q": "Is the specification process the same for US poly mailer orders as elsewhere?",
-    "a": "Yes. Specification, proofing and quality checks are the same wherever the order goes. What differs for US customers is that you order to a schedule, with the currency, documentation and delivery arrangements confirmed in writing."
+    "a": "Yes. Specification, proofing and quality checks are the same wherever the order goes. What differs for US customers is that you order to a schedule, with the currency, documentation and delivery arrangements confirmed by email."
    },
    {
     "q": "Do US location pages cover different shipping problems?",
@@ -4011,7 +4011,7 @@
    },
    {
     "q": "Is the phone number for US poly mailer customers a local number?",
-    "a": "No. The contact line serves every market and is not presented as a local US number, because it is not one. Either phone line reaches the same team, and anything agreed by phone is confirmed back to you in writing."
+    "a": "No. The contact line serves every market and is not presented as a local US number, because it is not one. Either phone line reaches the same team, and anything agreed by phone is confirmed back to you by email."
    },
    {
     "q": "What should US businesses settle before requesting a poly mailer price?",
@@ -4308,7 +4308,7 @@
    },
    {
     "q": "How should Maryland advocacy groups time campaign mailings against a fixed date?",
-    "a": "Nonprofit and advocacy mailings often carry a fixed budget and a fixed send date. Tell us the date the mailers must arrive when you ask for a price, and the production schedule, including when proof approval becomes critical, is confirmed in writing."
+    "a": "Nonprofit and advocacy mailings often carry a fixed budget and a fixed send date. Tell us the date the mailers must arrive when you ask for a price, and the production schedule, including when proof approval becomes critical, is confirmed by email."
    }
   ]
  },

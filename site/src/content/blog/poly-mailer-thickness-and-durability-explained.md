@@ -13,7 +13,7 @@ reviewed: 2026-08-15
 author: The Poly Mailers editorial team
 reviewer: Production and specification desk
 heroImage: ../../assets/products/silver-grey-poly-mailers-stacked-open-flap.png
-heroAlt: Silver-grey mailers stacked flat, the top one peeled back to show the film thickness at the fold
+heroAlt: Silver-gray mailers stacked flat, the top one peeled back to show the film thickness at the fold
 related:
   - href: /resources/poly-mailer-material-guide/
     label: Comparing films between suppliers

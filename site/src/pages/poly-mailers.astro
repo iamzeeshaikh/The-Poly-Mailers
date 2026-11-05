@@ -24,9 +24,9 @@ const groups = [
   },
   {
     key: 'color' as const,
-    title: 'By colour and print status',
+    title: 'By color and print status',
     blurb:
-      'Colour is the cheapest branding available and it is also a technical decision — the base determines which inks will read and how much shows through the film.',
+      'Color is the cheapest branding available and it is also a technical decision — the base determines which inks will read and how much shows through the film.',
   },
   {
     key: 'protective' as const,
@@ -59,7 +59,7 @@ const schema = graph([
     path,
     name: 'All poly mailers',
     description:
-      'Every poly mailer we supply, grouped by the decision behind it — size, colour, protection, print, sustainability and specialist formats.',
+      'Every poly mailer we supply, grouped by the decision behind it — size, color, protection, print, sustainability and specialist formats.',
     type: 'CollectionPage',
     hasBreadcrumb: true,
   }),
@@ -73,8 +73,8 @@ const schema = graph([
 ---
 
 <BaseLayout
-  title="All Poly Mailers | Sizes, Colours & Printed Formats"
-  description="Every poly mailer we supply — 29 products grouped by size, colour, protection, print and sustainability, each with the decision behind it explained."
+  title="All Poly Mailers | Sizes, Colors & Printed Formats"
+  description="Every poly mailer we supply — 29 products grouped by size, color, protection, print and sustainability, each with the decision behind it explained."
   path={path}
   schema={schema}
   crumbs={crumbs}

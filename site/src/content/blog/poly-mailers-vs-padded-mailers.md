@@ -13,7 +13,7 @@ reviewed: 2026-08-15
 author: The Poly Mailers editorial team
 reviewer: Production and specification desk
 heroImage: ../../assets/products/teal-bubble-lined-mailers-stacked-with-peel-strip.jpg
-heroAlt: Cushioned mailers stacked in a pile, the bubble layer showing through the coloured outer film
+heroAlt: Cushioned mailers stacked in a pile, the bubble layer showing through the colored outer film
 related:
   - href: /protective-mailers/
     label: Protective format comparison
@@ -80,7 +80,7 @@ Genuinely fragile items, boxed first. A cushioned mailer protects a boxed cerami
 
 Items with hard corners in a mixed parcel, where a corner would otherwise press against film with the whole weight of the parcel behind it.
 
-And anything where the failure is expensive relative to the packaging. If a damaged order costs you a replacement, a second shipment, a support conversation and a proportion of that customer's future orders, the arithmetic for cushioning gets favourable very quickly. Where it does, the [bubble-lined formats we run](/poly-bubble-mailers/) are the starting point.
+And anything where the failure is expensive relative to the packaging. If a damaged order costs you a replacement, a second shipment, a support conversation and a proportion of that customer's future orders, the arithmetic for cushioning gets favorable very quickly. Where it does, the [bubble-lined formats we run](/poly-bubble-mailers/) are the starting point.
 
 ## Running the numbers
 
@@ -96,7 +96,7 @@ That last step is the one that saves the most money. A business upgrading every 
 
 ## The honest limits of a flexible bag
 
-There is a point at which neither option is right, and recognising it early saves working through three specifications first.
+There is a point at which neither option is right, and recognizing it early saves working through three specifications first.
 
 A mailer has no structure. If your damage reports describe crushed cartons and deformed contents rather than broken ones, the problem is load rather than impact, and no lining changes that. The answer is a rigid carton, and accepting that at the start is cheaper than discovering it after two packaging changes.
 

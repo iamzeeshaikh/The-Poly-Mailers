@@ -26,7 +26,7 @@ export const usCitiesB: readonly LocationPage[] = [
     supportingKeywords: ['shipping bags jacksonville', 'import to parcel packaging', 'port logistics packaging'],
     sectors: [
       { name: 'Import and distribution', note: 'A port city with a business base built around goods arriving in bulk.' },
-      { name: 'Third-party fulfilment', note: 'Operations breaking down imported stock for several brand clients.' },
+      { name: 'Third-party fulfillment', note: 'Operations breaking down imported stock for several brand clients.' },
       { name: 'Ecommerce', note: 'Own-channel brands importing and fulfilling from the same location.' },
     ],
     recommended: [
@@ -45,7 +45,7 @@ export const usCitiesB: readonly LocationPage[] = [
           { title: 'Find out what arrives inner-packed', detail: 'Goods that arrive individually bagged need no further packaging beyond the mailer. Goods that arrive loose need two layers.' },
           { title: 'Size against the unit, not the case', detail: 'The case quantity is irrelevant to the outbound decision. The single unit is what has to fit.' },
           { title: 'Decide where inner bagging happens, if it is needed', detail: 'Doing it at the point of unpacking is faster than doing it per order later.' },
-          { title: 'Standardise the outbound range hard', detail: 'A break-bulk operation runs on repetition. Two or three sizes, with written rules.' },
+          { title: 'Standardize the outbound range hard', detail: 'A break-bulk operation runs on repetition. Two or three sizes, with written rules.' },
           { title: 'Check what printed information must carry through', detail: 'Origin marking, warnings and barcodes on the inbound packaging may need to appear on the outbound one.' },
         ],
       },
@@ -117,7 +117,7 @@ export const usCitiesB: readonly LocationPage[] = [
     sectors: [
       { name: 'Western wear and leather goods', note: 'A long-established regional trade in boots, belts, hats and leatherwork.' },
       { name: 'Equestrian and agricultural supply', note: 'Tack and equipment with buckles, hardware and irregular shapes.' },
-      { name: 'Ecommerce and distribution', note: 'A conventional fulfilment base alongside the specialist trades.' },
+      { name: 'Ecommerce and distribution', note: 'A conventional fulfillment base alongside the specialist trades.' },
     ],
     recommended: [
       { slug: '12x15-poly-mailers', why: 'Heavier soft goods need room and film weight rather than a tight fit.' },
@@ -209,7 +209,7 @@ export const usCitiesB: readonly LocationPage[] = [
     sectors: [
       { name: 'Apparel design and buying', note: 'Head-office teams moving samples between designers, factories and buyers.' },
       { name: 'Retail and own-brand development', note: 'Pre-production approval cycles that depend on physical samples arriving in condition.' },
-      { name: 'Fulfilment and distribution', note: 'A substantial logistics base alongside the head-office work.' },
+      { name: 'Fulfillment and distribution', note: 'A substantial logistics base alongside the head-office work.' },
     ],
     recommended: [
       { slug: 'custom-frosted-poly-bags', why: 'A sample stays presented and visible without being handled.' },
@@ -225,7 +225,7 @@ export const usCitiesB: readonly LocationPage[] = [
         paragraphs: [
           'A production garment arriving slightly creased is a customer service issue. A sample garment arriving creased is a corrupted piece of evidence, because the person opening it is assessing fit, drape and finish, and a crease from packaging looks exactly like a fault in the make.',
           'That is the reason sample shipping justifies packaging that would be over-specified for production. Room rather than compression, a presentation bag inside the mailer, and enough film weight that the parcel does not deform under other parcels.',
-          'It is also why anonymity often helps. A sample travelling between a factory and a buyer is commercially sensitive, and a parcel that announces the brand on the outside is doing the opposite of what is wanted.',
+          'It is also why anonymity often helps. A sample traveling between a factory and a buyer is commercially sensitive, and a parcel that announces the brand on the outside is doing the opposite of what is wanted.',
         ],
       },
       {
@@ -254,7 +254,7 @@ export const usCitiesB: readonly LocationPage[] = [
       },
       {
         q: 'Should sample parcels be branded?',
-        a: 'Usually not. Samples travelling between a factory and a buyer are commercially sensitive, and an anonymous parcel is generally preferred. Identification should be enough for the recipient and no more.',
+        a: 'Usually not. Samples traveling between a factory and a buyer are commercially sensitive, and an anonymous parcel is generally preferred. Identification should be enough for the recipient and no more.',
       },
       {
         q: 'How do I package a sample that will be passed around?',
@@ -262,7 +262,7 @@ export const usCitiesB: readonly LocationPage[] = [
       },
     ],
     related: [
-      { href: '/locations/ohio/', label: 'Ohio', reason: 'The state view, covering fulfilment centre requirements.' },
+      { href: '/locations/ohio/', label: 'Ohio', reason: 'The state view, covering fulfillment center requirements.' },
       { href: '/custom-frosted-poly-bags/', label: 'Presentation bags', reason: 'The layer that keeps a sample assessable.' },
       { href: '/industries/clothing-and-apparel/', label: 'Clothing and apparel', reason: 'The wider garment operation.' },
     ],
@@ -287,21 +287,21 @@ export const usCitiesB: readonly LocationPage[] = [
       'Poly mailers for Indianapolis businesses — how a central shipping position shortens transits, reduces handling and changes what packaging needs to do.',
     summary: 'How a central position shortens transits and lowers what packaging has to withstand.',
     intro: [
-      'Indianapolis sits close to the centre of the national parcel network, which produces an advantage most businesses never quantify: parcels leaving here reach a large share of the country in fewer legs and fewer handling events than parcels leaving a coast.',
+      'Indianapolis sits close to the center of the national parcel network, which produces an advantage most businesses never quantify: parcels leaving here reach a large share of the country in fewer legs and fewer handling events than parcels leaving a coast.',
       'Fewer handling events means fewer opportunities for damage, and that is a real input into a packaging specification. It is one of the few situations where the honest advice is that you may be over-specifying.',
     ],
     angle: 'A central position reducing handling — and the possibility of over-specifying as a result.',
     primaryKeyword: 'poly mailers indianapolis',
     supportingKeywords: ['shipping bags indianapolis', 'central distribution packaging', 'mailers indiana'],
     sectors: [
-      { name: 'National fulfilment', note: 'Operations located centrally to reduce average transit distance across the country.' },
+      { name: 'National fulfillment', note: 'Operations located centrally to reduce average transit distance across the country.' },
       { name: 'Distribution and logistics', note: 'A dense freight and parcel infrastructure built around the central position.' },
       { name: 'Ecommerce', note: 'Own-channel brands taking advantage of the same reach.' },
     ],
     recommended: [
       { slug: 'economy-poly-mailers', why: 'Fewer handling events genuinely does reduce what the film has to withstand.' },
-      { slug: '10x13-poly-mailers', why: 'The general-purpose standard for national fulfilment.' },
-      { slug: 'blank-poly-mailers', why: 'Where the operation is fulfilment rather than brand-led.' },
+      { slug: '10x13-poly-mailers', why: 'The general-purpose standard for national fulfillment.' },
+      { slug: 'blank-poly-mailers', why: 'Where the operation is fulfillment rather than brand-led.' },
       { slug: 'self-seal-poly-mailers', why: 'Bench speed matters more than protection when transits are short.' },
     ],
     blocks: [
@@ -309,7 +309,7 @@ export const usCitiesB: readonly LocationPage[] = [
         kind: 'prose',
         heading: 'Handling events, not distance, cause damage',
         paragraphs: [
-          'Parcels are not damaged by travelling. They are damaged at handling points — sortation, transfer, loading, unloading — and the number of those is a function of network structure rather than of miles.',
+          'Parcels are not damaged by traveling. They are damaged at handling points — sortation, transfer, loading, unloading — and the number of those is a function of network structure rather than of miles.',
           'A parcel leaving a central position often reaches its destination through fewer of them than one leaving an edge of the network, and that materially reduces the number of opportunities for something to go wrong.',
           'For a business shipping mostly regionally from here, that can justify a lighter specification than a coastal operation would need for the same product — which is not advice most suppliers volunteer, but it is what the evidence supports.',
         ],
@@ -401,7 +401,7 @@ export const usCitiesB: readonly LocationPage[] = [
         items: [
           { term: 'It must arrive on a date', detail: 'A start date, an event, an announcement. Unlike a retail order, arriving early or late defeats the purpose entirely.' },
           { term: 'It goes to a home address', detail: 'Which means porch delivery, weather, and a recipient who may not be expecting it.' },
-          { term: 'It represents an organisation', detail: 'A damaged or shabby parcel from an employer says something a damaged retail parcel does not.' },
+          { term: 'It represents an organization', detail: 'A damaged or shabby parcel from an employer says something a damaged retail parcel does not.' },
           { term: 'The quantity is exact', detail: 'Fifty new starters means fifty packs. Manufacturing tolerance matters here in a way it rarely does elsewhere.' },
         ],
       },
@@ -410,7 +410,7 @@ export const usCitiesB: readonly LocationPage[] = [
         heading: 'Low volume, high consequence',
         paragraphs: [
           'Corporate sends are usually measured in dozens or low hundreds, which is a quantity where unit price is almost irrelevant and everything else matters.',
-          'That inverts the usual advice. It is worth paying for the heavier film, the cushioned format, the printed bag and the exact colour, because the total spend is small and the cost of a poor impression on fifty new employees or twenty key clients is not.',
+          'That inverts the usual advice. It is worth paying for the heavier film, the cushioned format, the printed bag and the exact color, because the total spend is small and the cost of a poor impression on fifty new employees or twenty key clients is not.',
           'The one thing to be careful about is quantity. Manufactured runs carry a tolerance either side of the ordered figure, and for a send where every recipient must receive one, that tolerance needs to be discussed rather than discovered.',
         ],
       },
@@ -418,7 +418,7 @@ export const usCitiesB: readonly LocationPage[] = [
         kind: 'linked-prose',
         heading: 'Getting the count exactly right',
         before:
-          'Because a production run does not stop at an exact unit, an order for fifty may deliver slightly more or slightly fewer. For most commercial shipping that is immaterial; for a send where the count is fixed by a headcount it is not. Tell us at enquiry stage that the quantity is exact rather than approximate, and it can be specified accordingly. How tolerance is stated and handled is set out on the ',
+          'Because a production run does not stop at an exact unit, an order for fifty may deliver slightly more or slightly fewer. For most commercial shipping that is immaterial; for a send where the count is fixed by a headcount it is not. Tell us at inquiry stage that the quantity is exact rather than approximate, and it can be specified accordingly. How tolerance is stated and handled is set out on the ',
         link: { href: '/custom-order-policy/', anchor: 'custom order policy' },
         after: '.',
       },
@@ -426,11 +426,11 @@ export const usCitiesB: readonly LocationPage[] = [
     faqs: [
       {
         q: 'Can I order an exact quantity for a corporate send?',
-        a: 'Tell us the quantity is fixed rather than approximate at enquiry stage. Manufactured runs carry a tolerance either side of the ordered figure, and where a headcount decides the number it needs to be specified rather than assumed.',
+        a: 'Tell us the quantity is fixed rather than approximate at inquiry stage. Manufactured runs carry a tolerance either side of the ordered figure, and where a headcount decides the number it needs to be specified rather than assumed.',
       },
       {
         q: 'Is it worth printing packaging for a small corporate run?',
-        a: 'Often, yes, which is the opposite of the usual advice. At low volumes the total spend is small and the cost of a poor impression on a group of employees or clients is not, so the arithmetic favours specifying up rather than down.',
+        a: 'Often, yes, which is the opposite of the usual advice. At low volumes the total spend is small and the cost of a poor impression on a group of employees or clients is not, so the arithmetic favors specifying up rather than down.',
       },
       {
         q: 'What packaging suits sends to home addresses?',
@@ -550,7 +550,7 @@ export const usCitiesB: readonly LocationPage[] = [
       'Poly mailers for Denver businesses — what altitude and air transport do to sealed and inflated packaging, and when it matters.',
     summary: 'What altitude and air freight do to sealed packaging, and when it matters.',
     intro: [
-      'Denver raises a packaging question almost nowhere else does: what happens to a sealed parcel when the air pressure around it drops. It matters on the ground here, and it matters again for anything travelling by air.',
+      'Denver raises a packaging question almost nowhere else does: what happens to a sealed parcel when the air pressure around it drops. It matters on the ground here, and it matters again for anything traveling by air.',
       'For most contents it is a curiosity. For a few — anything sealed, inflated or containing liquid — it is a real effect worth designing around.',
     ],
     angle: 'Air pressure changes and their effect on sealed and inflated packaging.',
@@ -585,7 +585,7 @@ export const usCitiesB: readonly LocationPage[] = [
         items: [
           { term: 'Sealed pouches and containers inside the parcel', detail: 'These are the contents that visibly change, and occasionally the ones that fail.' },
           { term: 'Air-filled cushioning', detail: 'Systems inflated at low altitude become firmer higher up, which is usually fine and occasionally too firm.' },
-          { term: 'Anything shipped by air', detail: 'Cargo holds are pressurised, but not to sea level, so the effect is present on any air leg.' },
+          { term: 'Anything shipped by air', detail: 'Cargo holds are pressurized, but not to sea level, so the effect is present on any air leg.' },
           { term: 'Everything else', detail: 'Soft goods, garments, books, most accessories. The effect exists and does not matter.' },
         ],
       },
@@ -725,13 +725,13 @@ export const usCitiesB: readonly LocationPage[] = [
     kind: 'city',
     region: 'South',
     h1: 'Poly Mailers for Nashville Businesses',
-    title: 'Poly Mailers Nashville | Direct-to-Fan Fulfilment',
+    title: 'Poly Mailers Nashville | Direct-to-Fan Fulfillment',
     description:
       'Poly mailers for Nashville artists and small labels — packing direct-to-fan orders at home or in a small space, without a warehouse behind you.',
-    summary: 'Direct-to-fan fulfilment packed at home rather than in a warehouse.',
+    summary: 'Direct-to-fan fulfillment packed at home rather than in a warehouse.',
     intro: [
       'A lot of merchandise leaving Nashville is packed by the person who made it, or by two people in a room behind a studio. There is no bench, no forklift and no packing station — there is a table, a box of mailers and an evening after a show.',
-      'That is a genuinely different operation from a fulfilment centre, and the packaging decisions that suit it are different too.',
+      'That is a genuinely different operation from a fulfillment center, and the packaging decisions that suit it are different too.',
     ],
     angle: 'Hand-packing at home or in a small space, without warehouse infrastructure.',
     primaryKeyword: 'poly mailers nashville',
@@ -777,7 +777,7 @@ export const usCitiesB: readonly LocationPage[] = [
         kind: 'linked-prose',
         heading: 'When it stops fitting on a table',
         before:
-          'At some point direct-to-fan volume outgrows an evening and a table, and that is the moment to think about size standardisation, written rules and a proper bench rather than about a cheaper bag. The decisions that come with that transition are set out on the ',
+          'At some point direct-to-fan volume outgrows an evening and a table, and that is the moment to think about size standardization, written rules and a proper bench rather than about a cheaper bag. The decisions that come with that transition are set out on the ',
         link: { href: '/locations/tennessee/', anchor: 'Tennessee state page' },
         after: ', which covers planning merchandise runs at a larger scale.',
       },
@@ -829,7 +829,7 @@ export const usCitiesB: readonly LocationPage[] = [
     primaryKeyword: 'poly mailers atlanta',
     supportingKeywords: ['lightweight shipping bags', 'air freight packaging', 'shipping bags atlanta'],
     sectors: [
-      { name: 'Expedited and air-based fulfilment', note: 'Operations built around fast delivery, where air legs are routine rather than unusual.' },
+      { name: 'Expedited and air-based fulfillment', note: 'Operations built around fast delivery, where air legs are routine rather than unusual.' },
       { name: 'Direct-to-consumer brands', note: 'A large and fast-growing own-channel base shipping nationally.' },
       { name: 'Film and entertainment merchandise', note: 'Production-linked merchandise with short, sharp demand peaks.' },
     ],
@@ -844,7 +844,7 @@ export const usCitiesB: readonly LocationPage[] = [
         kind: 'compare',
         heading: 'Where the weight actually is',
         intro:
-          'Before optimising the mailer, it is worth knowing what proportion of the parcel it accounts for.',
+          'Before optimizing the mailer, it is worth knowing what proportion of the parcel it accounts for.',
         caption: 'Typical contributors to a parcel’s billed weight and volume.',
         columns: ['Component', 'Weight contribution', 'Volume contribution'],
         rows: [

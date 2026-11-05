@@ -6,7 +6,7 @@ import type { ProductPage } from '../types';
  * The exact-size pages answer "will my product fit and what will it cost me to
  * run this size", so each one leads with the items that genuinely suit it and
  * compares itself to the size directly above and below. The two broad pages
- * (large, small) answer "which of these should I standardise on", so they lead
+ * (large, small) answer "which of these should I standardize on", so they lead
  * with a decision, not a description.
  *
  * No page states a capacity in grams or a film weight in microns. Fit is always
@@ -117,7 +117,7 @@ export const sizeProducts: ProductPage[] = [
         kind: 'prose',
         heading: 'Designing artwork for a narrow panel',
         paragraphs: [
-          'The printable area on a 6x9 is smaller than most brand teams expect once you allow for the closure strip at the top and a margin at the sides. A wordmark that reads comfortably on a 12x15 can become a grey smudge here.',
+          'The printable area on a 6x9 is smaller than most brand teams expect once you allow for the closure strip at the top and a margin at the sides. A wordmark that reads comfortably on a 12x15 can become a gray smudge here.',
           'The approach that works is to treat the front as a single element. One mark, sized generously, with plenty of clear space around it. Move the website address, the social handles and any care wording to the reverse, where there is no closure strip competing for room.',
           'If your identity depends on fine detail — a thin script, a hairline rule, a monogram with tight counters — ask for that element to be checked before the run. Fine lines can close up on flexible film in a way they never do on paper.',
         ],
@@ -126,7 +126,7 @@ export const sizeProducts: ProductPage[] = [
         kind: 'specs',
         heading: 'Options confirmed on your quotation',
         intro:
-          'Every line below is a choice, not a fixed figure. We quote against what you select and confirm the exact specification in writing.',
+          'Every line below is a choice, not a fixed figure. We quote against what you select and confirm the exact specification by email.',
         rows: [
           {
             label: 'Film weight',
@@ -139,9 +139,9 @@ export const sizeProducts: ProductPage[] = [
             note: 'A tear tab helps recipients open the bag without scissors, which matters for gift ranges.',
           },
           {
-            label: 'Colour',
-            options: ['Stock colour', 'Matched to your brand colour'],
-            note: 'Colour matching is quoted against a reference you supply.',
+            label: 'Color',
+            options: ['Stock color', 'Matched to your brand color'],
+            note: 'Color matching is quoted against a reference you supply.',
           },
           {
             label: 'Print',
@@ -151,7 +151,7 @@ export const sizeProducts: ProductPage[] = [
           {
             label: 'Finish',
             options: ['Gloss', 'Matte'],
-            note: 'Matte hides handling marks; gloss holds saturated colour more strongly.',
+            note: 'Matte hides handling marks; gloss holds saturated color more strongly.',
           },
         ],
       },
@@ -159,7 +159,7 @@ export const sizeProducts: ProductPage[] = [
         kind: 'linked-prose',
         heading: 'Ordering, packing and storage',
         before:
-          'A carton of 6x9 mailers takes up very little bench space, which is why fulfilment teams tend to keep more of this size on hand than any other. Store the cartons flat and away from direct sunlight; adhesive strips are the part of a mailer that ages first, and heat is what ages them. If you are standardising a pick-and-pack station around two or three sizes, this is usually the one that sits closest to the packer. Choosing that mix well is covered in the ',
+          'A carton of 6x9 mailers takes up very little bench space, which is why fulfillment teams tend to keep more of this size on hand than any other. Store the cartons flat and away from direct sunlight; adhesive strips are the part of a mailer that ages first, and heat is what ages them. If you are standardizing a pick-and-pack station around two or three sizes, this is usually the one that sits closest to the packer. Choosing that mix well is covered in the ',
         link: { href: '/size-guide/', anchor: 'framework for choosing a mailer size' },
         after:
           ', which works through the measurements to take before you commit to a run.',
@@ -171,7 +171,7 @@ export const sizeProducts: ProductPage[] = [
         kind: 'prose',
         heading: 'Quality checks before your order ships',
         paragraphs: [
-          'Every custom run is checked against the proof you approved. We look at registration and colour consistency across the run, at seal integrity along the side and bottom welds, and at the adhesive strip lifting cleanly from its liner.',
+          'Every custom run is checked against the proof you approved. We look at registration and color consistency across the run, at seal integrity along the side and bottom welds, and at the adhesive strip lifting cleanly from its liner.',
           'Bags are counted by weight and by carton, and any short or damaged carton is flagged before dispatch rather than after. If something is wrong on arrival, tell us within a reasonable window and we will work it out with you — the terms are set out in the custom-order policy.',
         ],
       },
@@ -249,7 +249,7 @@ export const sizeProducts: ProductPage[] = [
       supportingKeywords: ['9 x 12 poly mailer bags', 'poly mailers for books', 'mailers for one t-shirt'],
       nearestPage: '/10x13-poly-mailers/',
       boundary:
-        'This page argues for the tighter fit; 10x13 is written for buyers standardising on one size across a mixed range.',
+        'This page argues for the tighter fit; 10x13 is written for buyers standardizing on one size across a mixed range.',
     },
     images: [
       {
@@ -338,9 +338,9 @@ export const sizeProducts: ProductPage[] = [
             note: 'The reverse of this size is large enough for care wording or a returns note.',
           },
           {
-            label: 'Colour',
-            options: ['Stock colour', 'Matched to your brand colour'],
-            note: 'Matched colour is quoted against a physical or digital reference you provide.',
+            label: 'Color',
+            options: ['Stock color', 'Matched to your brand color'],
+            note: 'Matched color is quoted against a physical or digital reference you provide.',
           },
         ],
       },
@@ -348,9 +348,9 @@ export const sizeProducts: ProductPage[] = [
         kind: 'linked-prose',
         heading: 'Print coverage on a mid-size panel',
         before:
-          'This is the smallest size where two-sided print earns its cost. The front carries the mark, the reverse carries the things customers actually read at the doorstep — how to return, how to recycle the bag in their area, where to find you. Coverage choice changes the price more than most buyers expect, and the trade-offs between spot colour, full coverage and single-side print are set out in the ',
+          'This is the smallest size where two-sided print earns its cost. The front carries the mark, the reverse carries the things customers actually read at the doorstep — how to return, how to recycle the bag in their area, where to find you. Coverage choice changes the price more than most buyers expect, and the trade-offs between spot color, full coverage and single-side print are set out in the ',
         link: { href: '/printing-options/', anchor: 'breakdown of print methods and coverage' },
-        after: ', which is worth reading before you finalise artwork.',
+        after: ', which is worth reading before you finalize artwork.',
       },
       {
         kind: 'bullets',
@@ -382,7 +382,7 @@ export const sizeProducts: ProductPage[] = [
         kind: 'prose',
         heading: 'Checks we run before dispatch',
         paragraphs: [
-          'Print is checked against your approved proof for colour and registration at the start, middle and end of the run. Seals are checked along both welds. The adhesive liner is checked for clean release, which is the failure that annoys packers most and shows up least on a photograph.',
+          'Print is checked against your approved proof for color and registration at the start, middle and end of the run. Seals are checked along both welds. The adhesive liner is checked for clean release, which is the failure that annoys packers most and shows up least on a photograph.',
           'Counts are verified by carton before the order leaves. If a run cannot meet the approved proof, we stop and talk to you rather than shipping something close enough.',
         ],
       },
@@ -419,12 +419,12 @@ export const sizeProducts: ProductPage[] = [
       {
         href: '/apparel-shipping-bags/',
         label: 'Apparel Shipping Bags',
-        reason: 'Written around garment fulfilment rather than a single dimension.',
+        reason: 'Written around garment fulfillment rather than a single dimension.',
       },
     ],
     cta: {
       heading: 'Price a 9x12 run',
-      body: 'Send us the quantity, the print coverage you want and what goes inside. We will confirm the specification in writing before anything is scheduled.',
+      body: 'Send us the quantity, the print coverage you want and what goes inside. We will confirm the specification by email before anything is scheduled.',
       buttonLabel: 'Ask for 9x12 pricing',
     },
     whatsapp:
@@ -441,22 +441,22 @@ export const sizeProducts: ProductPage[] = [
     h1: '10x13 Poly Mailers',
     title: '10x13 Poly Mailers | The Standard Apparel Size',
     description:
-      'The 10x13 mailer is the apparel default. What it holds, why brands standardise on it, print layout notes and how it compares up and down.',
+      'The 10x13 mailer is the apparel default. What it holds, why brands standardize on it, print layout notes and how it compares up and down.',
     summary:
-      'The most-ordered apparel size, and the one most brands standardise on when they want to carry a single SKU.',
+      'The most-ordered apparel size, and the one most brands standardize on when they want to carry a single SKU.',
     intro: [
       'Ten by thirteen is the size the apparel industry settled on. It takes a folded t-shirt with room to spare, a pair of leggings, a light knit, or a two-item order without straining the seal. That tolerance is the whole reason it dominates: it forgives a rushed fold on a busy afternoon.',
-      'It is also the size where standardising pays off most. One SKU means one carton on the bench, one artwork file, one reorder, and packers who never have to decide. For a lot of businesses the small amount of extra film per parcel costs less than the time and error rate of running four sizes.',
+      'It is also the size where standardizing pays off most. One SKU means one carton on the bench, one artwork file, one reorder, and packers who never have to decide. For a lot of businesses the small amount of extra film per parcel costs less than the time and error rate of running four sizes.',
       'This page is written for the buyer weighing that decision rather than for someone who already knows they want a 10x13.',
     ],
     plan: {
       intent: 'Buy 10x13 poly mailers, usually in bulk, often printed.',
       audience:
-        'Apparel and ecommerce operations deciding whether to standardise on one mailer size.',
+        'Apparel and ecommerce operations deciding whether to standardize on one mailer size.',
       problem:
         'Balancing material cost per parcel against the operational cost of running several sizes.',
       angle:
-        'Frames 10x13 as an operations decision, not just a dimension, and is explicit about when standardising is the wrong call.',
+        'Frames 10x13 as an operations decision, not just a dimension, and is explicit about when standardizing is the wrong call.',
       primaryKeyword: '10x13 poly mailers',
       supportingKeywords: [
         '10x13 mailers',
@@ -484,7 +484,7 @@ export const sizeProducts: ProductPage[] = [
     blocks: [
       {
         kind: 'compare',
-        heading: 'Standardising on one size, or running three',
+        heading: 'Standardizing on one size, or running three',
         intro:
           'The honest comparison is not between dimensions. It is between two ways of running a packing bench.',
         caption:
@@ -537,7 +537,7 @@ export const sizeProducts: ProductPage[] = [
         paragraphs: [
           'On this size the shipping label is a design constraint, not an afterthought. A standard four-by-six label covers a substantial share of the front panel, and it goes on wherever the packer finds space unless you make the right place obvious.',
           'Two approaches work. Either leave a deliberate clear zone in the upper portion of the front, sized for your label, and let the artwork sit below it. Or move the whole design to the reverse and keep the front plain, which makes the label placement irrelevant and often photographs better on an unboxing video.',
-          'What does not work is a centred full-bleed design on the front and a hope that the label lands kindly. It will not.',
+          'What does not work is a centered full-bleed design on the front and a hope that the label lands kindly. It will not.',
         ],
       },
       {
@@ -559,7 +559,7 @@ export const sizeProducts: ProductPage[] = [
           {
             label: 'Print coverage',
             options: ['Unprinted', 'Logo only', 'Partial coverage', 'Full coverage'],
-            note: 'Coverage affects price more than the number of colours does.',
+            note: 'Coverage affects price more than the number of colors does.',
           },
           {
             label: 'Sides printed',
@@ -572,9 +572,9 @@ export const sizeProducts: ProductPage[] = [
             note: 'Matte is the more common choice for apparel because it photographs without hotspots.',
           },
           {
-            label: 'Colour',
-            options: ['Stock colour', 'Matched to your brand colour'],
-            note: 'Matched colour needs a reference and a proof round before the run.',
+            label: 'Color',
+            options: ['Stock color', 'Matched to your brand color'],
+            note: 'Matched color needs a reference and a proof round before the run.',
           },
         ],
       },
@@ -582,23 +582,23 @@ export const sizeProducts: ProductPage[] = [
         kind: 'linked-prose',
         heading: 'Volume, storage and reordering',
         before:
-          'Standardising on one size makes forecasting straightforward: parcels shipped equals mailers used. Order to a run rate you can store properly — flat, dry, out of sunlight — rather than to the largest quantity available, because adhesive is the component that ages. Businesses coordinating a first order across several markets will find the practical points in the ',
+          'Standardizing on one size makes forecasting straightforward: parcels shipped equals mailers used. Order to a run rate you can store properly — flat, dry, out of sunlight — rather than to the largest quantity available, because adhesive is the component that ages. Businesses coordinating a first order across several markets will find the practical points in the ',
         link: { href: '/resources/international-ordering-guide/', anchor: 'guide to ordering across markets' },
         after: ' more useful than a general shipping page.',
       },
       {
         kind: 'steps',
-        heading: 'From enquiry to delivered order',
+        heading: 'From inquiry to delivered order',
         steps: [
           {
             title: 'Specification',
             detail:
-              'We agree size, film weight, closure, colour and print coverage, and put all of it in writing.',
+              'We agree size, film weight, closure, color and print coverage, and set all of it out on your quotation.',
           },
           {
             title: 'Artwork and proof',
             detail:
-              'You send artwork, we return a digital proof showing placement and colour, and nothing runs until you approve it.',
+              'You send artwork, we return a digital proof showing placement and color, and nothing runs until you approve it.',
           },
           {
             title: 'Production',
@@ -607,7 +607,7 @@ export const sizeProducts: ProductPage[] = [
           },
           {
             title: 'Packing and count verification',
-            detail: 'Cartons are counted and labelled, and discrepancies are resolved before dispatch.',
+            detail: 'Cartons are counted and labeled, and discrepancies are resolved before dispatch.',
           },
           {
             title: 'Dispatch to your address',
@@ -628,10 +628,10 @@ export const sizeProducts: ProductPage[] = [
       },
       {
         q: 'Should I print the front or the back?',
-        a: 'If your shipping label goes on the front, put your design on the reverse or design a deliberate clear zone for the label. A centred front design without a label plan gets covered on a high proportion of parcels.',
+        a: 'If your shipping label goes on the front, put your design on the reverse or design a deliberate clear zone for the label. A centered front design without a label plan gets covered on a high proportion of parcels.',
       },
       {
-        q: 'Can I order this size unprinted while artwork is finalised?',
+        q: 'Can I order this size unprinted while artwork is finalized?',
         a: 'Yes, and it is a common sequence. Businesses often run blank stock while a design is being settled, then switch to printed on the next order once the artwork is approved.',
       },
       {
@@ -653,7 +653,7 @@ export const sizeProducts: ProductPage[] = [
       {
         href: '/poly-mailer-sizes/',
         label: 'Size collection',
-        reason: 'Compare every size in one table before you standardise.',
+        reason: 'Compare every size in one table before you standardize.',
       },
     ],
     cta: {
@@ -694,7 +694,7 @@ export const sizeProducts: ProductPage[] = [
       supportingKeywords: ['12 x 15 poly mailers', '12x15.5 poly mailers', 'poly mailers for knitwear'],
       nearestPage: '/10x13-poly-mailers/',
       boundary:
-        '10x13 is the standardisation decision. This page is the upgrade decision made after that standard started failing.',
+        '10x13 is the standardization decision. This page is the upgrade decision made after that standard started failing.',
     },
     images: [
       {
@@ -707,7 +707,7 @@ export const sizeProducts: ProductPage[] = [
       },
       {
         file: 'silver-grey-poly-mailers-stacked-open-flap.png',
-        alt: 'Stack of silver-grey poly mailers with the top bag folded open at the flap',
+        alt: 'Stack of silver-gray poly mailers with the top bag folded open at the flap',
       },
     ],
     blocks: [
@@ -795,7 +795,7 @@ export const sizeProducts: ProductPage[] = [
       },
       {
         kind: 'linked-prose',
-        heading: 'Fulfilment and storage implications',
+        heading: 'Fulfillment and storage implications',
         before:
           'Moving up a size changes your bench as much as your parcels. Cartons hold fewer units, so reorder points come round sooner, and the packed parcels themselves take more room in outbound cages. Weigh a packed sample before you commit, because a size change can push a parcel across a pricing threshold that wipes out the material saving you were chasing. If cushioning is the real requirement rather than room, the ',
         link: { href: '/protective-mailers/', anchor: 'comparison of protective mailer formats' },
@@ -803,10 +803,10 @@ export const sizeProducts: ProductPage[] = [
       },
       {
         kind: 'prose',
-        heading: 'Print behaviour on a larger panel',
+        heading: 'Print behavior on a larger panel',
         paragraphs: [
-          'Bigger panels are more forgiving for artwork and less forgiving for colour. A flat area of solid colour across a panel this size will show any inconsistency in ink lay-down that a small logo would have hidden.',
-          'If your brand colour is a large solid, ask for it to be reviewed at proof stage on the actual film and finish you have chosen. Colour reads differently on matte film than on gloss, and differently again on a coloured base than on white.',
+          'Bigger panels are more forgiving for artwork and less forgiving for color. A flat area of solid color across a panel this size will show any inconsistency in ink lay-down that a small logo would have hidden.',
+          'If your brand color is a large solid, ask for it to be reviewed at proof stage on the actual film and finish you have chosen. Color reads differently on matte film than on gloss, and differently again on a colored base than on white.',
         ],
       },
     ],
@@ -847,7 +847,7 @@ export const sizeProducts: ProductPage[] = [
     ],
     cta: {
       heading: 'Price 12x15 mailers for your order profile',
-      body: 'Send us your typical and heaviest order and we will quote the size and film weight that fits both, in writing.',
+      body: 'Send us your typical and heaviest order and we will quote the size and film weight that fits both, by email.',
       buttonLabel: 'Request 12x15 pricing',
     },
     whatsapp:
@@ -877,7 +877,7 @@ export const sizeProducts: ProductPage[] = [
       problem:
         'Getting heavy contents to arrive intact in a large flexible bag rather than a box.',
       angle:
-        'Focuses on packing technique and load behaviour at large sizes, which smaller size pages do not need to cover.',
+        'Focuses on packing technique and load behavior at large sizes, which smaller size pages do not need to cover.',
       primaryKeyword: '14.5 x 19 poly mailers',
       supportingKeywords: ['14x19 poly mailers', '14.5x19 mailers', 'poly mailers for hoodies'],
       nearestPage: '/19x24-poly-mailers/',
@@ -946,7 +946,7 @@ export const sizeProducts: ProductPage[] = [
           },
           {
             term: 'Bedding and towel sets',
-            detail: 'Single-bed sets and folded towel bundles, where softness works in the bag’s favour.',
+            detail: 'Single-bed sets and folded towel bundles, where softness works in the bag’s favor.',
           },
           {
             term: 'Costume and uniform kits',
@@ -978,12 +978,12 @@ export const sizeProducts: ProductPage[] = [
           {
             label: 'Print coverage',
             options: ['Unprinted', 'Logo only', 'Partial coverage', 'Full coverage'],
-            note: 'A large panel makes full coverage effective, and also makes colour consistency more visible.',
+            note: 'A large panel makes full coverage effective, and also makes color consistency more visible.',
           },
           {
-            label: 'Colour',
-            options: ['Stock colour', 'Matched to your brand colour'],
-            note: 'Larger solid areas make colour matching more demanding, so we proof before running.',
+            label: 'Color',
+            options: ['Stock color', 'Matched to your brand color'],
+            note: 'Larger solid areas make color matching more demanding, so we proof before running.',
           },
         ],
       },
@@ -1048,7 +1048,7 @@ export const sizeProducts: ProductPage[] = [
     ],
     cta: {
       heading: 'Quote 14.5x19 mailers',
-      body: 'Tell us what you are shipping and roughly how many a month. We will quote the film weight and closure that suit the load, and confirm it in writing.',
+      body: 'Tell us what you are shipping and roughly how many a month. We will quote the film weight and closure that suit the load, and confirm it by email.',
       buttonLabel: 'Ask about 14.5x19',
     },
     whatsapp:
@@ -1065,9 +1065,9 @@ export const sizeProducts: ProductPage[] = [
     h1: '19x24 Poly Mailers',
     title: '19x24 Poly Mailers | Bulk & Consolidated Orders',
     description:
-      'A 19x24 mailer consolidates multi-item orders, bedding and bulk garment shipments. Load behaviour, sealing, labelling and storage notes.',
+      'A 19x24 mailer consolidates multi-item orders, bedding and bulk garment shipments. Load behavior, sealing, labeling and storage notes.',
     summary:
-      'A consolidation size — several garments, bedding, or a wholesale drop travelling as one parcel.',
+      'A consolidation size — several garments, bedding, or a wholesale drop traveling as one parcel.',
     intro: [
       'By nineteen by twenty-four, a mailer is doing a job a carton used to do. Businesses order this size to consolidate: four or five garments to one address, a bedding set, a wholesale drop to a stockist, a returns consolidation going back to a warehouse.',
       'The economics are why it exists. A soft-goods order that would need a carton and void fill can travel in a single flexible bag at a fraction of the weight and cube. The trade is that everything about how the parcel is packed matters more.',
@@ -1079,7 +1079,7 @@ export const sizeProducts: ProductPage[] = [
       problem:
         'Replacing a carton with a flexible bag without increasing damage or delivery exceptions.',
       angle:
-        'Treats the size as a carton-replacement decision, covering cube, weight and label behaviour rather than fit.',
+        'Treats the size as a carton-replacement decision, covering cube, weight and label behavior rather than fit.',
       primaryKeyword: '19x24 poly mailers',
       supportingKeywords: ['19 x 24 poly mailers', 'poly mailer bags 19 x 24', 'bulk poly mailers'],
       nearestPage: '/14-5x19-poly-mailers/',
@@ -1141,7 +1141,7 @@ export const sizeProducts: ProductPage[] = [
           },
           {
             term: 'Consolidated customer orders',
-            detail: 'Four or five garments from one basket travelling as one parcel rather than several.',
+            detail: 'Four or five garments from one basket traveling as one parcel rather than several.',
           },
           {
             term: 'Returns consolidation',
@@ -1149,7 +1149,7 @@ export const sizeProducts: ProductPage[] = [
           },
           {
             term: 'Event and team orders',
-            detail: 'Uniform and merchandise runs delivered in one shipment to an organiser.',
+            detail: 'Uniform and merchandise runs delivered in one shipment to an organizer.',
           },
         ],
       },
@@ -1230,17 +1230,17 @@ export const sizeProducts: ProductPage[] = [
       {
         href: '/large-poly-mailers/',
         label: 'Large Poly Mailers',
-        reason: 'Compare the large formats before standardising on one.',
+        reason: 'Compare the large formats before standardizing on one.',
       },
       {
         href: '/industries/ecommerce/',
         label: 'Ecommerce packaging',
-        reason: 'How consolidation decisions fit into a wider fulfilment setup.',
+        reason: 'How consolidation decisions fit into a wider fulfillment setup.',
       },
     ],
     cta: {
       heading: 'Price a 19x24 run',
-      body: 'Tell us what you are consolidating and how often. We will quote a film weight suited to the load and confirm the specification in writing.',
+      body: 'Tell us what you are consolidating and how often. We will quote a film weight suited to the load and confirm the specification by email.',
       buttonLabel: 'Request 19x24 pricing',
     },
     whatsapp:
@@ -1261,7 +1261,7 @@ export const sizeProducts: ProductPage[] = [
     summary:
       'Square format for soft goods that resist folding into a rectangle — cushions, quilts, bulk textiles.',
     intro: [
-      'A square mailer is an unusual thing to order, and that is exactly why it exists. Almost every product in a fulfilment operation folds into a rectangle. The ones that do not — a cushion, a folded quilt, a pouffe cover, a round pet bed — end up jammed diagonally into a rectangular bag with air in two corners and strain on the seal.',
+      'A square mailer is an unusual thing to order, and that is exactly why it exists. Almost every product in a fulfillment operation folds into a rectangle. The ones that do not — a cushion, a folded quilt, a pouffe cover, a round pet bed — end up jammed diagonally into a rectangular bag with air in two corners and strain on the seal.',
       'Twenty-four by twenty-four gives those products a shape that matches them. The parcel comes out flat and square, stacks properly, and the label sits on a face that is genuinely flat rather than on a bulge.',
     ],
     plan: {
@@ -1285,7 +1285,7 @@ export const sizeProducts: ProductPage[] = [
       },
       {
         file: 'silver-grey-poly-mailers-stacked-open-flap.png',
-        alt: 'Silver-grey mailers in a flat stack, the top one opened out to show the full panel width',
+        alt: 'Silver-gray mailers in a flat stack, the top one opened out to show the full panel width',
       },
     ],
     blocks: [
@@ -1333,12 +1333,12 @@ export const sizeProducts: ProductPage[] = [
           {
             title: 'Fill the footprint, not the middle',
             detail:
-              'Build the load out to the corners. A square bag with a round load in the centre is the least stable parcel you can make.',
+              'Build the load out to the corners. A square bag with a round load in the center is the least stable parcel you can make.',
           },
           {
             title: 'Compress evenly before sealing',
             detail:
-              'Press down across the whole face rather than at the centre, so the loft is uniform when the seal closes.',
+              'Press down across the whole face rather than at the center, so the loft is uniform when the seal closes.',
           },
           {
             title: 'Seal with the strip on clean film',
@@ -1355,7 +1355,7 @@ export const sizeProducts: ProductPage[] = [
       {
         kind: 'specs',
         heading: 'What to select for a square run',
-        intro: 'Confirmed in writing on your quotation, as with every size.',
+        intro: 'Confirmed on your quotation, as with every size.',
         rows: [
           {
             label: 'Film weight',
@@ -1375,7 +1375,7 @@ export const sizeProducts: ProductPage[] = [
           {
             label: 'Print coverage',
             options: ['Unprinted', 'Logo only', 'Partial coverage', 'Full coverage'],
-            note: 'A square panel needs artwork laid out for square; a rectangular design centred on it looks unresolved.',
+            note: 'A square panel needs artwork laid out for square; a rectangular design centered on it looks unresolved.',
           },
           {
             label: 'Finish',
@@ -1388,7 +1388,7 @@ export const sizeProducts: ProductPage[] = [
         kind: 'linked-prose',
         heading: 'Artwork on a square panel',
         before:
-          'Most brand artwork is drawn for rectangles, so a square panel usually needs a proper layout rather than a rescale. Centred marks work well; horizontal lock-ups with long strap lines rarely do, because they leave large empty bands above and below. Bringing the artwork to us early avoids a round of rework, and the file requirements are set out in the ',
+          'Most brand artwork is drawn for rectangles, so a square panel usually needs a proper layout rather than a rescale. Centered marks work well; horizontal lock-ups with long strap lines rarely do, because they leave large empty bands above and below. Bringing the artwork to us early avoids a round of rework, and the file requirements are set out in the ',
         link: { href: '/artwork-guidelines/', anchor: 'artwork specification for print files' },
         after: '.',
       },
@@ -1480,7 +1480,7 @@ export const sizeProducts: ProductPage[] = [
       },
       {
         file: 'silver-grey-poly-mailers-stacked-open-flap.png',
-        alt: 'Large silver-grey mailers stacked flat, illustrating how big formats store before use',
+        alt: 'Large silver-gray mailers stacked flat, illustrating how big formats store before use',
       },
     ],
     blocks: [
@@ -1489,8 +1489,8 @@ export const sizeProducts: ProductPage[] = [
         heading: 'What changes as a mailer gets bigger',
         standfirst: 'Three things shift, and only one of them is obvious.',
         paragraphs: [
-          'The obvious one is capacity. The two that catch people out are load behaviour and cost structure.',
-          'Load behaviour: a small mailer is held rigid by its contents. A large one is not. Slack air, an uneven load or a hard corner all turn into movement, and movement is what opens seals and tears corners. Sizing up means changing how you pack, not just what you buy.',
+          'The obvious one is capacity. The two that catch people out are load behavior and cost structure.',
+          'Load behavior: a small mailer is held rigid by its contents. A large one is not. Slack air, an uneven load or a hard corner all turn into movement, and movement is what opens seals and tears corners. Sizing up means changing how you pack, not just what you buy.',
           'Cost structure: a bigger bag costs more per unit, holds fewer per carton, and produces a parcel that may fall into a different shipping band. Sometimes consolidating four parcels into one large mailer saves money; sometimes it crosses a threshold and costs more. It is worth weighing a packed sample before you switch a whole flow.',
         ],
       },
@@ -1725,9 +1725,9 @@ export const sizeProducts: ProductPage[] = [
             note: 'A tear tab is worth adding for gift and subscription ranges, where the opening is part of the experience.',
           },
           {
-            label: 'Colour',
-            options: ['Stock colour', 'Matched to your brand colour'],
-            note: 'Small formats are where coloured film gives the most impact for the least cost.',
+            label: 'Color',
+            options: ['Stock color', 'Matched to your brand color'],
+            note: 'Small formats are where colored film gives the most impact for the least cost.',
           },
           {
             label: 'Print',
@@ -1738,11 +1738,11 @@ export const sizeProducts: ProductPage[] = [
       },
       {
         kind: 'linked-prose',
-        heading: 'Where colour does the most work',
+        heading: 'Where color does the most work',
         before:
-          'Small parcels arrive in a stack of other small parcels, and colour is what separates yours from the rest before anything is opened. It is also the cheapest form of branding available, because a coloured film costs far less than a printed run. The full range and how colour behaves against print is set out on the ',
-        link: { href: '/poly-mailer-colors/', anchor: 'colour options across the mailer range' },
-        after: ', which covers contrast and print legibility on each base colour.',
+          'Small parcels arrive in a stack of other small parcels, and color is what separates yours from the rest before anything is opened. It is also the cheapest form of branding available, because a colored film costs far less than a printed run. The full range and how color behaves against print is set out on the ',
+        link: { href: '/poly-mailer-colors/', anchor: 'color options across the mailer range' },
+        after: ', which covers contrast and print legibility on each base color.',
       },
     ],
     faqs: [
@@ -1755,12 +1755,12 @@ export const sizeProducts: ProductPage[] = [
         a: 'For soft or boxed-but-light contents, yes. What small mailers do not do is absorb impact. If the contents are fragile, a cushioned format is the right choice rather than a heavier plain film.',
       },
       {
-        q: 'Can small mailers be printed in full colour?',
+        q: 'Can small mailers be printed in full color?',
         a: 'Yes. The limit is legibility rather than the process. Fine type and hairline details close up on flexible film, so it is worth checking small artwork with us before the run.',
       },
       {
         q: 'Do you supply small mailers unprinted?',
-        a: 'Yes. Plain stock in a range of colours is available, and a lot of businesses start there while artwork is being finalised.',
+        a: 'Yes. Plain stock in a range of colors is available, and a lot of businesses start there while artwork is being finalized.',
       },
     ],
     related: [
