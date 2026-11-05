@@ -823,7 +823,7 @@ export const usStatesB: readonly LocationPage[] = [
     sectors: [
       { name: 'Automotive parts and aftermarket', note: 'Component and accessory shipping where containment and consistency outrank presentation.' },
       { name: 'Industrial supply and distribution', note: 'B2B shipping into other businesses rather than to consumers.' },
-      { name: 'Contract manufacturing', note: 'Operations packaging goods to a customer’s written specification.' },
+      { name: 'Contract manufacturing', note: 'Operations packaging goods to a customer’s exact specification.' },
       { name: 'Direct-selling brands', note: 'A growing own-channel base, including a strong regional apparel and merchandise presence.' },
     ],
     recommended: [
@@ -1006,7 +1006,7 @@ export const usStatesB: readonly LocationPage[] = [
     primaryKeyword: 'poly mailers minnesota',
     supportingKeywords: ['retail supplier packaging', 'shipping bags MN', 'own brand packaging'],
     sectors: [
-      { name: 'Retail suppliers and own-brand producers', note: 'Businesses packaging goods to a retailer’s written specification.' },
+      { name: 'Retail suppliers and own-brand producers', note: 'Businesses packaging goods to a retailer’s exact specification.' },
       { name: 'Consumer goods manufacturing', note: 'Producers shipping into both retail and direct channels with different requirements for each.' },
       { name: 'Medical and health products', note: 'A significant regional presence, with the documentation habits that come with it.' },
       { name: 'Direct-to-consumer brands', note: 'Own-channel businesses, often the same producers selling both ways.' },

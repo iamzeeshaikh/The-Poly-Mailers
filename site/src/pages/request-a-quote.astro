@@ -17,7 +17,7 @@ const schema = graph([
     path,
     name: 'Request a quotation',
     description:
-      'Send a short brief and receive a written specification and price for custom poly mailers. Unit prices start at $0.30, quoted against what you actually need.',
+      'Send a short brief and receive a full specification and price for custom poly mailers. Unit prices start at $0.30, quoted against what you actually need.',
     hasBreadcrumb: true,
   }),
   breadcrumbs(crumbs),
@@ -26,7 +26,7 @@ const schema = graph([
 
 <BaseLayout
   title="Request a Quote | Custom Poly Mailer Pricing"
-  description="Send a short brief and get a written specification and price for poly mailers. Attach artwork if you have it, and we will check it before quoting."
+  description="Send a short brief and get a full specification and price for poly mailers. Attach artwork if you have it, and we will check it before quoting."
   path={path}
   schema={schema}
   crumbs={crumbs}

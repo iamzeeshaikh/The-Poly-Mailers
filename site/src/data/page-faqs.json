@@ -224,7 +224,7 @@
   "faqs": [
    {
     "q": "What products does The Poly Mailers actually supply to businesses?",
-    "a": "One product category in many configurations: size-specific, colored, printed, blank, padded, cushioned and self-seal poly mailers, plus frosted zip-closure garment bags. We do not present ourselves as a general packaging supplier, and every order is made to a written specification."
+    "a": "One product category in many configurations: size-specific, colored, printed, blank, padded, cushioned and self-seal poly mailers, plus frosted zip-closure garment bags. We do not present ourselves as a general packaging supplier, and every order is made to a confirmed specification."
    },
    {
     "q": "Why does The Poly Mailers not publish fixed delivery times?",
@@ -1001,7 +1001,7 @@
    },
    {
     "q": "What does the custom order policy cover if mailers do not match the proof?",
-    "a": "Wrong color, wrong placement or wrong artwork against the approved proof is ours to resolve. The proof is the reference and we are held to it. The same applies when the order does not match the written specification."
+    "a": "Wrong color, wrong placement or wrong artwork against the approved proof is ours to resolve. The proof is the reference and we are held to it. The same applies when the order does not match the confirmed specification."
    },
    {
     "q": "Is a manufacturing defect covered by the custom order policy?",
@@ -3326,7 +3326,7 @@
    },
    {
     "q": "Can I request a poly mailer quote without knowing the size?",
-    "a": "Yes. If you are unsure of the size or the film, say so in the message. Working that out is part of the quotation rather than something you must settle first, and we come back with a size recommendation and a written specification."
+    "a": "Yes. If you are unsure of the size or the film, say so in the message. Working that out is part of the quotation rather than something you must settle first, and we come back with a size recommendation and a full specification."
    },
    {
     "q": "How will I receive my poly mailer quote?",
@@ -3338,7 +3338,7 @@
    },
    {
     "q": "Does a poly mailer quote commit me to ordering?",
-    "a": "No. A quotation carries no obligation either way. Nothing is scheduled until you approve the written specification, and for printed work nothing runs until you also approve a proof, so you can review everything before committing."
+    "a": "No. A quotation carries no obligation either way. Nothing is scheduled until you approve the full specification, and for printed work nothing runs until you also approve a proof, so you can review everything before committing."
    },
    {
     "q": "Should I attach artwork to a poly mailer quote request?",
@@ -3403,7 +3403,7 @@
    },
    {
     "q": "Can I skip the poly mailer reference guides and just ask for advice?",
-    "a": "Yes. Describe what you ship and we will do the working out, with a size recommendation, a written specification and a price, and a partial brief still gets a useful reply. You can <a href=\"/request-a-quote/\">send a short quote request</a> at any time."
+    "a": "Yes. Describe what you ship and we will do the working out, with a size recommendation, a full specification and a price, and a partial brief still gets a useful reply. You can <a href=\"/request-a-quote/\">send a short quote request</a> at any time."
    }
   ]
  },
@@ -4365,7 +4365,7 @@
     "a": "12x15 poly mailers are the mid-size that absorbs the most variation in a mixed parts range. Pairing it with a small set of other controlled sizes keeps the specification stable while covering most components without wasting film."
    },
    {
-    "q": "Can Michigan contract manufacturers order mailers to a customer's written specification?",
+    "q": "Can Michigan contract manufacturers order mailers to a customer's exact specification?",
     "a": "Yes. Send the specification and we will quote against it, stating film, weight, closure, dimensions and tolerance on the quotation rather than describing them in conversation. That written record is what a contract manufacturer needs to show its own customer."
    },
    {

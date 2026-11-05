@@ -123,7 +123,7 @@ export const countryHubs: readonly CountryHub[] = [
     h1: 'Poly Mailers for United Kingdom Businesses',
     title: 'Poly Mailers UK | Polythene Mailing Bags to Order',
     description:
-      'Custom polythene mailing bags and poly mailers for UK businesses, made to order and shipped to your address with a written specification.',
+      'Custom polythene mailing bags and poly mailers for UK businesses, made to order and shipped to your address against a confirmed specification.',
     intro: [
       'Shipping custom mailer orders to the United Kingdom means producing to your specification and delivering to your address. There is no UK warehouse, no trade counter and no local stock, and this page says so plainly.',
       'UK buyers often use different vocabulary — polythene mailing bags, mailing pouches, plastic postal envelopes — for the same product. They all describe what is on this site, and the specification conversation is the same whichever term you started from.',

@@ -245,7 +245,7 @@ export const printProducts: ProductPage[] = [
     ],
     cta: {
       heading: 'Start a custom printed order',
-      body: 'Send your artwork, size and quantity. We will come back with a written specification, a price and a proof before anything is scheduled.',
+      body: 'Send your artwork, size and quantity. We will come back with a full specification, a price and a proof before anything is scheduled.',
       buttonLabel: 'Request a custom quotation',
     },
     whatsapp:

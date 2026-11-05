@@ -213,7 +213,7 @@ export const sizeProducts: ProductPage[] = [
     ],
     cta: {
       heading: 'Get a price for 6x9 mailers',
-      body: 'Tell us your quantity, whether you want print, and what you are sending. We will come back with a written specification and a price.',
+      body: 'Tell us your quantity, whether you want print, and what you are sending. We will come back with a full specification and a price.',
       buttonLabel: 'Request a 6x9 quotation',
     },
     whatsapp:
@@ -658,7 +658,7 @@ export const sizeProducts: ProductPage[] = [
     ],
     cta: {
       heading: 'Quote a 10x13 order',
-      body: 'Tell us your monthly volume and whether you want print. We will send a written specification and price, and a sample if you want to test the fit first.',
+      body: 'Tell us your monthly volume and whether you want print. We will send a full specification and price, and a sample if you want to test the fit first.',
       buttonLabel: 'Get 10x13 pricing',
     },
     whatsapp:
