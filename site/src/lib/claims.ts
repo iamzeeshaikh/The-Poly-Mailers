@@ -83,8 +83,8 @@ export const BANNED_CLAIM_PATTERNS: readonly RegExp[] = [
   /\bbreaks?\s+down\s+in\s+\d+/i,
   /\bdecomposes?\s+(in|within)\s+\d+/i,
   /\b\d+\s?(microns?|mils?|micrometers?)\b/i,
-  /\bminimum\s+order\s+(quantity\s+)?(is\s+)?\d/i,
-  /\bMOQ\s*(of|:)?\s*\d/i,
+  // MOQ wording allowed since 2026-11-08 (owner: "moq 100"); pack/run phrasing is banned instead.
+  /\b(packs?|runs?)\s+of\s+(100|250|500|1,?000)\b/i,
   /\b(ships?|delivered|dispatch(ed)?|turnaround|lead time)\s+in\s+\d+\s*(–|-|to)?\s*\d*\s*(working\s+|business\s+)?(day|week)/i,
   /\b(usps|ups|fedex|dhl|royal mail|canada post|australia post)[- ]approved\b/i,
   /\bapproved\s+(by|for)\s+(usps|ups|fedex|dhl)\b/i,

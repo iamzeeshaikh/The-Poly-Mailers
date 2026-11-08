@@ -21,7 +21,7 @@ const crumbs: Crumb[] = [{ name: 'Home', href: '/' }, { name: 'Checkout', href: 
 ---
 <BaseLayout
   title="Checkout | The Poly Mailers"
-  description={`Order custom poly mailers from ${UNIT_PRICE_TEXT} per unit in runs of ${PACK_QTY}, shipped to the US, UK, Canada and Australia. Pay by invoice after you approve your free proof, or cash on delivery in the US and Canada.`}
+  description={`Order custom poly mailers starting from ${UNIT_PRICE_TEXT} per unit, minimum order ${PACK_QTY}, shipped to the US, UK, Canada and Australia. Pay by invoice after you approve your free proof, or cash on delivery in the US and Canada.`}
   path={path}
   crumbs={crumbs}
   noindex
@@ -31,7 +31,7 @@ const crumbs: Crumb[] = [{ name: 'Home', href: '/' }, { name: 'Checkout', href: 
       <p class="eyebrow">Checkout</p>
       <h1>Your order</h1>
       <p class="lede">
-        Every mailer starts from {UNIT_PRICE_TEXT} per unit, in runs of {PACK_QTY}, shipped to the United States,
+        Every mailer starts from {UNIT_PRICE_TEXT} per unit, with a minimum order of {PACK_QTY}, shipped to the United States,
         United Kingdom, Canada and Australia. Nothing runs or is paid before you approve a free digital proof.
       </p>
     </header>

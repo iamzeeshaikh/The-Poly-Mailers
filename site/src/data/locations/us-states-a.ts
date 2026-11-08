@@ -365,7 +365,7 @@ export const usStatesA: readonly LocationPage[] = [
     faqs: [
       {
         q: 'What is the minimum quantity if we have almost no storage?',
-        a: 'We quote against what you actually need rather than against a published threshold. Smaller runs carry a higher unit price because setup spreads across fewer units, and we will show you the difference so you can weigh it against your rent.',
+        a: 'The minimum order is 100 mailers per design. A carton of 100 flat mailers takes little shelf space, so it suits a shop with almost no storage.',
       },
       {
         q: 'Which mailer suits shipping books and prints?',

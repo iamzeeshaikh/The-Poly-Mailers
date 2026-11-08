@@ -5,7 +5,7 @@
  * every line from here and never trusts the browser.
  *
  * Facts as the site states them: from $0.30 per unit (PRICING, the live Offer
- * price), sold in runs of 100 up to 5,000 per design online, shipped to the
+ * price), minimum order 100, up to 5,000 per design online, shipped to the
  * United States, United Kingdom, Canada and Australia. Shipping cost and the
  * schedule are confirmed on the quotation that comes with the free digital
  * proof (/shipping-and-delivery/), and nothing is printed or paid before the

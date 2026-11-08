@@ -176,8 +176,8 @@ export const usCitiesA: readonly LocationPage[] = [
         a: 'Enough for the drop plus a working tail, and no further than your next range change. Whatever the volume discount, packaging that outlives the range it was ordered for is a write-off rather than a saving.',
       },
       {
-        q: 'Can you produce short runs for collaborations?',
-        a: 'Yes, with a higher unit price because setup spreads across fewer units. Many brands run a permanent base bag and use short printed runs only for collaborations that justify it.',
+        q: 'Can you produce small orders for collaborations?',
+        a: 'Yes, from the 100-mailer minimum per design. Many brands run a permanent base bag and use short printed runs only for collaborations that justify it.',
       },
     ],
     related: [
@@ -544,7 +544,7 @@ export const usCitiesA: readonly LocationPage[] = [
     cta: {
       heading: 'Package a small operation',
       body: 'Tell us what you make and roughly how many parcels a week. We will suggest something that fits your scale rather than an order you cannot store.',
-      buttonLabel: 'Ask about small runs',
+      buttonLabel: 'Ask about a 100-mailer order',
     },
     whatsapp: 'Hi, I am a small maker in Philadelphia and need packaging in modest quantities.',
   },

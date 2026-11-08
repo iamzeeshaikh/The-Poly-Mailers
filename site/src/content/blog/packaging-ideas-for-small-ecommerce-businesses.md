@@ -30,7 +30,7 @@ faqs:
   - q: How much packaging should I keep in stock?
     a: A season rather than a year, especially if you store it at home. Closure adhesive ages faster in warm or bright conditions, and packaging that outlives your range is a write-off however cheap it was per unit.
   - q: Is there a minimum order quantity?
-    a: Quantities are quoted against what you actually need rather than against a published threshold. Smaller runs carry a higher unit price because setup spreads across fewer units, and the difference is shown so you can decide.
+    a: Yes. The minimum order is 100 mailers per design, which suits a first order for a small shop. Online orders go up to 5,000 per design, and larger or custom runs are quoted per job.
 cta:
   heading: "Starting small and want to know what a first run costs"
   body: "Tell us roughly how much you ship and what you sell. We will quote a specification that suits the volume you are actually at."

@@ -46,8 +46,8 @@ const BANNED_CLAIMS = [
   { re: /\bbreaks?\s+down\s+in\s+\d/i, why: 'states a breakdown period' },
   { re: /\bdecomposes?\s+(in|within)\s+\d/i, why: 'states a decomposition period' },
   { re: /\b\d+\s?(microns?|mils?|micrometres?)\b/i, why: 'states an exact film gauge' },
-  { re: /\bminimum\s+order\s+(quantity\s+)?(is\s+)?\d/i, why: 'states a numeric MOQ' },
-  { re: /\bMOQ\s*(of|:)?\s*\d/i, why: 'states a numeric MOQ' },
+  // A numeric MOQ is allowed since 2026-11-08 (owner: "moq 100"); "runs/packs of N" is not.
+  { re: /\b(packs?|runs?)\s+of\s+(100|250|500|1,?000)\b/i, why: 'pack/run wording instead of the MOQ' },
   { re: /\b(ships?|delivered|dispatch(ed)?|turnaround|lead time)\s+in\s+\d+\s*(–|-|to)?\s*\d*\s*(working\s+|business\s+)?(day|week)/i, why: 'states a delivery or production time' },
   { re: /\b(usps|ups|fedex|dhl|royal mail|canada post|australia post)[- ]approved\b/i, why: 'claims carrier approval' },
   { re: /\bapproved\s+(by|for)\s+(usps|ups|fedex|dhl)\b/i, why: 'claims carrier approval' },

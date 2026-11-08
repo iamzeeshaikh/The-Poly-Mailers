@@ -1256,7 +1256,7 @@ export const industries: readonly IndustryPage[] = [
       },
       {
         q: 'Is there a minimum order?',
-        a: 'Quantities are quoted against what you actually need rather than against a published threshold. Smaller runs carry a higher unit price because setup spreads across fewer units, and we will show you the difference so you can decide.',
+        a: 'Yes, 100 mailers per design (MOQ). Order that online, or up to 5,000 per design, and ask for a custom quote for anything larger or non-standard.',
       },
       {
         q: 'How much packaging should I keep in stock?',

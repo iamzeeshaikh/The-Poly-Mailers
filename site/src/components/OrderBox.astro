@@ -1,7 +1,7 @@
 ---
 /** Product-page order box. One starting price for every mailer: $0.30 per unit
- *  (PRICING.unit, the same figure as the Offer and the Merchant feed), in runs
- *  of 100, shipped to the four markets we serve. "Add to order" keeps the line
+ *  (PRICING.unit, the same figure as the Offer and the Merchant feed), minimum
+ *  order 100, shipped to the four markets we serve. "Add to order" keeps the line
  *  in localStorage (public/scripts/order.js) and opens /checkout/, where the
  *  delivery address and payment method are taken; without JavaScript the form
  *  still lands on /checkout/?add=<slug>&qty=<n>. No pack total is shown here;
@@ -18,7 +18,7 @@ const formId = `order-${slug}`;
   <h2 class="orderbox-h" id={`${formId}-heading`}>Order {product.toLowerCase()}</h2>
   <p class="orderbox-from"><strong>Starting from {UNIT_PRICE_TEXT} per unit</strong></p>
   <p class="orderbox-sub">
-    Plain or printed with your artwork, in runs of {PACK_QTY}. Shipped to the United States,
+    Plain or printed with your artwork. Minimum order {PACK_QTY} mailers. Shipped to the United States,
     United Kingdom, Canada and Australia.
   </p>
   <form method="get" action="/checkout/" data-order-box data-slug={slug} data-unit={UNIT_PRICE}
