@@ -26,7 +26,7 @@ function priorityFor(path: string): string {
   if (/^\/(request-a-quote|design-your-poly-mailer)\/$/.test(path)) return '0.9';
   if (/^\/(blog|resources|locations|industries)\//.test(path)) return '0.5';
   if (
-    /^\/(privacy-policy|terms-and-conditions|accessibility-statement|custom-order-policy|shipping-and-delivery|sitemap)\/$/.test(
+    /^\/(privacy-policy|terms-and-conditions|accessibility-statement|custom-order-policy|refund_returns|shipping-and-delivery|sitemap)\/$/.test(
       path,
     )
   ) {

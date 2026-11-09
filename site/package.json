@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/prune-orphan-assets.mjs",
+    "build": "astro build && node scripts/prune-orphan-assets.mjs && node scripts/check-feed.mjs",
     "preview": "astro preview",
     "check": "astro check",
     "images": "node scripts/prepare-images.mjs",

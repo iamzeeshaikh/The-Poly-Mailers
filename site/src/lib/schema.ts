@@ -142,23 +142,23 @@ const OFFER_REGIONS = ['US', 'GB', 'CA', 'AU'] as const;
 /**
  * Return policy attached to every offer.
  *
- * `MerchantReturnNotPermitted`, because /custom-order-policy/ states plainly
- * that a printed run produced to your artwork cannot be restocked, resold or
- * returned. A finite return window would read better in a listing and would
- * contradict the page it links to, which is the kind of mismatch that loses a
- * merchant listing rather than wins one.
- *
- * This is separate from us being wrong. Where an order does not match the
- * approved proof or the written specification we put it right, and the policy
- * page says so — that is a remedy, not a return.
+ * Defective-only, as /refund_returns/ states: damaged, defective or off-proof
+ * orders reported within 14 days of delivery are remade or refunded at no cost,
+ * and change-of-mind returns are not accepted (/custom-order-policy/).
+ * Refunds reach the original payment method within 10 business days.
  */
+export const RETURN_DAYS = 14;
 function returnPolicy(): Json {
   return {
     '@type': 'MerchantReturnPolicy',
     '@id': `${SITE_URL}/#returnpolicy`,
     applicableCountry: [...OFFER_REGIONS],
-    returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
-    merchantReturnLink: abs('/custom-order-policy/'),
+    returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+    merchantReturnDays: RETURN_DAYS,
+    returnMethod: 'https://schema.org/ReturnByMail',
+    returnFees: 'https://schema.org/FreeReturn',
+    refundType: 'https://schema.org/FullRefund',
+    merchantReturnLink: abs('/refund_returns/'),
   };
 }
 

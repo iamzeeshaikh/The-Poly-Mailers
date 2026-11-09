@@ -568,6 +568,187 @@ export const policyPages: readonly ContentPage[] = [
 
   /* ===================================================================== */
   {
+    slug: 'refund_returns',
+    name: 'the returns and refunds policy',
+    h1: 'Returns and Refunds Policy',
+    title: 'Returns and Refunds Policy | The Poly Mailers',
+    description:
+      'What happens when poly mailers arrive damaged, defective or off-proof: a 14-day reporting window, photos, a free remake or a refund within 10 business days.',
+    summary: 'How a faulty or off-proof order is remade or refunded.',
+    intro: [
+      'Every mailer we ship was made for one customer, so there is no change-of-mind return: a run printed with your logo cannot go back on a shelf for someone else. What we do stand behind is the run itself. If it arrives damaged, defective or different from the proof you approved, we remake it or refund it.',
+      'This page gives the numbers that apply to that promise: how long you have to tell us, what to send, and how fast the money comes back when a refund is the right answer.',
+    ],
+    plan: {
+      intent: 'Find out whether a faulty poly mailer order can be returned or refunded.',
+      audience: 'Buyers who have received an order and found a problem with it.',
+      problem: 'They need the reporting window, the evidence required and the refund timing.',
+      angle: 'The defective-only return terms as numbers: 14 days, photos, remake or refund, 10 business days.',
+      primaryKeyword: 'poly mailer returns and refunds',
+      supportingKeywords: ['custom mailer refund policy', 'defective poly mailers'],
+      nearestPage: '/custom-order-policy/',
+      boundary: 'Return window, evidence and refund timing here; change points and production terms there.',
+    },
+    blocks: [
+      {
+        kind: 'bullets',
+        heading: 'The short version',
+        intro: 'Four facts cover most of what people want to know.',
+        items: [
+          {
+            term: '14 days from delivery',
+            detail:
+              'Tell us about a problem within 14 days of the cartons arriving. The sooner the better, while the stock is still sealed and on hand.',
+          },
+          {
+            term: 'Faulty, damaged or off-proof only',
+            detail:
+              'Custom mailers cannot be returned because you changed your mind, ordered too many or picked a size that does not suit.',
+          },
+          {
+            term: 'Remake or refund, at no cost to you',
+            detail:
+              'We reprint the affected mailers free of charge or refund what you paid for them. You do not pay to ship anything back.',
+          },
+          {
+            term: 'Refunds within 10 business days',
+            detail:
+              'Once a refund is agreed, it reaches your original payment method within 10 business days.',
+          },
+        ],
+      },
+      {
+        kind: 'bullets',
+        heading: 'What counts as a problem we fix',
+        intro: 'If your delivery shows any of these, it is ours to put right.',
+        items: [
+          {
+            term: 'Damaged on arrival',
+            detail:
+              'Torn film, crushed or wet cartons, or mailers that reached you unusable because of how they traveled.',
+          },
+          {
+            term: 'A manufacturing defect',
+            detail:
+              'Seals that split, a closure strip that will not hold, print that smears or drops out across the run.',
+          },
+          {
+            term: 'Not what you approved',
+            detail:
+              'The wrong color, size, film or artwork compared with the digital proof you signed off.',
+          },
+          {
+            term: 'Short on quantity',
+            detail:
+              'Fewer mailers than your order beyond the run tolerance stated on your order. We send the balance.',
+          },
+        ],
+      },
+      {
+        kind: 'steps',
+        heading: 'How to report it',
+        intro: 'Three steps, and most claims are settled within a couple of emails.',
+        steps: [
+          {
+            title: 'Email us within 14 days',
+            detail:
+              'Write to info@thepolymailers.com with your order number (it starts with TPM) and a line on what is wrong.',
+          },
+          {
+            title: 'Attach photos',
+            detail:
+              'Show the outer cartons as they arrived, a few affected mailers up close, and the carton label. A rough count of how many are affected helps us size the remake.',
+          },
+          {
+            title: 'Keep the stock',
+            detail:
+              'Hold on to the affected mailers until the claim is closed. We rarely ask for them back, and if we do, we pay for the shipping.',
+          },
+        ],
+      },
+      {
+        kind: 'prose',
+        heading: 'Refunds and remakes',
+        paragraphs: [
+          'Once the photos confirm the problem, you choose between a free remake of the affected mailers and a refund for them. A remake goes back through production against the same approved proof, so nothing about your artwork needs to be redone.',
+          'A refund goes back to the way you paid: to your PayPal account for a PayPal invoice, or to the paying bank account for a bank transfer. For cash on delivery we refund by bank transfer to the account you give us. Either way the money is sent within 10 business days of the refund being agreed.',
+        ],
+      },
+      {
+        kind: 'linked-prose',
+        heading: 'Who to contact',
+        before:
+          'Email info@thepolymailers.com, call +1 503-461-4788 or +44 7458 651107, or send photos on WhatsApp to +1 503-461-4788. Every number reaches the same team. For what can still change before and after a proof is approved, see the ',
+        link: { href: '/custom-order-policy/', anchor: 'custom order policy for made-to-order runs' },
+        after: '.',
+      },
+    ],
+    faqs: [
+      {
+        q: 'Can I return custom poly mailers if I change my mind?',
+        a: 'No. Each run is printed to your artwork and cannot be resold, so change-of-mind returns are not accepted. Damaged, defective or off-proof orders are remade or refunded.',
+      },
+      {
+        q: 'How long do I have to report a problem with my order?',
+        a: '14 days from the day the order is delivered. Report it as early as you can, while the cartons are still sealed and easy to photograph.',
+      },
+      {
+        q: 'What photos should I send with a claim?',
+        a: 'The outer cartons as they arrived, close-ups of a few affected mailers, and the carton label. Add a rough count of how many mailers are affected.',
+      },
+      {
+        q: 'Do I have to ship faulty mailers back?',
+        a: 'Usually not. Photos are enough in most cases. If we do need to see the stock, we arrange and pay for the return shipping.',
+      },
+      {
+        q: 'How long does a refund take?',
+        a: 'Refunds are sent to your original payment method within 10 business days of the refund being agreed.',
+      },
+      {
+        q: 'Can I choose a remake instead of a refund?',
+        a: 'Yes. You pick either a free remake of the affected mailers or a refund for them. A remake is printed against the same approved proof.',
+      },
+      {
+        q: 'What if only part of the order is faulty?',
+        a: 'We remake or refund the affected part. A rough count from you, backed by photos, is what we use to size it.',
+      },
+      {
+        q: 'Is a spelling mistake on an approved proof covered?',
+        a: 'No. The proof is what we print against, so an error in artwork you approved is not a defect. That is why we offer as many free proof rounds as you need before production.',
+      },
+      {
+        q: 'What if the mailers arrive in a different color from the proof?',
+        a: 'A clear mismatch with the color on your approved proof counts as not matching the order, and we remake or refund those mailers.',
+      },
+      {
+        q: 'Does this policy apply in every country you ship to?',
+        a: 'Yes. The same 14-day window and remake-or-refund terms apply to orders shipped to the United States, United Kingdom, Canada and Australia.',
+      },
+      {
+        q: 'Is damage during shipping covered?',
+        a: 'Yes. If cartons arrive crushed, torn or wet and the mailers inside are unusable, send photos of the cartons as delivered within 14 days and we remake or refund them.',
+      },
+      {
+        q: 'How do I pay for a remake?',
+        a: 'You do not. A remake of damaged, defective or off-proof mailers is free, including the shipping to you.',
+      },
+    ],
+    related: [
+      {
+        href: '/custom-order-policy/',
+        label: 'Custom order policy',
+        reason: 'What can change at each stage before a run is printed.',
+      },
+      {
+        href: '/contact/',
+        label: 'Contact us',
+        reason: 'Email, phone and WhatsApp for a claim with photos.',
+      },
+    ],
+  },
+
+  /* ===================================================================== */
+  {
     slug: 'accessibility-statement',
     name: 'accessibility',
     h1: 'Accessibility Statement',
