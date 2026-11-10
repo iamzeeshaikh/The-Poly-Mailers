@@ -315,7 +315,7 @@ export const sizeProducts: ProductPage[] = [
         kind: 'specs',
         heading: 'Specification choices',
         intro:
-          'These are the variables we quote against. Nothing here is fixed until it is written on your quotation.',
+          'These are the variables we quote against. Nothing here is fixed until it appears on your quotation.',
         rows: [
           {
             label: 'Film weight',
@@ -764,7 +764,7 @@ export const sizeProducts: ProductPage[] = [
       {
         kind: 'specs',
         heading: 'Selectable specification',
-        intro: 'We quote against your selections; the final specification is written on the quotation.',
+        intro: 'We quote against your selections; the final specification is set out on the quotation.',
         rows: [
           {
             label: 'Film weight',

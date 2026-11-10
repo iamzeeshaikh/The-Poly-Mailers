@@ -300,17 +300,17 @@ export const policyPages: readonly ContentPage[] = [
         paragraphs: [
           'Production takes 4–6 business days from the day you approve your free digital proof. Delivery then takes 2–3 business days to addresses in the United States, United Kingdom, Canada and Australia.',
           'The clock starts at proof approval, so a quick decision on the proof is the fastest route to an early delivery date.',
-          'If you have a fixed date — a campaign launch, a peak season, a retail delivery window — say so at enquiry stage. It changes what we recommend.',
+          'If you have a fixed date — a campaign launch, a peak season, a retail delivery window — say so at inquiry stage. It changes what we recommend.',
         ],
       },
       {
         kind: 'bullets',
         heading: 'What is confirmed on your quotation',
-        intro: 'Everything below is stated in writing before you commit to an order.',
+        intro: 'Everything below applies to every order.',
         items: [
           {
             term: 'The delivery address and market',
-            detail: 'Including whether it is a business address, a residential one or a fulfilment centre.',
+            detail: 'Including whether it is a business address, a residential one or a fulfillment center.',
           },
           {
             term: 'The production schedule',
@@ -352,12 +352,12 @@ export const policyPages: readonly ContentPage[] = [
           {
             term: 'Film availability',
             detail:
-              'Not every film, colour or material is available for every market. This is confirmed before you order, not after.',
+              'Not every film, color or material is available for every market. This is confirmed before you order, not after.',
           },
           {
             term: 'Delivery arrangements',
             detail:
-              'How a shipment reaches a business address in Perth is a different arrangement from one reaching a fulfilment centre in Ohio.',
+              'How a shipment reaches a business address in Perth is a different arrangement from one reaching a fulfillment center in Ohio.',
           },
         ],
       },
@@ -380,8 +380,8 @@ export const policyPages: readonly ContentPage[] = [
         a: 'Production takes 4–6 business days after you approve your proof, and delivery takes 2–3 business days after that.',
       },
       {
-        q: 'Can you ship to a fulfilment centre?',
-        a: 'Yes, and it is worth telling us at enquiry stage, because fulfilment centres often have specific labelling, palletisation and booking requirements that need to be built into the order.',
+        q: 'Can you ship to a fulfillment center?',
+        a: 'Yes, and it is worth telling us at inquiry stage, because fulfillment centers often have specific labeling, palletizing and booking requirements that need to be built into the order.',
       },
       {
         q: 'Who pays import duties?',
@@ -435,7 +435,7 @@ export const policyPages: readonly ContentPage[] = [
           {
             title: 'Before the quotation is confirmed',
             detail:
-              'Anything can change. Size, film, colour, coverage, quantity. This is the point to be indecisive.',
+              'Anything can change. Size, film, color, coverage, quantity. This is the point to be indecisive.',
           },
           {
             title: 'After confirmation, before the proof',
@@ -467,7 +467,7 @@ export const policyPages: readonly ContentPage[] = [
           {
             term: 'The order does not match the approved proof',
             detail:
-              'Wrong colour, wrong placement, wrong artwork. The proof is the reference and we are held to it.',
+              'Wrong color, wrong placement, wrong artwork. The proof is the reference and we are held to it.',
           },
           {
             term: 'The order does not match the confirmed specification',
@@ -522,7 +522,7 @@ export const policyPages: readonly ContentPage[] = [
         heading: 'Quantity variation on a manufactured run',
         paragraphs: [
           'Production runs of film do not stop at an exact unit, so a manufactured order may deliver slightly above or slightly below the quantity ordered. This is normal in the industry rather than a defect.',
-          'The tolerance that applies to your order is stated on your quotation, along with how any variation is charged. If an exact quantity matters — a set number of units for a subscription drop, for instance — say so at enquiry stage so we can specify accordingly.',
+          'The tolerance that applies to your order is stated on your quotation, along with how any variation is charged. If an exact quantity matters — a set number of units for a subscription drop, for instance — say so at inquiry stage so we can specify accordingly.',
         ],
       },
       {
@@ -545,7 +545,7 @@ export const policyPages: readonly ContentPage[] = [
       },
       {
         q: 'Will I receive exactly the quantity I ordered?',
-        a: 'Manufactured runs carry a tolerance either side of the ordered quantity, stated on your quotation along with how any variation is charged. If an exact count matters for your operation, tell us at enquiry stage.',
+        a: 'Manufactured runs carry a tolerance either side of the ordered quantity, stated on your quotation along with how any variation is charged. If an exact count matters for your operation, tell us at inquiry stage.',
       },
       {
         q: 'How quickly do I need to report a problem?',

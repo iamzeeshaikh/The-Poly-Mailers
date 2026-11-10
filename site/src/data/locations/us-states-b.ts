@@ -839,7 +839,7 @@ export const usStatesB: readonly LocationPage[] = [
         intro:
           'Five things that matter more than price in this context, and that we will confirm for your order.',
         items: [
-          { term: 'The specification stated, not implied', detail: 'Film, weight, closure, dimensions and tolerance, written on the quotation rather than described in conversation.' },
+          { term: 'The specification stated, not implied', detail: 'Film, weight, closure, dimensions and tolerance, stated on the quotation rather than described in conversation.' },
           { term: 'Notice of a material change', detail: 'If the film available for your order changes, you should hear about it before it ships, not after.' },
           { term: 'Consistency across reorders', detail: 'Where a specification has to hold, say so at quotation stage and it will be quoted as a requirement rather than a preference.' },
           { term: 'Documentation on request', detail: 'Whatever the film supplier holds, available for your records rather than described over the phone.' },

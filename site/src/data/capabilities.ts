@@ -827,7 +827,7 @@ export const capabilityPages: readonly ContentPage[] = [
           {
             title: 'It goes on the quotation',
             detail:
-              'What is evidenced is written down, so what you were told and what you ordered are the same thing.',
+              'Whatever is evidenced is stated on the quotation, so what you were told and what you ordered are the same thing.',
           },
         ],
       },
