@@ -227,8 +227,8 @@
     "a": "One product category in many configurations: size-specific, colored, printed, blank, padded, cushioned and self-seal poly mailers, plus frosted zip-closure garment bags. We do not present ourselves as a general packaging supplier, and every order is made to a confirmed specification."
    },
    {
-    "q": "Why does The Poly Mailers not publish fixed delivery times?",
-    "a": "Timing depends on the specification, the quantity, the print and how quickly a proof is approved, so one published figure would be wrong for most orders. Instead we confirm a schedule for your specific order by email."
+    "q": "How long do The Poly Mailers orders take to arrive?",
+    "a": "Production takes 4–6 business days after you approve your free digital proof, and delivery takes 2–3 business days after dispatch. Shipping is free to the United States, United Kingdom, Canada and Australia."
    },
    {
     "q": "Can The Poly Mailers quote custom dimensions outside standard sizes?",
@@ -1980,7 +1980,7 @@
    },
    {
     "q": "Can my mailer order arrive in Chicago before a fixed show date?",
-    "a": "Tell us the show date when you ask for a quote. Production and transit depend on specification, quantity and proof approval, so we confirm a schedule for your order and give you the date to work backwards from rather than a general lead time."
+    "a": "Tell us the show date when you ask for a quote. Production takes 4–6 business days after proof approval and delivery 2–3 business days, so work back from the show date and approve the proof in time."
    },
    {
     "q": "What should go inside each parcel shipped to a Chicago trade show?",
@@ -3353,8 +3353,8 @@
     "a": "Yes. A phone call is faster when you are still deciding what to order, and anything agreed that way is confirmed back to you by email before it goes near production. For detailed specifications or artwork, email leaves a clearer record."
    },
    {
-    "q": "Does a poly mailer quote include shipping costs?",
-    "a": "Yes. Shipping cost is quoted rather than absorbed into the unit price, so you can see it. The delivery address, schedule, shipping arrangement and any documentation for your market are also confirmed on the quotation."
+    "q": "Is shipping included in a poly mailer quote?",
+    "a": "Yes. Shipping is free to the United States, United Kingdom, Canada and Australia, so the quote has no separate shipping charge. The delivery address and any documentation for your market are confirmed on the quotation."
    },
    {
     "q": "How can I make my poly mailer quote accurate first time?",
@@ -3379,7 +3379,7 @@
    },
    {
     "q": "Why do the poly mailer reference guides contain no gauge figures or percentages?",
-    "a": "Because we will not publish numbers we cannot stand behind for your order. Film gauge varies by market and run, recycled content varies by batch, and delivery time depends on the order, so each is confirmed on your quotation instead."
+    "a": "Because we will not publish numbers we cannot stand behind for your order. Film gauge varies by market and run and recycled content varies by batch, so each is confirmed on your quotation instead. Delivery timing is fixed: 4–6 business days of production after proof approval, then 2–3 business days in transit."
    },
    {
     "q": "Which poly mailer reference guide helps with first-time artwork?",
@@ -3816,12 +3816,12 @@
   "h2": "More questions about mailer shipping and delivery",
   "faqs": [
    {
-    "q": "Why is no standard delivery time published for poly mailer orders?",
-    "a": "Production depends on specification, quantity, printing and how quickly a proof is approved, and transit depends on destination, weight and service. One figure would be wrong for most orders, so we confirm a schedule for yours at quotation."
+    "q": "When does the production clock start on a poly mailer order?",
+    "a": "On the day you approve your free digital proof. Production then takes 4–6 business days, and delivery takes 2–3 business days after dispatch."
    },
    {
-    "q": "Is shipping cost included in the poly mailer unit price?",
-    "a": "No. Shipping cost is quoted separately rather than absorbed into the unit price, so you can see it. The quotation also states who bears the cost at each stage and how the order travels to your address."
+    "q": "Is shipping free on poly mailer orders?",
+    "a": "Yes. Shipping is free to the United States, United Kingdom, Canada and Australia. Any import paperwork your destination needs is set out on your quotation."
    },
    {
     "q": "What should I check when a poly mailer delivery arrives?",
@@ -3999,7 +3999,7 @@
    },
    {
     "q": "Can US buyers get a next-day poly mailer delivery?",
-    "a": "No. Orders are made to the specification you approve and shipped to your address, so there is no shelf stock for same-week or next-day top-ups. A schedule is confirmed by email for your order, so you plan against a real date."
+    "a": "No. Orders are made to the specification you approve and shipped to your address, so there is no shelf stock for same-week or next-day top-ups. Production takes 4–6 business days after proof approval and delivery 2–3 business days, so plan stock around that."
    },
    {
     "q": "Is the specification process the same for US poly mailer orders as elsewhere?",

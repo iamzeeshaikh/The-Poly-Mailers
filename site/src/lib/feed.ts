@@ -13,16 +13,14 @@
  * stable across rebuilds. Merchant Center treats a changed id as a new product
  * and loses the item's history.
  *
- * No `g:shipping` cost or delivery times: /shipping-and-delivery/ says shipping
- * is quoted per order and publishes no delivery time, so the feed must not
- * state a price or a schedule the page does not. Account-level shipping in
- * Merchant Center applies instead.
+ * `g:shipping` per market: free (0 USD), 4–6 business days handling and 2–3
+ * transit, the same figures as /shipping-and-delivery/ and the Offer markup.
  */
 
 import { getImage } from 'astro:assets';
 import { products } from '~/data/products';
 import { BRAND, PRICING, SITE_URL, abs } from '~/lib/site';
-import { MIN_QTY } from '~/lib/order';
+import { MIN_QTY, SHIP_COUNTRIES, SHIPPING_COST, HANDLING_DAYS, TRANSIT_DAYS } from '~/lib/order';
 
 const modules = import.meta.glob<{ default: ImageMetadata }>(
   '/src/assets/products/*.{png,jpg,jpeg}',
@@ -86,6 +84,10 @@ export async function buildFeed(): Promise<Response> {
         '      <g:identifier_exists>no</g:identifier_exists>',
         '      <g:product_type>Poly mailers</g:product_type>',
         `      <g:google_product_category>${FEED_CATEGORY}</g:google_product_category>`,
+        ...SHIP_COUNTRIES.map(
+          (c) =>
+            `      <g:shipping><g:country>${c.code}</g:country><g:service>Free shipping</g:service><g:price>${SHIPPING_COST.toFixed(2)} ${PRICING.currency}</g:price><g:min_handling_time>${HANDLING_DAYS.min}</g:min_handling_time><g:max_handling_time>${HANDLING_DAYS.max}</g:max_handling_time><g:min_transit_time>${TRANSIT_DAYS.min}</g:min_transit_time><g:max_transit_time>${TRANSIT_DAYS.max}</g:max_transit_time></g:shipping>`,
+        ),
         '    </item>',
       ].join('\n'),
     );

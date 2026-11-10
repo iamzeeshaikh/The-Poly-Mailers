@@ -149,11 +149,11 @@ export const POST: APIRoute = async ({ request }) => {
   const td = 'style="padding:7px 12px;border-bottom:1px solid #e2ddd3;font-family:Arial,sans-serif;font-size:14px"';
   const itemHtml = `<table style="border-collapse:collapse;max-width:760px">${lines
     .map((line) => `<tr><td ${td}><a href="${line.url}">${esc(line.name)}</a></td><td ${td}>${line.qty.toLocaleString('en-US')} units</td><td ${td} align="right">${money(line.total)}</td></tr>`)
-    .join('')}<tr><td ${td}>Shipping</td><td ${td}></td><td ${td} align="right">Confirmed with the proof</td></tr><tr><th align="left" ${td}>Total (before shipping)</th><td ${td}></td><th ${td} align="right">${money(total)}</th></tr></table>`;
+    .join('')}<tr><td ${td}>Shipping</td><td ${td}></td><td ${td} align="right">Free</td></tr><tr><th align="left" ${td}>Total</th><td ${td}></td><th ${td} align="right">${money(total)}</th></tr></table>`;
 
   const officeText = [
     `PAYMENT: ${payLine}`, spamLine, `Order ${ref}`, '', itemText,
-    `Total: ${money(total)} for ${units.toLocaleString('en-US')} units at ${money(UNIT_PRICE)} per unit, shipping to be confirmed with the proof`, '',
+    `Total: ${money(total)} for ${units.toLocaleString('en-US')} units at ${money(UNIT_PRICE)} per unit, free shipping`, '',
     `Name: ${v.name}`, v.company ? `Business: ${v.company}` : '', `Email: ${v.email}`, `Phone: ${v.phone}`,
     '', 'Ship to:', address, '',
     v.notes ? `Notes: ${v.notes}` : '', fileNote, attachments.length ? `Attached: ${attachments.map((file) => file.filename).join(', ')}` : 'No artwork attached.',
@@ -174,13 +174,13 @@ ${fileNote ? `<p style="color:#9f1d1d">${esc(fileNote)}</p>` : ''}
 
   const steps = [
     'We check your artwork and email a free digital proof. If a file or a dimension is missing we ask for it first.',
-    'You approve the proof or ask for changes. Nothing runs before you approve. Shipping cost and the production schedule are confirmed with the proof.',
+    'You approve the proof or ask for changes. Nothing runs before you approve. Shipping is free. Production takes 4–6 business days after you approve, and delivery takes 2–3 business days.',
     method.detail,
     `Your mailers are counted by carton before dispatch and shipped to ${country.name}.`,
   ];
   const buyerText = [
-    `Hi ${v.name},`, '', `Thank you for your order ${ref} with ${BRAND.name}.`, '', itemText, 'Shipping: confirmed with your proof',
-    `Total before shipping: ${money(total)}`, `Payment: ${method.name}`, '', 'What happens next:',
+    `Hi ${v.name},`, '', `Thank you for your order ${ref} with ${BRAND.name}.`, '', itemText, 'Shipping: Free',
+    `Total: ${money(total)}`, `Payment: ${method.name}`, '', 'What happens next:',
     ...steps.map((step, index) => `${index + 1}. ${step}`), '', 'Ship to:', address, '',
     `Questions? Call ${BRAND.phoneDisplay} or reply to this email and quote your order number.`, BRAND.name,
   ].join('\n');

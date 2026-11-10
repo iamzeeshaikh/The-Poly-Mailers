@@ -6,9 +6,9 @@
  *
  * Facts as the site states them: from $0.30 per unit (PRICING, the live Offer
  * price), minimum order 100, up to 5,000 per design online, shipped to the
- * United States, United Kingdom, Canada and Australia. Shipping cost and the
- * schedule are confirmed on the quotation that comes with the free digital
- * proof (/shipping-and-delivery/), and nothing is printed or paid before the
+ * United States, United Kingdom, Canada and Australia. Shipping is free to all
+ * four; production takes 4–6 business days after proof approval and delivery
+ * 2–3 business days (/shipping-and-delivery/), and nothing is printed or paid before the
  * proof is approved. Payment is a PayPal invoice or a bank transfer invoice
  * sent after approval, or cash on delivery for US and Canadian addresses.
  */
@@ -46,9 +46,13 @@ export const SHIP_COUNTRIES: ShipCountry[] = [
   { code: 'AU', name: 'Australia' },
 ];
 export const SHIP_LINE = 'Shipped to the United States, United Kingdom, Canada and Australia';
-/** /shipping-and-delivery/: shipping cost is quoted rather than absorbed, and the schedule is confirmed per order. */
+/** /shipping-and-delivery/: free shipping to the four markets; handling and transit in business days. */
+export const SHIPPING_COST = 0;
+export const HANDLING_DAYS = { min: 4, max: 6 } as const;
+export const TRANSIT_DAYS = { min: 2, max: 3 } as const;
+export const FREE_SHIPPING_LINE = 'Free shipping to the United States, United Kingdom, Canada and Australia.';
 export const DELIVERY_LINE =
-  'Shipping cost and the production schedule are confirmed with your free digital proof, so you can see both before anything is charged.';
+  'Free shipping to the US, UK, Canada and Australia. Production takes 4–6 business days after you approve your free digital proof, and delivery takes 2–3 business days.';
 
 export type PaymentMethod = { id: 'paypal' | 'bank' | 'cod'; name: string; detail: string };
 export const PAYMENT_METHODS: PaymentMethod[] = [

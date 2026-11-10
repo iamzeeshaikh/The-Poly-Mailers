@@ -27,6 +27,7 @@ import {
   SOCIAL_PROFILES,
 } from './site';
 import type { Faq } from '~/data/types';
+import { SHIPPING_COST, HANDLING_DAYS, TRANSIT_DAYS } from './order';
 
 export type Json = Record<string, unknown>;
 
@@ -38,6 +39,14 @@ export function organization(): Json {
     url: `${SITE_URL}/`,
     email: BRAND.email,
     telephone: [BRAND.phoneDisplay, BRAND.phoneAltDisplay],
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: BRAND.address.street,
+      addressLocality: BRAND.address.city,
+      addressRegion: BRAND.address.region,
+      postalCode: BRAND.address.postalCode,
+      addressCountry: BRAND.address.country,
+    },
     description:
       'Custom poly mailer manufacturing and supply for businesses in the United States, United Kingdom, Canada and Australia. Printed, stock, colored, padded and size-specific mailers, quoted to order.',
     areaServed: [
@@ -163,22 +172,21 @@ function returnPolicy(): Json {
 }
 
 /**
- * Delivery terms attached to every offer.
- *
- * Destinations only. A `deliveryTime` would need handling and transit figures,
- * and the site publishes no lead times anywhere because none was supplied —
- * putting them in the markup would be inventing in JSON what we decline to
- * invent in prose, and Google checks markup against the page.
+ * Delivery terms attached to every offer, one OfferShippingDetails per market:
+ * free shipping, 4–6 business days handling after proof approval and 2–3
+ * business days transit, exactly as /shipping-and-delivery/ states.
  */
-function shippingDetails(): Json {
-  return {
+function shippingDetails(): Json[] {
+  return OFFER_REGIONS.map((code) => ({
     '@type': 'OfferShippingDetails',
-    '@id': `${SITE_URL}/#shipping`,
-    shippingDestination: OFFER_REGIONS.map((code) => ({
-      '@type': 'DefinedRegion',
-      addressCountry: code,
-    })),
-  };
+    shippingRate: { '@type': 'MonetaryAmount', value: SHIPPING_COST, currency: PRICING.currency },
+    shippingDestination: { '@type': 'DefinedRegion', addressCountry: code },
+    deliveryTime: {
+      '@type': 'ShippingDeliveryTime',
+      handlingTime: { '@type': 'QuantitativeValue', minValue: HANDLING_DAYS.min, maxValue: HANDLING_DAYS.max, unitCode: 'DAY' },
+      transitTime: { '@type': 'QuantitativeValue', minValue: TRANSIT_DAYS.min, maxValue: TRANSIT_DAYS.max, unitCode: 'DAY' },
+    },
+  }));
 }
 
 /**

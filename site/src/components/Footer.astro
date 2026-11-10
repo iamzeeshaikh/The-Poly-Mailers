@@ -107,6 +107,10 @@ const columns = [
             <span class="footer-label">WhatsApp</span>
             <a href={whatsappLink('Hi The Poly Mailers! I need more info.')}>{BRAND.whatsappDisplay}</a>
           </li>
+          <li>
+            <span class="footer-label">Address</span>
+            <address>{BRAND.addressDisplay}</address>
+          </li>
         </ul>
       </div>
 
@@ -221,6 +225,7 @@ const columns = [
   }
 
   .footer-contact a:hover { text-decoration: underline; }
+  .footer-contact address { font-style: normal; }
 
   .footer-nav {
     display: grid;

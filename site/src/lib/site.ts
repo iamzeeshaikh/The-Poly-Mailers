@@ -54,6 +54,16 @@ export const BRAND = {
   whatsappDisplay: '+1 503-461-4788',
   whatsappNumber: '15034614788',
   tagline: 'Custom poly mailers made to order for growing brands',
+  /** Business address (owner, 2026-11-10). Footer, /contact/ and Organization JSON-LD. */
+  address: {
+    street: '1639 70th St',
+    city: 'Brooklyn',
+    region: 'NY',
+    postalCode: '11204',
+    country: 'US',
+    countryName: 'United States',
+  },
+  addressDisplay: '1639 70th St, Brooklyn, NY 11204, United States',
 } as const;
 
 /**

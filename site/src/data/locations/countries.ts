@@ -62,7 +62,7 @@ export const countryHubs: readonly CountryHub[] = [
           { term: 'Made to order', detail: 'There is no shelf stock to draw from. Every order is produced to the specification you approve.' },
           { term: 'Shipped to your address', detail: 'Business premises, residential address or fulfillment center — tell us which, because the requirements differ.' },
           { term: 'Quoted in US dollars', detail: 'Quotations for US customers are issued in US dollars.' },
-          { term: 'Schedule confirmed by email', detail: 'Rather than a published lead time that would be wrong for most orders.' },
+          { term: 'Free shipping, set lead time', detail: 'Production takes 4–6 business days after proof approval, then 2–3 business days for delivery.' },
           { term: 'No local premises', detail: 'No branch, no depot, no collection point, and no US phone number presented as a local one.' },
         ],
       },
@@ -73,7 +73,7 @@ export const countryHubs: readonly CountryHub[] = [
         paragraphs: [
           'We will not describe ourselves as a local supplier, quote a next-day delivery, or imply that stock sits in a warehouse near you. None of those is the case, and a buyer who plans around them will be let down.',
           'We also do not claim compatibility or approval with any carrier. Poly mailers are widely used across every major network, and whether a particular service accepts a particular parcel is a question for that carrier rather than for a packaging supplier.',
-          'What we do instead is confirm a schedule for your specific order by email, so you are planning against a real date.',
+          'What we do instead is state the real timing: 4–6 business days of production after you approve the proof, then 2–3 business days for delivery, with shipping free.',
         ],
       },
       {

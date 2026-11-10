@@ -281,7 +281,7 @@ export const policyPages: readonly ContentPage[] = [
     summary: 'How orders reach each of the four markets we serve.',
     intro: [
       'Orders are manufactured to your specification and shipped to the address you give us. We hold no local branches, depots or collection points in any market, so everything below is about how a made-to-order shipment reaches you rather than about stock leaving a warehouse near you.',
-      'This page describes the process. The specifics for your order — carrier arrangements, documentation, timing and cost — are confirmed on your quotation, because they depend on quantity, weight, destination and the date you place the order.',
+      'This page describes the process. Shipping is free to all four markets we serve, production takes 4–6 business days after you approve your proof, and delivery takes 2–3 business days after dispatch. Carrier arrangements and documentation for your order are confirmed on your quotation.',
     ],
     plan: {
       intent: 'Understand how and where a supplier ships.',
@@ -296,10 +296,10 @@ export const policyPages: readonly ContentPage[] = [
     blocks: [
       {
         kind: 'prose',
-        heading: 'Why there is no delivery time on this page',
+        heading: 'Production and delivery times',
         paragraphs: [
-          'Production time depends on the specification, the quantity, whether the run is printed, and how quickly a proof is approved. Transit time depends on the destination, the weight and the service selected. A single figure covering all of that would be wrong for most orders.',
-          'So instead of publishing a number, we confirm a schedule in writing for your specific order at the point of quotation, and we tell you the date to work backwards from rather than a duration to guess with.',
+          'Production takes 4–6 business days from the day you approve your free digital proof. Delivery then takes 2–3 business days to addresses in the United States, United Kingdom, Canada and Australia.',
+          'The clock starts at proof approval, so a quick decision on the proof is the fastest route to an early delivery date.',
           'If you have a fixed date — a campaign launch, a peak season, a retail delivery window — say so at enquiry stage. It changes what we recommend.',
         ],
       },
@@ -322,9 +322,9 @@ export const policyPages: readonly ContentPage[] = [
             detail: 'How the order travels and who is responsible for it at each stage.',
           },
           {
-            term: 'Cost and who bears it',
+            term: 'Shipping cost',
             detail:
-              'Shipping cost is quoted rather than absorbed into a unit price, so you can see it.',
+              'Shipping is free to the United States, United Kingdom, Canada and Australia.',
           },
           {
             term: 'Documentation',
@@ -377,7 +377,7 @@ export const policyPages: readonly ContentPage[] = [
       },
       {
         q: 'How long will my order take?',
-        a: 'It depends on the specification, the quantity, whether it is printed and how quickly a proof is approved. We confirm a schedule in writing for your specific order rather than publishing a figure that would be wrong for most of them.',
+        a: 'Production takes 4–6 business days after you approve your proof, and delivery takes 2–3 business days after that.',
       },
       {
         q: 'Can you ship to a fulfilment centre?',
@@ -470,7 +470,7 @@ export const policyPages: readonly ContentPage[] = [
               'Wrong colour, wrong placement, wrong artwork. The proof is the reference and we are held to it.',
           },
           {
-            term: 'The order does not match the written specification',
+            term: 'The order does not match the confirmed specification',
             detail:
               'Wrong size, wrong film, wrong closure, wrong finish.',
           },
@@ -531,17 +531,17 @@ export const policyPages: readonly ContentPage[] = [
         before:
           'Contact us as soon as you find an issue, with the order reference, photographs of the cartons and the affected product as received, and the approximate proportion of the delivery affected. Keep the affected stock until the matter is resolved, because we may need to see it. The fastest route is the address and number on the ',
         link: { href: '/contact/', anchor: 'contact page' },
-        after: ', and we will confirm next steps in writing so both sides have a record.',
+        after: ', and we will confirm next steps by email so both sides have a record.',
       },
     ],
     faqs: [
       {
         q: 'Can I return custom printed mailers?',
-        a: 'Not as a change of mind, because printed material produced to your artwork cannot be resold or restocked. Where an order does not match the approved proof or the written specification, or has a manufacturing defect, we make it right.',
+        a: 'Not as a change of mind, because printed material produced to your artwork cannot be resold or restocked. Where an order does not match the approved proof or the confirmed specification, or has a manufacturing defect, we make it right.',
       },
       {
         q: 'What if I approve a proof and then spot a mistake?',
-        a: 'Tell us immediately. If production has not started, we will reproof at no drama. Once material is committed the run cannot be recovered, which is why we ask for approval in writing and encourage as many proof rounds as you want beforehand.',
+        a: 'Tell us immediately. If production has not started, we will reproof at no drama. Once material is committed the run cannot be recovered, which is why we ask you to approve the proof by email and encourage as many proof rounds as you want beforehand.',
       },
       {
         q: 'Will I receive exactly the quantity I ordered?',
@@ -549,7 +549,7 @@ export const policyPages: readonly ContentPage[] = [
       },
       {
         q: 'How quickly do I need to report a problem?',
-        a: 'As soon as you find it, and while the stock is still available to inspect. The specific window that applies to your order is stated on your quotation.',
+        a: 'Within 14 days of delivery, while the stock is still available to inspect. The <a href="/refund_returns/">returns and refunds policy</a> sets out what to send and how remakes and refunds work.',
       },
     ],
     related: [
